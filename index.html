@@ -998,6 +998,73 @@
 
     .footer-copy { font-size: 0.72rem; color: rgba(255,255,255,0.22); }
 
+    /* ── SAFETY VAULT ── */
+    .safety-vault { background: var(--white); }
+
+    .sv-intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: end;
+      margin-bottom: 4rem;
+    }
+
+    .sv-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .sv-card {
+      background: var(--bg);
+      border-radius: 16px;
+      padding: 40px 36px;
+      border: 1px solid rgba(74,59,79,0.06);
+      display: flex;
+      gap: 1.6rem;
+      align-items: flex-start;
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+
+    .sv-card:hover { box-shadow: 0 14px 36px rgba(74,59,79,0.09); transform: translateY(-4px); }
+
+    .sv-icon-wrap {
+      width: 52px; height: 52px;
+      border-radius: 14px;
+      background: var(--purple);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1.25rem;
+    }
+
+    .sv-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.97rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.55rem;
+    }
+
+    .sv-desc { font-size: 0.82rem; color: var(--text-s); line-height: 1.78; }
+
+    .sv-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 0.9rem;
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: rgba(201,185,156,0.12);
+      border: 1px solid rgba(201,185,156,0.3);
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
+
     /* ── ANIMATIONS ── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(24px); }
@@ -1018,6 +1085,9 @@
       .proc-grid { grid-template-columns: 1fr; }
       .wb-layout { grid-template-columns: 1fr; gap: 3rem; }
       .wb-stats { grid-template-columns: 1fr 1fr; }
+      .sv-intro { grid-template-columns: 1fr; gap: 2rem; }
+      .sv-grid { grid-template-columns: 1fr; }
+      .sv-card { flex-direction: column; gap: 1rem; }
       .partners-header { grid-template-columns: 1fr; gap: 2rem; }
       .partner-benefits { grid-template-columns: 1fr; }
       .partner-cta-bar { flex-direction: column; text-align: center; }
@@ -1047,6 +1117,7 @@
     </a>
     <ul class="nav-links">
       <li><a href="#value" data-i18n="nav.value"></a></li>
+      <li><a href="#security" data-i18n="nav.security"></a></li>
       <li><a href="#procedures" data-i18n="nav.procedures"></a></li>
       <li><a href="#brazil" data-i18n="nav.brazil"></a></li>
       <li><a href="#partners" data-i18n="nav.partners"></a></li>
@@ -1252,6 +1323,52 @@
     </div>
   </section>
 
+  <!-- ══ SAFETY VAULT ══ -->
+  <section class="safety-vault" id="security">
+    <div class="sv-intro">
+      <div>
+        <div class="section-kicker" data-i18n="sv.kicker"></div>
+        <div class="section-title" data-i18n="sv.title"></div>
+      </div>
+      <p class="section-lead" data-i18n="sv.lead"></p>
+    </div>
+
+    <div class="sv-grid">
+      <div class="sv-card">
+        <div class="sv-icon-wrap">🔐</div>
+        <div>
+          <div class="sv-title" data-i18n="sv1.title"></div>
+          <p class="sv-desc" data-i18n="sv1.desc"></p>
+          <div class="sv-badge" data-i18n="sv1.badge"></div>
+        </div>
+      </div>
+      <div class="sv-card">
+        <div class="sv-icon-wrap">👁</div>
+        <div>
+          <div class="sv-title" data-i18n="sv2.title"></div>
+          <p class="sv-desc" data-i18n="sv2.desc"></p>
+          <div class="sv-badge" data-i18n="sv2.badge"></div>
+        </div>
+      </div>
+      <div class="sv-card">
+        <div class="sv-icon-wrap">🏦</div>
+        <div>
+          <div class="sv-title" data-i18n="sv3.title"></div>
+          <p class="sv-desc" data-i18n="sv3.desc"></p>
+          <div class="sv-badge" data-i18n="sv3.badge"></div>
+        </div>
+      </div>
+      <div class="sv-card">
+        <div class="sv-icon-wrap">✦</div>
+        <div>
+          <div class="sv-title" data-i18n="sv4.title"></div>
+          <p class="sv-desc" data-i18n="sv4.desc"></p>
+          <div class="sv-badge" data-i18n="sv4.badge"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ══ PROCEDURES GALLERY ══ -->
   <section class="procedures" id="procedures">
     <div class="proc-header">
@@ -1428,13 +1545,14 @@
         'phase.badge':   'Phase 1: Launching Soon',
         'banner':        'Join the Elite Waitlist — early access closing soon',
         'nav.value':     'Advantage',
+        'nav.security':  'Security',
         'nav.procedures':'Procedures',
         'nav.brazil':    'Why Brazil',
         'nav.partners':  'Partners',
         'nav.cta':       'Join Waitlist',
 
-        'hero.h1':  'Your Best Version.<br>Is Already <span class="highlight">Within Reach.</span>',
-        'hero.sub': 'Aestyx is the world\'s first AI aesthetics intelligence platform. We connect you to Brazil\'s world-renowned specialists — delivering pinnacle results at 60–70% below European and American prices, without a single compromise on quality.',
+        'hero.h1':  'High-Performance Aesthetics.<br>Powered by <span class="highlight">Clinical Intelligence.</span>',
+        'hero.sub': 'Aestyx is the world\'s first AI aesthetics intelligence platform. We match you to Brazil\'s elite surgical ecosystem — where world-class training, cutting-edge technology, and currency arbitrage converge into your highest possible outcome.',
 
         'waitlist.placeholder': 'Your email address',
         'waitlist.btn':         'Request Access',
@@ -1457,21 +1575,21 @@
         'ui.fc.label':   'Available now',
         'ui.fc.val':     '127 verified specialists',
 
-        'vp.kicker': 'The Aestyx Advantage',
-        'vp.title':  'World-class results.<br><span class="accent">Exceptional value.</span>',
-        'vp.lead':   'For the first time, accessing the world\'s finest aesthetic medicine doesn\'t require paying the world\'s highest prices. Brazil\'s clinical excellence meets global intelligence.',
-        'vp1.title': 'Less Than Europe & the US',
-        'vp1.desc':  'Identical procedures, same international standards — at 60 to 70% of the price you\'d pay in London, New York, or Paris.',
+        'vp.kicker': 'Excellence Arbitrage',
+        'vp.title':  'Surgical mastery.<br><span class="accent">Strategic advantage.</span>',
+        'vp.lead':   'Aestyx gives you access to Brazil\'s elite surgical ecosystem — where Clinical Intelligence, world-class residency training, and currency arbitrage converge into your highest possible outcome.',
+        'vp1.title': 'Precision Cost Arbitrage',
+        'vp1.desc':  'The same procedure. The same international standards. 60–70% of the cost you\'d pay in London, New York, or Paris — reallocated entirely toward your result.',
         'vp2.title': 'Global Rank in Aesthetic Surgery',
-        'vp2.desc':  'Brazil holds the #2 position worldwide in cosmetic procedures. Brazilian surgeons train globally and are internationally recognized.',
+        'vp2.desc':  'Brazil holds the #2 position worldwide in cosmetic procedures. Brazilian surgeons complete internationally accredited residencies and are recognized globally for innovation.',
         'vp3.num':   'AI&#8209;Curated',
-        'vp3.title': 'Match to Your Blueprint™',
-        'vp3.desc':  'No guesswork. Our AI maps your goals and connects you only to verified specialists whose expertise matches your Blueprint™.',
+        'vp3.title': 'Matched to Your Blueprint™',
+        'vp3.desc':  'No cold searching. Our AI maps your clinical profile and connects you exclusively to verified specialists whose surgical expertise aligns with your goals.',
 
         'journey.kicker': 'Your Journey',
         'journey.title':  'From curiosity<br>to your <span class="accent">aesthetic peak.</span>',
         'js1.title': 'Discover Your Potential',
-        'js1.desc':  'Upload your photos securely. In seconds, our AI generates your Aestyx Score and identifies the path to your personal 100%.',
+        'js1.desc':  'Upload your photos through our encrypted portal. In seconds, our AI generates your Aestyx Score and maps the precise path to your personal 100%.',
         'js2.title': 'Receive Your Blueprint™',
         'js2.desc':  'A personalised, AI-curated plan detailing procedures, priorities, and expected outcomes — designed exclusively for you.',
         'js3.title': 'Match With a World-Class Specialist',
@@ -1526,16 +1644,36 @@
         'wb.p4.title': 'Aestyx Medical Curation',
         'wb.p4.desc':  'We verify every specialist on our platform. Credentials, patient outcomes, and international recognition are reviewed before any specialist joins the Aestyx network.',
 
-        'part.kicker': 'For Medical Partners',
-        'part.title':  'Join the world\'s premier<br><span class="accent">aesthetics network.</span>',
-        'part.lead':   'Aestyx connects verified Brazilian clinics and specialists to a global patient base actively seeking world-class aesthetic care.',
+        'sv.kicker': 'Security First',
+        'sv.title':  'Your privacy is<br><span class="accent">non-negotiable.</span>',
+        'sv.lead':   'Every photo, data point, and consultation detail processed by Aestyx is protected by hospital-grade protocols. Absolute privacy is not a feature — it is our fundamental premise.',
 
-        'pb1.title': 'Global Patient Reach',
-        'pb1.desc':  'Access patients from Europe, North America, and Asia who have been intelligently matched to your specialty and surgical profile.',
-        'pb2.title': 'Verified Luxury Ecosystem',
-        'pb2.desc':  'Aestyx operates as a curated, invitation-only network. Every partner clinic is reviewed, verified, and presented within a prestige context.',
-        'pb3.title': 'Patient Management AI Engine',
-        'pb3.desc':  'Our AI pre-qualifies patients, prepares their Blueprint™, and delivers structured clinical briefs — so you receive high-intent, well-informed patients only.',
+        'sv1.title': 'Clinical-Grade Encryption',
+        'sv1.desc':  'Every image you upload is protected by AES-256 encryption — the same standard used in hospital systems and financial institutions worldwide. Your data is never stored in plain form.',
+        'sv1.badge': 'AES-256 · Hospital Standard',
+
+        'sv2.title': 'Eyes-Only Access',
+        'sv2.desc':  'Your Blueprint™ and photos are accessible only to you and the verified surgeon you choose. Our AI processes all data anonymously — no staff member ever views your images.',
+        'sv2.badge': 'Zero Unauthorized Access',
+
+        'sv3.title': 'Aestyx Escrow Control',
+        'sv3.desc':  'Payment is held in secure escrow. The clinic receives funds only after all safety protocols and service milestones have been confirmed — your financial protection is absolute.',
+        'sv3.badge': 'Funds Released on Completion',
+
+        'sv4.title': 'Verified Tier: Clinics & Surgeons',
+        'sv4.desc':  'Every partner clinic undergoes a full audit: CRM registration, RQE specialty certification, and sanitary compliance. Only clinics that clear all three tiers are admitted to the Aestyx network.',
+        'sv4.badge': 'CRM · RQE · Sanitary Compliance',
+
+        'part.kicker': 'For Medical Partners',
+        'part.title':  'Your global pipeline.<br><span class="accent">Built and delivered.</span>',
+        'part.lead':   'We resolve the FX, the logistics, and the language barrier. You focus on the OR — we bring the high-ticket patient (USD/EUR), fully briefed and ready.',
+
+        'pb1.title': 'High-Ticket Global Patients',
+        'pb1.desc':  'Access pre-qualified patients from Europe, North America, and Asia — matched to your specialty and surgical profile, arriving with intent and purchasing power in hard currency.',
+        'pb2.title': 'Structured Clinical Brief, Delivered',
+        'pb2.desc':  'Each patient arrives with an AI-prepared Structured Clinical Brief: goals, medical history, photo analysis, and a prioritized procedure shortlist. Save 40+ minutes of intake consultation.',
+        'pb3.title': 'Invitation-Only Verified Network',
+        'pb3.desc':  'Aestyx is not a directory. We audit CRM registration, RQE specialty code, and sanitary compliance before admission. Your peers on this network are held to the same standard.',
 
         'pcb.kicker':      'Apply to Join',
         'pcb.title':       'Ready to access global patients?',
@@ -1559,13 +1697,14 @@
         'phase.badge':   'Fase 1: Lançamento Em Breve',
         'banner':        'Entre para a Lista de Espera de Elite — vagas limitadas',
         'nav.value':     'Vantagem',
+        'nav.security':  'Segurança',
         'nav.procedures':'Procedimentos',
         'nav.brazil':    'Por Que o Brasil',
         'nav.partners':  'Parceiros',
         'nav.cta':       'Lista de Espera',
 
-        'hero.h1':  'Sua Melhor Versão.<br>Está ao Seu <span class="highlight">Alcance.</span>',
-        'hero.sub': 'Aestyx é a primeira plataforma mundial de inteligência estética com IA. Conectamos você aos melhores especialistas do Brasil — resultados de classe mundial a 60–70% abaixo dos preços europeus e americanos, sem abrir mão de nenhum padrão de qualidade.',
+        'hero.h1':  'Estética de Alta Performance.<br>Movida por <span class="highlight">Inteligência Clínica.</span>',
+        'hero.sub': 'Aestyx é a primeira plataforma mundial de inteligência estética com IA. Conectamos você ao ecossistema cirúrgico de elite do Brasil — onde formação de classe mundial, tecnologia de ponta e arbitragem cambial convergem para o seu melhor resultado possível.',
 
         'waitlist.placeholder': 'Seu endereço de e-mail',
         'waitlist.btn':         'Solicitar Acesso',
@@ -1588,21 +1727,21 @@
         'ui.fc.label':   'Disponíveis agora',
         'ui.fc.val':     '127 especialistas verificados',
 
-        'vp.kicker': 'A Vantagem Aestyx',
-        'vp.title':  'Resultados de classe mundial.<br><span class="accent">Valor excepcional.</span>',
-        'vp.lead':   'Pela primeira vez, acessar o que há de melhor na medicina estética mundial não exige pagar os preços mais altos do mundo. A excelência clínica do Brasil encontra a inteligência global.',
-        'vp1.title': 'Abaixo dos Preços Europeus e Americanos',
-        'vp1.desc':  'Procedimentos idênticos, mesmos padrões internacionais — a 60 a 70% do preço que você pagaria em Londres, Nova York ou Paris.',
+        'vp.kicker': 'Arbitragem de Excelência',
+        'vp.title':  'Maestria cirúrgica.<br><span class="accent">Vantagem estratégica.</span>',
+        'vp.lead':   'A Aestyx conecta você ao ecossistema cirúrgico de elite do Brasil — onde Inteligência Clínica, residências internacionalmente acreditadas e arbitragem cambial convergem para o seu melhor resultado possível.',
+        'vp1.title': 'Arbitragem de Custo com Precisão',
+        'vp1.desc':  'O mesmo procedimento. Os mesmos padrões internacionais. 60–70% do custo que você pagaria em Londres, Nova York ou Paris — realocado integralmente para o seu resultado.',
         'vp2.title': 'Ranking Global em Cirurgia Estética',
-        'vp2.desc':  'O Brasil ocupa o 2º lugar mundial em procedimentos estéticos. Cirurgiões brasileiros se formam globalmente e são reconhecidos internacionalmente.',
+        'vp2.desc':  'O Brasil ocupa o 2º lugar mundial em procedimentos estéticos. Cirurgiões brasileiros completam residências internacionalmente acreditadas e são reconhecidos globalmente por inovação.',
         'vp3.num':   'Curadoria&#8209;IA',
         'vp3.title': 'Match com o Seu Blueprint™',
-        'vp3.desc':  'Sem achismos. Nossa IA mapeia seus objetivos e conecta você apenas a especialistas verificados cuja expertise combina com seu Blueprint™.',
+        'vp3.desc':  'Sem buscas aleatórias. Nossa IA mapeia seu perfil clínico e conecta você exclusivamente a especialistas verificados cuja expertise cirúrgica está alinhada aos seus objetivos.',
 
         'journey.kicker': 'Sua Jornada',
         'journey.title':  'Da curiosidade<br>ao seu <span class="accent">pico estético.</span>',
         'js1.title': 'Descubra Seu Potencial',
-        'js1.desc':  'Envie suas fotos com segurança. Em segundos, nossa IA gera seu Aestyx Score e identifica o caminho para o seu 100% pessoal.',
+        'js1.desc':  'Envie suas fotos pelo nosso portal criptografado. Em segundos, nossa IA gera seu Aestyx Score e mapeia o caminho preciso para o seu 100% pessoal.',
         'js2.title': 'Receba Seu Blueprint™',
         'js2.desc':  'Um plano personalizado, curado por IA, detalhando procedimentos, prioridades e resultados esperados — criado exclusivamente para você.',
         'js3.title': 'Match com um Especialista de Classe Mundial',
@@ -1657,16 +1796,36 @@
         'wb.p4.title': 'Curadoria Médica Aestyx',
         'wb.p4.desc':  'Verificamos cada especialista em nossa plataforma. Credenciais, resultados com pacientes e reconhecimento internacional são analisados antes de qualquer admissão na rede Aestyx.',
 
-        'part.kicker': 'Para Parceiros Médicos',
-        'part.title':  'Junte-se à principal<br><span class="accent">rede estética do mundo.</span>',
-        'part.lead':   'Aestyx conecta clínicas e especialistas brasileiros verificados a uma base global de pacientes que buscam ativamente cuidados estéticos de classe mundial.',
+        'sv.kicker': 'Segurança em Primeiro Lugar',
+        'sv.title':  'Sua privacidade é<br><span class="accent">inegociável.</span>',
+        'sv.lead':   'Cada foto, dado e detalhe de consulta processado pela Aestyx é protegido por protocolos de nível hospitalar. Privacidade absoluta não é um recurso — é nossa premissa fundamental.',
 
-        'pb1.title': 'Alcance Global de Pacientes',
-        'pb1.desc':  'Acesse pacientes da Europa, América do Norte e Ásia que foram inteligentemente combinados à sua especialidade e perfil cirúrgico.',
-        'pb2.title': 'Ecossistema de Luxo Verificado',
-        'pb2.desc':  'A Aestyx opera como uma rede curada, exclusiva por convite. Cada clínica parceira é revisada, verificada e apresentada em um contexto de prestígio.',
-        'pb3.title': 'Motor IA de Gestão de Pacientes',
-        'pb3.desc':  'Nossa IA pré-qualifica pacientes, prepara o Blueprint™ e entrega briefs clínicos estruturados — você recebe apenas pacientes bem informados e de alta intenção.',
+        'sv1.title': 'Criptografia de Nível Clínico',
+        'sv1.desc':  'Cada imagem enviada é protegida com criptografia AES-256 — o mesmo padrão utilizado em sistemas hospitalares e instituições financeiras em todo o mundo. Seus dados nunca são armazenados em texto simples.',
+        'sv1.badge': 'AES-256 · Padrão Hospitalar',
+
+        'sv2.title': 'Acesso Exclusivo: Você e Seu Cirurgião',
+        'sv2.desc':  'Seu Blueprint™ e suas fotos são acessíveis apenas a você e ao cirurgião verificado que você escolher. Nossa IA processa todos os dados de forma anônima — nenhum colaborador vê suas imagens.',
+        'sv2.badge': 'Zero Acesso Não Autorizado',
+
+        'sv3.title': 'Custódia Financeira Aestyx',
+        'sv3.desc':  'O pagamento fica em custódia segura. A clínica recebe os valores apenas após o cumprimento de todos os protocolos de segurança e marcos de serviço confirmados.',
+        'sv3.badge': 'Liberação Mediante Cumprimento',
+
+        'sv4.title': 'Verificação de Tier: Clínicas e Médicos',
+        'sv4.desc':  'Cada clínica parceira passa por auditoria completa: registro no CRM, número de RQE (especialidade) e conformidade sanitária. Apenas clínicas aprovadas nos três critérios são admitidas na rede Aestyx.',
+        'sv4.badge': 'CRM · RQE · Conformidade Sanitária',
+
+        'part.kicker': 'Para Parceiros Médicos',
+        'part.title':  'Seu pipeline global.<br><span class="accent">Construído e entregue.</span>',
+        'part.lead':   'Resolvemos o câmbio, a logística e a barreira do idioma. Você foca no centro cirúrgico — nós trazemos o paciente de alto ticket (Dólar/Euro), totalmente orientado e pronto.',
+
+        'pb1.title': 'Pacientes Globais de Alto Ticket',
+        'pb1.desc':  'Acesse pacientes pré-qualificados da Europa, América do Norte e Ásia — combinados à sua especialidade e perfil cirúrgico, chegando com intenção e poder de compra em moeda forte.',
+        'pb2.title': 'Briefing Clínico Estruturado, Entregue',
+        'pb2.desc':  'Cada paciente chega com um Briefing Clínico preparado pela IA: objetivos, histórico médico, análise de fotos e uma lista priorizada de procedimentos. Economize mais de 40 minutos de consulta inicial.',
+        'pb3.title': 'Rede Verificada por Convite',
+        'pb3.desc':  'A Aestyx não é um diretório. Auditamos CRM, RQE e conformidade sanitária antes da admissão. Seus pares nessa rede são mantidos no mesmo padrão de excelência.',
 
         'pcb.kicker':      'Candidatar-se',
         'pcb.title':       'Pronto para acessar pacientes globais?',
@@ -1690,13 +1849,14 @@
         'phase.badge':   'Fase 1: Próximo Lanzamiento',
         'banner':        'Únete a la Lista de Espera de Élite — cupos limitados',
         'nav.value':     'Ventaja',
+        'nav.security':  'Seguridad',
         'nav.procedures':'Procedimientos',
         'nav.brazil':    'Por Qué Brasil',
         'nav.partners':  'Socios',
         'nav.cta':       'Lista de Espera',
 
-        'hero.h1':  'Tu Mejor Versión.<br>Ya Está a Tu <span class="highlight">Alcance.</span>',
-        'hero.sub': 'Aestyx es la primera plataforma mundial de inteligencia estética con IA. Te conectamos con los mejores especialistas de Brasil — resultados de clase mundial a 60–70% por debajo de los precios europeos y americanos, sin comprometer ningún estándar de calidad.',
+        'hero.h1':  'Estética de Alto Rendimiento.<br>Impulsada por <span class="highlight">Inteligencia Clínica.</span>',
+        'hero.sub': 'Aestyx es la primera plataforma mundial de inteligencia estética con IA. Te conectamos con el ecosistema quirúrgico de élite de Brasil — donde formación de clase mundial, tecnología avanzada y arbitraje cambiario convergen en tu mejor resultado posible.',
 
         'waitlist.placeholder': 'Tu dirección de e-mail',
         'waitlist.btn':         'Solicitar Acceso',
@@ -1719,21 +1879,21 @@
         'ui.fc.label':   'Disponibles ahora',
         'ui.fc.val':     '127 especialistas verificados',
 
-        'vp.kicker': 'La Ventaja Aestyx',
-        'vp.title':  'Resultados de clase mundial.<br><span class="accent">Valor excepcional.</span>',
-        'vp.lead':   'Por primera vez, acceder a lo mejor de la medicina estética mundial no requiere pagar los precios más altos del mundo. La excelencia clínica de Brasil se encuentra con la inteligencia global.',
-        'vp1.title': 'Menos que en Europa y EE.UU.',
-        'vp1.desc':  'Procedimientos idénticos, mismos estándares internacionales — al 60–70% del precio que pagarías en Londres, Nueva York o París.',
+        'vp.kicker': 'Arbitraje de Excelencia',
+        'vp.title':  'Maestría quirúrgica.<br><span class="accent">Ventaja estratégica.</span>',
+        'vp.lead':   'Aestyx te da acceso al ecosistema quirúrgico de élite de Brasil — donde Inteligencia Clínica, residencias internacionalmente acreditadas y arbitraje cambiario convergen en tu mejor resultado posible.',
+        'vp1.title': 'Arbitraje de Costo con Precisión',
+        'vp1.desc':  'El mismo procedimiento. Los mismos estándares internacionales. Al 60–70% del costo que pagarías en Londres, Nueva York o París — redirigido íntegramente hacia tu resultado.',
         'vp2.title': 'Ranking Global en Cirugía Estética',
-        'vp2.desc':  'Brasil ocupa el puesto #2 mundial en procedimientos cosméticos. Los cirujanos brasileños se forman globalmente y son reconocidos internacionalmente.',
+        'vp2.desc':  'Brasil ocupa el puesto #2 mundial en procedimientos cosméticos. Los cirujanos brasileños completan residencias internacionalmente acreditadas y son reconocidos globalmente por su innovación.',
         'vp3.num':   'Curación&#8209;IA',
         'vp3.title': 'Match con tu Blueprint™',
-        'vp3.desc':  'Sin suposiciones. Nuestra IA mapea tus objetivos y te conecta solo con especialistas verificados cuya experiencia coincide con tu Blueprint™.',
+        'vp3.desc':  'Sin búsquedas a ciegas. Nuestra IA mapea tu perfil clínico y te conecta exclusivamente con especialistas verificados cuya experiencia quirúrgica se alinea con tus objetivos.',
 
         'journey.kicker': 'Tu Viaje',
         'journey.title':  'De la curiosidad<br>a tu <span class="accent">pico estético.</span>',
         'js1.title': 'Descubre Tu Potencial',
-        'js1.desc':  'Sube tus fotos de forma segura. En segundos, nuestra IA genera tu Aestyx Score e identifica el camino hacia tu 100% personal.',
+        'js1.desc':  'Sube tus fotos a través de nuestro portal cifrado. En segundos, nuestra IA genera tu Aestyx Score y traza el camino preciso hacia tu 100% personal.',
         'js2.title': 'Recibe Tu Blueprint™',
         'js2.desc':  'Un plan personalizado, curado por IA, que detalla procedimientos, prioridades y resultados esperados — diseñado exclusivamente para ti.',
         'js3.title': 'Match con un Especialista de Clase Mundial',
@@ -1788,16 +1948,36 @@
         'wb.p4.title': 'Curación Médica Aestyx',
         'wb.p4.desc':  'Verificamos cada especialista en nuestra plataforma. Credenciales, resultados con pacientes y reconocimiento internacional son revisados antes de que cualquier especialista ingrese a la red Aestyx.',
 
-        'part.kicker': 'Para Socios Médicos',
-        'part.title':  'Únete a la principal<br><span class="accent">red estética del mundo.</span>',
-        'part.lead':   'Aestyx conecta clínicas y especialistas brasileños verificados con una base global de pacientes que buscan activamente atención estética de clase mundial.',
+        'sv.kicker': 'Seguridad Primero',
+        'sv.title':  'Tu privacidad es<br><span class="accent">no negociable.</span>',
+        'sv.lead':   'Cada foto, dato y detalle de consulta procesado por Aestyx está protegido por protocolos de nivel hospitalario. La privacidad absoluta no es una función — es nuestra premisa fundamental.',
 
-        'pb1.title': 'Alcance Global de Pacientes',
-        'pb1.desc':  'Accede a pacientes de Europa, Norteamérica y Asia que han sido inteligentemente emparejados con tu especialidad y perfil quirúrgico.',
-        'pb2.title': 'Ecosistema de Lujo Verificado',
-        'pb2.desc':  'Aestyx opera como una red curada, exclusiva por invitación. Cada clínica asociada es revisada, verificada y presentada en un contexto de prestigio.',
-        'pb3.title': 'Motor IA de Gestión de Pacientes',
-        'pb3.desc':  'Nuestra IA pre-califica pacientes, prepara su Blueprint™ y entrega briefings clínicos estructurados — recibes solo pacientes bien informados y de alta intención.',
+        'sv1.title': 'Cifrado de Nivel Clínico',
+        'sv1.desc':  'Cada imagen que subes está protegida con cifrado AES-256 — el mismo estándar utilizado en sistemas hospitalarios e instituciones financieras en todo el mundo. Tus datos nunca se almacenan en texto plano.',
+        'sv1.badge': 'AES-256 · Estándar Hospitalario',
+
+        'sv2.title': 'Acceso Exclusivo: Tú y Tu Cirujano',
+        'sv2.desc':  'Tu Blueprint™ y tus fotos son accesibles únicamente para ti y el cirujano verificado que elijas. Nuestra IA procesa todos los datos de forma anónima — ningún colaborador ve tus imágenes.',
+        'sv2.badge': 'Cero Acceso No Autorizado',
+
+        'sv3.title': 'Custodia Financiera Aestyx',
+        'sv3.desc':  'El pago queda en custodia segura. La clínica recibe los fondos únicamente tras confirmar el cumplimiento de todos los protocolos de seguridad y los hitos de servicio acordados.',
+        'sv3.badge': 'Fondos Liberados al Completar',
+
+        'sv4.title': 'Verificación de Tier: Clínicas y Médicos',
+        'sv4.desc':  'Cada clínica asociada pasa por una auditoría completa: registro en el Consejo Médico, código de especialidad RQE y cumplimiento sanitario. Solo las que superan los tres criterios son admitidas a la red Aestyx.',
+        'sv4.badge': 'Registro · Especialidad · Cumplimiento Sanitario',
+
+        'part.kicker': 'Para Socios Médicos',
+        'part.title':  'Tu pipeline global.<br><span class="accent">Construido y entregado.</span>',
+        'part.lead':   'Resolvemos el FX, la logística y la barrera del idioma. Tú te enfocas en el quirófano — nosotros traemos al paciente de alto ticket (USD/EUR), totalmente orientado y listo.',
+
+        'pb1.title': 'Pacientes Globales de Alto Ticket',
+        'pb1.desc':  'Accede a pacientes pre-calificados de Europa, Norteamérica y Asia — emparejados con tu especialidad y perfil quirúrgico, llegando con intención y poder adquisitivo en moneda fuerte.',
+        'pb2.title': 'Briefing Clínico Estructurado, Entregado',
+        'pb2.desc':  'Cada paciente llega con un Briefing Clínico preparado por IA: objetivos, historial médico, análisis fotográfico y lista priorizada de procedimientos. Ahorra más de 40 minutos de consulta inicial.',
+        'pb3.title': 'Red Verificada por Invitación',
+        'pb3.desc':  'Aestyx no es un directorio. Auditamos el registro profesional, código de especialidad y cumplimiento sanitario antes de la admisión. Tus pares en esta red mantienen el mismo estándar de excelencia.',
 
         'pcb.kicker':      'Postularse',
         'pcb.title':       '¿Listo para acceder a pacientes globales?',
