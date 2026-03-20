@@ -7,6 +7,7 @@
   <meta name="description" content="The world's first AI aesthetics intelligence platform. World-class Brazilian specialists. Your best version awaits.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
   <style>
     /* ===== V2: EARTHY PURPLE — MODERN SOPHISTICATION ===== */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -1065,6 +1066,44 @@
       border-radius: 20px;
     }
 
+    /* ── LUCIDE ICON SIZING ── */
+    .vp-icon svg  { width: 28px; height: 28px; stroke: var(--purple); stroke-width: 1.5; }
+    .proc-icon svg { width: 30px; height: 30px; stroke: var(--gold); stroke-width: 1.5; }
+    .pb-icon svg  { width: 26px; height: 26px; stroke: var(--purple); stroke-width: 1.5; }
+    .fc-icon svg  { width: 20px; height: 20px; stroke: var(--purple); stroke-width: 1.75; }
+    .sv-icon-wrap svg { width: 24px; height: 24px; stroke: var(--white); stroke-width: 1.5; }
+
+    /* ── SCORE TOOLTIP ── */
+    .score-row { display: flex; align-items: center; gap: 7px; }
+    .score-info { position: relative; display: flex; align-items: center; cursor: pointer; outline: none; }
+    .score-info svg { width: 13px; height: 13px; stroke: rgba(255,255,255,0.4); stroke-width: 2; flex-shrink: 0; }
+    .score-tooltip {
+      position: absolute;
+      bottom: calc(100% + 10px);
+      right: -8px;
+      width: 238px;
+      background: var(--text);
+      color: rgba(255,255,255,0.75);
+      font-size: 0.71rem;
+      line-height: 1.65;
+      padding: 12px 14px;
+      border-radius: 8px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s;
+      z-index: 30;
+      letter-spacing: 0.01em;
+    }
+    .score-tooltip::after {
+      content: '';
+      position: absolute;
+      top: 100%; right: 14px;
+      border: 6px solid transparent;
+      border-top-color: var(--text);
+    }
+    .score-info:hover .score-tooltip,
+    .score-info:focus-within .score-tooltip { opacity: 1; pointer-events: auto; }
+
     /* ── ANIMATIONS ── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(24px); }
@@ -1120,7 +1159,7 @@
       <li><a href="#security" data-i18n="nav.security"></a></li>
       <li><a href="#procedures" data-i18n="nav.procedures"></a></li>
       <li><a href="#brazil" data-i18n="nav.brazil"></a></li>
-      <li><a href="#partners" data-i18n="nav.partners"></a></li>
+      <li><a href="lp/partners.html" data-i18n="nav.partners"></a></li>
     </ul>
     <div class="nav-right">
       <div class="lang-selector">
@@ -1166,7 +1205,13 @@
             <div class="bp-header-title">Aestyx Blueprint™</div>
           </div>
           <div class="bp-score-badge">
-            <div class="bp-score-num">84<span style="font-size:1rem">/100</span></div>
+            <div class="score-row">
+              <div class="bp-score-num">84<span style="font-size:1rem">/100</span></div>
+              <div class="score-info" tabindex="0" aria-label="Score info">
+                <i data-lucide="info"></i>
+                <div class="score-tooltip" data-i18n="ui.score.tooltip"></div>
+              </div>
+            </div>
             <div class="bp-score-lbl" data-i18n="ui.score.lbl"></div>
           </div>
         </div>
@@ -1206,7 +1251,7 @@
       </div>
 
       <div class="floating-card">
-        <div class="fc-icon">🩺</div>
+        <div class="fc-icon"><i data-lucide="stethoscope"></i></div>
         <div class="fc-text">
           <div class="fc-label" data-i18n="ui.fc.label"></div>
           <div class="fc-val" data-i18n="ui.fc.val"></div>
@@ -1226,19 +1271,19 @@
     </div>
     <div class="vp-grid">
       <div class="vp-card">
-        <span class="vp-icon">💎</span>
+        <span class="vp-icon"><i data-lucide="gem"></i></span>
         <div class="vp-number">60<span class="vp-unit">–70%</span></div>
         <div class="vp-title" data-i18n="vp1.title"></div>
         <p class="vp-desc" data-i18n="vp1.desc"></p>
       </div>
       <div class="vp-card">
-        <span class="vp-icon">🏆</span>
+        <span class="vp-icon"><i data-lucide="award"></i></span>
         <div class="vp-number">#<span style="font-size:2rem">2</span></div>
         <div class="vp-title" data-i18n="vp2.title"></div>
         <p class="vp-desc" data-i18n="vp2.desc"></p>
       </div>
       <div class="vp-card">
-        <span class="vp-icon">🤖</span>
+        <span class="vp-icon"><i data-lucide="cpu"></i></span>
         <div class="vp-number" style="font-size:2rem;line-height:1.3" data-i18n="vp3.num"></div>
         <div class="vp-title" data-i18n="vp3.title"></div>
         <p class="vp-desc" data-i18n="vp3.desc"></p>
@@ -1335,7 +1380,7 @@
 
     <div class="sv-grid">
       <div class="sv-card">
-        <div class="sv-icon-wrap">🔐</div>
+        <div class="sv-icon-wrap"><i data-lucide="shield-check"></i></div>
         <div>
           <div class="sv-title" data-i18n="sv1.title"></div>
           <p class="sv-desc" data-i18n="sv1.desc"></p>
@@ -1343,7 +1388,7 @@
         </div>
       </div>
       <div class="sv-card">
-        <div class="sv-icon-wrap">👁</div>
+        <div class="sv-icon-wrap"><i data-lucide="eye-off"></i></div>
         <div>
           <div class="sv-title" data-i18n="sv2.title"></div>
           <p class="sv-desc" data-i18n="sv2.desc"></p>
@@ -1351,7 +1396,7 @@
         </div>
       </div>
       <div class="sv-card">
-        <div class="sv-icon-wrap">🏦</div>
+        <div class="sv-icon-wrap"><i data-lucide="landmark"></i></div>
         <div>
           <div class="sv-title" data-i18n="sv3.title"></div>
           <p class="sv-desc" data-i18n="sv3.desc"></p>
@@ -1359,7 +1404,7 @@
         </div>
       </div>
       <div class="sv-card">
-        <div class="sv-icon-wrap">✦</div>
+        <div class="sv-icon-wrap"><i data-lucide="badge-check"></i></div>
         <div>
           <div class="sv-title" data-i18n="sv4.title"></div>
           <p class="sv-desc" data-i18n="sv4.desc"></p>
@@ -1382,7 +1427,7 @@
     <div class="proc-grid">
       <!-- Facial -->
       <div class="proc-card">
-        <span class="proc-icon">✦</span>
+        <span class="proc-icon"><i data-lucide="sparkles"></i></span>
         <div class="proc-category" data-i18n="p1.cat"></div>
         <div class="proc-tagline" data-i18n="p1.tag"></div>
         <ul class="proc-list" data-i18n-list="p1.items"></ul>
@@ -1390,7 +1435,7 @@
       </div>
       <!-- Skin -->
       <div class="proc-card">
-        <span class="proc-icon">◈</span>
+        <span class="proc-icon"><i data-lucide="zap"></i></span>
         <div class="proc-category" data-i18n="p2.cat"></div>
         <div class="proc-tagline" data-i18n="p2.tag"></div>
         <ul class="proc-list" data-i18n-list="p2.items"></ul>
@@ -1398,7 +1443,7 @@
       </div>
       <!-- Body -->
       <div class="proc-card">
-        <span class="proc-icon">◇</span>
+        <span class="proc-icon"><i data-lucide="layers"></i></span>
         <div class="proc-category" data-i18n="p3.cat"></div>
         <div class="proc-tagline" data-i18n="p3.tag"></div>
         <ul class="proc-list" data-i18n-list="p3.items"></ul>
@@ -1406,7 +1451,7 @@
       </div>
       <!-- Hair -->
       <div class="proc-card">
-        <span class="proc-icon">❋</span>
+        <span class="proc-icon"><i data-lucide="feather"></i></span>
         <div class="proc-category" data-i18n="p4.cat"></div>
         <div class="proc-tagline" data-i18n="p4.tag"></div>
         <ul class="proc-list" data-i18n-list="p4.items"></ul>
@@ -1469,47 +1514,6 @@
     </div>
   </section>
 
-  <!-- ══ MEDICAL PARTNERS ══ -->
-  <section class="partners" id="partners">
-    <div class="partners-header">
-      <div>
-        <div class="section-kicker" data-i18n="part.kicker"></div>
-        <div class="section-title" data-i18n="part.title"></div>
-      </div>
-      <p class="section-lead" data-i18n="part.lead"></p>
-    </div>
-
-    <div class="partner-benefits">
-      <div class="pb-card">
-        <span class="pb-icon">🌍</span>
-        <div class="pb-title" data-i18n="pb1.title"></div>
-        <p class="pb-desc" data-i18n="pb1.desc"></p>
-      </div>
-      <div class="pb-card">
-        <span class="pb-icon">✦</span>
-        <div class="pb-title" data-i18n="pb2.title"></div>
-        <p class="pb-desc" data-i18n="pb2.desc"></p>
-      </div>
-      <div class="pb-card">
-        <span class="pb-icon">🤖</span>
-        <div class="pb-title" data-i18n="pb3.title"></div>
-        <p class="pb-desc" data-i18n="pb3.desc"></p>
-      </div>
-    </div>
-
-    <div class="partner-cta-bar">
-      <div class="pcb-left">
-        <div class="pcb-kicker" data-i18n="pcb.kicker"></div>
-        <div class="pcb-title" data-i18n="pcb.title"></div>
-      </div>
-      <div class="pcb-form">
-        <input type="email" class="pcb-input" id="partner-email" data-i18n-placeholder="pcb.placeholder">
-        <button class="btn-gold" onclick="handleWaitlist('partner-email','partner-success')" data-i18n="pcb.btn"></button>
-      </div>
-    </div>
-    <p class="waitlist-success" id="partner-success" style="display:none;margin-top:1rem;text-align:center;color:var(--gold)" data-i18n="waitlist.success"></p>
-  </section>
-
   <!-- ══ ELITE WAITLIST ══ -->
   <section class="cta-section" id="waitlist">
     <div class="section-kicker" data-i18n="cta.kicker"></div>
@@ -1532,7 +1536,7 @@
     <ul class="footer-links">
       <li><a href="#" data-i18n="footer.privacy"></a></li>
       <li><a href="#" data-i18n="footer.terms"></a></li>
-      <li><a href="#partners" data-i18n="footer.partners"></a></li>
+      <li><a href="lp/partners.html" data-i18n="footer.partners"></a></li>
       <li><a href="#" data-i18n="footer.contact"></a></li>
     </ul>
     <div class="footer-copy" data-i18n="footer.copy"></div>
@@ -1551,15 +1555,16 @@
         'nav.partners':  'Partners',
         'nav.cta':       'Join Waitlist',
 
-        'hero.h1':  'High-Performance Aesthetics.<br>Powered by <span class="highlight">Clinical Intelligence.</span>',
-        'hero.sub': 'Aestyx is the world\'s first AI aesthetics intelligence platform. We match you to Brazil\'s elite surgical ecosystem — where world-class training, cutting-edge technology, and currency arbitrage converge into your highest possible outcome.',
+        'hero.h1':  'Reach Your<br><span class="highlight">Aesthetic Peak.</span>',
+        'hero.sub': 'AI-Powered Blueprints matched with Brazil\'s world-renowned surgical mastery — at 70% less than you\'d pay in the US or Europe.',
 
         'waitlist.placeholder': 'Your email address',
         'waitlist.btn':         'Request Access',
         'waitlist.success':     '✓ You\'re on the list. We\'ll be in touch.',
 
-        'ui.stat':       'Aesthetic Peak Score',
-        'ui.score.lbl':  'Aestyx Score',
+        'ui.stat':          'Aesthetic Peak Score',
+        'ui.score.lbl':     'Aestyx Score',
+        'ui.score.tooltip': 'Aestyx Score: A proprietary clinical metric calculating facial symmetry, golden ratio proportions, and surgical viability.',
         'ui.goal':       'Aesthetic Peak Blueprint',
         'ui.cat1':       'Facial Refinement',
         'ui.cat1p':      'Rhinoplasty · Facelift',
@@ -1703,15 +1708,16 @@
         'nav.partners':  'Parceiros',
         'nav.cta':       'Lista de Espera',
 
-        'hero.h1':  'Estética de Alta Performance.<br>Movida por <span class="highlight">Inteligência Clínica.</span>',
-        'hero.sub': 'Aestyx é a primeira plataforma mundial de inteligência estética com IA. Conectamos você ao ecossistema cirúrgico de elite do Brasil — onde formação de classe mundial, tecnologia de ponta e arbitragem cambial convergem para o seu melhor resultado possível.',
+        'hero.h1':  'Chegue ao seu<br><span class="highlight">Auge Estético.</span>',
+        'hero.sub': 'A plataforma que mapeia sua melhor versão via IA e te conecta exclusivamente à elite médica do Brasil.',
 
         'waitlist.placeholder': 'Seu endereço de e-mail',
         'waitlist.btn':         'Solicitar Acesso',
         'waitlist.success':     '✓ Você está na lista. Entraremos em contato.',
 
-        'ui.stat':       'Pontuação de Pico Estético',
-        'ui.score.lbl':  'Aestyx Score',
+        'ui.stat':          'Pontuação de Pico Estético',
+        'ui.score.lbl':     'Aestyx Score',
+        'ui.score.tooltip': 'Aestyx Score: Métrica clínica proprietária que calcula simetria facial, proporções da regra áurea e viabilidade cirúrgica.',
         'ui.goal':       'Blueprint de Pico Estético',
         'ui.cat1':       'Refinamento Facial',
         'ui.cat1p':      'Rinoplastia · Lifting',
@@ -1855,15 +1861,16 @@
         'nav.partners':  'Socios',
         'nav.cta':       'Lista de Espera',
 
-        'hero.h1':  'Estética de Alto Rendimiento.<br>Impulsada por <span class="highlight">Inteligencia Clínica.</span>',
-        'hero.sub': 'Aestyx es la primera plataforma mundial de inteligencia estética con IA. Te conectamos con el ecosistema quirúrgico de élite de Brasil — donde formación de clase mundial, tecnología avanzada y arbitraje cambiario convergen en tu mejor resultado posible.',
+        'hero.h1':  'Alcanza tu<br><span class="highlight">Máximo Nivel Estético.</span>',
+        'hero.sub': 'Diagnósticos de precisión por IA y acceso directo a los mejores cirujanos de Brasil.',
 
         'waitlist.placeholder': 'Tu dirección de e-mail',
         'waitlist.btn':         'Solicitar Acceso',
         'waitlist.success':     '✓ Estás en la lista. Te contactaremos pronto.',
 
-        'ui.stat':       'Puntuación de Pico Estético',
-        'ui.score.lbl':  'Aestyx Score',
+        'ui.stat':          'Puntuación de Pico Estético',
+        'ui.score.lbl':     'Aestyx Score',
+        'ui.score.tooltip': 'Aestyx Score: Métrica clínica propietaria que calcula la simetría facial, las proporciones de la proporción áurea y la viabilidad quirúrgica.',
         'ui.goal':       'Blueprint de Pico Estético',
         'ui.cat1':       'Refinamiento Facial',
         'ui.cat1p':      'Rinoplastia · Lifting',
@@ -2046,6 +2053,10 @@
 
     const saved = (() => { try { return localStorage.getItem('aestyx-lang'); } catch(e) { return null; } })();
     setLanguage(T[saved] ? saved : 'en');
+
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof lucide !== 'undefined') lucide.createIcons();
+    });
   </script>
 </body>
 </html>

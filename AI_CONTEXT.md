@@ -20,3 +20,11 @@ You must reference these global skills for every task:
 - **Code/Commits/Docs:** ENGLISH only.
 - **User Explanations:** PORTUGUESE only.
 - **Role:** Gemini is the Lead Architect. Claude is the Code Executor.
+
+## 🏗️ Architecture & UI Integrity Rules (IMMUTABLE)
+
+- **UI Stability:** Never modify existing CSS variables or the global style guide unless explicitly requested.
+- **Atomic Styles:** Use ONLY the pre-defined variables (`--purple`, `--gold`, etc.). No hardcoded hex codes in new elements.
+- **Component-First (HTML Edition):** When splitting files, common elements (Nav, Footer, Head) must be identical across all `.html` files.
+- **Modular Policy:** Files over 500 lines MUST be refactored into modular components or separate pages.
+- **Iconography:** Standardize on Lucide Icons. Remove all emojis from UI elements.
