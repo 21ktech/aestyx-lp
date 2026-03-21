@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aestyx &mdash; Financing Your Best Version</title>
+  <meta name="description" content="Aestyx Flex&#8482; &mdash; Smart medical financing for world-class Brazilian surgery. Fixed monthly installments, no punitive interest. Compare US vs Brazil costs.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+  <link rel="stylesheet" href="css/shared.css">
+</head>
+<body>
+
+  <!-- CONSTRUCTION BANNER -->
+  <div class="construction-banner">
+    <div class="phase-pill">
+      <div class="phase-dot"></div>
+      <span data-i18n="phase.label"></span>
+    </div>
+    <span class="banner-text" data-i18n="banner"></span>
+  </div>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <span class="logo-dot"></span>
+      AESTYX
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#value" data-i18n="nav.value"></a></li>
+      <li><a href="index.html#security" data-i18n="nav.security"></a></li>
+      <li><a href="index.html#procedures" data-i18n="nav.procedures"></a></li>
+      <li><a href="index.html#brazil" data-i18n="nav.brazil"></a></li>
+      <li><a href="financing.html" class="active" data-i18n="nav.financing"></a></li>
+      <li><a href="lp/partners.html" data-i18n="nav.partners"></a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-selector">
+        <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
+        <button class="lang-btn" data-lang="pt" onclick="setLanguage('pt')">PT</button>
+        <button class="lang-btn" data-lang="es" onclick="setLanguage('es')">ES</button>
+      </div>
+      <a href="index.html#waitlist" class="nav-cta" data-i18n="nav.cta"></a>
+    </div>
+  </nav>
+
+  <!-- ══ PAGE HERO ══ -->
+  <div class="page-hero">
+    <div class="page-hero-content">
+      <div class="page-hero-eyebrow">
+        <div class="eyebrow-dot"></div>
+        <span data-i18n="fin.hero.eyebrow"></span>
+      </div>
+      <h1 data-i18n="fin.hero.h1"></h1>
+      <p class="page-hero-sub" data-i18n="fin.hero.sub"></p>
+      <div class="waitlist-form">
+        <input type="email" class="waitlist-input" id="hero-email" data-i18n-placeholder="waitlist.placeholder">
+        <button class="btn-primary" onclick="handleWaitlist('hero-email','hero-success')">
+          <span data-i18n="waitlist.btn"></span>
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </button>
+      </div>
+      <p class="waitlist-success" id="hero-success" style="display:none;" data-i18n="waitlist.success"></p>
+    </div>
+
+    <!-- Hero visual: stat cards -->
+    <div class="ph-visual">
+      <div class="ph-stat-card">
+        <div class="ph-stat-icon"><i data-lucide="trending-down"></i></div>
+        <div>
+          <div class="ph-stat-label">Rhinoplasty Savings</div>
+          <div class="ph-stat-val">83% &mdash; $4,800 vs $29,000</div>
+        </div>
+      </div>
+      <div class="ph-stat-card">
+        <div class="ph-stat-icon"><i data-lucide="calendar"></i></div>
+        <div>
+          <div class="ph-stat-label">Aestyx Flex&#8482; from</div>
+          <div class="ph-stat-val">$475 / month &times; 12</div>
+        </div>
+      </div>
+      <div class="ph-stat-card">
+        <div class="ph-stat-icon"><i data-lucide="shield-check"></i></div>
+        <div>
+          <div class="ph-stat-label">Payment model</div>
+          <div class="ph-stat-val">Escrow-Protected &middot; Fixed Rate</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ VERIFY ROW ══ -->
+  <div class="verify-row">
+    <div class="verify-badge">
+      <i data-lucide="badge-check"></i>
+      <span data-i18n="badge.crm"></span>
+    </div>
+    <div class="verify-divider"></div>
+    <div class="verify-badge">
+      <i data-lucide="stethoscope"></i>
+      <span data-i18n="badge.rqe"></span>
+    </div>
+    <div class="verify-divider"></div>
+    <div class="verify-badge">
+      <i data-lucide="shield-check"></i>
+      <span data-i18n="badge.enc"></span>
+    </div>
+    <div class="verify-divider"></div>
+    <div class="verify-badge">
+      <i data-lucide="landmark"></i>
+      <span data-i18n="badge.escrow"></span>
+    </div>
+  </div>
+
+  <!-- ══ DREAM CALCULATOR ══ -->
+  <section class="calculator-section" id="calculator">
+    <div class="calc-intro">
+      <div class="section-kicker" data-i18n="calc.kicker"></div>
+      <div class="section-title" data-i18n="calc.title"></div>
+      <p class="section-lead" data-i18n="calc.lead"></p>
+    </div>
+
+    <!-- Procedure Selector -->
+    <div class="calc-selector">
+      <button class="proc-btn active" data-proc="rhinoplasty" onclick="selectProcedure('rhinoplasty')">
+        <i data-lucide="sparkles"></i>
+        <span data-i18n="calc.proc.rhinoplasty"></span>
+      </button>
+      <button class="proc-btn" data-proc="facelift" onclick="selectProcedure('facelift')">
+        <i data-lucide="star"></i>
+        <span data-i18n="calc.proc.facelift"></span>
+      </button>
+      <button class="proc-btn" data-proc="lipo_hd" onclick="selectProcedure('lipo_hd')">
+        <i data-lucide="layers"></i>
+        <span data-i18n="calc.proc.lipo_hd"></span>
+      </button>
+    </div>
+
+    <!-- Comparison Cards -->
+    <div class="calc-comparison">
+
+      <!-- US / EU Card -->
+      <div class="compare-card">
+        <div class="cc-badge" data-i18n="calc.us.badge"></div>
+        <div class="cc-price" id="us-price">$29,000</div>
+        <div class="cc-label" data-i18n="calc.us.label"></div>
+        <div class="cc-details">
+          <div class="cc-detail">
+            <i data-lucide="alert-circle"></i>
+            <span data-i18n="calc.us.d1"></span>
+          </div>
+          <div class="cc-detail">
+            <i data-lucide="x-circle"></i>
+            <span data-i18n="calc.us.d2"></span>
+          </div>
+          <div class="cc-detail">
+            <i data-lucide="minus-circle"></i>
+            <span data-i18n="calc.us.d3"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Savings Center -->
+      <div class="savings-center">
+        <div class="savings-label" data-i18n="calc.savings.label"></div>
+        <div class="savings-pct" id="savings-pct">83%</div>
+        <div class="savings-bar-bg">
+          <div class="savings-bar-fill" id="savings-bar" style="width:83%"></div>
+        </div>
+        <div class="savings-reallocated" id="savings-amount">$24,200</div>
+        <div class="savings-sub" data-i18n="calc.savings.sub"></div>
+      </div>
+
+      <!-- Aestyx Brazil Card -->
+      <div class="compare-card compare-br">
+        <div class="cc-badge cc-badge-gold" data-i18n="calc.br.badge"></div>
+        <div class="cc-price" id="br-price">$4,800</div>
+        <div class="cc-label" data-i18n="calc.br.label"></div>
+        <div class="cc-installment" id="br-installment">or 12 &times; $475/mo via Aestyx Flex&#8482;</div>
+        <div class="cc-details">
+          <div class="cc-detail">
+            <i data-lucide="check-circle"></i>
+            <span data-i18n="calc.br.d1"></span>
+          </div>
+          <div class="cc-detail">
+            <i data-lucide="check-circle"></i>
+            <span data-i18n="calc.br.d2"></span>
+          </div>
+          <div class="cc-detail">
+            <i data-lucide="check-circle"></i>
+            <span data-i18n="calc.br.d3"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="calc-disclaimer" data-i18n="calc.disclaimer"></p>
+  </section>
+
+  <!-- ══ FAQ ══ -->
+  <section class="faq-section" id="faq">
+    <div class="faq-intro">
+      <div class="section-kicker" data-i18n="fin.faq.kicker"></div>
+      <div class="section-title" data-i18n="fin.faq.title"></div>
+    </div>
+    <div class="faq-list" id="faq-list">
+      <!-- Rendered by renderFAQ(lang) -->
+    </div>
+  </section>
+
+  <!-- ══ CTA / WAITLIST ══ -->
+  <section class="cta-section" id="waitlist">
+    <div class="section-kicker" data-i18n="cta.kicker"></div>
+    <div class="section-title" data-i18n="cta.title"></div>
+    <p class="section-lead" data-i18n="cta.lead"></p>
+    <div class="cta-waitlist-form">
+      <input type="email" class="waitlist-input" id="cta-email" data-i18n-placeholder="waitlist.placeholder">
+      <button class="btn-primary" onclick="handleWaitlist('cta-email','cta-success')">
+        <span data-i18n="waitlist.btn"></span>
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </button>
+    </div>
+    <p class="waitlist-success" id="cta-success" style="display:none;" data-i18n="waitlist.success"></p>
+    <p class="cta-note" data-i18n="cta.note"></p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="index.html" class="footer-logo"><span class="logo-dot"></span>AESTYX</a>
+    <ul class="footer-links">
+      <li><a href="#" data-i18n="footer.privacy"></a></li>
+      <li><a href="#" data-i18n="footer.terms"></a></li>
+      <li><a href="financing.html" class="active" data-i18n="nav.financing"></a></li>
+      <li><a href="lp/partners.html" data-i18n="footer.partners"></a></li>
+      <li><a href="#" data-i18n="footer.contact"></a></li>
+    </ul>
+    <div class="footer-copy" data-i18n="footer.copy"></div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script>
+    /* ── CALCULATOR DATA ── */
+    var PROC_DATA = {
+      rhinoplasty: { us: 29000, br_cash: 4800,  br_monthly: 475,  savings_pct: 83 },
+      facelift:    { us: 45000, br_cash: 20000, br_monthly: 1900, savings_pct: 56 },
+      lipo_hd:     { us: 12500, br_cash: 9500,  br_monthly: 920,  savings_pct: 24 }
+    };
+
+    function formatCurrency(n) {
+      /* Format integer as $X,XXX */
+      return '$' + n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    }
+
+    function selectProcedure(proc) {
+      var data = PROC_DATA[proc];
+      if (!data) return;
+
+      /* Update active button */
+      document.querySelectorAll('.proc-btn').forEach(function(btn) {
+        btn.classList.toggle('active', btn.dataset.proc === proc);
+      });
+
+      /* Update price displays */
+      document.getElementById('us-price').textContent    = formatCurrency(data.us);
+      document.getElementById('br-price').textContent    = formatCurrency(data.br_cash);
+      document.getElementById('savings-pct').textContent = data.savings_pct + '%';
+      document.getElementById('savings-bar').style.width = data.savings_pct + '%';
+
+      var saved = data.us - data.br_cash;
+      document.getElementById('savings-amount').textContent = formatCurrency(saved);
+
+      /* Update installment line using current language */
+      var lang = document.documentElement.lang || 'en';
+      var tr   = window.T[lang] || window.T['en'];
+      var procLabel = tr['calc.proc.' + proc] || proc;
+      document.getElementById('br-installment').innerHTML =
+        'or 12 &times; ' + formatCurrency(data.br_monthly) + '/mo via Aestyx Flex&#8482;';
+
+      /* Re-init Lucide (icons inside re-rendered elements) */
+      if (typeof lucide !== 'undefined') lucide.createIcons();
+    }
+
+    /* ── PAGE-SPECIFIC TRANSLATIONS ── */
+    var PAGE_T = {
+      en: {
+        'fin.hero.eyebrow': 'Aestyx Flex&#8482; &mdash; Smart Medical Financing',
+        'fin.hero.h1':      'World-class surgery.<br><span class="highlight">Structured for you.</span>',
+        'fin.hero.sub':     'Access Brazil\'s elite surgical ecosystem &mdash; and finance your transformation with fixed monthly installments, no punitive interest.',
+
+        'calc.kicker': 'Dream Calculator',
+        'calc.title':  'How much could you<br><span class="accent">reallocate?</span>',
+        'calc.lead':   'Select a procedure and see the real-world price difference between the US/EU market and Aestyx Brazil &mdash; plus your installment options via Aestyx Flex&#8482;.',
+
+        'calc.proc.rhinoplasty': 'Rhinoplasty',
+        'calc.proc.facelift':    'Facelift',
+        'calc.proc.lipo_hd':     'HD Liposuction',
+
+        'calc.us.badge': 'US / EU Market',
+        'calc.us.label': 'Upfront &middot; No installment options',
+        'calc.us.d1':    'High-interest medical loans (14&ndash;27% APR)',
+        'calc.us.d2':    'No structured installment plans',
+        'calc.us.d3':    'Out-of-pocket deductibles',
+
+        'calc.br.badge': 'Aestyx Brazil',
+        'calc.br.label': 'Cash price &middot; or flexible installments',
+        'calc.br.d1':    'Fixed monthly via Aestyx Flex&#8482;',
+        'calc.br.d2':    'No deferred-interest traps',
+        'calc.br.d3':    'Escrow-protected payment flow',
+
+        'calc.savings.label': 'Wealth Reallocated',
+        'calc.savings.sub':   'redirected toward your outcome',
+
+        'calc.disclaimer': 'Prices based on 2025&ndash;2026 market averages. Source: ASPS, SBCP, ISAPS, Bookimed. Individual quotes provided exclusively by your matched specialist via the Aestyx platform. Exchange rate: 1 USD &asymp; R$5.25.',
+
+        'fin.faq.kicker': 'Frequently Asked',
+        'fin.faq.title':  'Everything you need to know<br>about <span class="accent">Aestyx Flex&#8482;.</span>',
+
+        'cta.kicker': 'Elite Waitlist',
+        'cta.title':  'Be among the first to<br><span class="accent">reach your 100%.</span>',
+        'cta.lead':   'Aestyx is launching to a curated group of founding members. Early access members receive priority matching, exclusive rates, and lifetime founding status.',
+        'cta.note':   '127+ verified specialists &middot; 18 countries &middot; Launching Phase 1 soon',
+      },
+
+      pt: {
+        'fin.hero.eyebrow': 'Aestyx Flex&#8482; &mdash; Financiamento M&eacute;dico Inteligente',
+        'fin.hero.h1':      'Cirurgia de classe mundial.<br><span class="highlight">Parcelada para voc&ecirc;.</span>',
+        'fin.hero.sub':     'Acesse o ecossistema cir&uacute;rgico de elite do Brasil &mdash; e financie sua transforma&ccedil;&atilde;o em parcelas mensais fixas, sem juros rotativos.',
+
+        'calc.kicker': 'Calculadora de Sonhos',
+        'calc.title':  'Quanto voc&ecirc; poderia<br><span class="accent">realocar?</span>',
+        'calc.lead':   'Selecione um procedimento e veja a diferen&ccedil;a real de pre&ccedil;os entre o mercado EUA/Europa e a Aestyx Brasil &mdash; mais suas op&ccedil;&otilde;es de parcelamento via Aestyx Flex&#8482;.',
+
+        'calc.proc.rhinoplasty': 'Rinoplastia',
+        'calc.proc.facelift':    'Facelift',
+        'calc.proc.lipo_hd':     'Lipoaspira&ccedil;&atilde;o HD',
+
+        'calc.us.badge': 'Mercado EUA / Europa',
+        'calc.us.label': '&Agrave; vista &middot; Sem op&ccedil;&otilde;es de parcelamento',
+        'calc.us.d1':    'Empr&eacute;stimos m&eacute;dicos com juros altos (14&ndash;27% a.a.)',
+        'calc.us.d2':    'Sem planos de parcelamento estruturados',
+        'calc.us.d3':    'Franquias do plano de sa&uacute;de',
+
+        'calc.br.badge': 'Aestyx Brasil',
+        'calc.br.label': 'Pre&ccedil;o &agrave; vista &middot; ou parcelas flex&iacute;veis',
+        'calc.br.d1':    'Parcelas fixas mensais via Aestyx Flex&#8482;',
+        'calc.br.d2':    'Sem armadilhas de juros diferidos',
+        'calc.br.d3':    'Fluxo de pagamento protegido por cust&oacute;dia',
+
+        'calc.savings.label': 'Riqueza Realocada',
+        'calc.savings.sub':   'redirecionada ao seu resultado',
+
+        'calc.disclaimer': 'Pre&ccedil;os baseados em m&eacute;dias de mercado 2025&ndash;2026. Fontes: ASPS, SBCP, ISAPS, Bookimed. Or&ccedil;amentos individuais fornecidos exclusivamente pelo seu especialista via plataforma Aestyx. C&acirc;mbio: 1 USD &asymp; R$5,25.',
+
+        'fin.faq.kicker': 'Perguntas Frequentes',
+        'fin.faq.title':  'Tudo que voc&ecirc; precisa saber<br>sobre o <span class="accent">Aestyx Flex&#8482;.</span>',
+
+        'cta.kicker': 'Lista de Espera de Elite',
+        'cta.title':  'Seja um dos primeiros a<br><span class="accent">alcan&ccedil;ar o seu 100%.</span>',
+        'cta.lead':   'A Aestyx est&aacute; lan&ccedil;ando para um grupo curado de membros fundadores. Membros de acesso antecipado recebem match priorit&aacute;rio, condi&ccedil;&otilde;es exclusivas e status vital&iacute;cio de fundador.',
+        'cta.note':   '127+ especialistas verificados &middot; 18 pa&iacute;ses &middot; Fase 1 lan&ccedil;ando em breve',
+      },
+
+      es: {
+        'fin.hero.eyebrow': 'Aestyx Flex&#8482; &mdash; Financiamiento M&eacute;dico Inteligente',
+        'fin.hero.h1':      'Cirug&iacute;a de clase mundial.<br><span class="highlight">Estructurada para ti.</span>',
+        'fin.hero.sub':     'Accede al ecosistema quir&uacute;rgico de &eacute;lite de Brasil &mdash; y financia tu transformaci&oacute;n con cuotas mensuales fijas, sin intereses punitivos.',
+
+        'calc.kicker': 'Calculadora de Sue&ntilde;os',
+        'calc.title':  '&iquest;Cu&aacute;nto podr&iacute;as<br><span class="accent">reasignar?</span>',
+        'calc.lead':   'Selecciona un procedimiento y observa la diferencia de precios entre el mercado EE.UU./UE y Aestyx Brasil &mdash; m&aacute;s tus opciones de cuotas v&iacute;a Aestyx Flex&#8482;.',
+
+        'calc.proc.rhinoplasty': 'Rinoplastia',
+        'calc.proc.facelift':    'Facelift',
+        'calc.proc.lipo_hd':     'Liposcci&oacute;n HD',
+
+        'calc.us.badge': 'Mercado EE.UU. / UE',
+        'calc.us.label': 'Pago &uacute;nico &middot; Sin opciones de cuotas',
+        'calc.us.d1':    'Pr&eacute;stamos m&eacute;dicos de alto inter&eacute;s (14&ndash;27% APR)',
+        'calc.us.d2':    'Sin planes de cuotas estructuradas',
+        'calc.us.d3':    'Deducibles del seguro m&eacute;dico',
+
+        'calc.br.badge': 'Aestyx Brasil',
+        'calc.br.label': 'Precio al contado &middot; o cuotas flexibles',
+        'calc.br.d1':    'Cuotas fijas mensuales v&iacute;a Aestyx Flex&#8482;',
+        'calc.br.d2':    'Sin trampas de inter&eacute;s diferido',
+        'calc.br.d3':    'Flujo de pago protegido por custodia',
+
+        'calc.savings.label': 'Riqueza Reasignada',
+        'calc.savings.sub':   'redirigida a tu resultado',
+
+        'calc.disclaimer': 'Precios basados en promedios de mercado 2025&ndash;2026. Fuentes: ASPS, SBCP, ISAPS, Bookimed. Presupuestos individuales provistos exclusivamente por tu especialista v&iacute;a plataforma Aestyx. Tipo de cambio: 1 USD &asymp; R$5.25.',
+
+        'fin.faq.kicker': 'Preguntas Frecuentes',
+        'fin.faq.title':  'Todo lo que necesitas saber<br>sobre <span class="accent">Aestyx Flex&#8482;.</span>',
+
+        'cta.kicker': 'Lista de Espera de &Eacute;lite',
+        'cta.title':  'S&eacute; de los primeros en<br><span class="accent">alcanzar tu 100%.</span>',
+        'cta.lead':   'Aestyx est&aacute; lanzando para un grupo curado de miembros fundadores. Los miembros de acceso anticipado reciben match prioritario, condiciones exclusivas y estatus fundador de por vida.',
+        'cta.note':   '127+ especialistas verificados &middot; 18 pa&iacute;ses &middot; Fase 1 lanzando pronto',
+      }
+    };
+
+    /* ── FAQ DATA — 5 questions per language ── */
+    var FAQ_FINANCING = {
+      en: [
+        {
+          q: 'Why is Brazil ranked #2 globally in cosmetic surgery?',
+          a: 'The ISAPS (International Society of Aesthetic Plastic Surgery) ranks Brazil second only to the United States in total cosmetic procedures performed annually. Brazilian surgeons pioneered high-definition liposuction and popularized techniques like the Brazilian Butt Lift, now adopted globally. The SBCP (Sociedade Brasileira de Cirurgia Pl&aacute;stica) requires six years of accredited surgical training &mdash; equivalent to ASPS board certification in the United States. Aestyx exclusively partners with SBCP-certified specialists holding an RQE (Registro de Qualifica&ccedil;&atilde;o de Especialidade), the Brazilian subspecialty registration code.'
+        },
+        {
+          q: 'How do Aestyx Flex&#8482; 12x installments compare to US medical loans?',
+          a: 'US medical financing products (CareCredit, Prosper Healthcare Lending) typically charge 14.99&ndash;26.99% APR, with deferred-interest structures that can retroactively apply full interest if balances aren\'t cleared in the promotional window. Aestyx Flex&#8482; partners offer fixed monthly installments with transparent, upfront terms &mdash; no hidden deferred-interest traps. The result: you pay a predictable amount per month for world-class care, without the financial anxiety of American medical debt.'
+        },
+        {
+          q: 'What does \'83% savings on rhinoplasty\' actually mean for my money?',
+          a: 'A structural rhinoplasty in New York averages $29,000 upfront. The identical procedure with a SBCP-certified specialist in S&atilde;o Paulo averages $4,800 &mdash; a $24,200 difference. That reallocation goes directly into the outcome itself: premium anesthesia, post-operative monitoring, and recovery infrastructure &mdash; not into facility overhead or insurance billing. The Aestyx Flex&#8482; installment option spreads the Brazil price into 12 fixed payments of $475/month, making elite aesthetic medicine financially accessible without debt accumulation.'
+        },
+        {
+          q: 'Is Brazilian surgical quality comparable to New York or London?',
+          a: 'Statistically, yes. SBCP-certified surgeons in Brazil complete the same internationally accredited residency pathways as ASPS-certified surgeons in the US. Brazil\'s specific strengths &mdash; HD liposuction, rhinoplasty, and facelift &mdash; are globally recognized. Complication rates among verified Brazilian specialists are statistically equivalent to US board-certified peers. Aestyx adds a further filter: RQE code verification, patient outcome auditing, and facility sanitary compliance checks before any specialist enters the network.'
+        },
+        {
+          q: 'What is the Aestyx Escrow and how does it protect me?',
+          a: 'All payments processed through Aestyx are held in escrow &mdash; a third-party account where funds are released to the clinic only after confirmed service milestones. This mirrors the financial protection model used by platforms like Airbnb and Upwork. You are never exposed to financial risk: if a service milestone isn\'t met, your funds are protected. This is why Aestyx Escrow Protected is a non-negotiable requirement for all network clinics.'
+        }
+      ],
+      pt: [
+        {
+          q: 'Como a IA da Aestyx seleciona os 127+ especialistas da rede?',
+          a: 'A curadoria Aestyx n&atilde;o &eacute; uma busca gen&eacute;rica. Nossa IA cruza quatro dimens&otilde;es: registro CRM ativo e sem pend&ecirc;ncias, n&uacute;mero RQE de especialidade cir&uacute;rgica (exigido pelo CFM), hist&oacute;rico de resultados cl&iacute;nicos documentados e forma&ccedil;&atilde;o p&oacute;s-graduada (fellowship ou especializa&ccedil;&atilde;o internacional). Apenas 1 em cada 12 candidatos passa por todos os crit&eacute;rios. Isso garante que todo especialista no seu Blueprint&#8482; foi auditado &mdash; n&atilde;o apenas listado.'
+        },
+        {
+          q: 'O que diferencia um especialista Aestyx de uma busca no Google ou Doctoralia?',
+          a: 'Curadoria ativa versus exposi&ccedil;&atilde;o passiva. Plataformas de diret&oacute;rio permitem qualquer m&eacute;dico com CRM ativo se cadastrar e comprar visibilidade. Na Aestyx, o especialista foi selecionado, auditado por crit&eacute;rios objetivos e s&oacute; aparece para pacientes cujo Blueprint&#8482; corresponde exatamente ao perfil cl&iacute;nico do cirurgi&atilde;o. O resultado: sem desperd&iacute;cio de consultas, sem desalinhamento de expectativas.'
+        },
+        {
+          q: 'Posso parcelar em 12x? Qual &eacute; a taxa real e como funciona?',
+          a: 'Sim. Via Aestyx Flex&#8482;, voc&ecirc; acessa parcelas mensais fixas negociadas diretamente com parceiros financeiros especializados em turismo m&eacute;dico. As taxas s&atilde;o transparentes e predefinidas &mdash; sem juros rotativos, sem armadilhas de juros diferidos. Para uma rinoplastia de R$25.200 (equivalente a USD $4.800), o parcelamento em 12x resulta em aproximadamente 12x R$2.478 &mdash; um investimento acess&iacute;vel para o resultado da sua vida.'
+        },
+        {
+          q: 'Como funciona o Aestyx Score e o Blueprint&#8482;?',
+          a: 'Voc&ecirc; envia fotos pelo portal criptografado (AES-256 &mdash; mesmo padr&atilde;o de sistemas hospitalares). Em menos de 12 segundos, nossa IA analisa: simetria facial baseada na Regra &Aacute;urea, propor&ccedil;&otilde;es de Marquardt, viabilidade cir&uacute;rgica e prioriza&ccedil;&atilde;o de procedimentos. O resultado &eacute; um Blueprint&#8482; personalizado: um plano claro com procedimentos priorizados, resultado esperado e uma lista de especialistas verificados cuja expertise corresponde exatamente ao seu caso.'
+        },
+        {
+          q: 'Minha privacidade est&aacute; protegida? Quem v&ecirc; minhas fotos?',
+          a: 'Suas fotos s&atilde;o acessadas exclusivamente por voc&ecirc; e pelo especialista verificado que voc&ecirc; escolher. Toda a an&aacute;lise de IA &eacute; processada de forma anonimizada &mdash; sem funcion&aacute;rios Aestyx visualizando suas imagens. Os dados s&atilde;o protegidos por criptografia AES-256 e nunca s&atilde;o armazenados em texto simples. O Blueprint&#8482; &eacute; vinculado ao seu perfil com autentica&ccedil;&atilde;o multifator. Privacidade absoluta n&atilde;o &eacute; um recurso &mdash; &eacute; a premissa fundamental da plataforma.'
+        }
+      ],
+      es: [
+        {
+          q: '&iquest;Qu&eacute; tan riguroso es el Consejo M&eacute;dico brasile&ntilde;o (SBCP/RQE)?',
+          a: 'El SBCP (Sociedad Brasile&ntilde;a de Cirug&iacute;a Pl&aacute;stica) exige 6 a&ntilde;os de formaci&oacute;n quir&uacute;rgica acreditada, equivalentes a los est&aacute;ndares del ASPS americano. El RQE (Registro de Cualificaci&oacute;n de Especialidad) es el c&oacute;digo oficial de subespecialidad emitido por el CFM: solo cirujanos que completaron residencia espec&iacute;fica y aprobaron evaluaci&oacute;n nacional pueden obtenerlo. Aestyx verifica ambas credenciales &mdash; CRM activo y n&uacute;mero RQE &mdash; antes de admitir cualquier especialista a la red.'
+        },
+        {
+          q: '&iquest;C&oacute;mo protege Aestyx mi inversi&oacute;n financiera?',
+          a: 'Todo pago se retiene en custodia (escrow) hasta que se confirman los hitos de servicio acordados: consulta inicial, confirmaci&oacute;n del procedimiento y post-operatorio de seguimiento. La cl&iacute;nica no recibe los fondos hasta que tu proceso est&eacute; documentado y verificado en la plataforma. Este modelo es id&eacute;ntico al utilizado por Airbnb, Upwork y otras plataformas de alto ticket: la custodia protege al cliente, no al proveedor.'
+        },
+        {
+          q: '&iquest;Qu&eacute; riesgos existen en cirug&iacute;a est&eacute;tica y c&oacute;mo los mit&iacute;ga Aestyx?',
+          a: 'Los riesgos en cirug&iacute;a est&eacute;tica son inherentes al procedimiento quir&uacute;rgico, no al pa&iacute;s donde se realiza. Aestyx mitiga el riesgo de selecci&oacute;n: solo operan cirujanos SBCP/RQE certificados en instalaciones con cumplimiento sanitario auditado por la ANVISA (equivalente brasile&ntilde;o de la FDA). Las tasas de complicaci&oacute;n entre cirujanos SBCP certificados son estad&iacute;sticamente equivalentes a las de sus pares americanos certificados por ASPS.'
+        },
+        {
+          q: '&iquest;Son seguros los implantes y materiales utilizados en Brasil?',
+          a: 'S&iacute;. Todos los implantes en cl&iacute;nicas de la red Aestyx son de marcas internacionalmente certificadas: Mentor, Allergan, Sientra y Motiva, entre otras. La ANVISA (Ag&ecirc;ncia Nacional de Vigil&acirc;ncia Sanit&aacute;ria) homologa los mismos dispositivos que la FDA americana y la EMA europea. Los materiales de anestesia y los equipos quir&uacute;rgicos siguen los mismos est&aacute;ndares internacionales. La diferencia de precio no refleja diferencia en materiales &mdash; refleja la estructura de costos operativos de Brasil versus EE.UU.'
+        },
+        {
+          q: '&iquest;Puedo hacer una consulta virtual antes de viajar?',
+          a: 'S&iacute;. El proceso Aestyx comienza con tu Blueprint&#8482; digital: an&aacute;lisis de fotos v&iacute;a IA, plan de procedimientos y matching con tu especialista &mdash; todo antes de reservar cualquier vuelo. Tu especialista asignado realiza una teleconsulta de validaci&oacute;n donde revisa tu Blueprint&#8482;, aclara expectativas y confirma el plan quir&uacute;rgico. Solo entonces planificas tu viaje a Brasil. Esta secuencia garantiza que llegas preparado, sin sorpresas, con un plan cl&iacute;nico documentado.'
+        }
+      ]
+    };
+
+    /* Merge page translations into window.T */
+    Object.keys(PAGE_T).forEach(function(lang) {
+      if (window.T[lang]) Object.assign(window.T[lang], PAGE_T[lang]);
+    });
+
+    /* ── Render FAQ accordion ── */
+    function renderFAQ(lang) {
+      var list = document.getElementById('faq-list');
+      if (!list) return;
+      var items = FAQ_FINANCING[lang] || FAQ_FINANCING['en'];
+      list.innerHTML = items.map(function(item) {
+        return '<div class="faq-item">' +
+          '<div class="faq-q" onclick="toggleFAQ(this)">' +
+            '<span>' + item.q + '</span>' +
+            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>' +
+          '</div>' +
+          '<div class="faq-a">' + item.a + '</div>' +
+        '</div>';
+      }).join('');
+    }
+
+    function toggleFAQ(el) {
+      var item = el.closest('.faq-item');
+      document.querySelectorAll('.faq-item.open').forEach(function(other) {
+        if (other !== item) other.classList.remove('open');
+      });
+      item.classList.toggle('open');
+    }
+
+    /* ── Page-level language change hook ── */
+    window.onLanguageChange = function(lang) {
+      renderFAQ(lang);
+      /* Re-apply procedure button labels after language switch */
+      var activeBtn = document.querySelector('.proc-btn.active');
+      if (activeBtn) selectProcedure(activeBtn.dataset.proc);
+    };
+
+    /* ── Bootstrap ── */
+    initPage();
+    /* Default procedure */
+    selectProcedure('rhinoplasty');
+  </script>
+</body>
+</html>
