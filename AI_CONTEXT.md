@@ -8,12 +8,28 @@
 
 ## 🛠 Active Skills (Invocation via Antigravity Global)
 
+## 🛠 Active Skills (Invocation via Antigravity Global)
+
 You must reference these global skills for every task:
 
+### Core Execution
+
 1. `@concise-planning`: Always start with a technical plan.
-2. `@nextjs-best-practices` & `@ui-ux-pro-max`: For the Frontend luxury layer.
-3. `@fastapi-pro`: For the Python/AI Backend.
-4. `@git-pushing`: For branch management and conventional commits.
+2. `@lint-and-validate`: Keep the HTML/CSS/JS structure impeccable.
+3. `@git-pushing`: For branch management and conventional commits.
+4. `@systematic-debugging`: To resolve path and logic errors.
+
+### Premium Experience (Frontend & UX)
+
+5. `@nextjs-best-practices` & `@ui-ux-pro-max`: For the Frontend luxury layer.
+6. `@form-cro`: Optimize all conversion points (Waitlist/Specialist Portal).
+7. `@seo-audit`: Technical SEO for global reach.
+
+### Intelligence & Business (Backend & Copy)
+
+8. `@fastapi-pro`: For the Python/AI Backend.
+9. `@ai-agents-architect`: Scaling the Aestyx Blueprint™ logic.
+10. `@copywriting`: High-end, "Earthy Luxury" tone of voice.
 
 ## 🤖 Interaction Protocol
 
