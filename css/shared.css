@@ -162,6 +162,22 @@ nav {
 
 .nav-cta:hover { background: var(--text); transform: translateY(-1px); }
 
+/* ── Mobile nav toggle ── */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--purple);
+  padding: 6px;
+  border-radius: 6px;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
+.nav-toggle:hover { background: rgba(74,59,79,0.07); }
+.nav-toggle svg { width: 22px; height: 22px; display: block; stroke-width: 1.8; }
+
 /* ── HERO ── */
 .hero {
   min-height: 100vh;
@@ -1500,5 +1516,173 @@ footer {
   /* Footer / Nav */
   footer { flex-direction: column; gap: 1.6rem; text-align: center; }
   nav .nav-links { display: none; }
+  nav.nav-open .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 68px;
+    left: 0; right: 0;
+    background: rgba(244,243,245,0.97);
+    backdrop-filter: blur(18px);
+    padding: 0.6rem 5vw 1.2rem;
+    gap: 0;
+    border-bottom: 1px solid rgba(74,59,79,0.1);
+    z-index: 99;
+  }
+  nav.nav-open .nav-links li { border-bottom: 1px solid rgba(74,59,79,0.07); }
+  nav.nav-open .nav-links li:last-child { border-bottom: none; }
+  nav.nav-open .nav-links a { display: block; padding: 0.85rem 0; font-size: 0.9rem; }
+  .nav-toggle { display: flex; }
   .waitlist-form { flex-direction: column; }
+
+  /* Product Stack */
+  .ps-grid { grid-template-columns: repeat(2, 1fr); }
 }
+
+@media (max-width: 480px) {
+  .ps-grid { grid-template-columns: 1fr; }
+  .footer-links { flex-direction: column; gap: 0.8rem; }
+}
+
+/* ── PRODUCT STACK (5 Pillars) ── */
+.product-stack { background: var(--bg-2); }
+
+.ps-intro {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 4rem;
+}
+
+.ps-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.2rem;
+}
+
+@media (max-width: 1200px) {
+  .ps-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.ps-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 2rem 1.6rem;
+  border: 1px solid rgba(74,59,79,0.07);
+  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.ps-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 48px rgba(74,59,79,0.1);
+  border-color: rgba(74,59,79,0.15);
+}
+
+.ps-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(74,59,79,0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--purple);
+  margin-bottom: 0.2rem;
+  flex-shrink: 0;
+}
+
+.ps-icon svg { width: 20px; height: 20px; stroke: var(--purple); stroke-width: 1.75; }
+
+.ps-number {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.1rem;
+}
+
+.ps-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.ps-desc {
+  font-size: 0.79rem;
+  color: var(--text-s);
+  line-height: 1.7;
+  flex: 1;
+}
+
+.ps-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.67rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--purple);
+  text-decoration: none;
+  margin-top: 0.4rem;
+  transition: gap 0.2s;
+}
+
+.ps-link::after { content: '→'; }
+.ps-link:hover { gap: 9px; }
+
+/* ── CLUB PAGE ── */
+.club-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 4rem;
+}
+
+@media (max-width: 960px) {
+  .club-grid { grid-template-columns: 1fr; }
+}
+
+.club-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  border: 1px solid rgba(74,59,79,0.07);
+  text-align: center;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.club-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(74,59,79,0.09); }
+
+.club-icon {
+  width: 56px; height: 56px;
+  border-radius: 14px;
+  background: rgba(74,59,79,0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.4rem;
+  color: var(--purple);
+}
+
+.club-icon svg { width: 24px; height: 24px; stroke: var(--purple); stroke-width: 1.75; }
+
+.club-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.7rem;
+}
+
+.club-desc { font-size: 0.82rem; color: var(--text-s); line-height: 1.75; }
+
+/* ── HOW IT WORKS: JOURNEY SECTION ── */
+.hiw-section { background: var(--white); }
+.hiw-brazil { background: var(--bg); }

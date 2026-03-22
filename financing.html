@@ -28,13 +28,13 @@
       AESTYX
     </a>
     <ul class="nav-links">
-      <li><a href="index.html#value" data-i18n="nav.value"></a></li>
-      <li><a href="index.html#security" data-i18n="nav.security"></a></li>
+      <li><a href="index.html" data-i18n="nav.value"></a></li>
+      <li><a href="security.html" data-i18n="nav.security"></a></li>
       <li><a href="index.html#procedures" data-i18n="nav.procedures"></a></li>
-      <li><a href="index.html#brazil" data-i18n="nav.brazil"></a></li>
-      <li><a href="financing.html" class="active" data-i18n="nav.financing"></a></li>
-      <li><a href="lp/partners.html" data-i18n="nav.partners"></a></li>
     </ul>
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
+      <i data-lucide="menu"></i>
+    </button>
     <div class="nav-right">
       <div class="lang-selector">
         <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
@@ -77,7 +77,7 @@
         <div class="ph-stat-icon"><i data-lucide="calendar"></i></div>
         <div>
           <div class="ph-stat-label">Aestyx Flex&#8482; from</div>
-          <div class="ph-stat-val">$475 / month &times; 12</div>
+          <div class="ph-stat-val">$400 / month &times; 12</div>
         </div>
       </div>
       <div class="ph-stat-card">
@@ -177,7 +177,7 @@
         <div class="cc-badge cc-badge-gold" data-i18n="calc.br.badge"></div>
         <div class="cc-price" id="br-price">$4,800</div>
         <div class="cc-label" data-i18n="calc.br.label"></div>
-        <div class="cc-installment" id="br-installment">or 12 &times; $475/mo via Aestyx Flex&#8482;</div>
+        <div class="cc-installment" id="br-installment">or 12 &times; $400/mo via Aestyx Flex&#8482;</div>
         <div class="cc-details">
           <div class="cc-detail">
             <i data-lucide="check-circle"></i>
@@ -232,7 +232,7 @@
       <li><a href="#" data-i18n="footer.privacy"></a></li>
       <li><a href="#" data-i18n="footer.terms"></a></li>
       <li><a href="financing.html" class="active" data-i18n="nav.financing"></a></li>
-      <li><a href="lp/partners.html" data-i18n="footer.partners"></a></li>
+      <li><a href="partners.html" data-i18n="footer.partners"></a></li>
       <li><a href="#" data-i18n="footer.contact"></a></li>
     </ul>
     <div class="footer-copy" data-i18n="footer.copy"></div>
@@ -242,7 +242,7 @@
   <script>
     /* ── CALCULATOR DATA ── */
     var PROC_DATA = {
-      rhinoplasty: { us: 29000, br_cash: 4800,  br_monthly: 475,  savings_pct: 83 },
+      rhinoplasty: { us: 29000, br_cash: 4800,  br_monthly: 400,  savings_pct: 83 },
       facelift:    { us: 45000, br_cash: 20000, br_monthly: 1900, savings_pct: 56 },
       lipo_hd:     { us: 12500, br_cash: 9500,  br_monthly: 920,  savings_pct: 24 }
     };
@@ -414,7 +414,7 @@
         },
         {
           q: 'What does \'83% savings on rhinoplasty\' actually mean for my money?',
-          a: 'A structural rhinoplasty in New York averages $29,000 upfront. The identical procedure with a SBCP-certified specialist in S&atilde;o Paulo averages $4,800 &mdash; a $24,200 difference. That reallocation goes directly into the outcome itself: premium anesthesia, post-operative monitoring, and recovery infrastructure &mdash; not into facility overhead or insurance billing. The Aestyx Flex&#8482; installment option spreads the Brazil price into 12 fixed payments of $475/month, making elite aesthetic medicine financially accessible without debt accumulation.'
+          a: 'A structural rhinoplasty in New York averages $29,000 upfront. The identical procedure with a SBCP-certified specialist in S&atilde;o Paulo averages $4,800 &mdash; a $24,200 difference. That reallocation goes directly into the outcome itself: premium anesthesia, post-operative monitoring, and recovery infrastructure &mdash; not into facility overhead or insurance billing. The Aestyx Flex&#8482; installment option spreads the Brazil price into 12 fixed payments of $400/month, making elite aesthetic medicine financially accessible without debt accumulation.'
         },
         {
           q: 'Is Brazilian surgical quality comparable to New York or London?',
@@ -436,7 +436,7 @@
         },
         {
           q: 'Posso parcelar em 12x? Qual &eacute; a taxa real e como funciona?',
-          a: 'Sim. Via Aestyx Flex&#8482;, voc&ecirc; acessa parcelas mensais fixas negociadas diretamente com parceiros financeiros especializados em turismo m&eacute;dico. As taxas s&atilde;o transparentes e predefinidas &mdash; sem juros rotativos, sem armadilhas de juros diferidos. Para uma rinoplastia de R$25.200 (equivalente a USD $4.800), o parcelamento em 12x resulta em aproximadamente 12x R$2.478 &mdash; um investimento acess&iacute;vel para o resultado da sua vida.'
+          a: 'Sim. Via Aestyx Flex&#8482;, voc&ecirc; acessa parcelas mensais fixas negociadas diretamente com parceiros financeiros especializados em turismo m&eacute;dico. As taxas s&atilde;o transparentes e predefinidas &mdash; sem juros rotativos, sem armadilhas de juros diferidos. Para uma rinoplastia de R$25.200 (equivalente a USD $4.800), o parcelamento em 12x resulta em aproximadamente 12x R$2.100 &mdash; um investimento acess&iacute;vel para o resultado da sua vida.'
         },
         {
           q: 'Como funciona o Aestyx Score e o Blueprint&#8482;?',

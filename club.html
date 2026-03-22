@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aestyx Club &mdash; Me vs Me</title>
+  <meta name="description" content="Aestyx Club — Performance tracking and 'Me vs Me' gamification. Your aesthetic evolution, quantified and celebrated over time.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+  <link rel="stylesheet" href="css/shared.css">
+  <style>
+    .club-coming-soon {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: rgba(201,185,156,0.1);
+      border: 1px solid rgba(201,185,156,0.35);
+      padding: 6px 14px;
+      border-radius: 20px;
+      margin-bottom: 1.8rem;
+    }
+    .club-coming-soon-dot {
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--gold);
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+    .club-score-preview {
+      background: var(--purple);
+      border-radius: 20px;
+      padding: 3rem 2.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .club-score-preview::before {
+      content: '';
+      position: absolute;
+      top: -40px; right: -40px;
+      width: 180px; height: 180px;
+      border-radius: 50%;
+      background: rgba(201,185,156,0.06);
+    }
+    .csp-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    .csp-score {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 5rem;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .csp-score span { font-size: 2rem; color: var(--gold); }
+    .csp-sublabel {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.45);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .csp-progress {
+      margin-top: 2rem;
+    }
+    .csp-progress-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 0.6rem;
+    }
+    .csp-bar-bg {
+      height: 6px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .csp-bar-fill {
+      height: 100%;
+      width: 84%;
+      background: linear-gradient(90deg, var(--gold), rgba(201,185,156,0.6));
+      border-radius: 3px;
+    }
+    .csp-delta {
+      margin-top: 1.4rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.55);
+    }
+    .csp-delta strong { color: var(--gold); }
+  </style>
+</head>
+<body>
+
+  <!-- CONSTRUCTION BANNER -->
+  <div class="construction-banner">
+    <div class="phase-pill">
+      <div class="phase-dot"></div>
+      <span data-i18n="phase.label"></span>
+    </div>
+    <span class="banner-text" data-i18n="banner"></span>
+  </div>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <span class="logo-dot"></span>
+      AESTYX
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" data-i18n="nav.value"></a></li>
+      <li><a href="security.html" data-i18n="nav.security"></a></li>
+      <li><a href="index.html#procedures" data-i18n="nav.procedures"></a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
+      <i data-lucide="menu"></i>
+    </button>
+    <div class="nav-right">
+      <div class="lang-selector">
+        <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
+        <button class="lang-btn" data-lang="pt" onclick="setLanguage('pt')">PT</button>
+        <button class="lang-btn" data-lang="es" onclick="setLanguage('es')">ES</button>
+      </div>
+      <a href="index.html#waitlist" class="nav-cta" data-i18n="nav.cta"></a>
+    </div>
+  </nav>
+
+  <!-- ══ PAGE HERO ══ -->
+  <div class="page-hero">
+    <div class="page-hero-content">
+      <div class="club-coming-soon">
+        <div class="club-coming-soon-dot"></div>
+        <span data-i18n="club.hero.eyebrow"></span>
+      </div>
+      <h1 data-i18n="club.hero.h1"></h1>
+      <p class="page-hero-sub" data-i18n="club.hero.sub"></p>
+      <a href="index.html#waitlist" class="btn-primary" style="display:inline-flex;text-decoration:none;margin-top:0.5rem;">
+        <span data-i18n="club.hero.cta"></span>
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+    </div>
+
+    <!-- Score preview card -->
+    <div class="ph-visual" style="max-width:340px;">
+      <div class="club-score-preview">
+        <div class="csp-label" data-i18n="club.preview.label"></div>
+        <div class="csp-score">84<span>/100</span></div>
+        <div class="csp-sublabel" data-i18n="club.preview.sublabel"></div>
+        <div class="csp-progress">
+          <div class="csp-progress-label">
+            <span data-i18n="club.preview.from"></span>
+            <span data-i18n="club.preview.current"></span>
+          </div>
+          <div class="csp-bar-bg"><div class="csp-bar-fill"></div></div>
+        </div>
+        <div class="csp-delta">
+          <i data-lucide="trending-up" style="width:14px;height:14px;stroke:var(--gold)"></i>
+          <span data-i18n="club.preview.delta"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ VERIFY ROW ══ -->
+  <div class="verify-row">
+    <div class="verify-badge">
+      <i data-lucide="badge-check"></i>
+      <span data-i18n="badge.crm"></span>
+    </div>
+    <div class="verify-divider"></div>
+    <div class="verify-badge">
+      <i data-lucide="trophy"></i>
+      <span data-i18n="club.badge.track"></span>
+    </div>
+    <div class="verify-divider"></div>
+    <div class="verify-badge">
+      <i data-lucide="trending-up"></i>
+      <span data-i18n="club.badge.progress"></span>
+    </div>
+    <div class="verify-divider"></div>
+    <div class="verify-badge">
+      <i data-lucide="star"></i>
+      <span data-i18n="club.badge.rewards"></span>
+    </div>
+  </div>
+
+  <!-- ══ CLUB FEATURES ══ -->
+  <section style="background:var(--white);padding:96px 5vw;">
+    <div style="text-align:center;max-width:600px;margin:0 auto 4rem;">
+      <div class="section-kicker" data-i18n="club.features.kicker"></div>
+      <div class="section-title" data-i18n="club.features.title"></div>
+    </div>
+
+    <div class="club-grid">
+      <div class="club-card">
+        <div class="club-icon"><i data-lucide="bar-chart-2"></i></div>
+        <div class="club-title" data-i18n="club.f1.title"></div>
+        <p class="club-desc" data-i18n="club.f1.desc"></p>
+      </div>
+      <div class="club-card">
+        <div class="club-icon"><i data-lucide="user"></i></div>
+        <div class="club-title" data-i18n="club.f2.title"></div>
+        <p class="club-desc" data-i18n="club.f2.desc"></p>
+      </div>
+      <div class="club-card">
+        <div class="club-icon"><i data-lucide="trophy"></i></div>
+        <div class="club-title" data-i18n="club.f3.title"></div>
+        <p class="club-desc" data-i18n="club.f3.desc"></p>
+      </div>
+      <div class="club-card">
+        <div class="club-icon"><i data-lucide="calendar-check"></i></div>
+        <div class="club-title" data-i18n="club.f4.title"></div>
+        <p class="club-desc" data-i18n="club.f4.desc"></p>
+      </div>
+      <div class="club-card">
+        <div class="club-icon"><i data-lucide="lock"></i></div>
+        <div class="club-title" data-i18n="club.f5.title"></div>
+        <p class="club-desc" data-i18n="club.f5.desc"></p>
+      </div>
+      <div class="club-card">
+        <div class="club-icon"><i data-lucide="zap"></i></div>
+        <div class="club-title" data-i18n="club.f6.title"></div>
+        <p class="club-desc" data-i18n="club.f6.desc"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ WAITLIST CTA ══ -->
+  <section class="cta-section" id="waitlist">
+    <div class="section-kicker" data-i18n="cta.kicker"></div>
+    <div class="section-title" data-i18n="cta.title"></div>
+    <p class="section-lead" data-i18n="cta.lead"></p>
+    <div class="cta-waitlist-form">
+      <input type="email" class="waitlist-input" id="cta-email" data-i18n-placeholder="waitlist.placeholder">
+      <button class="btn-primary" onclick="handleWaitlist('cta-email','cta-success')">
+        <span data-i18n="waitlist.btn"></span>
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </button>
+    </div>
+    <p class="waitlist-success" id="cta-success" style="display:none;" data-i18n="waitlist.success"></p>
+    <p class="cta-note" data-i18n="cta.note"></p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="index.html" class="footer-logo"><span class="logo-dot"></span>AESTYX</a>
+    <ul class="footer-links">
+      <li><a href="#" data-i18n="footer.privacy"></a></li>
+      <li><a href="#" data-i18n="footer.terms"></a></li>
+      <li><a href="financing.html" data-i18n="nav.financing"></a></li>
+      <li><a href="partners.html" data-i18n="footer.partners"></a></li>
+      <li><a href="#" data-i18n="footer.contact"></a></li>
+    </ul>
+    <div class="footer-copy" data-i18n="footer.copy"></div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script>
+    var PAGE_T = {
+      en: {
+        'club.hero.eyebrow': 'Phase 2 Preview',
+        'club.hero.h1':      'Track your evolution.<br><span class="highlight">Me vs Me.</span>',
+        'club.hero.sub':     'Aestyx Club turns your aesthetic journey into a measurable progression. Your Score evolves. Your milestones are tracked. Your best self, quantified.',
+        'club.hero.cta':     'Reserve My Spot',
+
+        'club.preview.label':   'Aestyx Score',
+        'club.preview.sublabel':'Aesthetic Peak Index',
+        'club.preview.from':    'Score 6 months ago: 71',
+        'club.preview.current': 'Today: 84',
+        'club.preview.delta':   '+13 points &mdash; Facial Refinement phase complete',
+
+        'club.badge.track':    'Progress Tracked',
+        'club.badge.progress': 'Score Evolution',
+        'club.badge.rewards':  'Founder Rewards',
+
+        'club.features.kicker': 'Aestyx Club',
+        'club.features.title':  'Your aesthetic journey,<br><span class="accent">gamified.</span>',
+
+        'club.f1.title': 'Score Dashboard',
+        'club.f1.desc':  'Your Aestyx Score updates after each procedure phase. Track facial symmetry, golden ratio alignment, and surgical viability in real time.',
+
+        'club.f2.title': 'Me vs Me',
+        'club.f2.desc':  'Compare your current score against your baseline at any point in the journey. No external comparison &mdash; only your own peak, approached step by step.',
+
+        'club.f3.title': 'Milestone Rewards',
+        'club.f3.desc':  'Earn Aestyx Club points for completing Blueprint™ phases, consultation milestones, and post-operative check-ins. Redeem for priority access and exclusive benefits.',
+
+        'club.f4.title': 'Journey Timeline',
+        'club.f4.desc':  'A visual, chronological record of every step in your aesthetic transformation &mdash; from first Score to final result.',
+
+        'club.f5.title': 'Private Vault',
+        'club.f5.desc':  'AES-256 encrypted photo archive. Compare before and after securely, with full ownership and deletion rights. Only you see your progression.',
+
+        'club.f6.title': 'Founder Access',
+        'club.f6.desc':  'Waitlist members who join before Phase 1 launch receive Founder status: lifetime priority matching, exclusive Aestyx Club tier, and early feature access.',
+
+        'cta.kicker': 'Elite Waitlist',
+        'cta.title':  'Be among the first to<br><span class="accent">reach your 100%.</span>',
+        'cta.lead':   'Aestyx is launching to a curated group of founding members. Early access members receive priority matching, exclusive rates, and lifetime founding status.',
+        'cta.note':   '127+ verified specialists &middot; 18 countries &middot; Launching Phase 1 soon',
+      },
+
+      pt: {
+        'club.hero.eyebrow': 'Pr&eacute;via da Fase 2',
+        'club.hero.h1':      'Acompanhe sua evolu&ccedil;&atilde;o.<br><span class="highlight">Eu vs Eu.</span>',
+        'club.hero.sub':     'O Aestyx Club transforma sua jornada est&eacute;tica em uma progress&atilde;o mensur&aacute;vel. Seu Score evolui. Seus marcos s&atilde;o registrados. Sua melhor vers&atilde;o, quantificada.',
+        'club.hero.cta':     'Reservar Minha Vaga',
+
+        'club.preview.label':   'Aestyx Score',
+        'club.preview.sublabel':'&Iacute;ndice de Pico Est&eacute;tico',
+        'club.preview.from':    'Score h&aacute; 6 meses: 71',
+        'club.preview.current': 'Hoje: 84',
+        'club.preview.delta':   '+13 pontos &mdash; Fase de Refinamento Facial conclu&iacute;da',
+
+        'club.badge.track':    'Progress&atilde;o Registrada',
+        'club.badge.progress': 'Evolu&ccedil;&atilde;o do Score',
+        'club.badge.rewards':  'Recompensas Founder',
+
+        'club.features.kicker': 'Aestyx Club',
+        'club.features.title':  'Sua jornada est&eacute;tica,<br><span class="accent">gamificada.</span>',
+
+        'club.f1.title': 'Dashboard do Score',
+        'club.f1.desc':  'Seu Aestyx Score &eacute; atualizado ap&oacute;s cada fase de procedimento. Acompanhe simetria facial, alinhamento com a regra &aacute;urea e viabilidade cir&uacute;rgica em tempo real.',
+
+        'club.f2.title': 'Eu vs Eu',
+        'club.f2.desc':  'Compare seu score atual com o baseline em qualquer ponto da jornada. Sem compara&ccedil;&atilde;o externa &mdash; apenas o seu pr&oacute;prio pico, alcan&ccedil;ado passo a passo.',
+
+        'club.f3.title': 'Recompensas por Marco',
+        'club.f3.desc':  'Acumule pontos Aestyx Club ao concluir fases do Blueprint&#8482;, marcos de consulta e check-ins p&oacute;s-operat&oacute;rios. Resgate por acesso priorit&aacute;rio e benef&iacute;cios exclusivos.',
+
+        'club.f4.title': 'Linha do Tempo da Jornada',
+        'club.f4.desc':  'Um registro visual e cronol&oacute;gico de cada etapa da sua transforma&ccedil;&atilde;o est&eacute;tica &mdash; do primeiro Score ao resultado final.',
+
+        'club.f5.title': 'Cofre Privado',
+        'club.f5.desc':  'Arquivo de fotos criptografado com AES-256. Compare antes e depois com seguran&ccedil;a, com propriedade completa e direito de exclus&atilde;o. Apenas voc&ecirc; v&ecirc; sua progress&atilde;o.',
+
+        'club.f6.title': 'Acesso Founder',
+        'club.f6.desc':  'Membros da lista de espera que ingressarem antes do lan&ccedil;amento da Fase 1 recebem status Founder: match priorit&aacute;rio vitalicio, tier exclusivo do Aestyx Club e acesso antecipado a features.',
+
+        'cta.kicker': 'Lista de Espera de Elite',
+        'cta.title':  'Seja um dos primeiros a<br><span class="accent">alcan&ccedil;ar o seu 100%.</span>',
+        'cta.lead':   'A Aestyx est&aacute; lan&ccedil;ando para um grupo curado de membros fundadores. Membros de acesso antecipado recebem match priorit&aacute;rio, condi&ccedil;&otilde;es exclusivas e status vital&iacute;cio de fundador.',
+        'cta.note':   '127+ especialistas verificados &middot; 18 pa&iacute;ses &middot; Fase 1 lan&ccedil;ando em breve',
+      },
+
+      es: {
+        'club.hero.eyebrow': 'Vista Previa Fase 2',
+        'club.hero.h1':      'Sigue tu evoluci&oacute;n.<br><span class="highlight">Yo vs Yo.</span>',
+        'club.hero.sub':     'Aestyx Club convierte tu viaje est&eacute;tico en una progresi&oacute;n medible. Tu Score evoluciona. Tus hitos se registran. Tu mejor versi&oacute;n, cuantificada.',
+        'club.hero.cta':     'Reservar Mi Lugar',
+
+        'club.preview.label':   'Aestyx Score',
+        'club.preview.sublabel':'&Iacute;ndice de Pico Est&eacute;tico',
+        'club.preview.from':    'Score hace 6 meses: 71',
+        'club.preview.current': 'Hoy: 84',
+        'club.preview.delta':   '+13 puntos &mdash; Fase de Refinamiento Facial completada',
+
+        'club.badge.track':    'Progreso Registrado',
+        'club.badge.progress': 'Evoluci&oacute;n del Score',
+        'club.badge.rewards':  'Recompensas Founder',
+
+        'club.features.kicker': 'Aestyx Club',
+        'club.features.title':  'Tu viaje est&eacute;tico,<br><span class="accent">gamificado.</span>',
+
+        'club.f1.title': 'Dashboard del Score',
+        'club.f1.desc':  'Tu Aestyx Score se actualiza tras cada fase de procedimiento. Sigue la simetr&iacute;a facial, alineaci&oacute;n con la proporci&oacute;n &aacute;urea y viabilidad quir&uacute;rgica en tiempo real.',
+
+        'club.f2.title': 'Yo vs Yo',
+        'club.f2.desc':  'Compara tu score actual con tu l&iacute;nea base en cualquier punto del viaje. Sin comparaci&oacute;n externa &mdash; solo tu propio pico, alcanzado paso a paso.',
+
+        'club.f3.title': 'Recompensas por Hito',
+        'club.f3.desc':  'Acumula puntos Aestyx Club al completar fases del Blueprint&#8482;, hitos de consulta y seguimientos posoperatorios. Canjea por acceso prioritario y beneficios exclusivos.',
+
+        'club.f4.title': 'L&iacute;nea de Tiempo del Viaje',
+        'club.f4.desc':  'Un registro visual y cronol&oacute;gico de cada paso de tu transformaci&oacute;n est&eacute;tica &mdash; desde el primer Score hasta el resultado final.',
+
+        'club.f5.title': 'B&oacute;veda Privada',
+        'club.f5.desc':  'Archivo de fotos cifrado con AES-256. Compara antes y despu&eacute;s de forma segura, con propiedad completa y derecho de eliminaci&oacute;n. Solo t&uacute; ves tu progresi&oacute;n.',
+
+        'club.f6.title': 'Acceso Founder',
+        'club.f6.desc':  'Los miembros de la lista de espera que ingresen antes del lanzamiento de la Fase 1 reciben estatus Founder: match prioritario de por vida, tier exclusivo del Aestyx Club y acceso anticipado a funciones.',
+
+        'cta.kicker': 'Lista de Espera de &Eacute;lite',
+        'cta.title':  'S&eacute; de los primeros en<br><span class="accent">alcanzar tu 100%.</span>',
+        'cta.lead':   'Aestyx est&aacute; lanzando para un grupo curado de miembros fundadores. Los miembros de acceso anticipado reciben match prioritario, condiciones exclusivas y estatus fundador de por vida.',
+        'cta.note':   '127+ especialistas verificados &middot; 18 pa&iacute;ses &middot; Fase 1 lanzando pronto',
+      }
+    };
+
+    Object.keys(PAGE_T).forEach(function(lang) {
+      if (window.T[lang]) Object.assign(window.T[lang], PAGE_T[lang]);
+    });
+
+    initPage();
+  </script>
+</body>
+</html>

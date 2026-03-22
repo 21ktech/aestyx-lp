@@ -8,15 +8,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
-  <link rel="stylesheet" href="../css/shared.css">
+  <link rel="stylesheet" href="css/shared.css">
   <style>
-    /* ── PAGE-SPECIFIC STYLES (not in shared.css) ── */
-
-    /* Waitlist success inside partner-cta-bar uses gold color */
-    .partner-cta-bar .waitlist-success {
-      color: var(--gold);
-      text-align: center;
-    }
+    .partner-cta-bar .waitlist-success { color: var(--gold); text-align: center; }
   </style>
 </head>
 <body>
@@ -32,25 +26,25 @@
 
   <!-- NAV -->
   <nav>
-    <a href="../index.html" class="nav-logo">
+    <a href="index.html" class="nav-logo">
       <span class="logo-dot"></span>
       AESTYX
     </a>
     <ul class="nav-links">
-      <li><a href="../index.html#value" data-i18n="nav.value"></a></li>
-      <li><a href="../index.html#security" data-i18n="nav.security"></a></li>
-      <li><a href="../index.html#procedures" data-i18n="nav.procedures"></a></li>
-      <li><a href="../index.html#brazil" data-i18n="nav.brazil"></a></li>
-      <li><a href="../financing.html" data-i18n="nav.financing"></a></li>
-      <li><a href="partners.html" class="active" data-i18n="nav.partners"></a></li>
+      <li><a href="index.html" data-i18n="nav.value"></a></li>
+      <li><a href="security.html" data-i18n="nav.security"></a></li>
+      <li><a href="index.html#procedures" data-i18n="nav.procedures"></a></li>
     </ul>
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
+      <i data-lucide="menu"></i>
+    </button>
     <div class="nav-right">
       <div class="lang-selector">
         <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
         <button class="lang-btn" data-lang="pt" onclick="setLanguage('pt')">PT</button>
         <button class="lang-btn" data-lang="es" onclick="setLanguage('es')">ES</button>
       </div>
-      <a href="../index.html#waitlist" class="nav-cta" data-i18n="nav.cta"></a>
+      <a href="index.html#waitlist" class="nav-cta" data-i18n="nav.cta"></a>
     </div>
   </nav>
 
@@ -124,7 +118,7 @@
 
     <div class="partner-benefits">
       <div class="pb-card">
-        <span class="pb-icon"><i data-lucide="globe"></i></span>
+        <span class="pb-icon"><i data-lucide="circle-dollar-sign"></i></span>
         <div class="pb-title" data-i18n="pb1.title"></div>
         <p class="pb-desc" data-i18n="pb1.desc"></p>
       </div>
@@ -185,28 +179,25 @@
 
   <!-- FOOTER -->
   <footer>
-    <a href="../index.html" class="footer-logo"><span class="logo-dot"></span>AESTYX</a>
+    <a href="index.html" class="footer-logo"><span class="logo-dot"></span>AESTYX</a>
     <ul class="footer-links">
       <li><a href="#" data-i18n="footer.privacy"></a></li>
       <li><a href="#" data-i18n="footer.terms"></a></li>
-      <li><a href="../financing.html" data-i18n="nav.financing"></a></li>
+      <li><a href="financing.html" data-i18n="nav.financing"></a></li>
       <li><a href="partners.html" class="active" data-i18n="footer.partners"></a></li>
       <li><a href="#" data-i18n="footer.contact"></a></li>
     </ul>
     <div class="footer-copy" data-i18n="footer.copy"></div>
   </footer>
 
-  <script src="../js/i18n.js"></script>
+  <script src="js/i18n.js"></script>
   <script>
-    /* ── PAGE-SPECIFIC TRANSLATIONS ── */
     var PAGE_T = {
       en: {
-        /* Page hero overrides (more specific than shared part.* keys) */
         'part.hero.eyebrow': 'Invitation-Only Medical Network',
         'part.hero.h1':      'Your global pipeline.<br><span class="highlight">Built and delivered.</span>',
-        'part.hero.sub':     'We resolve the FX, the logistics, and the language barrier. You focus on the OR &mdash; we bring the high-ticket patient (USD/EUR), fully briefed and ready.',
+        'part.hero.sub':     'Focus on the OR &mdash; we handle the global pipeline. Pre-qualified patients from 18+ countries, AI-structured clinical briefs, and full logistics management. <strong>Zero commission from your revenue.</strong> Aestyx monetizes through a transparent patient-side service fee.',
 
-        /* Stat cards */
         'ph.s1.label': 'Patient Countries',
         'ph.s1.val':   '18 Countries &middot; Active',
         'ph.s2.label': 'Clinical Briefs Delivered',
@@ -214,25 +205,22 @@
         'ph.s3.label': 'Network Standard',
         'ph.s3.val':   'Invitation-Only &middot; Audited',
 
-        /* Partner section */
         'part.kicker': 'Why Partner With Aestyx',
         'part.title':  'Three pillars.<br><span class="accent">Zero friction.</span>',
         'part.lead':   'We handle every layer between the global patient and your operating table.',
 
-        'pb1.title': 'High-Ticket Global Patients',
-        'pb1.desc':  'Pre-qualified patients from Europe, North America, and Asia &mdash; matched to your specialty, arriving with intent and purchasing power in hard currency.',
+        'pb1.title': 'Zero Commission. Always.',
+        'pb1.desc':  'You invoice your standard procedure fee in full. Aestyx charges patients a transparent service fee on their side &mdash; approximately 30% of their total investment. You keep 100% of your revenue. No commission, no revenue split, no surprises.',
         'pb2.title': 'Structured Clinical Brief, Delivered',
         'pb2.desc':  'Every patient arrives with an AI-prepared brief: goals, medical history, photo analysis, and a prioritized procedure list. Save 40+ minutes of intake time.',
         'pb3.title': 'Invitation-Only Verified Network',
         'pb3.desc':  'Aestyx is not a directory. We audit CRM, RQE, and sanitary compliance. Your peers on this network are held to the same standard.',
 
-        /* CTA bar */
         'pcb.kicker':      'Apply to Join',
-        'pcb.title':       'Ready to access global patients?',
+        'pcb.title':       'Focus on the OR. We handle the global pipeline.',
         'pcb.placeholder': 'Your clinic email address',
         'pcb.btn':         'Apply Now',
 
-        /* Verification */
         'ver.kicker': 'Our Verification Standard',
         'ver.title':  'Three-tier audit.<br><span class="accent">Every partner, every time.</span>',
 
@@ -252,7 +240,7 @@
       pt: {
         'part.hero.eyebrow': 'Rede M&eacute;dica por Convite',
         'part.hero.h1':      'Seu pipeline global.<br><span class="highlight">Constru&iacute;do e entregue.</span>',
-        'part.hero.sub':     'Resolvemos o c&acirc;mbio, a log&iacute;stica e a barreira do idioma. Voc&ecirc; foca no centro cir&uacute;rgico &mdash; n&oacute;s trazemos o paciente de alto ticket (D&oacute;lar/Euro), totalmente orientado e pronto.',
+        'part.hero.sub':     'Foque no centro cir&uacute;rgico &mdash; n&oacute;s gerenciamos o pipeline global. Pacientes pr&eacute;-qualificados de 18+ pa&iacute;ses, briefings cl&iacute;nicos por IA e log&iacute;stica completa. <strong>Zero comiss&atilde;o sobre sua receita.</strong> A Aestyx monetiza via taxa de servi&ccedil;o transparente do lado do paciente.',
 
         'ph.s1.label': 'Pa&iacute;ses dos Pacientes',
         'ph.s1.val':   '18 Pa&iacute;ses &middot; Ativo',
@@ -265,15 +253,15 @@
         'part.title':  'Tr&ecirc;s pilares.<br><span class="accent">Zero fric&ccedil;&atilde;o.</span>',
         'part.lead':   'Gerenciamos cada camada entre o paciente global e a sua mesa cir&uacute;rgica.',
 
-        'pb1.title': 'Pacientes Globais de Alto Ticket',
-        'pb1.desc':  'Pacientes pr&eacute;-qualificados da Europa, Am&eacute;rica do Norte e &Aacute;sia &mdash; combinados &agrave; sua especialidade, chegando com inten&ccedil;&atilde;o e poder de compra em moeda forte.',
+        'pb1.title': 'Zero Comiss&atilde;o. Sempre.',
+        'pb1.desc':  'Voc&ecirc; emite nota pelo valor integral do seu procedimento. A Aestyx cobra uma taxa de servi&ccedil;o transparente do lado do paciente &mdash; aproximadamente 30% do investimento total dele. Voc&ecirc; fica com 100% da sua receita. Sem comiss&atilde;o, sem divis&atilde;o de receita, sem surpresas.',
         'pb2.title': 'Briefing Cl&iacute;nico Estruturado, Entregue',
         'pb2.desc':  'Cada paciente chega com um brief preparado por IA: objetivos, hist&oacute;rico m&eacute;dico, an&aacute;lise fotogr&aacute;fica e lista priorizada de procedimentos. Economize mais de 40 minutos de consulta.',
         'pb3.title': 'Rede Verificada por Convite',
         'pb3.desc':  'A Aestyx n&atilde;o &eacute; um diret&oacute;rio. Auditamos CRM, RQE e conformidade sanit&aacute;ria. Seus pares nessa rede s&atilde;o mantidos no mesmo padr&atilde;o.',
 
         'pcb.kicker':      'Candidatar-se',
-        'pcb.title':       'Pronto para acessar pacientes globais?',
+        'pcb.title':       'Foque no centro cir&uacute;rgico. N&oacute;s gerenciamos o pipeline global.',
         'pcb.placeholder': 'E-mail da sua cl&iacute;nica',
         'pcb.btn':         'Candidatar-me',
 
@@ -296,7 +284,7 @@
       es: {
         'part.hero.eyebrow': 'Red M&eacute;dica por Invitaci&oacute;n',
         'part.hero.h1':      'Tu pipeline global.<br><span class="highlight">Construido y entregado.</span>',
-        'part.hero.sub':     'Resolvemos el FX, la log&iacute;stica y la barrera del idioma. T&uacute; te enfocas en el quir&oacute;fano &mdash; nosotros traemos al paciente de alto ticket (USD/EUR), totalmente orientado y listo.',
+        'part.hero.sub':     'Enf&oacute;cate en el quir&oacute;fano &mdash; nosotros manejamos el pipeline global. Pacientes pre-calificados de 18+ pa&iacute;ses, briefings cl&iacute;nicos por IA y log&iacute;stica completa. <strong>Cero comisi&oacute;n sobre tu facturaci&oacute;n.</strong> Aestyx monetiza a trav&eacute;s de una tarifa de servicio transparente del lado del paciente.',
 
         'ph.s1.label': 'Pa&iacute;ses de Pacientes',
         'ph.s1.val':   '18 Pa&iacute;ses &middot; Activo',
@@ -309,15 +297,15 @@
         'part.title':  'Tres pilares.<br><span class="accent">Cero fricci&oacute;n.</span>',
         'part.lead':   'Gestionamos cada capa entre el paciente global y tu mesa de operaciones.',
 
-        'pb1.title': 'Pacientes Globales de Alto Ticket',
-        'pb1.desc':  'Pacientes pre-calificados de Europa, Norteam&eacute;rica y Asia &mdash; emparejados con tu especialidad, llegando con intenci&oacute;n y poder adquisitivo en moneda fuerte.',
+        'pb1.title': 'Cero Comisi&oacute;n. Siempre.',
+        'pb1.desc':  'T&uacute; facturas tu tarifa de procedimiento completa. Aestyx cobra una tarifa de servicio transparente del lado del paciente &mdash; aproximadamente 30% de su inversi&oacute;n total. T&uacute; conservas el 100% de tus ingresos. Sin comisi&oacute;n, sin divisi&oacute;n de ingresos, sin sorpresas.',
         'pb2.title': 'Briefing Cl&iacute;nico Estructurado, Entregado',
         'pb2.desc':  'Cada paciente llega con un briefing preparado por IA: objetivos, historial m&eacute;dico, an&aacute;lisis fotogr&aacute;fico y lista priorizada de procedimientos. Ahorra m&aacute;s de 40 minutos de consulta inicial.',
         'pb3.title': 'Red Verificada por Invitaci&oacute;n',
         'pb3.desc':  'Aestyx no es un directorio. Auditamos el registro m&eacute;dico, c&oacute;digo de especialidad y cumplimiento sanitario. Tus pares en esta red mantienen el mismo est&aacute;ndar.',
 
         'pcb.kicker':      'Postularse',
-        'pcb.title':       '&iquest;Listo para acceder a pacientes globales?',
+        'pcb.title':       'Enf&oacute;cate en el quir&oacute;fano. Nosotros manejamos el pipeline global.',
         'pcb.placeholder': 'E-mail de tu cl&iacute;nica',
         'pcb.btn':         'Postularme',
 
@@ -338,14 +326,10 @@
       }
     };
 
-    /* Merge page translations into window.T */
     Object.keys(PAGE_T).forEach(function(lang) {
       if (window.T[lang]) Object.assign(window.T[lang], PAGE_T[lang]);
     });
 
-    /* No page-specific onLanguageChange needed here */
-
-    /* Bootstrap */
     initPage();
   </script>
 </body>

@@ -28,13 +28,13 @@
       AESTYX
     </a>
     <ul class="nav-links">
-      <li><a href="#value" data-i18n="nav.value"></a></li>
-      <li><a href="#security" data-i18n="nav.security"></a></li>
+      <li><a href="index.html" data-i18n="nav.value"></a></li>
+      <li><a href="security.html" data-i18n="nav.security"></a></li>
       <li><a href="#procedures" data-i18n="nav.procedures"></a></li>
-      <li><a href="#brazil" data-i18n="nav.brazil"></a></li>
-      <li><a href="financing.html" data-i18n="nav.financing"></a></li>
-      <li><a href="lp/partners.html" data-i18n="nav.partners"></a></li>
     </ul>
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
+      <i data-lucide="menu"></i>
+    </button>
     <div class="nav-right">
       <div class="lang-selector">
         <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
@@ -157,157 +157,59 @@
     </div>
   </div>
 
-  <!-- ══ VALUE PROPS: BRAZIL ARBITRAGE ══ -->
-  <section class="value-props" id="value">
-    <div class="vp-intro">
-      <div>
-        <div class="section-kicker" data-i18n="vp.kicker"></div>
-        <div class="section-title" data-i18n="vp.title"></div>
-      </div>
-      <p class="section-lead" data-i18n="vp.lead"></p>
+  <!-- ══ PRODUCT STACK — 5 PILLARS ══ -->
+  <section class="product-stack" id="platform">
+    <div class="ps-intro">
+      <div class="section-kicker" data-i18n="pillars.kicker"></div>
+      <div class="section-title" data-i18n="pillars.title"></div>
     </div>
-    <div class="vp-grid">
-      <div class="vp-card">
-        <span class="vp-icon"><i data-lucide="gem"></i></span>
-        <div class="vp-number">60<span class="vp-unit">&ndash;70%</span></div>
-        <div class="vp-title" data-i18n="vp1.title"></div>
-        <p class="vp-desc" data-i18n="vp1.desc"></p>
-      </div>
-      <div class="vp-card">
-        <span class="vp-icon"><i data-lucide="award"></i></span>
-        <div class="vp-number">#<span style="font-size:2rem">2</span></div>
-        <div class="vp-title" data-i18n="vp2.title"></div>
-        <p class="vp-desc" data-i18n="vp2.desc"></p>
-      </div>
-      <div class="vp-card">
-        <span class="vp-icon"><i data-lucide="cpu"></i></span>
-        <div class="vp-number" style="font-size:2rem;line-height:1.3" data-i18n="vp3.num"></div>
-        <div class="vp-title" data-i18n="vp3.title"></div>
-        <p class="vp-desc" data-i18n="vp3.desc"></p>
-      </div>
-    </div>
-  </section>
+    <div class="ps-grid">
 
-  <!-- ══ PATIENT JOURNEY ══ -->
-  <section class="journey" id="journey">
-    <div class="section-kicker" data-i18n="journey.kicker"></div>
-    <div class="section-title" data-i18n="journey.title"></div>
-    <div class="journey-layout">
-      <div class="journey-steps">
-        <div class="js-item">
-          <div class="js-left"><div class="js-node">01</div><div class="js-line"></div></div>
-          <div>
-            <div class="js-title" data-i18n="js1.title"></div>
-            <p class="js-desc" data-i18n="js1.desc"></p>
-          </div>
-        </div>
-        <div class="js-item">
-          <div class="js-left"><div class="js-node">02</div><div class="js-line"></div></div>
-          <div>
-            <div class="js-title" data-i18n="js2.title"></div>
-            <p class="js-desc" data-i18n="js2.desc"></p>
-          </div>
-        </div>
-        <div class="js-item">
-          <div class="js-left"><div class="js-node">03</div><div class="js-line"></div></div>
-          <div>
-            <div class="js-title" data-i18n="js3.title"></div>
-            <p class="js-desc" data-i18n="js3.desc"></p>
-          </div>
-        </div>
-        <div class="js-item">
-          <div class="js-left"><div class="js-node">04</div><div class="js-line"></div></div>
-          <div>
-            <div class="js-title" data-i18n="js4.title"></div>
-            <p class="js-desc" data-i18n="js4.desc"></p>
-          </div>
-        </div>
+      <!-- Pillar 1: Aestyx Score -->
+      <div class="ps-card">
+        <div class="ps-icon"><i data-lucide="brain"></i></div>
+        <div class="ps-number">01</div>
+        <div class="ps-name" data-i18n="pillar1.name"></div>
+        <p class="ps-desc" data-i18n="pillar1.desc"></p>
+        <a href="#waitlist" class="ps-link" data-i18n="pillar1.cta"></a>
       </div>
 
-      <div class="journey-visual">
-        <div class="j-card">
-          <div class="jc-header">
-            <div class="jc-label" data-i18n="jc.label"></div>
-            <div class="jc-headline" data-i18n="jc.headline"></div>
-          </div>
-          <div class="jc-body">
-            <div class="jc-row">
-              <div class="jc-check">&#10003;</div>
-              <div>
-                <div class="jc-row-title" data-i18n="jc.r1.title"></div>
-                <div class="jc-row-sub" data-i18n="jc.r1.sub"></div>
-              </div>
-            </div>
-            <div class="jc-row">
-              <div class="jc-check">&#10003;</div>
-              <div>
-                <div class="jc-row-title" data-i18n="jc.r2.title"></div>
-                <div class="jc-row-sub" data-i18n="jc.r2.sub"></div>
-              </div>
-            </div>
-            <div class="jc-row">
-              <div class="jc-check">&#10003;</div>
-              <div>
-                <div class="jc-row-title" data-i18n="jc.r3.title"></div>
-                <div class="jc-row-sub" data-i18n="jc.r3.sub"></div>
-              </div>
-            </div>
-            <div class="jc-row">
-              <div class="jc-check">&#10003;</div>
-              <div>
-                <div class="jc-row-title" data-i18n="jc.r4.title"></div>
-                <div class="jc-row-sub" data-i18n="jc.r4.sub"></div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <!-- Pillar 2: Aestyx Blueprint™ -->
+      <div class="ps-card">
+        <div class="ps-icon"><i data-lucide="map"></i></div>
+        <div class="ps-number">02</div>
+        <div class="ps-name" data-i18n="pillar2.name"></div>
+        <p class="ps-desc" data-i18n="pillar2.desc"></p>
+        <a href="how-it-works.html" class="ps-link" data-i18n="pillar2.cta"></a>
       </div>
-    </div>
-  </section>
 
-  <!-- ══ SAFETY VAULT ══ -->
-  <section class="safety-vault" id="security">
-    <div class="sv-intro">
-      <div>
-        <div class="section-kicker" data-i18n="sv.kicker"></div>
-        <div class="section-title" data-i18n="sv.title"></div>
+      <!-- Pillar 3: AI Translation Bridge -->
+      <div class="ps-card">
+        <div class="ps-icon"><i data-lucide="languages"></i></div>
+        <div class="ps-number">03</div>
+        <div class="ps-name" data-i18n="pillar3.name"></div>
+        <p class="ps-desc" data-i18n="pillar3.desc"></p>
+        <a href="how-it-works.html" class="ps-link" data-i18n="pillar3.cta"></a>
       </div>
-      <p class="section-lead" data-i18n="sv.lead"></p>
-    </div>
 
-    <div class="sv-grid">
-      <div class="sv-card">
-        <div class="sv-icon-wrap"><i data-lucide="shield-check"></i></div>
-        <div>
-          <div class="sv-title" data-i18n="sv1.title"></div>
-          <p class="sv-desc" data-i18n="sv1.desc"></p>
-          <div class="sv-badge" data-i18n="sv1.badge"></div>
-        </div>
+      <!-- Pillar 4: Medical Marketplace -->
+      <div class="ps-card">
+        <div class="ps-icon"><i data-lucide="store"></i></div>
+        <div class="ps-number">04</div>
+        <div class="ps-name" data-i18n="pillar4.name"></div>
+        <p class="ps-desc" data-i18n="pillar4.desc"></p>
+        <a href="financing.html" class="ps-link" data-i18n="pillar4.cta"></a>
       </div>
-      <div class="sv-card">
-        <div class="sv-icon-wrap"><i data-lucide="eye-off"></i></div>
-        <div>
-          <div class="sv-title" data-i18n="sv2.title"></div>
-          <p class="sv-desc" data-i18n="sv2.desc"></p>
-          <div class="sv-badge" data-i18n="sv2.badge"></div>
-        </div>
+
+      <!-- Pillar 5: Aestyx Club -->
+      <div class="ps-card">
+        <div class="ps-icon"><i data-lucide="trophy"></i></div>
+        <div class="ps-number">05</div>
+        <div class="ps-name" data-i18n="pillar5.name"></div>
+        <p class="ps-desc" data-i18n="pillar5.desc"></p>
+        <a href="club.html" class="ps-link" data-i18n="pillar5.cta"></a>
       </div>
-      <div class="sv-card">
-        <div class="sv-icon-wrap"><i data-lucide="landmark"></i></div>
-        <div>
-          <div class="sv-title" data-i18n="sv3.title"></div>
-          <p class="sv-desc" data-i18n="sv3.desc"></p>
-          <div class="sv-badge" data-i18n="sv3.badge"></div>
-        </div>
-      </div>
-      <div class="sv-card">
-        <div class="sv-icon-wrap"><i data-lucide="badge-check"></i></div>
-        <div>
-          <div class="sv-title" data-i18n="sv4.title"></div>
-          <p class="sv-desc" data-i18n="sv4.desc"></p>
-          <div class="sv-badge" data-i18n="sv4.badge"></div>
-        </div>
-      </div>
+
     </div>
   </section>
 
@@ -353,71 +255,6 @@
     </div>
   </section>
 
-  <!-- ══ WHY BRAZIL? ══ -->
-  <section class="why-brazil" id="brazil">
-    <div class="section-kicker" data-i18n="wb.kicker"></div>
-    <div class="section-title" data-i18n="wb.title"></div>
-    <div class="wb-layout">
-      <div>
-        <div class="wb-stats">
-          <div class="wb-stat-card">
-            <div class="wb-num">60<span class="wb-unit">&ndash;70%</span></div>
-            <div class="wb-label" data-i18n="wb.s1"></div>
-          </div>
-          <div class="wb-stat-card">
-            <div class="wb-num">#<span style="font-size:1.6rem">2</span></div>
-            <div class="wb-label" data-i18n="wb.s2"></div>
-          </div>
-          <div class="wb-stat-card full">
-            <div class="wb-num" style="font-size:2rem" data-i18n="wb.s3.num"></div>
-            <div class="wb-label" data-i18n="wb.s3"></div>
-          </div>
-        </div>
-      </div>
-      <div class="wb-points">
-        <div class="wb-point">
-          <div class="wb-check">&#10003;</div>
-          <div>
-            <div class="wb-point-title" data-i18n="wb.p1.title"></div>
-            <div class="wb-point-desc" data-i18n="wb.p1.desc"></div>
-          </div>
-        </div>
-        <div class="wb-point">
-          <div class="wb-check">&#10003;</div>
-          <div>
-            <div class="wb-point-title" data-i18n="wb.p2.title"></div>
-            <div class="wb-point-desc" data-i18n="wb.p2.desc"></div>
-          </div>
-        </div>
-        <div class="wb-point">
-          <div class="wb-check">&#10003;</div>
-          <div>
-            <div class="wb-point-title" data-i18n="wb.p3.title"></div>
-            <div class="wb-point-desc" data-i18n="wb.p3.desc"></div>
-          </div>
-        </div>
-        <div class="wb-point">
-          <div class="wb-check">&#10003;</div>
-          <div>
-            <div class="wb-point-title" data-i18n="wb.p4.title"></div>
-            <div class="wb-point-desc" data-i18n="wb.p4.desc"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══ FAQ ══ -->
-  <section class="faq-section" id="faq">
-    <div class="faq-intro">
-      <div class="section-kicker" data-i18n="faq.kicker"></div>
-      <div class="section-title" data-i18n="faq.title"></div>
-    </div>
-    <div class="faq-list" id="faq-list">
-      <!-- Rendered by renderFAQ(lang) -->
-    </div>
-  </section>
-
   <!-- ══ ELITE WAITLIST ══ -->
   <section class="cta-section" id="waitlist">
     <div class="section-kicker" data-i18n="cta.kicker"></div>
@@ -441,7 +278,7 @@
       <li><a href="#" data-i18n="footer.privacy"></a></li>
       <li><a href="#" data-i18n="footer.terms"></a></li>
       <li><a href="financing.html" data-i18n="nav.financing"></a></li>
-      <li><a href="lp/partners.html" data-i18n="footer.partners"></a></li>
+      <li><a href="partners.html" data-i18n="footer.partners"></a></li>
       <li><a href="#" data-i18n="footer.contact"></a></li>
     </ul>
     <div class="footer-copy" data-i18n="footer.copy"></div>
@@ -449,7 +286,6 @@
 
   <script src="js/i18n.js"></script>
   <script>
-    /* ── PAGE-SPECIFIC TRANSLATIONS ── */
     var PAGE_T = {
       en: {
         'hero.h1':  'Reach Your<br><span class="highlight">Aesthetic Peak.</span>',
@@ -473,38 +309,28 @@
         'ui.fc.label':   'Available now',
         'ui.fc.val':     '127 verified specialists',
 
-        'vp.kicker': 'Excellence Arbitrage',
-        'vp.title':  'Surgical mastery.<br><span class="accent">Strategic advantage.</span>',
-        'vp.lead':   'Aestyx gives you access to Brazil\'s elite surgical ecosystem &mdash; where Clinical Intelligence, world-class residency training, and currency arbitrage converge into your highest possible outcome.',
-        'vp1.title': 'Precision Cost Arbitrage',
-        'vp1.desc':  'The same procedure. The same international standards. 60&ndash;70% of the cost you\'d pay in London, New York, or Paris &mdash; reallocated entirely toward your result.',
-        'vp2.title': 'Global Rank in Aesthetic Surgery',
-        'vp2.desc':  'Brazil holds the #2 position worldwide in cosmetic procedures (ISAPS). Brazilian surgeons complete internationally accredited residencies and are recognized globally for innovation.',
-        'vp3.num':   'AI&#8209;Curated',
-        'vp3.title': 'Matched to Your Blueprint&#8482;',
-        'vp3.desc':  'No cold searching. Our AI maps your clinical profile and connects you exclusively to verified specialists whose surgical expertise aligns with your goals.',
+        'pillars.kicker': 'The Platform',
+        'pillars.title':  'Five layers of intelligence.<br><span class="accent">One perfect outcome.</span>',
 
-        'journey.kicker': 'Your Journey',
-        'journey.title':  'From curiosity<br>to your <span class="accent">aesthetic peak.</span>',
-        'js1.title': 'Discover Your Potential',
-        'js1.desc':  'Upload your photos through our encrypted portal. In seconds, our AI generates your Aestyx Score and maps the precise path to your personal 100%.',
-        'js2.title': 'Receive Your Blueprint&#8482;',
-        'js2.desc':  'A personalised, AI-curated plan detailing procedures, priorities, and expected outcomes &mdash; designed exclusively for you.',
-        'js3.title': 'Match With a World-Class Specialist',
-        'js3.desc':  'We connect you to a verified Brazilian specialist whose expertise perfectly matches your Blueprint&#8482;. No cold searching.',
-        'js4.title': 'Transform. Arrive at Your 100%.',
-        'js4.desc':  'Consult, plan your journey to Brazil, and experience the transformation you have always envisioned.',
+        'pillar1.name': 'Aestyx Score',
+        'pillar1.desc': 'Your diagnostic entry layer. AI-generated clinical metric in under 12 seconds &mdash; facial symmetry, golden ratio, surgical viability.',
+        'pillar1.cta':  'Get my Score',
 
-        'jc.label':    'Aestyx Client Journey',
-        'jc.headline': 'Your 100%<br>awaits.',
-        'jc.r1.title': 'Aestyx Score Generated',
-        'jc.r1.sub':   'AI analysis complete in under 12 seconds',
-        'jc.r2.title': 'Personalized Blueprint&#8482; Ready',
-        'jc.r2.sub':   'Procedures, priorities &amp; outcome preview',
-        'jc.r3.title': 'Specialist Matched &amp; Verified',
-        'jc.r3.sub':   'Board-certified, globally trained expert',
-        'jc.r4.title': 'Journey to Brazil Planned',
-        'jc.r4.sub':   'End-to-end concierge support by Aestyx',
+        'pillar2.name': 'Aestyx Blueprint&#8482;',
+        'pillar2.desc': 'The clinical engine powered by Gemini AI. A personalized procedure roadmap built exclusively for your anatomy and goals.',
+        'pillar2.cta':  'See how it works',
+
+        'pillar3.name': 'AI Translation Bridge',
+        'pillar3.desc': 'Seamless patient-doctor communication. Your Blueprint&#8482; arrives at the clinic pre-interpreted &mdash; no language barrier, zero intake waste.',
+        'pillar3.cta':  'Explore',
+
+        'pillar4.name': 'Medical Marketplace',
+        'pillar4.desc': 'Match with elite verified Brazilian specialists. Escrow-protected payment releases only after all service milestones are confirmed.',
+        'pillar4.cta':  'View Financing',
+
+        'pillar5.name': 'Aestyx Club',
+        'pillar5.desc': 'Performance tracking and "Me vs Me" gamification. Your aesthetic evolution, quantified and celebrated over time.',
+        'pillar5.cta':  'Preview Club',
 
         'proc.kicker': 'Procedures',
         'proc.title':  'Every dimension<br>of your <span style="color:var(--gold)">aesthetic peak.</span>',
@@ -526,60 +352,6 @@
         'p4.cat':   'Hair Restoration',
         'p4.tag':   'Density. Naturalness. Confidence.',
         'p4.items': ['FUE Advanced Technology', 'DHI Direct Implant', 'PRP Scalp Therapy', 'Hairline Design'],
-
-        'wb.kicker': 'Why Brazil?',
-        'wb.title':  'The global capital of<br><span class="accent">aesthetic excellence.</span>',
-        'wb.s1':     'Below European &amp; US prices &mdash; same international standards',
-        'wb.s2':     'Globally in cosmetic surgery volume (ISAPS)',
-        'wb.s3.num': 'World-Renowned',
-        'wb.s3':     'Brazilian specialists are recognized worldwide for innovation in body sculpting, rhinoplasty, and skin rejuvenation',
-        'wb.p1.title': 'International Training Standards',
-        'wb.p1.desc':  'Brazilian plastic surgeons complete internationally accredited residencies. Many train in the US, Europe, and Asia before returning to practice.',
-        'wb.p2.title': 'Innovation-Led Culture',
-        'wb.p2.desc':  'Brazil pioneered techniques like the Brazilian Butt Lift and high-definition body contouring, now adopted by surgeons globally.',
-        'wb.p3.title': 'Transparent Economic Advantage',
-        'wb.p3.desc':  'The same rhinoplasty performed in S&atilde;o Paulo costs 60&ndash;70% less than in London or New York &mdash; without compromising on materials, technology, or outcomes.',
-        'wb.p4.title': 'Aestyx Medical Curation',
-        'wb.p4.desc':  'We verify every specialist on our platform. Credentials, patient outcomes, and international recognition are reviewed before any specialist joins the Aestyx network.',
-
-        'sv.kicker': 'Security First',
-        'sv.title':  'Your privacy is<br><span class="accent">non-negotiable.</span>',
-        'sv.lead':   'Every photo, data point, and consultation detail processed by Aestyx is protected by hospital-grade protocols. Absolute privacy is not a feature &mdash; it is our fundamental premise.',
-
-        'sv1.title': 'Clinical-Grade Encryption',
-        'sv1.desc':  'Every image you upload is protected by AES-256 encryption &mdash; the same standard used in hospital systems and financial institutions worldwide. Your data is never stored in plain form.',
-        'sv1.badge': 'AES-256 &middot; Hospital Standard',
-
-        'sv2.title': 'Eyes-Only Access',
-        'sv2.desc':  'Your Blueprint&#8482; and photos are accessible only to you and the verified surgeon you choose. Our AI processes all data anonymously &mdash; no staff member ever views your images.',
-        'sv2.badge': 'Zero Unauthorized Access',
-
-        'sv3.title': 'Aestyx Escrow Control',
-        'sv3.desc':  'Payment is held in secure escrow. The clinic receives funds only after all safety protocols and service milestones have been confirmed &mdash; your financial protection is absolute.',
-        'sv3.badge': 'Funds Released on Completion',
-
-        'sv4.title': 'Verified Tier: Clinics &amp; Surgeons',
-        'sv4.desc':  'Every partner clinic undergoes a full audit: CRM registration, RQE specialty certification, and sanitary compliance. Only clinics that clear all three tiers are admitted to the Aestyx network.',
-        'sv4.badge': 'CRM &middot; RQE &middot; Sanitary Compliance',
-
-        'faq.kicker': 'Economic Arbitrage',
-        'faq.title':  'Frequently asked<br><span class="accent">questions.</span>',
-
-        'part.kicker': 'For Medical Partners',
-        'part.title':  'Your global pipeline.<br><span class="accent">Built and delivered.</span>',
-        'part.lead':   'We resolve the FX, the logistics, and the language barrier. You focus on the OR &mdash; we bring the high-ticket patient (USD/EUR), fully briefed and ready.',
-
-        'pb1.title': 'High-Ticket Global Patients',
-        'pb1.desc':  'Access pre-qualified patients from Europe, North America, and Asia &mdash; matched to your specialty and surgical profile, arriving with intent and purchasing power in hard currency.',
-        'pb2.title': 'Structured Clinical Brief, Delivered',
-        'pb2.desc':  'Each patient arrives with an AI-prepared Structured Clinical Brief: goals, medical history, photo analysis, and a prioritized procedure shortlist. Save 40+ minutes of intake consultation.',
-        'pb3.title': 'Invitation-Only Verified Network',
-        'pb3.desc':  'Aestyx is not a directory. We audit CRM registration, RQE specialty code, and sanitary compliance before admission. Your peers on this network are held to the same standard.',
-
-        'pcb.kicker':      'Apply to Join',
-        'pcb.title':       'Ready to access global patients?',
-        'pcb.placeholder': 'Your clinic email address',
-        'pcb.btn':         'Apply Now',
 
         'cta.kicker': 'Elite Waitlist',
         'cta.title':  'Be among the first to<br><span class="accent">reach your 100%.</span>',
@@ -609,38 +381,28 @@
         'ui.fc.label':   'Dispon&iacute;veis agora',
         'ui.fc.val':     '127 especialistas verificados',
 
-        'vp.kicker': 'Arbitragem de Excel&ecirc;ncia',
-        'vp.title':  'Maestria cir&uacute;rgica.<br><span class="accent">Vantagem estrat&eacute;gica.</span>',
-        'vp.lead':   'A Aestyx conecta voc&ecirc; ao ecossistema cir&uacute;rgico de elite do Brasil &mdash; onde Intelig&ecirc;ncia Cl&iacute;nica, resid&ecirc;ncias internacionalmente acreditadas e arbitragem cambial convergem para o seu melhor resultado poss&iacute;vel.',
-        'vp1.title': 'Arbitragem de Custo com Precis&atilde;o',
-        'vp1.desc':  'O mesmo procedimento. Os mesmos padr&otilde;es internacionais. 60&ndash;70% do custo que voc&ecirc; pagaria em Londres, Nova York ou Paris &mdash; realocado integralmente para o seu resultado.',
-        'vp2.title': 'Ranking Global em Cirurgia Est&eacute;tica',
-        'vp2.desc':  'O Brasil ocupa o 2&ordm; lugar mundial em procedimentos est&eacute;ticos (ISAPS). Cirurgi&otilde;es brasileiros completam resid&ecirc;ncias internacionalmente acreditadas e s&atilde;o reconhecidos globalmente por inova&ccedil;&atilde;o.',
-        'vp3.num':   'Curadoria&#8209;IA',
-        'vp3.title': 'Match com o Seu Blueprint&#8482;',
-        'vp3.desc':  'Sem buscas aleat&oacute;rias. Nossa IA mapeia seu perfil cl&iacute;nico e conecta voc&ecirc; exclusivamente a especialistas verificados cuja expertise cir&uacute;rgica est&aacute; alinhada aos seus objetivos.',
+        'pillars.kicker': 'A Plataforma',
+        'pillars.title':  'Cinco camadas de intelig&ecirc;ncia.<br><span class="accent">Um resultado perfeito.</span>',
 
-        'journey.kicker': 'Sua Jornada',
-        'journey.title':  'Da curiosidade<br>ao seu <span class="accent">pico est&eacute;tico.</span>',
-        'js1.title': 'Descubra Seu Potencial',
-        'js1.desc':  'Envie suas fotos pelo nosso portal criptografado. Em segundos, nossa IA gera seu Aestyx Score e mapeia o caminho preciso para o seu 100% pessoal.',
-        'js2.title': 'Receba Seu Blueprint&#8482;',
-        'js2.desc':  'Um plano personalizado, curado por IA, detalhando procedimentos, prioridades e resultados esperados &mdash; criado exclusivamente para voc&ecirc;.',
-        'js3.title': 'Match com um Especialista de Classe Mundial',
-        'js3.desc':  'Conectamos voc&ecirc; a um especialista brasileiro verificado cuja expertise combina perfeitamente com seu Blueprint&#8482;.',
-        'js4.title': 'Transforme-se. Chegue ao Seu 100%.',
-        'js4.desc':  'Consulte, planeje sua jornada ao Brasil e experimente a transforma&ccedil;&atilde;o que voc&ecirc; sempre imaginou.',
+        'pillar1.name': 'Aestyx Score',
+        'pillar1.desc': 'Sua camada de entrada diagn&oacute;stica. M&eacute;trica cl&iacute;nica gerada por IA em menos de 12 segundos &mdash; simetria facial, regra &aacute;urea, viabilidade cir&uacute;rgica.',
+        'pillar1.cta':  'Obter meu Score',
 
-        'jc.label':    'Jornada do Cliente Aestyx',
-        'jc.headline': 'Seu 100%<br>espera por voc&ecirc;.',
-        'jc.r1.title': 'Aestyx Score Gerado',
-        'jc.r1.sub':   'An&aacute;lise IA completa em menos de 12 segundos',
-        'jc.r2.title': 'Blueprint&#8482; Personalizado Pronto',
-        'jc.r2.sub':   'Procedimentos, prioridades &amp; pr&eacute;via de resultado',
-        'jc.r3.title': 'Especialista Combinado e Verificado',
-        'jc.r3.sub':   'Expert certificado, treinado internacionalmente',
-        'jc.r4.title': 'Jornada ao Brasil Planejada',
-        'jc.r4.sub':   'Suporte concierge completo pela Aestyx',
+        'pillar2.name': 'Aestyx Blueprint&#8482;',
+        'pillar2.desc': 'O motor cl&iacute;nico impulsionado pelo Gemini AI. Um roteiro de procedimentos personalizado, constru&iacute;do exclusivamente para sua anatomia e objetivos.',
+        'pillar2.cta':  'Ver como funciona',
+
+        'pillar3.name': 'Ponte de Tradu&ccedil;&atilde;o IA',
+        'pillar3.desc': 'Comunica&ccedil;&atilde;o fluida entre paciente e m&eacute;dico. Seu Blueprint&#8482; chega &agrave; cl&iacute;nica pr&eacute;-interpretado &mdash; sem barreira de idioma, zero desperd&iacute;cio de consulta.',
+        'pillar3.cta':  'Explorar',
+
+        'pillar4.name': 'Marketplace M&eacute;dico',
+        'pillar4.desc': 'Match com especialistas brasileiros de elite. O pagamento em escrow s&oacute; &eacute; liberado ap&oacute;s todos os marcos de servi&ccedil;o serem confirmados.',
+        'pillar4.cta':  'Ver Financiamento',
+
+        'pillar5.name': 'Aestyx Club',
+        'pillar5.desc': 'Acompanhamento de performance e gamifica&ccedil;&atilde;o "Eu vs Eu". Sua evolu&ccedil;&atilde;o est&eacute;tica, quantificada e celebrada ao longo do tempo.',
+        'pillar5.cta':  'Pr&eacute;via do Club',
 
         'proc.kicker': 'Procedimentos',
         'proc.title':  'Cada dimens&atilde;o<br>do seu <span style="color:var(--gold)">pico est&eacute;tico.</span>',
@@ -662,60 +424,6 @@
         'p4.cat':   'Restaura&ccedil;&atilde;o Capilar',
         'p4.tag':   'Densidade. Naturalidade. Confian&ccedil;a.',
         'p4.items': ['T&eacute;cnica FUE Avan&ccedil;ada', 'Implante Direto DHI', 'Terapia PRP Capilar', 'Design de Linha Frontal'],
-
-        'wb.kicker': 'Por Que o Brasil?',
-        'wb.title':  'A capital mundial da<br><span class="accent">excel&ecirc;ncia est&eacute;tica.</span>',
-        'wb.s1':     'Abaixo dos pre&ccedil;os europeus e americanos &mdash; mesmo padr&atilde;o internacional',
-        'wb.s2':     'Globalmente em volume de cirurgias pl&aacute;sticas (ISAPS)',
-        'wb.s3.num': 'Renome Mundial',
-        'wb.s3':     'Especialistas brasileiros s&atilde;o reconhecidos mundialmente por inova&ccedil;&atilde;o em escultura corporal, rinoplastia e rejuvenescimento de pele',
-        'wb.p1.title': 'Padr&otilde;es de Forma&ccedil;&atilde;o Internacional',
-        'wb.p1.desc':  'Cirurgi&otilde;es pl&aacute;sticos brasileiros realizam resid&ecirc;ncias internacionalmente acreditadas. Muitos se especializam nos EUA, Europa e &Aacute;sia antes de retornar ao Brasil.',
-        'wb.p2.title': 'Cultura de Inova&ccedil;&atilde;o',
-        'wb.p2.desc':  'O Brasil pioneirizou t&eacute;cnicas como o Brazilian Butt Lift e o contorno corporal de alta defini&ccedil;&atilde;o, hoje adotadas por cirurgi&otilde;es em todo o mundo.',
-        'wb.p3.title': 'Vantagem Econ&ocirc;mica Transparente',
-        'wb.p3.desc':  'A mesma rinoplastia realizada em S&atilde;o Paulo custa 60&ndash;70% menos do que em Londres ou Nova York &mdash; sem comprometer materiais, tecnologia ou resultados.',
-        'wb.p4.title': 'Curadoria M&eacute;dica Aestyx',
-        'wb.p4.desc':  'Verificamos cada especialista em nossa plataforma. Credenciais, resultados com pacientes e reconhecimento internacional s&atilde;o analisados antes de qualquer admiss&atilde;o na rede Aestyx.',
-
-        'sv.kicker': 'Seguran&ccedil;a em Primeiro Lugar',
-        'sv.title':  'Sua privacidade &eacute;<br><span class="accent">inegoci&aacute;vel.</span>',
-        'sv.lead':   'Cada foto, dado e detalhe de consulta processado pela Aestyx &eacute; protegido por protocolos de n&iacute;vel hospitalar. Privacidade absoluta n&atilde;o &eacute; um recurso &mdash; &eacute; nossa premissa fundamental.',
-
-        'sv1.title': 'Criptografia de N&iacute;vel Cl&iacute;nico',
-        'sv1.desc':  'Cada imagem enviada &eacute; protegida com criptografia AES-256 &mdash; o mesmo padr&atilde;o utilizado em sistemas hospitalares e institui&ccedil;&otilde;es financeiras em todo o mundo.',
-        'sv1.badge': 'AES-256 &middot; Padr&atilde;o Hospitalar',
-
-        'sv2.title': 'Acesso Exclusivo: Voc&ecirc; e Seu Cirurgi&atilde;o',
-        'sv2.desc':  'Seu Blueprint&#8482; e suas fotos s&atilde;o acess&iacute;veis apenas a voc&ecirc; e ao cirurgi&atilde;o verificado que voc&ecirc; escolher. Nossa IA processa todos os dados de forma an&ocirc;nima.',
-        'sv2.badge': 'Zero Acesso N&atilde;o Autorizado',
-
-        'sv3.title': 'Cust&oacute;dia Financeira Aestyx',
-        'sv3.desc':  'O pagamento fica em cust&oacute;dia segura. A cl&iacute;nica recebe os valores apenas ap&oacute;s o cumprimento de todos os protocolos de seguran&ccedil;a e marcos de servi&ccedil;o confirmados.',
-        'sv3.badge': 'Libera&ccedil;&atilde;o Mediante Cumprimento',
-
-        'sv4.title': 'Verifica&ccedil;&atilde;o de Tier: Cl&iacute;nicas e M&eacute;dicos',
-        'sv4.desc':  'Cada cl&iacute;nica parceira passa por auditoria completa: registro no CRM, n&uacute;mero de RQE (especialidade) e conformidade sanit&aacute;ria. Apenas cl&iacute;nicas aprovadas nos tr&ecirc;s crit&eacute;rios s&atilde;o admitidas na rede Aestyx.',
-        'sv4.badge': 'CRM &middot; RQE &middot; Conformidade Sanit&aacute;ria',
-
-        'faq.kicker': 'Curadoria &amp; Exclusividade',
-        'faq.title':  'Perguntas<br><span class="accent">frequentes.</span>',
-
-        'part.kicker': 'Para Parceiros M&eacute;dicos',
-        'part.title':  'Seu pipeline global.<br><span class="accent">Constru&iacute;do e entregue.</span>',
-        'part.lead':   'Resolvemos o c&acirc;mbio, a log&iacute;stica e a barreira do idioma. Voc&ecirc; foca no centro cir&uacute;rgico &mdash; n&oacute;s trazemos o paciente de alto ticket (D&oacute;lar/Euro), totalmente orientado e pronto.',
-
-        'pb1.title': 'Pacientes Globais de Alto Ticket',
-        'pb1.desc':  'Acesse pacientes pr&eacute;-qualificados da Europa, Am&eacute;rica do Norte e &Aacute;sia &mdash; combinados &agrave; sua especialidade e perfil cir&uacute;rgico, chegando com inten&ccedil;&atilde;o e poder de compra em moeda forte.',
-        'pb2.title': 'Briefing Cl&iacute;nico Estruturado, Entregue',
-        'pb2.desc':  'Cada paciente chega com um Briefing Cl&iacute;nico preparado pela IA: objetivos, hist&oacute;rico m&eacute;dico, an&aacute;lise de fotos e uma lista priorizada de procedimentos. Economize mais de 40 minutos de consulta inicial.',
-        'pb3.title': 'Rede Verificada por Convite',
-        'pb3.desc':  'A Aestyx n&atilde;o &eacute; um diret&oacute;rio. Auditamos CRM, RQE e conformidade sanit&aacute;ria antes da admiss&atilde;o. Seus pares nessa rede s&atilde;o mantidos no mesmo padr&atilde;o de excel&ecirc;ncia.',
-
-        'pcb.kicker':      'Candidatar-se',
-        'pcb.title':       'Pronto para acessar pacientes globais?',
-        'pcb.placeholder': 'E-mail da sua cl&iacute;nica',
-        'pcb.btn':         'Candidatar-me',
 
         'cta.kicker': 'Lista de Espera de Elite',
         'cta.title':  'Seja um dos primeiros a<br><span class="accent">alcan&ccedil;ar o seu 100%.</span>',
@@ -745,38 +453,28 @@
         'ui.fc.label':   'Disponibles ahora',
         'ui.fc.val':     '127 especialistas verificados',
 
-        'vp.kicker': 'Arbitraje de Excelencia',
-        'vp.title':  'Maestr&iacute;a quir&uacute;rgica.<br><span class="accent">Ventaja estrat&eacute;gica.</span>',
-        'vp.lead':   'Aestyx te da acceso al ecosistema quir&uacute;rgico de &eacute;lite de Brasil &mdash; donde Inteligencia Cl&iacute;nica, residencias internacionalmente acreditadas y arbitraje cambiario convergen en tu mejor resultado posible.',
-        'vp1.title': 'Arbitraje de Costo con Precisi&oacute;n',
-        'vp1.desc':  'El mismo procedimiento. Los mismos est&aacute;ndares internacionales. Al 60&ndash;70% del costo que pagar&iacute;as en Londres, Nueva York o Par&iacute;s &mdash; redirigido &iacute;ntegramente hacia tu resultado.',
-        'vp2.title': 'Ranking Global en Cirug&iacute;a Est&eacute;tica',
-        'vp2.desc':  'Brasil ocupa el puesto #2 mundial en procedimientos cosm&eacute;ticos (ISAPS). Los cirujanos brasile&ntilde;os completan residencias internacionalmente acreditadas y son reconocidos globalmente por su innovaci&oacute;n.',
-        'vp3.num':   'Curaci&oacute;n&#8209;IA',
-        'vp3.title': 'Match con tu Blueprint&#8482;',
-        'vp3.desc':  'Sin b&uacute;squedas a ciegas. Nuestra IA mapea tu perfil cl&iacute;nico y te conecta exclusivamente con especialistas verificados cuya experiencia quir&uacute;rgica se alinea con tus objetivos.',
+        'pillars.kicker': 'La Plataforma',
+        'pillars.title':  'Cinco capas de inteligencia.<br><span class="accent">Un resultado perfecto.</span>',
 
-        'journey.kicker': 'Tu Viaje',
-        'journey.title':  'De la curiosidad<br>a tu <span class="accent">pico est&eacute;tico.</span>',
-        'js1.title': 'Descubre Tu Potencial',
-        'js1.desc':  'Sube tus fotos a trav&eacute;s de nuestro portal cifrado. En segundos, nuestra IA genera tu Aestyx Score y traza el camino preciso hacia tu 100% personal.',
-        'js2.title': 'Recibe Tu Blueprint&#8482;',
-        'js2.desc':  'Un plan personalizado, curado por IA, que detalla procedimientos, prioridades y resultados esperados &mdash; dise&ntilde;ado exclusivamente para ti.',
-        'js3.title': 'Match con un Especialista de Clase Mundial',
-        'js3.desc':  'Te conectamos con un especialista brasile&ntilde;o verificado cuya experiencia coincide perfectamente con tu Blueprint&#8482;.',
-        'js4.title': 'Transf&oacute;rmate. Llega a Tu 100%.',
-        'js4.desc':  'Consulta, planifica tu viaje a Brasil y experimenta la transformaci&oacute;n que siempre has imaginado.',
+        'pillar1.name': 'Aestyx Score',
+        'pillar1.desc': 'Tu capa de entrada diagn&oacute;stica. M&eacute;trica cl&iacute;nica generada por IA en menos de 12 segundos &mdash; simetr&iacute;a facial, proporci&oacute;n &aacute;urea, viabilidad quir&uacute;rgica.',
+        'pillar1.cta':  'Obtener mi Score',
 
-        'jc.label':    'Viaje del Cliente Aestyx',
-        'jc.headline': 'Tu 100%<br>te espera.',
-        'jc.r1.title': 'Aestyx Score Generado',
-        'jc.r1.sub':   'An&aacute;lisis IA completo en menos de 12 segundos',
-        'jc.r2.title': 'Blueprint&#8482; Personalizado Listo',
-        'jc.r2.sub':   'Procedimientos, prioridades y vista previa de resultado',
-        'jc.r3.title': 'Especialista Emparejado y Verificado',
-        'jc.r3.sub':   'Experto certificado, formado internacionalmente',
-        'jc.r4.title': 'Viaje a Brasil Planificado',
-        'jc.r4.sub':   'Soporte concierge completo por Aestyx',
+        'pillar2.name': 'Aestyx Blueprint&#8482;',
+        'pillar2.desc': 'El motor cl&iacute;nico impulsado por Gemini AI. Una hoja de ruta de procedimientos personalizada, construida exclusivamente para tu anatom&iacute;a y objetivos.',
+        'pillar2.cta':  'Ver c&oacute;mo funciona',
+
+        'pillar3.name': 'Puente de Traducci&oacute;n IA',
+        'pillar3.desc': 'Comunicaci&oacute;n fluida entre paciente y m&eacute;dico. Tu Blueprint&#8482; llega a la cl&iacute;nica pre-interpretado &mdash; sin barrera idiom&aacute;tica, cero desperdicio de consulta.',
+        'pillar3.cta':  'Explorar',
+
+        'pillar4.name': 'Marketplace M&eacute;dico',
+        'pillar4.desc': 'Match con especialistas brasile&ntilde;os de &eacute;lite. El pago en custodia se libera solo despu&eacute;s de confirmar todos los hitos de servicio.',
+        'pillar4.cta':  'Ver Financiamiento',
+
+        'pillar5.name': 'Aestyx Club',
+        'pillar5.desc': 'Seguimiento de rendimiento y gamificaci&oacute;n "Yo vs Yo". Tu evoluci&oacute;n est&eacute;tica, cuantificada y celebrada en el tiempo.',
+        'pillar5.cta':  'Vista previa del Club',
 
         'proc.kicker': 'Procedimientos',
         'proc.title':  'Cada dimensi&oacute;n<br>de tu <span style="color:var(--gold)">pico est&eacute;tico.</span>',
@@ -799,60 +497,6 @@
         'p4.tag':   'Densidad. Naturalidad. Confianza.',
         'p4.items': ['T&eacute;cnica FUE Avanzada', 'Implante Directo DHI', 'Terapia PRP Capilar', 'Dise&ntilde;o de L&iacute;nea Frontal'],
 
-        'wb.kicker': '&iquest;Por Qu&eacute; Brasil?',
-        'wb.title':  'La capital mundial de la<br><span class="accent">excelencia est&eacute;tica.</span>',
-        'wb.s1':     'Por debajo de precios europeos y americanos &mdash; mismo est&aacute;ndar internacional',
-        'wb.s2':     'Globalmente en volumen de cirug&iacute;as pl&aacute;sticas (ISAPS)',
-        'wb.s3.num': 'Renombre Mundial',
-        'wb.s3':     'Los especialistas brasile&ntilde;os son reconocidos mundialmente por la innovaci&oacute;n en escultura corporal, rinoplastia y rejuvenecimiento de piel',
-        'wb.p1.title': 'Est&aacute;ndares de Formaci&oacute;n Internacional',
-        'wb.p1.desc':  'Los cirujanos pl&aacute;sticos brasile&ntilde;os realizan residencias internacionalmente acreditadas. Muchos se especializan en EE.UU., Europa y Asia antes de regresar a Brasil.',
-        'wb.p2.title': 'Cultura de Innovaci&oacute;n',
-        'wb.p2.desc':  'Brasil pionerizo t&eacute;cnicas como el Brazilian Butt Lift y el contorneado corporal de alta definici&oacute;n, hoy adoptadas por cirujanos en todo el mundo.',
-        'wb.p3.title': 'Ventaja Econ&oacute;mica Transparente',
-        'wb.p3.desc':  'La misma rinoplastia realizada en S&atilde;o Paulo cuesta 60&ndash;70% menos que en Londres o Nueva York &mdash; sin comprometer materiales, tecnolog&iacute;a ni resultados.',
-        'wb.p4.title': 'Curaci&oacute;n M&eacute;dica Aestyx',
-        'wb.p4.desc':  'Verificamos cada especialista en nuestra plataforma. Credenciales, resultados con pacientes y reconocimiento internacional son revisados antes de que cualquier especialista ingrese a la red Aestyx.',
-
-        'sv.kicker': 'Seguridad Primero',
-        'sv.title':  'Tu privacidad es<br><span class="accent">no negociable.</span>',
-        'sv.lead':   'Cada foto, dato y detalle de consulta procesado por Aestyx est&aacute; protegido por protocolos de nivel hospitalario. La privacidad absoluta no es una funci&oacute;n &mdash; es nuestra premisa fundamental.',
-
-        'sv1.title': 'Cifrado de Nivel Cl&iacute;nico',
-        'sv1.desc':  'Cada imagen que subes est&aacute; protegida con cifrado AES-256 &mdash; el mismo est&aacute;ndar utilizado en sistemas hospitalarios e instituciones financieras en todo el mundo.',
-        'sv1.badge': 'AES-256 &middot; Est&aacute;ndar Hospitalario',
-
-        'sv2.title': 'Acceso Exclusivo: T&uacute; y Tu Cirujano',
-        'sv2.desc':  'Tu Blueprint&#8482; y tus fotos son accesibles &uacute;nicamente para ti y el cirujano verificado que elijas. Nuestra IA procesa todos los datos de forma an&oacute;nima.',
-        'sv2.badge': 'Cero Acceso No Autorizado',
-
-        'sv3.title': 'Custodia Financiera Aestyx',
-        'sv3.desc':  'El pago queda en custodia segura. La cl&iacute;nica recibe los fondos &uacute;nicamente tras confirmar el cumplimiento de todos los protocolos de seguridad y los hitos de servicio acordados.',
-        'sv3.badge': 'Fondos Liberados al Completar',
-
-        'sv4.title': 'Verificaci&oacute;n de Tier: Cl&iacute;nicas y M&eacute;dicos',
-        'sv4.desc':  'Cada cl&iacute;nica asociada pasa por una auditor&iacute;a completa: registro en el Consejo M&eacute;dico, c&oacute;digo de especialidad RQE y cumplimiento sanitario.',
-        'sv4.badge': 'Registro &middot; Especialidad &middot; Cumplimiento Sanitario',
-
-        'faq.kicker': 'Maestr&iacute;a &amp; Seguridad',
-        'faq.title':  'Preguntas<br><span class="accent">frecuentes.</span>',
-
-        'part.kicker': 'Para Socios M&eacute;dicos',
-        'part.title':  'Tu pipeline global.<br><span class="accent">Construido y entregado.</span>',
-        'part.lead':   'Resolvemos el FX, la log&iacute;stica y la barrera del idioma. T&uacute; te enfocas en el quir&oacute;fano &mdash; nosotros traemos al paciente de alto ticket (USD/EUR), totalmente orientado y listo.',
-
-        'pb1.title': 'Pacientes Globales de Alto Ticket',
-        'pb1.desc':  'Accede a pacientes pre-calificados de Europa, Norteam&eacute;rica y Asia &mdash; emparejados con tu especialidad y perfil quir&uacute;rgico, llegando con intenci&oacute;n y poder adquisitivo en moneda fuerte.',
-        'pb2.title': 'Briefing Cl&iacute;nico Estructurado, Entregado',
-        'pb2.desc':  'Cada paciente llega con un Briefing Cl&iacute;nico preparado por IA: objetivos, historial m&eacute;dico, an&aacute;lisis fotogr&aacute;fico y lista priorizada de procedimientos.',
-        'pb3.title': 'Red Verificada por Invitaci&oacute;n',
-        'pb3.desc':  'Aestyx no es un directorio. Auditamos el registro profesional, c&oacute;digo de especialidad y cumplimiento sanitario antes de la admisi&oacute;n.',
-
-        'pcb.kicker':      'Postularse',
-        'pcb.title':       '&iquest;Listo para acceder a pacientes globales?',
-        'pcb.placeholder': 'E-mail de tu cl&iacute;nica',
-        'pcb.btn':         'Postularme',
-
         'cta.kicker': 'Lista de Espera de &Eacute;lite',
         'cta.title':  'S&eacute; de los primeros en<br><span class="accent">alcanzar tu 100%.</span>',
         'cta.lead':   'Aestyx est&aacute; lanzando para un grupo curado de miembros fundadores. Los miembros de acceso anticipado reciben match prioritario, condiciones exclusivas y estatus fundador de por vida.',
@@ -860,100 +504,10 @@
       }
     };
 
-    /* Merge page-specific keys into window.T */
     Object.keys(PAGE_T).forEach(function(lang) {
       if (window.T[lang]) Object.assign(window.T[lang], PAGE_T[lang]);
     });
 
-    /* ── FAQ DATA (psychological framing per language) ── */
-    var FAQ_T = {
-      en: [
-        {
-          q: 'What does \'83% savings on rhinoplasty\' actually mean for my money?',
-          a: 'A structural rhinoplasty in New York averages $29,000 upfront. The identical procedure with a SBCP-certified specialist in S&atilde;o Paulo averages $4,800 &mdash; a $24,200 difference. That reallocation goes directly into the outcome itself: premium anesthesia, post-operative monitoring, and recovery infrastructure &mdash; not into facility overhead or insurance billing. The Aestyx Flex&#8482; installment option spreads the Brazil price into 12 fixed payments of $475/month, making elite aesthetic medicine financially accessible without debt accumulation.'
-        },
-        {
-          q: 'How do Aestyx Flex&#8482; installments compare to US medical loans?',
-          a: 'US medical financing products (CareCredit, Prosper Healthcare Lending) typically charge 14.99&ndash;26.99% APR, with deferred-interest structures that can retroactively apply full interest if balances aren\'t cleared in the promotional window. Aestyx Flex&#8482; partners offer fixed monthly installments with transparent, upfront terms &mdash; no hidden deferred-interest traps. The result: you pay a predictable amount per month for world-class care, without the financial anxiety of American medical debt.'
-        },
-        {
-          q: 'Is Brazilian surgical quality comparable to New York or London?',
-          a: 'Statistically, yes. SBCP-certified surgeons in Brazil complete the same internationally accredited residency pathways as ASPS-certified surgeons in the US. Brazil\'s specific strengths &mdash; HD liposuction, rhinoplasty, and facelift &mdash; are globally recognized. Complication rates among verified Brazilian specialists are statistically equivalent to US board-certified peers. Aestyx adds a further filter: RQE code verification, patient outcome auditing, and facility sanitary compliance checks before any specialist enters the network.'
-        },
-        {
-          q: 'What is SBCP certification and how does it compare to ASPS?',
-          a: 'The SBCP (Sociedade Brasileira de Cirurgia Pl&aacute;stica) is the Brazilian equivalent of the ASPS (American Society of Plastic Surgeons). It requires six years of accredited surgical training, a national board examination, and ongoing continuing education. The RQE (Registro de Qualifica&ccedil;&atilde;o de Especialidade) is the Brazilian subspecialty registration code issued by the CFM (Conselho Federal de Medicina) &mdash; only surgeons who completed specific residency and passed a national assessment can obtain it. Aestyx verifies both credentials before admitting any specialist to the network.'
-        }
-      ],
-      pt: [
-        {
-          q: 'Como a IA da Aestyx seleciona os 127+ especialistas da rede?',
-          a: 'A curadoria Aestyx n&atilde;o &eacute; uma busca gen&eacute;rica. Nossa IA cruza quatro dimens&otilde;es: registro CRM ativo e sem pend&ecirc;ncias, n&uacute;mero RQE de especialidade cir&uacute;rgica (exigido pelo CFM), hist&oacute;rico de resultados cl&iacute;nicos documentados e forma&ccedil;&atilde;o p&oacute;s-graduada (fellowship ou especializa&ccedil;&atilde;o internacional). Apenas 1 em cada 12 candidatos passa por todos os crit&eacute;rios. Isso garante que todo especialista no seu Blueprint&#8482; foi auditado &mdash; n&atilde;o apenas listado.'
-        },
-        {
-          q: 'O que diferencia um especialista Aestyx de uma busca no Google ou Doctoralia?',
-          a: 'Curadoria ativa versus exposi&ccedil;&atilde;o passiva. Plataformas de diret&oacute;rio permitem qualquer m&eacute;dico com CRM ativo se cadastrar e comprar visibilidade. Na Aestyx, o especialista foi selecionado, auditado por crit&eacute;rios objetivos e s&oacute; aparece para pacientes cujo Blueprint&#8482; corresponde exatamente ao perfil cl&iacute;nico do cirurgi&atilde;o. O resultado: sem desperd&iacute;cio de consultas, sem desalinhamento de expectativas.'
-        },
-        {
-          q: 'Posso parcelar em 12x? Qual &eacute; a taxa real e como funciona?',
-          a: 'Sim. Via Aestyx Flex&#8482;, voc&ecirc; acessa parcelas mensais fixas negociadas diretamente com parceiros financeiros especializados em turismo m&eacute;dico. As taxas s&atilde;o transparentes e predefinidas &mdash; sem juros rotativos, sem armadilhas de juros diferidos (comuns nos EUA, onde CareCredit pode cobrar at&eacute; 26,99% a.a. retroativamente). Para uma rinoplastia de R$25.200 (equivalente a USD $4.800), o parcelamento em 12x resulta em aproximadamente 12x R$2.478 &mdash; um investimento acess&iacute;vel para o resultado da sua vida.'
-        },
-        {
-          q: 'Como funciona o Aestyx Score e o Blueprint&#8482;?',
-          a: 'Voc&ecirc; envia fotos pelo portal criptografado (AES-256 &mdash; mesmo padr&atilde;o de sistemas hospitalares). Em menos de 12 segundos, nossa IA analisa: simetria facial baseada na Regra &Aacute;urea, propor&ccedil;&otilde;es de Marquardt, viabilidade cir&uacute;rgica e prioriza&ccedil;&atilde;o de procedimentos. O resultado &eacute; um Blueprint&#8482; personalizado: um plano claro com procedimentos priorizados, resultado esperado e uma lista de especialistas verificados cuja expertise corresponde exatamente ao seu caso.'
-        }
-      ],
-      es: [
-        {
-          q: '&iquest;Qu&eacute; tan riguroso es el Consejo M&eacute;dico brasile&ntilde;o (SBCP/RQE)?',
-          a: 'El SBCP (Sociedad Brasile&ntilde;a de Cirug&iacute;a Pl&aacute;stica) exige 6 a&ntilde;os de formaci&oacute;n quir&uacute;rgica acreditada, equivalentes a los est&aacute;ndares del ASPS americano. El RQE (Registro de Cualificaci&oacute;n de Especialidad) es el c&oacute;digo oficial de subespecialidad emitido por el CFM (Consejo Federal de Medicina): solo cirujanos que completaron residencia espec&iacute;fica y aprobaron evaluaci&oacute;n nacional pueden obtenerlo. Aestyx verifica ambas credenciales &mdash; CRM activo y n&uacute;mero RQE &mdash; antes de admitir cualquier especialista a la red.'
-        },
-        {
-          q: '&iquest;C&oacute;mo protege Aestyx mi inversi&oacute;n financiera?',
-          a: 'Todo pago se retiene en custodia (escrow) hasta que se confirman los hitos de servicio acordados: consulta inicial, confirmaci&oacute;n del procedimiento y post-operatorio de seguimiento. La cl&iacute;nica no recibe los fondos hasta que tu proceso est&eacute; documentado y verificado en la plataforma. Este modelo es id&eacute;ntico al utilizado por Airbnb, Upwork y otras plataformas de alto ticket: la custodia protege al cliente, no al proveedor.'
-        },
-        {
-          q: '&iquest;Qu&eacute; riesgos existen en cirug&iacute;a est&eacute;tica y c&oacute;mo los mit&iacute;ga Aestyx?',
-          a: 'Los riesgos en cirug&iacute;a est&eacute;tica son inherentes al procedimiento quir&uacute;rgico, no al pa&iacute;s donde se realiza. Aestyx mitiga el riesgo de selecci&oacute;n: solo operan cirujanos SBCP/RQE certificados en instalaciones con cumplimiento sanitario auditado por la ANVISA (equivalente brasile&ntilde;o de la FDA). Las tasas de complicaci&oacute;n entre cirujanos SBCP certificados son estad&iacute;sticamente equivalentes a las de sus pares americanos certificados por ASPS. El riesgo real se reduce eligiendo bien &mdash; y Aestyx hace esa elecci&oacute;n por ti.'
-        },
-        {
-          q: '&iquest;Son seguros los implantes y materiales utilizados en Brasil?',
-          a: 'S&iacute;. Todos los implantes en cl&iacute;nicas de la red Aestyx son de marcas internacionalmente certificadas: Mentor, Allergan, Sientra y Motiva, entre otras. La ANVISA (Ag&ecirc;ncia Nacional de Vigil&acirc;ncia Sanit&aacute;ria) homologa los mismos dispositivos que la FDA americana y la EMA europea. La diferencia de precio no refleja diferencia en materiales &mdash; refleja la estructura de costos operativos de Brasil versus EE.UU.'
-        }
-      ]
-    };
-
-    /* ── Render FAQ accordion ── */
-    function renderFAQ(lang) {
-      var list = document.getElementById('faq-list');
-      if (!list) return;
-      var items = FAQ_T[lang] || FAQ_T['en'];
-      list.innerHTML = items.map(function(item) {
-        return '<div class="faq-item">' +
-          '<div class="faq-q" onclick="toggleFAQ(this)">' +
-            '<span>' + item.q + '</span>' +
-            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>' +
-          '</div>' +
-          '<div class="faq-a">' + item.a + '</div>' +
-        '</div>';
-      }).join('');
-    }
-
-    function toggleFAQ(el) {
-      var item = el.closest('.faq-item');
-      /* Close other open items */
-      document.querySelectorAll('.faq-item.open').forEach(function(other) {
-        if (other !== item) other.classList.remove('open');
-      });
-      item.classList.toggle('open');
-    }
-
-    /* ── Page-level language change hook ── */
-    window.onLanguageChange = function(lang) {
-      renderFAQ(lang);
-    };
-
-    /* ── Bootstrap ── */
     initPage();
   </script>
 </body>

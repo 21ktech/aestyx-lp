@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aestyx &mdash; How It Works</title>
+  <meta name="description" content="Aestyx Blueprint™ — AI-powered clinical roadmaps, seamless doctor-patient communication, and world-class Brazilian specialists. Discover how Aestyx works.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+  <link rel="stylesheet" href="css/shared.css">
+</head>
+<body>
+
+  <!-- CONSTRUCTION BANNER -->
+  <div class="construction-banner">
+    <div class="phase-pill">
+      <div class="phase-dot"></div>
+      <span data-i18n="phase.label"></span>
+    </div>
+    <span class="banner-text" data-i18n="banner"></span>
+  </div>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <span class="logo-dot"></span>
+      AESTYX
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" data-i18n="nav.value"></a></li>
+      <li><a href="security.html" data-i18n="nav.security"></a></li>
+      <li><a href="index.html#procedures" data-i18n="nav.procedures"></a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
+      <i data-lucide="menu"></i>
+    </button>
+    <div class="nav-right">
+      <div class="lang-selector">
+        <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
+        <button class="lang-btn" data-lang="pt" onclick="setLanguage('pt')">PT</button>
+        <button class="lang-btn" data-lang="es" onclick="setLanguage('es')">ES</button>
+      </div>
+      <a href="index.html#waitlist" class="nav-cta" data-i18n="nav.cta"></a>
+    </div>
+  </nav>
+
+  <!-- ══ PAGE HERO ══ -->
+  <div class="page-hero">
+    <div class="page-hero-content">
+      <div class="page-hero-eyebrow">
+        <div class="eyebrow-dot"></div>
+        <span data-i18n="hiw.hero.eyebrow"></span>
+      </div>
+      <h1 data-i18n="hiw.hero.h1"></h1>
+      <p class="page-hero-sub" data-i18n="hiw.hero.sub"></p>
+    </div>
+    <div class="ph-visual">
+      <div class="ph-stat-card">
+        <div class="ph-stat-icon"><i data-lucide="clock"></i></div>
+        <div>
+          <div class="ph-stat-label" data-i18n="hiw.s1.label"></div>
+          <div class="ph-stat-val" data-i18n="hiw.s1.val"></div>
+        </div>
+      </div>
+      <div class="ph-stat-card">
+        <div class="ph-stat-icon"><i data-lucide="cpu"></i></div>
+        <div>
+          <div class="ph-stat-label" data-i18n="hiw.s2.label"></div>
+          <div class="ph-stat-val" data-i18n="hiw.s2.val"></div>
+        </div>
+      </div>
+      <div class="ph-stat-card">
+        <div class="ph-stat-icon"><i data-lucide="users"></i></div>
+        <div>
+          <div class="ph-stat-label" data-i18n="hiw.s3.label"></div>
+          <div class="ph-stat-val" data-i18n="hiw.s3.val"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ VERIFY ROW ══ -->
+  <div class="verify-row">
+    <div class="verify-badge">
+      <i data-lucide="badge-check"></i>
+      <span data-i18n="badge.crm"></span>
+    </div>
+    <div class="verify-divider"></div>
+    <div class="verify-badge">
+      <i data-lucide="stethoscope"></i>
+      <span data-i18n="badge.rqe"></span>
+    </div>
+    <div class="verify-divider"></div>
+    <div class="verify-badge">
+      <i data-lucide="shield-check"></i>
+      <span data-i18n="badge.enc"></span>
+    </div>
+    <div class="verify-divider"></div>
+    <div class="verify-badge">
+      <i data-lucide="landmark"></i>
+      <span data-i18n="badge.escrow"></span>
+    </div>
+  </div>
+
+  <!-- ══ PATIENT JOURNEY ══ -->
+  <section class="journey hiw-section" id="journey">
+    <div class="section-kicker" data-i18n="journey.kicker"></div>
+    <div class="section-title" data-i18n="journey.title"></div>
+    <div class="journey-layout">
+      <div class="journey-steps">
+        <div class="js-item">
+          <div class="js-left"><div class="js-node">01</div><div class="js-line"></div></div>
+          <div>
+            <div class="js-title" data-i18n="js1.title"></div>
+            <p class="js-desc" data-i18n="js1.desc"></p>
+          </div>
+        </div>
+        <div class="js-item">
+          <div class="js-left"><div class="js-node">02</div><div class="js-line"></div></div>
+          <div>
+            <div class="js-title" data-i18n="js2.title"></div>
+            <p class="js-desc" data-i18n="js2.desc"></p>
+          </div>
+        </div>
+        <div class="js-item">
+          <div class="js-left"><div class="js-node">03</div><div class="js-line"></div></div>
+          <div>
+            <div class="js-title" data-i18n="js3.title"></div>
+            <p class="js-desc" data-i18n="js3.desc"></p>
+          </div>
+        </div>
+        <div class="js-item">
+          <div class="js-left"><div class="js-node">04</div><div class="js-line"></div></div>
+          <div>
+            <div class="js-title" data-i18n="js4.title"></div>
+            <p class="js-desc" data-i18n="js4.desc"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="journey-visual">
+        <div class="j-card">
+          <div class="jc-header">
+            <div class="jc-label" data-i18n="jc.label"></div>
+            <div class="jc-headline" data-i18n="jc.headline"></div>
+          </div>
+          <div class="jc-body">
+            <div class="jc-row">
+              <div class="jc-check">&#10003;</div>
+              <div>
+                <div class="jc-row-title" data-i18n="jc.r1.title"></div>
+                <div class="jc-row-sub" data-i18n="jc.r1.sub"></div>
+              </div>
+            </div>
+            <div class="jc-row">
+              <div class="jc-check">&#10003;</div>
+              <div>
+                <div class="jc-row-title" data-i18n="jc.r2.title"></div>
+                <div class="jc-row-sub" data-i18n="jc.r2.sub"></div>
+              </div>
+            </div>
+            <div class="jc-row">
+              <div class="jc-check">&#10003;</div>
+              <div>
+                <div class="jc-row-title" data-i18n="jc.r3.title"></div>
+                <div class="jc-row-sub" data-i18n="jc.r3.sub"></div>
+              </div>
+            </div>
+            <div class="jc-row">
+              <div class="jc-check">&#10003;</div>
+              <div>
+                <div class="jc-row-title" data-i18n="jc.r4.title"></div>
+                <div class="jc-row-sub" data-i18n="jc.r4.sub"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ WHY BRAZIL? ══ -->
+  <section class="why-brazil hiw-brazil" id="brazil">
+    <div class="section-kicker" data-i18n="wb.kicker"></div>
+    <div class="section-title" data-i18n="wb.title"></div>
+    <div class="wb-layout">
+      <div>
+        <div class="wb-stats">
+          <div class="wb-stat-card">
+            <div class="wb-num">60<span class="wb-unit">&ndash;70%</span></div>
+            <div class="wb-label" data-i18n="wb.s1"></div>
+          </div>
+          <div class="wb-stat-card">
+            <div class="wb-num">#<span style="font-size:1.6rem">2</span></div>
+            <div class="wb-label" data-i18n="wb.s2"></div>
+          </div>
+          <div class="wb-stat-card full">
+            <div class="wb-num" style="font-size:2rem" data-i18n="wb.s3.num"></div>
+            <div class="wb-label" data-i18n="wb.s3"></div>
+          </div>
+        </div>
+      </div>
+      <div class="wb-points">
+        <div class="wb-point">
+          <div class="wb-check">&#10003;</div>
+          <div>
+            <div class="wb-point-title" data-i18n="wb.p1.title"></div>
+            <div class="wb-point-desc" data-i18n="wb.p1.desc"></div>
+          </div>
+        </div>
+        <div class="wb-point">
+          <div class="wb-check">&#10003;</div>
+          <div>
+            <div class="wb-point-title" data-i18n="wb.p2.title"></div>
+            <div class="wb-point-desc" data-i18n="wb.p2.desc"></div>
+          </div>
+        </div>
+        <div class="wb-point">
+          <div class="wb-check">&#10003;</div>
+          <div>
+            <div class="wb-point-title" data-i18n="wb.p3.title"></div>
+            <div class="wb-point-desc" data-i18n="wb.p3.desc"></div>
+          </div>
+        </div>
+        <div class="wb-point">
+          <div class="wb-check">&#10003;</div>
+          <div>
+            <div class="wb-point-title" data-i18n="wb.p4.title"></div>
+            <div class="wb-point-desc" data-i18n="wb.p4.desc"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ WAITLIST CTA ══ -->
+  <section class="cta-section" id="waitlist">
+    <div class="section-kicker" data-i18n="cta.kicker"></div>
+    <div class="section-title" data-i18n="cta.title"></div>
+    <p class="section-lead" data-i18n="cta.lead"></p>
+    <div class="cta-waitlist-form">
+      <input type="email" class="waitlist-input" id="cta-email" data-i18n-placeholder="waitlist.placeholder">
+      <button class="btn-primary" onclick="handleWaitlist('cta-email','cta-success')">
+        <span data-i18n="waitlist.btn"></span>
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </button>
+    </div>
+    <p class="waitlist-success" id="cta-success" style="display:none;" data-i18n="waitlist.success"></p>
+    <p class="cta-note" data-i18n="cta.note"></p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="index.html" class="footer-logo"><span class="logo-dot"></span>AESTYX</a>
+    <ul class="footer-links">
+      <li><a href="#" data-i18n="footer.privacy"></a></li>
+      <li><a href="#" data-i18n="footer.terms"></a></li>
+      <li><a href="financing.html" data-i18n="nav.financing"></a></li>
+      <li><a href="partners.html" data-i18n="footer.partners"></a></li>
+      <li><a href="#" data-i18n="footer.contact"></a></li>
+    </ul>
+    <div class="footer-copy" data-i18n="footer.copy"></div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script>
+    var PAGE_T = {
+      en: {
+        'hiw.hero.eyebrow': 'Blueprint &amp; AI Bridge',
+        'hiw.hero.h1':      'From curiosity to your<br><span class="highlight">Aesthetic Peak.</span>',
+        'hiw.hero.sub':     'Aestyx maps your clinical profile in seconds, builds a personalized Blueprint™, and connects you exclusively to verified Brazilian specialists whose expertise matches your goals.',
+
+        'hiw.s1.label': 'Score Generated In',
+        'hiw.s1.val':   'Under 12 Seconds',
+        'hiw.s2.label': 'Clinical Engine',
+        'hiw.s2.val':   'Powered by Gemini AI',
+        'hiw.s3.label': 'Verified Specialists',
+        'hiw.s3.val':   '127 Active &middot; 18 Countries',
+
+        'journey.kicker': 'Your Journey',
+        'journey.title':  'From curiosity<br>to your <span class="accent">aesthetic peak.</span>',
+        'js1.title': 'Discover Your Potential',
+        'js1.desc':  'Upload your photos through our encrypted portal. In seconds, our AI generates your Aestyx Score and maps the precise path to your personal 100%.',
+        'js2.title': 'Receive Your Blueprint&#8482;',
+        'js2.desc':  'A personalised, AI-curated plan detailing procedures, priorities, and expected outcomes &mdash; designed exclusively for you.',
+        'js3.title': 'Match With a World-Class Specialist',
+        'js3.desc':  'We connect you to a verified Brazilian specialist whose expertise perfectly matches your Blueprint&#8482;. No cold searching.',
+        'js4.title': 'Transform. Arrive at Your 100%.',
+        'js4.desc':  'Consult, plan your journey to Brazil, and experience the transformation you have always envisioned.',
+
+        'jc.label':    'Aestyx Client Journey',
+        'jc.headline': 'Your 100%<br>awaits.',
+        'jc.r1.title': 'Aestyx Score Generated',
+        'jc.r1.sub':   'AI analysis complete in under 12 seconds',
+        'jc.r2.title': 'Personalized Blueprint&#8482; Ready',
+        'jc.r2.sub':   'Procedures, priorities &amp; outcome preview',
+        'jc.r3.title': 'Specialist Matched &amp; Verified',
+        'jc.r3.sub':   'Board-certified, globally trained expert',
+        'jc.r4.title': 'Journey to Brazil Planned',
+        'jc.r4.sub':   'End-to-end concierge support by Aestyx',
+
+        'wb.kicker': 'Why Brazil?',
+        'wb.title':  'The global capital of<br><span class="accent">aesthetic excellence.</span>',
+        'wb.s1':     'Below European &amp; US prices &mdash; same international standards',
+        'wb.s2':     'Globally in cosmetic surgery volume (ISAPS)',
+        'wb.s3.num': 'World-Renowned',
+        'wb.s3':     'Brazilian specialists are recognized worldwide for innovation in body sculpting, rhinoplasty, and skin rejuvenation',
+        'wb.p1.title': 'International Training Standards',
+        'wb.p1.desc':  'Brazilian plastic surgeons complete internationally accredited residencies. Many train in the US, Europe, and Asia before returning to practice.',
+        'wb.p2.title': 'Innovation-Led Culture',
+        'wb.p2.desc':  'Brazil pioneered techniques like the Brazilian Butt Lift and high-definition body contouring, now adopted by surgeons globally.',
+        'wb.p3.title': 'Transparent Economic Advantage',
+        'wb.p3.desc':  'The same rhinoplasty performed in S&atilde;o Paulo costs 60&ndash;70% less than in London or New York &mdash; without compromising on materials, technology, or outcomes.',
+        'wb.p4.title': 'Aestyx Medical Curation',
+        'wb.p4.desc':  'We verify every specialist on our platform. Credentials, patient outcomes, and international recognition are reviewed before any specialist joins the Aestyx network.',
+
+        'cta.kicker': 'Elite Waitlist',
+        'cta.title':  'Be among the first to<br><span class="accent">reach your 100%.</span>',
+        'cta.lead':   'Aestyx is launching to a curated group of founding members. Early access members receive priority matching, exclusive rates, and lifetime founding status.',
+        'cta.note':   '127+ verified specialists &middot; 18 countries &middot; Launching Phase 1 soon',
+      },
+
+      pt: {
+        'hiw.hero.eyebrow': 'Blueprint &amp; Ponte de IA',
+        'hiw.hero.h1':      'Da curiosidade ao seu<br><span class="highlight">Auge Est&eacute;tico.</span>',
+        'hiw.hero.sub':     'A Aestyx mapeia seu perfil cl&iacute;nico em segundos, cria um Blueprint&#8482; personalizado e te conecta exclusivamente &agrave; elite m&eacute;dica do Brasil.',
+
+        'hiw.s1.label': 'Score Gerado Em',
+        'hiw.s1.val':   'Menos de 12 Segundos',
+        'hiw.s2.label': 'Motor Cl&iacute;nico',
+        'hiw.s2.val':   'Powered by Gemini AI',
+        'hiw.s3.label': 'Especialistas Verificados',
+        'hiw.s3.val':   '127 Ativos &middot; 18 Pa&iacute;ses',
+
+        'journey.kicker': 'Sua Jornada',
+        'journey.title':  'Da curiosidade<br>ao seu <span class="accent">pico est&eacute;tico.</span>',
+        'js1.title': 'Descubra Seu Potencial',
+        'js1.desc':  'Envie suas fotos pelo nosso portal criptografado. Em segundos, nossa IA gera seu Aestyx Score e mapeia o caminho preciso para o seu 100% pessoal.',
+        'js2.title': 'Receba Seu Blueprint&#8482;',
+        'js2.desc':  'Um plano personalizado, curado por IA, detalhando procedimentos, prioridades e resultados esperados &mdash; criado exclusivamente para voc&ecirc;.',
+        'js3.title': 'Match com um Especialista de Classe Mundial',
+        'js3.desc':  'Conectamos voc&ecirc; a um especialista brasileiro verificado cuja expertise combina perfeitamente com seu Blueprint&#8482;.',
+        'js4.title': 'Transforme-se. Chegue ao Seu 100%.',
+        'js4.desc':  'Consulte, planeje sua jornada ao Brasil e experimente a transforma&ccedil;&atilde;o que voc&ecirc; sempre imaginou.',
+
+        'jc.label':    'Jornada do Cliente Aestyx',
+        'jc.headline': 'Seu 100%<br>espera por voc&ecirc;.',
+        'jc.r1.title': 'Aestyx Score Gerado',
+        'jc.r1.sub':   'An&aacute;lise IA completa em menos de 12 segundos',
+        'jc.r2.title': 'Blueprint&#8482; Personalizado Pronto',
+        'jc.r2.sub':   'Procedimentos, prioridades &amp; pr&eacute;via de resultado',
+        'jc.r3.title': 'Especialista Combinado e Verificado',
+        'jc.r3.sub':   'Expert certificado, treinado internacionalmente',
+        'jc.r4.title': 'Jornada ao Brasil Planejada',
+        'jc.r4.sub':   'Suporte concierge completo pela Aestyx',
+
+        'wb.kicker': 'Por Que o Brasil?',
+        'wb.title':  'A capital mundial da<br><span class="accent">excel&ecirc;ncia est&eacute;tica.</span>',
+        'wb.s1':     'Abaixo dos pre&ccedil;os europeus e americanos &mdash; mesmo padr&atilde;o internacional',
+        'wb.s2':     'Globalmente em volume de cirurgias pl&aacute;sticas (ISAPS)',
+        'wb.s3.num': 'Renome Mundial',
+        'wb.s3':     'Especialistas brasileiros s&atilde;o reconhecidos mundialmente por inova&ccedil;&atilde;o em escultura corporal, rinoplastia e rejuvenescimento de pele',
+        'wb.p1.title': 'Padr&otilde;es de Forma&ccedil;&atilde;o Internacional',
+        'wb.p1.desc':  'Cirurgi&otilde;es pl&aacute;sticos brasileiros realizam resid&ecirc;ncias internacionalmente acreditadas. Muitos se especializam nos EUA, Europa e &Aacute;sia antes de retornar ao Brasil.',
+        'wb.p2.title': 'Cultura de Inova&ccedil;&atilde;o',
+        'wb.p2.desc':  'O Brasil pioneirizou t&eacute;cnicas como o Brazilian Butt Lift e o contorno corporal de alta defini&ccedil;&atilde;o, hoje adotadas por cirurgi&otilde;es em todo o mundo.',
+        'wb.p3.title': 'Vantagem Econ&ocirc;mica Transparente',
+        'wb.p3.desc':  'A mesma rinoplastia realizada em S&atilde;o Paulo custa 60&ndash;70% menos do que em Londres ou Nova York &mdash; sem comprometer materiais, tecnologia ou resultados.',
+        'wb.p4.title': 'Curadoria M&eacute;dica Aestyx',
+        'wb.p4.desc':  'Verificamos cada especialista em nossa plataforma. Credenciais, resultados com pacientes e reconhecimento internacional s&atilde;o analisados antes de qualquer admiss&atilde;o na rede Aestyx.',
+
+        'cta.kicker': 'Lista de Espera de Elite',
+        'cta.title':  'Seja um dos primeiros a<br><span class="accent">alcan&ccedil;ar o seu 100%.</span>',
+        'cta.lead':   'A Aestyx est&aacute; lan&ccedil;ando para um grupo curado de membros fundadores. Membros de acesso antecipado recebem match priorit&aacute;rio, condi&ccedil;&otilde;es exclusivas e status vital&iacute;cio de fundador.',
+        'cta.note':   '127+ especialistas verificados &middot; 18 pa&iacute;ses &middot; Fase 1 lan&ccedil;ando em breve',
+      },
+
+      es: {
+        'hiw.hero.eyebrow': 'Blueprint &amp; Puente de IA',
+        'hiw.hero.h1':      'De la curiosidad a tu<br><span class="highlight">M&aacute;ximo Nivel Est&eacute;tico.</span>',
+        'hiw.hero.sub':     'Aestyx mapea tu perfil cl&iacute;nico en segundos, construye un Blueprint&#8482; personalizado y te conecta exclusivamente con especialistas brasile&ntilde;os verificados.',
+
+        'hiw.s1.label': 'Score Generado En',
+        'hiw.s1.val':   'Menos de 12 Segundos',
+        'hiw.s2.label': 'Motor Cl&iacute;nico',
+        'hiw.s2.val':   'Powered by Gemini AI',
+        'hiw.s3.label': 'Especialistas Verificados',
+        'hiw.s3.val':   '127 Activos &middot; 18 Pa&iacute;ses',
+
+        'journey.kicker': 'Tu Viaje',
+        'journey.title':  'De la curiosidad<br>a tu <span class="accent">pico est&eacute;tico.</span>',
+        'js1.title': 'Descubre Tu Potencial',
+        'js1.desc':  'Sube tus fotos a trav&eacute;s de nuestro portal cifrado. En segundos, nuestra IA genera tu Aestyx Score y traza el camino preciso hacia tu 100% personal.',
+        'js2.title': 'Recibe Tu Blueprint&#8482;',
+        'js2.desc':  'Un plan personalizado, curado por IA, que detalla procedimientos, prioridades y resultados esperados &mdash; dise&ntilde;ado exclusivamente para ti.',
+        'js3.title': 'Match con un Especialista de Clase Mundial',
+        'js3.desc':  'Te conectamos con un especialista brasile&ntilde;o verificado cuya experiencia coincide perfectamente con tu Blueprint&#8482;.',
+        'js4.title': 'Transf&oacute;rmate. Llega a Tu 100%.',
+        'js4.desc':  'Consulta, planifica tu viaje a Brasil y experimenta la transformaci&oacute;n que siempre has imaginado.',
+
+        'jc.label':    'Viaje del Cliente Aestyx',
+        'jc.headline': 'Tu 100%<br>te espera.',
+        'jc.r1.title': 'Aestyx Score Generado',
+        'jc.r1.sub':   'An&aacute;lisis IA completo en menos de 12 segundos',
+        'jc.r2.title': 'Blueprint&#8482; Personalizado Listo',
+        'jc.r2.sub':   'Procedimientos, prioridades y vista previa de resultado',
+        'jc.r3.title': 'Especialista Emparejado y Verificado',
+        'jc.r3.sub':   'Experto certificado, formado internacionalmente',
+        'jc.r4.title': 'Viaje a Brasil Planificado',
+        'jc.r4.sub':   'Soporte concierge completo por Aestyx',
+
+        'wb.kicker': '&iquest;Por Qu&eacute; Brasil?',
+        'wb.title':  'La capital mundial de la<br><span class="accent">excelencia est&eacute;tica.</span>',
+        'wb.s1':     'Por debajo de precios europeos y americanos &mdash; mismo est&aacute;ndar internacional',
+        'wb.s2':     'Globalmente en volumen de cirug&iacute;as pl&aacute;sticas (ISAPS)',
+        'wb.s3.num': 'Renombre Mundial',
+        'wb.s3':     'Los especialistas brasile&ntilde;os son reconocidos mundialmente por la innovaci&oacute;n en escultura corporal, rinoplastia y rejuvenecimiento de piel',
+        'wb.p1.title': 'Est&aacute;ndares de Formaci&oacute;n Internacional',
+        'wb.p1.desc':  'Los cirujanos pl&aacute;sticos brasile&ntilde;os realizan residencias internacionalmente acreditadas. Muchos se especializan en EE.UU., Europa y Asia antes de regresar a Brasil.',
+        'wb.p2.title': 'Cultura de Innovaci&oacute;n',
+        'wb.p2.desc':  'Brasil pionerizo t&eacute;cnicas como el Brazilian Butt Lift y el contorneado corporal de alta definici&oacute;n, hoy adoptadas por cirujanos en todo el mundo.',
+        'wb.p3.title': 'Ventaja Econ&oacute;mica Transparente',
+        'wb.p3.desc':  'La misma rinoplastia realizada en S&atilde;o Paulo cuesta 60&ndash;70% menos que en Londres o Nueva York &mdash; sin comprometer materiales, tecnolog&iacute;a ni resultados.',
+        'wb.p4.title': 'Curaci&oacute;n M&eacute;dica Aestyx',
+        'wb.p4.desc':  'Verificamos cada especialista en nuestra plataforma. Credenciales, resultados con pacientes y reconocimiento internacional son revisados antes de que cualquier especialista ingrese a la red Aestyx.',
+
+        'cta.kicker': 'Lista de Espera de &Eacute;lite',
+        'cta.title':  'S&eacute; de los primeros en<br><span class="accent">alcanzar tu 100%.</span>',
+        'cta.lead':   'Aestyx est&aacute; lanzando para un grupo curado de miembros fundadores. Los miembros de acceso anticipado reciben match prioritario, condiciones exclusivas y estatus fundador de por vida.',
+        'cta.note':   '127+ especialistas verificados &middot; 18 pa&iacute;ses &middot; Fase 1 lanzando pronto',
+      }
+    };
+
+    Object.keys(PAGE_T).forEach(function(lang) {
+      if (window.T[lang]) Object.assign(window.T[lang], PAGE_T[lang]);
+    });
+
+    initPage();
+  </script>
+</body>
+</html>

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aestyx &mdash; Security &amp; Privacy</title>
+  <meta name="description" content="AES-256 encryption, Aestyx Escrow protection, and triple-tier specialist verification. Your data and investment are protected at every stage.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+  <link rel="stylesheet" href="css/shared.css">
+</head>
+<body>
+
+  <!-- CONSTRUCTION BANNER -->
+  <div class="construction-banner">
+    <div class="phase-pill">
+      <div class="phase-dot"></div>
+      <span data-i18n="phase.label"></span>
+    </div>
+    <span class="banner-text" data-i18n="banner"></span>
+  </div>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <span class="logo-dot"></span>
+      AESTYX
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" data-i18n="nav.value"></a></li>
+      <li><a href="security.html" class="active" data-i18n="nav.security"></a></li>
+      <li><a href="index.html#procedures" data-i18n="nav.procedures"></a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
+      <i data-lucide="menu"></i>
+    </button>
+    <div class="nav-right">
+      <div class="lang-selector">
+        <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
+        <button class="lang-btn" data-lang="pt" onclick="setLanguage('pt')">PT</button>
+        <button class="lang-btn" data-lang="es" onclick="setLanguage('es')">ES</button>
+      </div>
+      <a href="index.html#waitlist" class="nav-cta" data-i18n="nav.cta"></a>
+    </div>
+  </nav>
+
+  <!-- ══ PAGE HERO ══ -->
+  <div class="page-hero">
+    <div class="page-hero-content">
+      <div class="page-hero-eyebrow">
+        <div class="eyebrow-dot"></div>
+        <span data-i18n="sec.hero.eyebrow"></span>
+      </div>
+      <h1 data-i18n="sec.hero.h1"></h1>
+      <p class="page-hero-sub" data-i18n="sec.hero.sub"></p>
+    </div>
+    <div class="ph-visual">
+      <div class="ph-stat-card">
+        <div class="ph-stat-icon"><i data-lucide="shield-check"></i></div>
+        <div>
+          <div class="ph-stat-label" data-i18n="sec.s1.label"></div>
+          <div class="ph-stat-val" data-i18n="sec.s1.val"></div>
+        </div>
+      </div>
+      <div class="ph-stat-card">
+        <div class="ph-stat-icon"><i data-lucide="eye-off"></i></div>
+        <div>
+          <div class="ph-stat-label" data-i18n="sec.s2.label"></div>
+          <div class="ph-stat-val" data-i18n="sec.s2.val"></div>
+        </div>
+      </div>
+      <div class="ph-stat-card">
+        <div class="ph-stat-icon"><i data-lucide="landmark"></i></div>
+        <div>
+          <div class="ph-stat-label" data-i18n="sec.s3.label"></div>
+          <div class="ph-stat-val" data-i18n="sec.s3.val"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ VERIFY ROW ══ -->
+  <div class="verify-row">
+    <div class="verify-badge">
+      <i data-lucide="badge-check"></i>
+      <span data-i18n="badge.crm"></span>
+    </div>
+    <div class="verify-divider"></div>
+    <div class="verify-badge">
+      <i data-lucide="stethoscope"></i>
+      <span data-i18n="badge.rqe"></span>
+    </div>
+    <div class="verify-divider"></div>
+    <div class="verify-badge">
+      <i data-lucide="shield-check"></i>
+      <span data-i18n="badge.enc"></span>
+    </div>
+    <div class="verify-divider"></div>
+    <div class="verify-badge">
+      <i data-lucide="landmark"></i>
+      <span data-i18n="badge.escrow"></span>
+    </div>
+  </div>
+
+  <!-- ══ SAFETY VAULT ══ -->
+  <section class="safety-vault" id="security">
+    <div class="sv-intro">
+      <div>
+        <div class="section-kicker" data-i18n="sv.kicker"></div>
+        <div class="section-title" data-i18n="sv.title"></div>
+      </div>
+      <p class="section-lead" data-i18n="sv.lead"></p>
+    </div>
+
+    <div class="sv-grid">
+      <div class="sv-card">
+        <div class="sv-icon-wrap"><i data-lucide="shield-check"></i></div>
+        <div>
+          <div class="sv-title" data-i18n="sv1.title"></div>
+          <p class="sv-desc" data-i18n="sv1.desc"></p>
+          <div class="sv-badge" data-i18n="sv1.badge"></div>
+        </div>
+      </div>
+      <div class="sv-card">
+        <div class="sv-icon-wrap"><i data-lucide="eye-off"></i></div>
+        <div>
+          <div class="sv-title" data-i18n="sv2.title"></div>
+          <p class="sv-desc" data-i18n="sv2.desc"></p>
+          <div class="sv-badge" data-i18n="sv2.badge"></div>
+        </div>
+      </div>
+      <div class="sv-card">
+        <div class="sv-icon-wrap"><i data-lucide="landmark"></i></div>
+        <div>
+          <div class="sv-title" data-i18n="sv3.title"></div>
+          <p class="sv-desc" data-i18n="sv3.desc"></p>
+          <div class="sv-badge" data-i18n="sv3.badge"></div>
+        </div>
+      </div>
+      <div class="sv-card">
+        <div class="sv-icon-wrap"><i data-lucide="badge-check"></i></div>
+        <div>
+          <div class="sv-title" data-i18n="sv4.title"></div>
+          <p class="sv-desc" data-i18n="sv4.desc"></p>
+          <div class="sv-badge" data-i18n="sv4.badge"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FAQ ══ -->
+  <section class="faq-section" id="faq">
+    <div class="faq-intro">
+      <div class="section-kicker" data-i18n="faq.kicker"></div>
+      <div class="section-title" data-i18n="faq.title"></div>
+    </div>
+    <div class="faq-list" id="faq-list"></div>
+  </section>
+
+  <!-- ══ WAITLIST CTA ══ -->
+  <section class="cta-section" id="waitlist">
+    <div class="section-kicker" data-i18n="cta.kicker"></div>
+    <div class="section-title" data-i18n="cta.title"></div>
+    <p class="section-lead" data-i18n="cta.lead"></p>
+    <div class="cta-waitlist-form">
+      <input type="email" class="waitlist-input" id="cta-email" data-i18n-placeholder="waitlist.placeholder">
+      <button class="btn-primary" onclick="handleWaitlist('cta-email','cta-success')">
+        <span data-i18n="waitlist.btn"></span>
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </button>
+    </div>
+    <p class="waitlist-success" id="cta-success" style="display:none;" data-i18n="waitlist.success"></p>
+    <p class="cta-note" data-i18n="cta.note"></p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="index.html" class="footer-logo"><span class="logo-dot"></span>AESTYX</a>
+    <ul class="footer-links">
+      <li><a href="#" data-i18n="footer.privacy"></a></li>
+      <li><a href="#" data-i18n="footer.terms"></a></li>
+      <li><a href="financing.html" data-i18n="nav.financing"></a></li>
+      <li><a href="partners.html" data-i18n="footer.partners"></a></li>
+      <li><a href="#" data-i18n="footer.contact"></a></li>
+    </ul>
+    <div class="footer-copy" data-i18n="footer.copy"></div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script>
+    var PAGE_T = {
+      en: {
+        'sec.hero.eyebrow': 'AES-256 &middot; Aestyx Escrow',
+        'sec.hero.h1':      'Your privacy is<br><span class="highlight">non-negotiable.</span>',
+        'sec.hero.sub':     'Every photo, data point, and consultation detail processed by Aestyx is protected by hospital-grade protocols. Absolute privacy is not a feature &mdash; it is our fundamental premise.',
+
+        'sec.s1.label': 'Data Encryption',
+        'sec.s1.val':   'AES-256 &middot; Hospital Standard',
+        'sec.s2.label': 'Data Access',
+        'sec.s2.val':   'Zero Unauthorized Access',
+        'sec.s3.label': 'Financial Protection',
+        'sec.s3.val':   'Escrow-Protected &middot; Always',
+
+        'sv.kicker': 'Security First',
+        'sv.title':  'Your privacy is<br><span class="accent">non-negotiable.</span>',
+        'sv.lead':   'Every photo, data point, and consultation detail processed by Aestyx is protected by hospital-grade protocols. Absolute privacy is not a feature &mdash; it is our fundamental premise.',
+
+        'sv1.title': 'Clinical-Grade Encryption',
+        'sv1.desc':  'Every image you upload is protected by AES-256 encryption &mdash; the same standard used in hospital systems and financial institutions worldwide. Your data is never stored in plain form.',
+        'sv1.badge': 'AES-256 &middot; Hospital Standard',
+
+        'sv2.title': 'Eyes-Only Access',
+        'sv2.desc':  'Your Blueprint&#8482; and photos are accessible only to you and the verified surgeon you choose. Our AI processes all data anonymously &mdash; no staff member ever views your images.',
+        'sv2.badge': 'Zero Unauthorized Access',
+
+        'sv3.title': 'Aestyx Escrow Control',
+        'sv3.desc':  'Payment is held in secure escrow. The clinic receives funds only after all safety protocols and service milestones have been confirmed &mdash; your financial protection is absolute.',
+        'sv3.badge': 'Funds Released on Completion',
+
+        'sv4.title': 'Verified Tier: Clinics &amp; Surgeons',
+        'sv4.desc':  'Every partner clinic undergoes a full audit: CRM registration, RQE specialty certification, and sanitary compliance. Only clinics that clear all three tiers are admitted to the Aestyx network.',
+        'sv4.badge': 'CRM &middot; RQE &middot; Sanitary Compliance',
+
+        'faq.kicker': 'Security &amp; Trust',
+        'faq.title':  'Frequently asked<br><span class="accent">questions.</span>',
+
+        'cta.kicker': 'Elite Waitlist',
+        'cta.title':  'Be among the first to<br><span class="accent">reach your 100%.</span>',
+        'cta.lead':   'Aestyx is launching to a curated group of founding members. Early access members receive priority matching, exclusive rates, and lifetime founding status.',
+        'cta.note':   '127+ verified specialists &middot; 18 countries &middot; Launching Phase 1 soon',
+      },
+
+      pt: {
+        'sec.hero.eyebrow': 'AES-256 &middot; Aestyx Escrow',
+        'sec.hero.h1':      'Sua privacidade &eacute;<br><span class="highlight">inegoci&aacute;vel.</span>',
+        'sec.hero.sub':     'Cada foto, dado e detalhe de consulta processado pela Aestyx &eacute; protegido por protocolos de n&iacute;vel hospitalar. Privacidade absoluta n&atilde;o &eacute; um recurso &mdash; &eacute; nossa premissa fundamental.',
+
+        'sec.s1.label': 'Criptografia',
+        'sec.s1.val':   'AES-256 &middot; Padr&atilde;o Hospitalar',
+        'sec.s2.label': 'Acesso aos Dados',
+        'sec.s2.val':   'Zero Acesso N&atilde;o Autorizado',
+        'sec.s3.label': 'Prote&ccedil;&atilde;o Financeira',
+        'sec.s3.val':   'Escrow Protegido &middot; Sempre',
+
+        'sv.kicker': 'Seguran&ccedil;a em Primeiro Lugar',
+        'sv.title':  'Sua privacidade &eacute;<br><span class="accent">inegoci&aacute;vel.</span>',
+        'sv.lead':   'Cada foto, dado e detalhe de consulta processado pela Aestyx &eacute; protegido por protocolos de n&iacute;vel hospitalar. Privacidade absoluta n&atilde;o &eacute; um recurso &mdash; &eacute; nossa premissa fundamental.',
+
+        'sv1.title': 'Criptografia de N&iacute;vel Cl&iacute;nico',
+        'sv1.desc':  'Cada imagem enviada &eacute; protegida com criptografia AES-256 &mdash; o mesmo padr&atilde;o utilizado em sistemas hospitalares e institui&ccedil;&otilde;es financeiras em todo o mundo.',
+        'sv1.badge': 'AES-256 &middot; Padr&atilde;o Hospitalar',
+
+        'sv2.title': 'Acesso Exclusivo: Voc&ecirc; e Seu Cirurgi&atilde;o',
+        'sv2.desc':  'Seu Blueprint&#8482; e suas fotos s&atilde;o acess&iacute;veis apenas a voc&ecirc; e ao cirurgi&atilde;o verificado que voc&ecirc; escolher. Nossa IA processa todos os dados de forma an&ocirc;nima.',
+        'sv2.badge': 'Zero Acesso N&atilde;o Autorizado',
+
+        'sv3.title': 'Cust&oacute;dia Financeira Aestyx',
+        'sv3.desc':  'O pagamento fica em cust&oacute;dia segura. A cl&iacute;nica recebe os valores apenas ap&oacute;s o cumprimento de todos os protocolos de seguran&ccedil;a e marcos de servi&ccedil;o confirmados.',
+        'sv3.badge': 'Libera&ccedil;&atilde;o Mediante Cumprimento',
+
+        'sv4.title': 'Verifica&ccedil;&atilde;o de Tier: Cl&iacute;nicas e M&eacute;dicos',
+        'sv4.desc':  'Cada cl&iacute;nica parceira passa por auditoria completa: registro no CRM, n&uacute;mero de RQE (especialidade) e conformidade sanit&aacute;ria. Apenas cl&iacute;nicas aprovadas nos tr&ecirc;s crit&eacute;rios s&atilde;o admitidas na rede Aestyx.',
+        'sv4.badge': 'CRM &middot; RQE &middot; Conformidade Sanit&aacute;ria',
+
+        'faq.kicker': 'Seguran&ccedil;a &amp; Confian&ccedil;a',
+        'faq.title':  'Perguntas<br><span class="accent">frequentes.</span>',
+
+        'cta.kicker': 'Lista de Espera de Elite',
+        'cta.title':  'Seja um dos primeiros a<br><span class="accent">alcan&ccedil;ar o seu 100%.</span>',
+        'cta.lead':   'A Aestyx est&aacute; lan&ccedil;ando para um grupo curado de membros fundadores. Membros de acesso antecipado recebem match priorit&aacute;rio, condi&ccedil;&otilde;es exclusivas e status vital&iacute;cio de fundador.',
+        'cta.note':   '127+ especialistas verificados &middot; 18 pa&iacute;ses &middot; Fase 1 lan&ccedil;ando em breve',
+      },
+
+      es: {
+        'sec.hero.eyebrow': 'AES-256 &middot; Aestyx Escrow',
+        'sec.hero.h1':      'Tu privacidad es<br><span class="highlight">no negociable.</span>',
+        'sec.hero.sub':     'Cada foto, dato y detalle de consulta procesado por Aestyx est&aacute; protegido por protocolos de nivel hospitalario. La privacidad absoluta no es una funci&oacute;n &mdash; es nuestra premissa fundamental.',
+
+        'sec.s1.label': 'Cifrado de Datos',
+        'sec.s1.val':   'AES-256 &middot; Est&aacute;ndar Hospitalario',
+        'sec.s2.label': 'Acceso a Datos',
+        'sec.s2.val':   'Cero Acceso No Autorizado',
+        'sec.s3.label': 'Protecci&oacute;n Financiera',
+        'sec.s3.val':   'Custodia Protegida &middot; Siempre',
+
+        'sv.kicker': 'Seguridad Primero',
+        'sv.title':  'Tu privacidad es<br><span class="accent">no negociable.</span>',
+        'sv.lead':   'Cada foto, dato y detalle de consulta procesado por Aestyx est&aacute; protegido por protocolos de nivel hospitalario. La privacidad absoluta no es una funci&oacute;n &mdash; es nuestra premissa fundamental.',
+
+        'sv1.title': 'Cifrado de Nivel Cl&iacute;nico',
+        'sv1.desc':  'Cada imagen que subes est&aacute; protegida con cifrado AES-256 &mdash; el mismo est&aacute;ndar utilizado en sistemas hospitalarios e instituciones financieras en todo el mundo.',
+        'sv1.badge': 'AES-256 &middot; Est&aacute;ndar Hospitalario',
+
+        'sv2.title': 'Acceso Exclusivo: T&uacute; y Tu Cirujano',
+        'sv2.desc':  'Tu Blueprint&#8482; y tus fotos son accesibles &uacute;nicamente para ti y el cirujano verificado que elijas. Nuestra IA procesa todos los datos de forma an&oacute;nima.',
+        'sv2.badge': 'Cero Acceso No Autorizado',
+
+        'sv3.title': 'Custodia Financiera Aestyx',
+        'sv3.desc':  'El pago queda en custodia segura. La cl&iacute;nica recibe los fondos &uacute;nicamente tras confirmar el cumplimiento de todos los protocolos de seguridad y los hitos de servicio acordados.',
+        'sv3.badge': 'Fondos Liberados al Completar',
+
+        'sv4.title': 'Verificaci&oacute;n de Tier: Cl&iacute;nicas y M&eacute;dicos',
+        'sv4.desc':  'Cada cl&iacute;nica asociada pasa por una auditor&iacute;a completa: registro en el Consejo M&eacute;dico, c&oacute;digo de especialidad RQE y cumplimiento sanitario.',
+        'sv4.badge': 'Registro &middot; Especialidad &middot; Cumplimiento Sanitario',
+
+        'faq.kicker': 'Seguridad &amp; Confianza',
+        'faq.title':  'Preguntas<br><span class="accent">frecuentes.</span>',
+
+        'cta.kicker': 'Lista de Espera de &Eacute;lite',
+        'cta.title':  'S&eacute; de los primeros en<br><span class="accent">alcanzar tu 100%.</span>',
+        'cta.lead':   'Aestyx est&aacute; lanzando para un grupo curado de miembros fundadores. Los miembros de acceso anticipado reciben match prioritario, condiciones exclusivas y estatus fundador de por vida.',
+        'cta.note':   '127+ especialistas verificados &middot; 18 pa&iacute;ses &middot; Fase 1 lanzando pronto',
+      }
+    };
+
+    var FAQ_T = {
+      en: [
+        {
+          q: 'How does AES-256 encryption protect my photos?',
+          a: 'AES-256 (Advanced Encryption Standard, 256-bit) is the same protocol used by hospitals, banks, and government agencies worldwide. When you upload photos to Aestyx, they are encrypted in transit and at rest &mdash; meaning even if a server were compromised, your images would be mathematically unreadable without your unique decryption key. No Aestyx staff member ever accesses your images in plain form.'
+        },
+        {
+          q: 'What is Aestyx Escrow and how does it protect my investment?',
+          a: 'Aestyx Escrow is a structured payment model inspired by Airbnb and Upwork. Your payment is held by a neutral third party and released to the clinic only after three milestones are confirmed: initial consultation completed, procedure confirmed, and post-operative check-in documented. If any milestone fails, the funds are protected. This model eliminates the financial risk of paying upfront with no recourse.'
+        },
+        {
+          q: 'Who can access my Blueprint™ and clinical data?',
+          a: 'Only you &mdash; and the specific verified surgeon you choose to share it with. Our AI processes all photo analysis anonymously, without any human review. Your Blueprint™ is never shared with other clinics, used for advertising, or sold to third parties. You retain full ownership and deletion rights at any time.'
+        },
+        {
+          q: 'How does Aestyx verify specialist credentials?',
+          a: 'Every specialist on the Aestyx network passes a three-tier audit: (1) Active CRM registration with the Regional Medical Council, (2) RQE specialty code confirming the specific surgical specialty, and (3) facility sanitary compliance per ANVISA standards. This triple-layer audit runs before admission and is periodically renewed. A specialist failing any tier is immediately suspended from the network.'
+        }
+      ],
+      pt: [
+        {
+          q: 'Como a criptografia AES-256 protege minhas fotos?',
+          a: 'AES-256 &eacute; o mesmo protocolo utilizado por hospitais, bancos e ag&ecirc;ncias governamentais em todo o mundo. Ao enviar fotos para a Aestyx, elas s&atilde;o criptografadas em tr&acirc;nsito e em repouso &mdash; mesmo que um servidor fosse comprometido, suas imagens seriam matematicamente ileg&iacute;veis sem a sua chave de deciframento &uacute;nica. Nenhum colaborador da Aestyx acessa suas imagens em formato aberto.'
+        },
+        {
+          q: 'O que &eacute; o Aestyx Escrow e como ele protege meu investimento?',
+          a: 'O Aestyx Escrow &eacute; um modelo de pagamento estruturado inspirado no Airbnb e no Upwork. Seu pagamento fica retido por um terceiro neutro e s&oacute; &eacute; liberado &agrave; cl&iacute;nica ap&oacute;s tr&ecirc;s marcos confirmados: consulta inicial realizada, procedimento confirmado e check-in p&oacute;s-operat&oacute;rio documentado. Se algum marco falhar, os fundos est&atilde;o protegidos.'
+        },
+        {
+          q: 'Quem pode acessar meu Blueprint&#8482; e dados cl&iacute;nicos?',
+          a: 'Apenas voc&ecirc; &mdash; e o cirurgi&atilde;o verificado espec&iacute;fico que voc&ecirc; escolher compartilhar. Nossa IA processa toda an&aacute;lise de fotos anonimamente, sem revis&atilde;o humana. Seu Blueprint&#8482; nunca &eacute; compartilhado com outras cl&iacute;nicas, usado para publicidade ou vendido a terceiros.'
+        },
+        {
+          q: 'Como a Aestyx verifica as credenciais dos especialistas?',
+          a: 'Todo especialista na rede Aestyx passa por auditoria em tr&ecirc;s n&iacute;veis: (1) CRM ativo no Conselho Regional de Medicina, (2) n&uacute;mero RQE confirmando a especialidade cir&uacute;rgica espec&iacute;fica, e (3) conformidade sanit&aacute;ria da instala&ccedil;&atilde;o conforme padr&otilde;es ANVISA. Esta auditoria tripla &eacute; exigida antes da admiss&atilde;o e renovada periodicamente.'
+        }
+      ],
+      es: [
+        {
+          q: '&iquest;C&oacute;mo protege el cifrado AES-256 mis fotos?',
+          a: 'AES-256 es el mismo protocolo utilizado por hospitales, bancos y agencias gubernamentales en todo el mundo. Al subir fotos a Aestyx, se cifran en tr&aacute;nsito y en reposo &mdash; incluso si un servidor fuera comprometido, tus im&aacute;genes ser&iacute;an matem&aacute;ticamente ilegibles sin tu clave de descifrado &uacute;nica. Ning&uacute;n miembro del equipo de Aestyx accede a tus im&aacute;genes en formato abierto.'
+        },
+        {
+          q: '&iquest;Qu&eacute; es Aestyx Escrow y c&oacute;mo protege mi inversi&oacute;n?',
+          a: 'Aestyx Escrow es un modelo de pago estructurado inspirado en Airbnb y Upwork. Tu pago queda retenido por un tercero neutral y se libera a la cl&iacute;nica solo tras confirmar tres hitos: consulta inicial completada, procedimiento confirmado y seguimiento posoperatorio documentado. Si alg&uacute;n hito falla, los fondos est&aacute;n protegidos.'
+        },
+        {
+          q: '&iquest;Qui&eacute;n puede acceder a mi Blueprint&#8482; y datos cl&iacute;nicos?',
+          a: 'Solo t&uacute; &mdash; y el cirujano verificado espec&iacute;fico que elijas compartirlo. Nuestra IA procesa todo el an&aacute;lisis de fotos de forma an&oacute;nima, sin revisi&oacute;n humana. Tu Blueprint&#8482; nunca se comparte con otras cl&iacute;nicas, se usa para publicidad ni se vende a terceros.'
+        },
+        {
+          q: '&iquest;C&oacute;mo verifica Aestyx las credenciales de los especialistas?',
+          a: 'Cada especialista en la red Aestyx pasa por una auditor&iacute;a de tres niveles: (1) CRM activo en el Consejo Regional de Medicina, (2) c&oacute;digo RQE confirmando la especialidad quir&uacute;rgica espec&iacute;fica, y (3) cumplimiento sanitario de las instalaciones seg&uacute;n est&aacute;ndares ANVISA. Esta auditor&iacute;a triple se requiere antes de la admisi&oacute;n y se renueva peri&oacute;dicamente.'
+        }
+      ]
+    };
+
+    Object.keys(PAGE_T).forEach(function(lang) {
+      if (window.T[lang]) Object.assign(window.T[lang], PAGE_T[lang]);
+    });
+
+    function renderFAQ(lang) {
+      var list = document.getElementById('faq-list');
+      if (!list) return;
+      var items = FAQ_T[lang] || FAQ_T['en'];
+      list.innerHTML = items.map(function(item) {
+        return '<div class="faq-item">' +
+          '<div class="faq-q" onclick="toggleFAQ(this)">' +
+            '<span>' + item.q + '</span>' +
+            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>' +
+          '</div>' +
+          '<div class="faq-a">' + item.a + '</div>' +
+        '</div>';
+      }).join('');
+    }
+
+    function toggleFAQ(el) {
+      var item = el.closest('.faq-item');
+      document.querySelectorAll('.faq-item.open').forEach(function(other) {
+        if (other !== item) other.classList.remove('open');
+      });
+      item.classList.toggle('open');
+    }
+
+    window.onLanguageChange = function(lang) { renderFAQ(lang); };
+
+    initPage();
+  </script>
+</body>
+</html>

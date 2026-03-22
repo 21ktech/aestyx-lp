@@ -175,6 +175,24 @@ window.handleWaitlist = function(inputId, successId) {
 };
 
 /* ----------------------------------------------------------------
+   toggleNav()
+   Toggle mobile navigation menu open/closed.
+   ---------------------------------------------------------------- */
+window.toggleNav = function() {
+  var nav = document.querySelector('nav');
+  nav.classList.toggle('nav-open');
+};
+
+/* Close mobile nav when any nav link is clicked (handles same-page anchors) */
+document.addEventListener('click', function(e) {
+  var link = e.target.closest('.nav-links a');
+  if (link) {
+    var nav = document.querySelector('nav');
+    if (nav) nav.classList.remove('nav-open');
+  }
+});
+
+/* ----------------------------------------------------------------
    initPage()
    Load saved language (or default 'en'), apply translations,
    and ensure Lucide icons initialise after DOMContentLoaded.
