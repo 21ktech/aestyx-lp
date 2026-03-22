@@ -162,6 +162,26 @@ nav {
 
 .nav-cta:hover { background: var(--text); transform: translateY(-1px); }
 
+/* ── Nav specialist ghost link ── */
+.nav-specialist {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--purple);
+  text-decoration: none;
+  border: 1px solid rgba(74,59,79,0.35);
+  padding: 7px 16px;
+  border-radius: 4px;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+.nav-specialist:hover,
+.nav-specialist.active {
+  background: rgba(74,59,79,0.07);
+  border-color: var(--purple);
+}
+
 /* ── Mobile nav toggle ── */
 .nav-toggle {
   display: none;
@@ -1032,10 +1052,17 @@ section { padding: 96px 5vw; }
 /* ── FOOTER ── */
 footer {
   background: var(--text);
-  padding: 44px 5vw;
+  padding: 64px 5vw 48px;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.footer-brand {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .footer-logo {
@@ -1052,14 +1079,29 @@ footer {
 
 .footer-logo .logo-dot { background: var(--gold); }
 
-.footer-links { display: flex; gap: 2rem; list-style: none; }
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.footer-col-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.2rem;
+}
+
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
 
 .footer-links a {
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.4);
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--lavender);
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -1067,7 +1109,7 @@ footer {
 .footer-links a:hover,
 .footer-links a.active { color: var(--gold); }
 
-.footer-copy { font-size: 0.72rem; color: rgba(255,255,255,0.22); }
+.footer-copy { font-size: 0.7rem; color: rgba(255,255,255,0.22); }
 
 /* ── PAGE HERO (partners/financing) ── */
 .page-hero {
@@ -1514,7 +1556,9 @@ footer {
   .verify-divider { display: none; }
 
   /* Footer / Nav */
-  footer { flex-direction: column; gap: 1.6rem; text-align: center; }
+  footer { grid-template-columns: 1fr; gap: 2.5rem; }
+  .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+  .nav-specialist { display: none; }
   nav .nav-links { display: none; }
   nav.nav-open .nav-links {
     display: flex;
@@ -1541,7 +1585,7 @@ footer {
 
 @media (max-width: 480px) {
   .ps-grid { grid-template-columns: 1fr; }
-  .footer-links { flex-direction: column; gap: 0.8rem; }
+  .footer-grid { grid-template-columns: 1fr; }
 }
 
 /* ── PRODUCT STACK (5 Pillars) ── */

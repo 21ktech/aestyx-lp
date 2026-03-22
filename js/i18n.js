@@ -32,6 +32,14 @@ window.T = {
     'footer.contact':  'Contact',
     'footer.copy':     '&copy; 2025 Aestyx Inc.',
 
+    /* ── Footer columns ── */
+    'footer.col.experience': 'Experience',
+    'footer.col.ecosystem':  'Ecosystem',
+    'footer.col.legal':      'Legal & Contact',
+    'footer.specialist':     'Medical Partnership',
+    'footer.security':       'Clinical Security',
+    'footer.club':           'Club Aestyx',
+
     /* ── Verification Badges ── */
     'badge.crm':    'CRM Verified',
     'badge.rqe':    'RQE Specialist',
@@ -66,6 +74,14 @@ window.T = {
     'footer.contact':  'Contato',
     'footer.copy':     '&copy; 2025 Aestyx Inc.',
 
+    /* ── Footer columns ── */
+    'footer.col.experience': 'Experiência',
+    'footer.col.ecosystem':  'Ecossistema',
+    'footer.col.legal':      'Legal & Contato',
+    'footer.specialist':     'Parceria Médica',
+    'footer.security':       'Segurança Clínica',
+    'footer.club':           'Club Aestyx',
+
     /* ── Verification Badges ── */
     'badge.crm':    'CRM Verificado',
     'badge.rqe':    'Especialista RQE',
@@ -99,6 +115,14 @@ window.T = {
     'footer.partners': 'Para Especialistas',
     'footer.contact':  'Contacto',
     'footer.copy':     '&copy; 2025 Aestyx Inc.',
+
+    /* ── Footer columns ── */
+    'footer.col.experience': 'Experiencia',
+    'footer.col.ecosystem':  'Ecosistema',
+    'footer.col.legal':      'Legal & Contacto',
+    'footer.specialist':     'Asociación Médica',
+    'footer.security':       'Seguridad Clínica',
+    'footer.club':           'Club Aestyx',
 
     /* ── Verification Badges ── */
     'badge.crm':    'CRM Verificado',
