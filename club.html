@@ -134,7 +134,6 @@
       <div class="lang-selector">
         <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
         <button class="lang-btn" data-lang="pt" onclick="setLanguage('pt')">PT</button>
-        <button class="lang-btn" data-lang="es" onclick="setLanguage('es')">ES</button>
       </div>
       <a href="index.html#waitlist" class="nav-cta" data-i18n="nav.cta"></a>
     </div>
@@ -294,132 +293,89 @@
   <script>
     var PAGE_T = {
       en: {
-        'club.hero.eyebrow': 'Phase 2 Preview',
-        'club.hero.h1':      'Track your evolution.<br><span class="highlight">Me vs Me.</span>',
-        'club.hero.sub':     'Aestyx Club turns your aesthetic journey into a measurable progression. Your Score evolves. Your milestones are tracked. Your best self, quantified.',
-        'club.hero.cta':     'Reserve My Spot',
+        'club.hero.eyebrow': 'Aestyx Club &mdash; from $9/month',
+        'club.hero.h1':      'Your evolution,<br><span class="highlight">tracked. Rewarded. Yours.</span>',
+        'club.hero.sub':     'The monthly membership that turns your aesthetic journey into measurable progress. Watch your Score climb. Unlock tiers. Earn rewards. See the difference between who you were and who you\'re becoming &mdash; month by month. Cancel anytime.',
+        'club.hero.cta':     'Subscribe &mdash; $9/month',
 
-        'club.preview.label':   'Aestyx Score',
-        'club.preview.sublabel':'Aesthetic Peak Index',
-        'club.preview.from':    'Score 6 months ago: 71',
-        'club.preview.current': 'Today: 84',
-        'club.preview.delta':   '+13 points &mdash; Facial Refinement phase complete',
+        'club.preview.label':   'Aestyx Score Evolution',
+        'club.preview.sublabel':'Aesthetic Peak Index &mdash; Month 6',
+        'club.preview.from':    'Baseline (Month 0): 71',
+        'club.preview.current': 'Current (Month 6): 84',
+        'club.preview.delta':   '+13 points &mdash; Silver Tier unlocked',
 
-        'club.badge.track':    'Progress Tracked',
-        'club.badge.progress': 'Score Evolution',
-        'club.badge.rewards':  'Founder Rewards',
+        'club.badge.track':    'Monthly Score Update',
+        'club.badge.progress': 'Tier Progression',
+        'club.badge.rewards':  'Milestone Rewards',
 
-        'club.features.kicker': 'Aestyx Club',
-        'club.features.title':  'Your aesthetic journey,<br><span class="accent">gamified.</span>',
+        'club.features.kicker': 'What\'s Included',
+        'club.features.title':  'Six reasons you\'ll want<br><span class="accent">to keep the subscription.</span>',
 
-        'club.f1.title': 'Score Dashboard',
-        'club.f1.desc':  'Your Aestyx Score updates after each procedure phase. Track facial symmetry, golden ratio alignment, and surgical viability in real time.',
+        'club.f1.title': 'Monthly Score Evolution',
+        'club.f1.desc':  'Your Aestyx Score updates every 30 days as you progress. Track facial symmetry, Golden Ratio alignment, and skin vitality improving over time. Watching the number move is addictive &mdash; in the best way.',
 
-        'club.f2.title': 'Me vs Me',
-        'club.f2.desc':  'Compare your current score against your baseline at any point in the journey. No external comparison &mdash; only your own peak, approached step by step.',
+        'club.f2.title': 'Tier Ranking System',
+        'club.f2.desc':  'Progress through four tiers based on your Score: <strong>Bronze (0&ndash;65)</strong>, <strong>Silver (66&ndash;79)</strong>, <strong>Gold (80&ndash;90)</strong>, <strong>Platinum (91&ndash;100)</strong>. Each tier unlocks higher-priority specialist access, exclusive benefits, and recognition milestones.',
 
-        'club.f3.title': 'Milestone Rewards',
-        'club.f3.desc':  'Earn Aestyx Club points for completing Blueprint™ phases, consultation milestones, and post-operative check-ins. Redeem for priority access and exclusive benefits.',
+        'club.f3.title': 'Me vs Me Timeline',
+        'club.f3.desc':  'A visual, chronological record of your entire aesthetic transformation &mdash; scores, photos, procedures, and milestones. No external ranking, no social comparison. Only one metric: are you closer to your 100% than you were last month?',
 
-        'club.f4.title': 'Journey Timeline',
-        'club.f4.desc':  'A visual, chronological record of every step in your aesthetic transformation &mdash; from first Score to final result.',
+        'club.f4.title': 'Blueprint Priority &amp; Discounts',
+        'club.f4.desc':  'Club members skip the queue for specialist consultations and receive an exclusive discount on Blueprint&#8482; renewals. At $9/month, the subscription effectively pays for itself on your next Blueprint.',
 
-        'club.f5.title': 'Private Vault',
-        'club.f5.desc':  'AES-256 encrypted photo archive. Compare before and after securely, with full ownership and deletion rights. Only you see your progression.',
+        'club.f5.title': 'Private Evolution Vault',
+        'club.f5.desc':  'AES-256 encrypted photo archive with clinical-quality before &amp; after comparison. Full ownership and deletion rights. Only you access your progression &mdash; your visual record of transformation, secured.',
 
-        'club.f6.title': 'Founder Access',
-        'club.f6.desc':  'Waitlist members who join before Phase 1 launch receive Founder status: lifetime priority matching, exclusive Aestyx Club tier, and early feature access.',
+        'club.f6.title': 'Founder Status &mdash; Lock Your Rate',
+        'club.f6.desc':  'Join before Phase 1 launch and lock the $9/month rate for life. Receive the exclusive Founder badge, priority access to every new specialist added to the network, and early access to every new feature before public release.',
 
-        'cta.kicker': 'Elite Waitlist',
-        'cta.title':  'Be among the first to<br><span class="accent">reach your 100%.</span>',
-        'cta.lead':   'Aestyx is launching to a curated group of founding members. Early access members receive priority matching, exclusive rates, and lifetime founding status.',
-        'cta.note':   '127+ verified specialists &middot; 18 countries &middot; Launching Phase 1 soon',
+        'cta.kicker': 'Founding Members',
+        'cta.title':  'Start tracking your evolution<br><span class="accent">from day one.</span>',
+        'cta.lead':   'Aestyx Club ($9/month) is the membership that makes your aesthetic journey visible, rewarding, and progressive. Founding members lock their rate for life and receive exclusive Founder tier benefits unavailable after launch.',
+        'cta.note':   'Aestyx Club &mdash; $9/month &middot; Cancel anytime &middot; Founders lock rate for life',
       },
 
       pt: {
-        'club.hero.eyebrow': 'Pr&eacute;via da Fase 2',
-        'club.hero.h1':      'Acompanhe sua evolu&ccedil;&atilde;o.<br><span class="highlight">Eu vs Eu.</span>',
-        'club.hero.sub':     'O Aestyx Club transforma sua jornada est&eacute;tica em uma progress&atilde;o mensur&aacute;vel. Seu Score evolui. Seus marcos s&atilde;o registrados. Sua melhor vers&atilde;o, quantificada.',
-        'club.hero.cta':     'Reservar Minha Vaga',
+        'club.hero.eyebrow': 'Aestyx Club &mdash; a partir de R$29/m&ecirc;s',
+        'club.hero.h1':      'Sua evolu&ccedil;&atilde;o,<br><span class="highlight">registrada. Recompensada. Sua.</span>',
+        'club.hero.sub':     'A assinatura mensal que transforma sua jornada est&eacute;tica em progress&atilde;o mensur&aacute;vel. Veja seu Score subir. Desbloqueie tiers. Ganhe recompensas. Sinta a diferen&ccedil;a entre quem voc&ecirc; era e quem est&aacute; se tornando &mdash; m&ecirc;s a m&ecirc;s. Cancele quando quiser.',
+        'club.hero.cta':     'Assinar &mdash; R$29/m&ecirc;s',
 
-        'club.preview.label':   'Aestyx Score',
-        'club.preview.sublabel':'&Iacute;ndice de Pico Est&eacute;tico',
-        'club.preview.from':    'Score h&aacute; 6 meses: 71',
-        'club.preview.current': 'Hoje: 84',
-        'club.preview.delta':   '+13 pontos &mdash; Fase de Refinamento Facial conclu&iacute;da',
+        'club.preview.label':   'Evolu&ccedil;&atilde;o do Aestyx Score',
+        'club.preview.sublabel':'&Iacute;ndice de Auge Est&eacute;tico &mdash; M&ecirc;s 6',
+        'club.preview.from':    'Baseline (M&ecirc;s 0): 71',
+        'club.preview.current': 'Atual (M&ecirc;s 6): 84',
+        'club.preview.delta':   '+13 pontos &mdash; Tier Silver desbloqueado',
 
-        'club.badge.track':    'Progress&atilde;o Registrada',
-        'club.badge.progress': 'Evolu&ccedil;&atilde;o do Score',
-        'club.badge.rewards':  'Recompensas Founder',
+        'club.badge.track':    'Atualiza&ccedil;&atilde;o Mensal do Score',
+        'club.badge.progress': 'Progress&atilde;o de Tier',
+        'club.badge.rewards':  'Recompensas por Marco',
 
-        'club.features.kicker': 'Aestyx Club',
-        'club.features.title':  'Sua jornada est&eacute;tica,<br><span class="accent">gamificada.</span>',
+        'club.features.kicker': 'O Que Est&aacute; Inclu&iacute;do',
+        'club.features.title':  'Seis motivos para voc&ecirc; querer<br><span class="accent">manter a assinatura.</span>',
 
-        'club.f1.title': 'Dashboard do Score',
-        'club.f1.desc':  'Seu Aestyx Score &eacute; atualizado ap&oacute;s cada fase de procedimento. Acompanhe simetria facial, alinhamento com a regra &aacute;urea e viabilidade cir&uacute;rgica em tempo real.',
+        'club.f1.title': 'Evolu&ccedil;&atilde;o Mensal do Score',
+        'club.f1.desc':  'Seu Aestyx Score &eacute; atualizado a cada 30 dias conforme voc&ecirc; progride. Acompanhe simetria facial, alinhamento com a Regra &Aacute;urea e vitalidade da pele evoluindo ao longo do tempo. Ver o n&uacute;mero subir &eacute; viciante &mdash; do jeito certo.',
 
-        'club.f2.title': 'Eu vs Eu',
-        'club.f2.desc':  'Compare seu score atual com o baseline em qualquer ponto da jornada. Sem compara&ccedil;&atilde;o externa &mdash; apenas o seu pr&oacute;prio pico, alcan&ccedil;ado passo a passo.',
+        'club.f2.title': 'Sistema de Tiers',
+        'club.f2.desc':  'Avance por quatro n&iacute;veis com base no seu Score: <strong>Bronze (0&ndash;65)</strong>, <strong>Silver (66&ndash;79)</strong>, <strong>Gold (80&ndash;90)</strong>, <strong>Platinum (91&ndash;100)</strong>. Cada tier desbloqueia acesso priorit&aacute;rio a especialistas, benef&iacute;cios exclusivos e marcos de reconhecimento.',
 
-        'club.f3.title': 'Recompensas por Marco',
-        'club.f3.desc':  'Acumule pontos Aestyx Club ao concluir fases do Blueprint&#8482;, marcos de consulta e check-ins p&oacute;s-operat&oacute;rios. Resgate por acesso priorit&aacute;rio e benef&iacute;cios exclusivos.',
+        'club.f3.title': 'Timeline Eu vs Eu',
+        'club.f3.desc':  'Um registro visual e cronol&oacute;gico de toda sua transforma&ccedil;&atilde;o est&eacute;tica &mdash; scores, fotos, procedimentos e marcos. Sem ranking externo, sem compara&ccedil;&atilde;o social. S&oacute; uma m&eacute;trica: voc&ecirc; est&aacute; mais perto do seu 100% do que estava no m&ecirc;s passado?',
 
-        'club.f4.title': 'Linha do Tempo da Jornada',
-        'club.f4.desc':  'Um registro visual e cronol&oacute;gico de cada etapa da sua transforma&ccedil;&atilde;o est&eacute;tica &mdash; do primeiro Score ao resultado final.',
+        'club.f4.title': 'Prioridade Blueprint &amp; Descontos',
+        'club.f4.desc':  'Membros do Club pulam a fila para consultas com especialistas e recebem desconto exclusivo nas renova&ccedil;&otilde;es do Blueprint&#8482;. Com R$29/m&ecirc;s, a assinatura se paga na pr&oacute;xima renova&ccedil;&atilde;o do Blueprint.',
 
-        'club.f5.title': 'Cofre Privado',
-        'club.f5.desc':  'Arquivo de fotos criptografado com AES-256. Compare antes e depois com seguran&ccedil;a, com propriedade completa e direito de exclus&atilde;o. Apenas voc&ecirc; v&ecirc; sua progress&atilde;o.',
+        'club.f5.title': 'Cofre Privado de Evolu&ccedil;&atilde;o',
+        'club.f5.desc':  'Arquivo de fotos criptografado com AES-256 com compara&ccedil;&atilde;o cl&iacute;nica de antes &amp; depois. Propriedade completa e direito de exclus&atilde;o. S&oacute; voc&ecirc; acessa sua progress&atilde;o &mdash; seu registro visual de transforma&ccedil;&atilde;o, protegido.',
 
-        'club.f6.title': 'Acesso Founder',
-        'club.f6.desc':  'Membros da lista de espera que ingressarem antes do lan&ccedil;amento da Fase 1 recebem status Founder: match priorit&aacute;rio vitalicio, tier exclusivo do Aestyx Club e acesso antecipado a features.',
+        'club.f6.title': 'Status Founder &mdash; Trave Seu Pre&ccedil;o',
+        'club.f6.desc':  'Entre antes do lan&ccedil;amento da Fase 1 e trave o valor de R$29/m&ecirc;s para sempre. Receba o badge exclusivo de Founder, acesso priorit&aacute;rio a cada novo especialista adicionado &agrave; rede e acesso antecipado a cada nova funcionalidade antes do lan&ccedil;amento p&uacute;blico.',
 
-        'cta.kicker': 'Lista de Espera de Elite',
-        'cta.title':  'Seja um dos primeiros a<br><span class="accent">alcan&ccedil;ar o seu 100%.</span>',
-        'cta.lead':   'A Aestyx est&aacute; lan&ccedil;ando para um grupo curado de membros fundadores. Membros de acesso antecipado recebem match priorit&aacute;rio, condi&ccedil;&otilde;es exclusivas e status vital&iacute;cio de fundador.',
-        'cta.note':   '127+ especialistas verificados &middot; 18 pa&iacute;ses &middot; Fase 1 lan&ccedil;ando em breve',
-      },
-
-      es: {
-        'club.hero.eyebrow': 'Vista Previa Fase 2',
-        'club.hero.h1':      'Sigue tu evoluci&oacute;n.<br><span class="highlight">Yo vs Yo.</span>',
-        'club.hero.sub':     'Aestyx Club convierte tu viaje est&eacute;tico en una progresi&oacute;n medible. Tu Score evoluciona. Tus hitos se registran. Tu mejor versi&oacute;n, cuantificada.',
-        'club.hero.cta':     'Reservar Mi Lugar',
-
-        'club.preview.label':   'Aestyx Score',
-        'club.preview.sublabel':'&Iacute;ndice de Pico Est&eacute;tico',
-        'club.preview.from':    'Score hace 6 meses: 71',
-        'club.preview.current': 'Hoy: 84',
-        'club.preview.delta':   '+13 puntos &mdash; Fase de Refinamiento Facial completada',
-
-        'club.badge.track':    'Progreso Registrado',
-        'club.badge.progress': 'Evoluci&oacute;n del Score',
-        'club.badge.rewards':  'Recompensas Founder',
-
-        'club.features.kicker': 'Aestyx Club',
-        'club.features.title':  'Tu viaje est&eacute;tico,<br><span class="accent">gamificado.</span>',
-
-        'club.f1.title': 'Dashboard del Score',
-        'club.f1.desc':  'Tu Aestyx Score se actualiza tras cada fase de procedimiento. Sigue la simetr&iacute;a facial, alineaci&oacute;n con la proporci&oacute;n &aacute;urea y viabilidad quir&uacute;rgica en tiempo real.',
-
-        'club.f2.title': 'Yo vs Yo',
-        'club.f2.desc':  'Compara tu score actual con tu l&iacute;nea base en cualquier punto del viaje. Sin comparaci&oacute;n externa &mdash; solo tu propio pico, alcanzado paso a paso.',
-
-        'club.f3.title': 'Recompensas por Hito',
-        'club.f3.desc':  'Acumula puntos Aestyx Club al completar fases del Blueprint&#8482;, hitos de consulta y seguimientos posoperatorios. Canjea por acceso prioritario y beneficios exclusivos.',
-
-        'club.f4.title': 'L&iacute;nea de Tiempo del Viaje',
-        'club.f4.desc':  'Un registro visual y cronol&oacute;gico de cada paso de tu transformaci&oacute;n est&eacute;tica &mdash; desde el primer Score hasta el resultado final.',
-
-        'club.f5.title': 'B&oacute;veda Privada',
-        'club.f5.desc':  'Archivo de fotos cifrado con AES-256. Compara antes y despu&eacute;s de forma segura, con propiedad completa y derecho de eliminaci&oacute;n. Solo t&uacute; ves tu progresi&oacute;n.',
-
-        'club.f6.title': 'Acceso Founder',
-        'club.f6.desc':  'Los miembros de la lista de espera que ingresen antes del lanzamiento de la Fase 1 reciben estatus Founder: match prioritario de por vida, tier exclusivo del Aestyx Club y acceso anticipado a funciones.',
-
-        'cta.kicker': 'Lista de Espera de &Eacute;lite',
-        'cta.title':  'S&eacute; de los primeros en<br><span class="accent">alcanzar tu 100%.</span>',
-        'cta.lead':   'Aestyx est&aacute; lanzando para un grupo curado de miembros fundadores. Los miembros de acceso anticipado reciben match prioritario, condiciones exclusivas y estatus fundador de por vida.',
-        'cta.note':   '127+ especialistas verificados &middot; 18 pa&iacute;ses &middot; Fase 1 lanzando pronto',
+        'cta.kicker': 'Membros Fundadores',
+        'cta.title':  'Comece a registrar sua evolu&ccedil;&atilde;o<br><span class="accent">desde o primeiro dia.</span>',
+        'cta.lead':   'O Aestyx Club (R$29/m&ecirc;s) &eacute; a assinatura que torna sua jornada est&eacute;tica vis&iacute;vel, recompensadora e progressiva. Membros fundadores travam seu valor para sempre e recebem benef&iacute;cios exclusivos do tier Founder indispon&iacute;veis ap&oacute;s o lan&ccedil;amento.',
+        'cta.note':   'Aestyx Club &mdash; R$29/m&ecirc;s &middot; Cancele quando quiser &middot; Founders travam o valor para sempre',
       }
     };
 

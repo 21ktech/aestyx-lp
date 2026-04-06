@@ -44,7 +44,6 @@
       <div class="lang-selector">
         <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
         <button class="lang-btn" data-lang="pt" onclick="setLanguage('pt')">PT</button>
-        <button class="lang-btn" data-lang="es" onclick="setLanguage('es')">ES</button>
       </div>
       <a href="index.html#waitlist" class="nav-cta" data-i18n="nav.cta"></a>
     </div>
@@ -217,135 +216,91 @@
   <script>
     var PAGE_T = {
       en: {
-        'part.hero.eyebrow': 'Invitation-Only Medical Network',
-        'part.hero.h1':      'Your global pipeline.<br><span class="highlight">Built and delivered.</span>',
-        'part.hero.sub':     'Focus on the OR &mdash; we handle the global pipeline. Pre-qualified patients from 18+ countries, AI-structured clinical briefs, and full logistics management. <strong>Zero commission from your revenue.</strong> Aestyx monetizes through a transparent patient-side service fee.',
+        'part.hero.eyebrow': 'Invitation-Only Specialist Network',
+        'part.hero.h1':      'More patients.<br><span class="highlight">Ready to consult.</span>',
+        'part.hero.sub':     'Aestyx brings you pre-qualified patients who already know exactly what they want. Each one arrives with a complete AI-prepared clinical brief &mdash; procedure priorities, goals, and medical history reviewed before the first appointment. You focus on your specialty. We handle the rest.',
 
-        'ph.s1.label': 'Patient Countries',
-        'ph.s1.val':   '18 Countries &middot; Active',
-        'ph.s2.label': 'Clinical Briefs Delivered',
+        'ph.s1.label': 'Patient Profile',
+        'ph.s1.val':   'Pre-Qualified &middot; Blueprint Ready',
+        'ph.s2.label': 'Clinical Brief',
         'ph.s2.val':   'Structured &middot; AI-Prepared',
         'ph.s3.label': 'Network Standard',
         'ph.s3.val':   'Invitation-Only &middot; Audited',
 
-        'part.kicker': 'Why Partner With Aestyx',
-        'part.title':  'Three pillars.<br><span class="accent">Zero friction.</span>',
-        'part.lead':   'We handle every layer between the global patient and your operating table.',
+        'part.kicker': 'How It Works For Specialists',
+        'part.title':  'Simple. Transparent.<br><span class="accent">Built around your practice.</span>',
+        'part.lead':   'We connect motivated, informed patients to verified specialists. No complexity, no surprises.',
 
-        'pb1.title': 'Zero Commission. Always.',
-        'pb1.desc':  'You invoice your standard procedure fee in full. Aestyx charges patients a transparent service fee on their side &mdash; approximately 30% of their total investment. You keep 100% of your revenue. No commission, no revenue split, no surprises.',
-        'pb2.title': 'Structured Clinical Brief, Delivered',
-        'pb2.desc':  'Every patient arrives with an AI-prepared brief: goals, medical history, photo analysis, and a prioritized procedure list. Save 40+ minutes of intake time.',
-        'pb3.title': 'Invitation-Only Verified Network',
-        'pb3.desc':  'Aestyx is not a directory. We audit CRM, RQE, and sanitary compliance. Your peers on this network are held to the same standard.',
+        'pb1.title': 'You Set Your Price. You Receive It.',
+        'pb1.desc':  'Register the fee you charge for each procedure. That is exactly the amount your patient pays for your service &mdash; transferred directly to you. No deductions, no commissions, no hidden fees on your revenue.',
+        'pb2.title': 'Patients Arrive Ready',
+        'pb2.desc':  'Every patient comes with an AI-structured clinical brief: aesthetic goals, medical history, photo analysis, and a prioritized procedure list. Your consultation starts where it should &mdash; at the clinical decision.',
+        'pb3.title': 'Curated, Verified Network',
+        'pb3.desc':  'Aestyx is not a directory. Every specialist is audited for CRM registration, RQE specialty code, and ANVISA sanitary compliance. Your peers on this network are held to the same rigorous standard.',
 
         'pcb.kicker':      'Apply to Join',
-        'pcb.title':       'Focus on the OR. We handle the global pipeline.',
+        'pcb.title':       'Join the network. Start receiving qualified patients.',
         'pcb.placeholder': 'Your clinic email address',
         'pcb.btn':         'Apply Now',
 
-        'ver.kicker': 'Our Verification Standard',
+        'ver.kicker': 'Verification Standard',
         'ver.title':  'Three-tier audit.<br><span class="accent">Every partner, every time.</span>',
 
         'ver1.title': 'CRM Registration',
-        'ver1.desc':  'We verify active registration with the Regional Medical Council (CRM). No active CRM number &mdash; no admission.',
+        'ver1.desc':  'Active registration with the Regional Medical Council (CRM) is mandatory. We verify directly &mdash; no active CRM number, no admission to the network.',
         'ver1.badge': 'Active Registration Required',
 
         'ver2.title': 'RQE Specialty Code',
-        'ver2.desc':  'Specialty procedures are cross-referenced against the specialist\'s RQE (Registro de Qualifica&ccedil;&atilde;o de Especialidade). Surgeons operate only within their verified scope.',
+        'ver2.desc':  'Specialty procedures are cross-referenced against the specialist\'s RQE (Registro de Qualifica&ccedil;&atilde;o de Especialidade). Every specialist operates exclusively within their verified scope.',
         'ver2.badge': 'Scope-Matched Procedures Only',
 
         'ver3.title': 'Sanitary Compliance',
-        'ver3.desc':  'Clinic facilities are reviewed for current ANVISA compliance and sanitary licensing. International patient safety standards apply.',
+        'ver3.desc':  'Clinic facilities are reviewed for current ANVISA compliance and sanitary licensing. International patient safety standards apply to every partner on the network.',
         'ver3.badge': 'ANVISA &middot; International Standards',
       },
 
       pt: {
-        'part.hero.eyebrow': 'Rede M&eacute;dica por Convite',
-        'part.hero.h1':      'Seu pipeline global.<br><span class="highlight">Constru&iacute;do e entregue.</span>',
-        'part.hero.sub':     'Foque no centro cir&uacute;rgico &mdash; n&oacute;s gerenciamos o pipeline global. Pacientes pr&eacute;-qualificados de 18+ pa&iacute;ses, briefings cl&iacute;nicos por IA e log&iacute;stica completa. <strong>Zero comiss&atilde;o sobre sua receita.</strong> A Aestyx monetiza via taxa de servi&ccedil;o transparente do lado do paciente.',
+        'part.hero.eyebrow': 'Rede de Especialistas por Convite',
+        'part.hero.h1':      'Mais pacientes.<br><span class="highlight">Prontos para consultar.</span>',
+        'part.hero.sub':     'A Aestyx leva at&eacute; voc&ecirc; pacientes pr&eacute;-qualificados que j&aacute; sabem exatamente o que querem. Cada um chega com um briefing cl&iacute;nico completo preparado por IA &mdash; procedimentos priorizados, objetivos e hist&oacute;rico m&eacute;dico revisados antes da primeira consulta. Voc&ecirc; foca na sua especialidade. N&oacute;s cuidamos do resto.',
 
-        'ph.s1.label': 'Pa&iacute;ses dos Pacientes',
-        'ph.s1.val':   '18 Pa&iacute;ses &middot; Ativo',
-        'ph.s2.label': 'Briefings Cl&iacute;nicos Entregues',
+        'ph.s1.label': 'Perfil do Paciente',
+        'ph.s1.val':   'Pr&eacute;-Qualificado &middot; Blueprint Pronto',
+        'ph.s2.label': 'Briefing Cl&iacute;nico',
         'ph.s2.val':   'Estruturado &middot; Preparado por IA',
         'ph.s3.label': 'Padr&atilde;o da Rede',
         'ph.s3.val':   'Apenas por Convite &middot; Auditado',
 
-        'part.kicker': 'Por Que Ser Parceiro Aestyx',
-        'part.title':  'Tr&ecirc;s pilares.<br><span class="accent">Zero fric&ccedil;&atilde;o.</span>',
-        'part.lead':   'Gerenciamos cada camada entre o paciente global e a sua mesa cir&uacute;rgica.',
+        'part.kicker': 'Como Funciona Para Especialistas',
+        'part.title':  'Simples. Transparente.<br><span class="accent">Feito para sua pr&aacute;tica.</span>',
+        'part.lead':   'Conectamos pacientes motivados e informados a especialistas verificados. Sem complexidade, sem surpresas.',
 
-        'pb1.title': 'Zero Comiss&atilde;o. Sempre.',
-        'pb1.desc':  'Voc&ecirc; emite nota pelo valor integral do seu procedimento. A Aestyx cobra uma taxa de servi&ccedil;o transparente do lado do paciente &mdash; aproximadamente 30% do investimento total dele. Voc&ecirc; fica com 100% da sua receita. Sem comiss&atilde;o, sem divis&atilde;o de receita, sem surpresas.',
-        'pb2.title': 'Briefing Cl&iacute;nico Estruturado, Entregue',
-        'pb2.desc':  'Cada paciente chega com um brief preparado por IA: objetivos, hist&oacute;rico m&eacute;dico, an&aacute;lise fotogr&aacute;fica e lista priorizada de procedimentos. Economize mais de 40 minutos de consulta.',
-        'pb3.title': 'Rede Verificada por Convite',
-        'pb3.desc':  'A Aestyx n&atilde;o &eacute; um diret&oacute;rio. Auditamos CRM, RQE e conformidade sanit&aacute;ria. Seus pares nessa rede s&atilde;o mantidos no mesmo padr&atilde;o.',
+        'pb1.title': 'Voc&ecirc; Define Seu Valor. Voc&ecirc; Recebe Integralmente.',
+        'pb1.desc':  'Cadastre o valor que voc&ecirc; cobra por cada procedimento. Esse &eacute; exatamente o valor que o paciente paga pelo seu servi&ccedil;o &mdash; transferido diretamente para voc&ecirc;. Sem descontos, sem cobran&ccedil;as ocultas sobre seus honor&aacute;rios.',
+        'pb2.title': 'Pacientes Chegam Preparados',
+        'pb2.desc':  'Cada paciente chega com um briefing cl&iacute;nico estruturado por IA: objetivos est&eacute;ticos, hist&oacute;rico m&eacute;dico, an&aacute;lise fotogr&aacute;fica e lista de procedimentos priorizada. Sua consulta come&ccedil;a onde deve &mdash; na decis&atilde;o cl&iacute;nica.',
+        'pb3.title': 'Rede Curada e Verificada',
+        'pb3.desc':  'A Aestyx n&atilde;o &eacute; um diret&oacute;rio. Cada especialista passa por auditoria de CRM, RQE e conformidade sanit&aacute;ria ANVISA. Seus pares nessa rede s&atilde;o mantidos no mesmo padr&atilde;o rigoroso.',
 
         'pcb.kicker':      'Candidatar-se',
-        'pcb.title':       'Foque no centro cir&uacute;rgico. N&oacute;s gerenciamos o pipeline global.',
+        'pcb.title':       'Entre na rede. Comece a receber pacientes qualificados.',
         'pcb.placeholder': 'E-mail da sua cl&iacute;nica',
         'pcb.btn':         'Candidatar-me',
 
-        'ver.kicker': 'Nosso Padr&atilde;o de Verifica&ccedil;&atilde;o',
+        'ver.kicker': 'Padr&atilde;o de Verifica&ccedil;&atilde;o',
         'ver.title':  'Auditoria em tr&ecirc;s n&iacute;veis.<br><span class="accent">Cada parceiro, sempre.</span>',
 
         'ver1.title': 'Registro no CRM',
-        'ver1.desc':  'Verificamos o registro ativo no Conselho Regional de Medicina (CRM). Sem n&uacute;mero de CRM ativo &mdash; sem admiss&atilde;o.',
+        'ver1.desc':  'Registro ativo no Conselho Regional de Medicina (CRM) &eacute; obrigat&oacute;rio. Verificamos diretamente &mdash; sem CRM ativo, sem admiss&atilde;o na rede.',
         'ver1.badge': 'Registro Ativo Obrigat&oacute;rio',
 
         'ver2.title': 'N&uacute;mero de RQE',
-        'ver2.desc':  'Os procedimentos de especialidade s&atilde;o cruzados com o RQE (Registro de Qualifica&ccedil;&atilde;o de Especialidade) do profissional. Cirurgi&otilde;es operam apenas dentro do escopo verificado.',
+        'ver2.desc':  'Os procedimentos de especialidade s&atilde;o cruzados com o RQE (Registro de Qualifica&ccedil;&atilde;o de Especialidade) do profissional. Cada especialista opera exclusivamente dentro do seu escopo verificado.',
         'ver2.badge': 'Procedimentos Dentro do Escopo',
 
         'ver3.title': 'Conformidade Sanit&aacute;ria',
-        'ver3.desc':  'As instala&ccedil;&otilde;es da cl&iacute;nica s&atilde;o revisadas quanto &agrave; conformidade atual com a ANVISA e ao licenciamento sanit&aacute;rio. Padr&otilde;es internacionais de seguran&ccedil;a do paciente se aplicam.',
+        'ver3.desc':  'As instala&ccedil;&otilde;es da cl&iacute;nica s&atilde;o revisadas quanto &agrave; conformidade atual com a ANVISA e ao licenciamento sanit&aacute;rio. Padr&otilde;es internacionais de seguran&ccedil;a do paciente se aplicam a todos os parceiros da rede.',
         'ver3.badge': 'ANVISA &middot; Padr&otilde;es Internacionais',
-      },
-
-      es: {
-        'part.hero.eyebrow': 'Red M&eacute;dica por Invitaci&oacute;n',
-        'part.hero.h1':      'Tu pipeline global.<br><span class="highlight">Construido y entregado.</span>',
-        'part.hero.sub':     'Enf&oacute;cate en el quir&oacute;fano &mdash; nosotros manejamos el pipeline global. Pacientes pre-calificados de 18+ pa&iacute;ses, briefings cl&iacute;nicos por IA y log&iacute;stica completa. <strong>Cero comisi&oacute;n sobre tu facturaci&oacute;n.</strong> Aestyx monetiza a trav&eacute;s de una tarifa de servicio transparente del lado del paciente.',
-
-        'ph.s1.label': 'Pa&iacute;ses de Pacientes',
-        'ph.s1.val':   '18 Pa&iacute;ses &middot; Activo',
-        'ph.s2.label': 'Briefings Cl&iacute;nicos Entregados',
-        'ph.s2.val':   'Estructurado &middot; Preparado por IA',
-        'ph.s3.label': 'Est&aacute;ndar de la Red',
-        'ph.s3.val':   'Solo por Invitaci&oacute;n &middot; Auditado',
-
-        'part.kicker': 'Por Qu&eacute; Asociarte con Aestyx',
-        'part.title':  'Tres pilares.<br><span class="accent">Cero fricci&oacute;n.</span>',
-        'part.lead':   'Gestionamos cada capa entre el paciente global y tu mesa de operaciones.',
-
-        'pb1.title': 'Cero Comisi&oacute;n. Siempre.',
-        'pb1.desc':  'T&uacute; facturas tu tarifa de procedimiento completa. Aestyx cobra una tarifa de servicio transparente del lado del paciente &mdash; aproximadamente 30% de su inversi&oacute;n total. T&uacute; conservas el 100% de tus ingresos. Sin comisi&oacute;n, sin divisi&oacute;n de ingresos, sin sorpresas.',
-        'pb2.title': 'Briefing Cl&iacute;nico Estructurado, Entregado',
-        'pb2.desc':  'Cada paciente llega con un briefing preparado por IA: objetivos, historial m&eacute;dico, an&aacute;lisis fotogr&aacute;fico y lista priorizada de procedimientos. Ahorra m&aacute;s de 40 minutos de consulta inicial.',
-        'pb3.title': 'Red Verificada por Invitaci&oacute;n',
-        'pb3.desc':  'Aestyx no es un directorio. Auditamos el registro m&eacute;dico, c&oacute;digo de especialidad y cumplimiento sanitario. Tus pares en esta red mantienen el mismo est&aacute;ndar.',
-
-        'pcb.kicker':      'Postularse',
-        'pcb.title':       'Enf&oacute;cate en el quir&oacute;fano. Nosotros manejamos el pipeline global.',
-        'pcb.placeholder': 'E-mail de tu cl&iacute;nica',
-        'pcb.btn':         'Postularme',
-
-        'ver.kicker': 'Nuestro Est&aacute;ndar de Verificaci&oacute;n',
-        'ver.title':  'Auditor&iacute;a en tres niveles.<br><span class="accent">Cada socio, siempre.</span>',
-
-        'ver1.title': 'Registro en el Consejo M&eacute;dico',
-        'ver1.desc':  'Verificamos el registro activo en el Consejo Regional de Medicina (CRM). Sin n&uacute;mero de registro activo &mdash; sin admisi&oacute;n.',
-        'ver1.badge': 'Registro Activo Requerido',
-
-        'ver2.title': 'C&oacute;digo de Especialidad RQE',
-        'ver2.desc':  'Los procedimientos de especialidad se cruzan con el RQE del profesional. Los cirujanos operan &uacute;nicamente dentro de su &aacute;mbito verificado.',
-        'ver2.badge': 'Procedimientos Dentro del Alcance',
-
-        'ver3.title': 'Cumplimiento Sanitario',
-        'ver3.desc':  'Las instalaciones de la cl&iacute;nica se revisan para verificar el cumplimiento actual de ANVISA y la licencia sanitaria. Se aplican los est&aacute;ndares internacionales de seguridad del paciente.',
-        'ver3.badge': 'ANVISA &middot; Est&aacute;ndares Internacionales',
       }
     };
 

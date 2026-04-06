@@ -9,7 +9,7 @@ window.T = {
     /* ── Phase / Banner ── */
     'phase.label': 'Phase 1',
     'phase.badge': 'Phase 1: Launching Soon',
-    'banner':      'Join the Elite Waitlist — early access closing soon',
+    'banner':      'Now accepting Founding Members &mdash; limited early access',
 
     /* ── Nav ── */
     'nav.value':      'Advantage',
@@ -22,8 +22,8 @@ window.T = {
 
     /* ── Waitlist ── */
     'waitlist.placeholder': 'Your email address',
-    'waitlist.btn':         'Request Access',
-    'waitlist.success':     '&#10003; You\'re on the list. We\'ll be in touch.',
+    'waitlist.btn':         'Begin My Evolution',
+    'waitlist.success':     '&#10003; Welcome. Your evolution starts here.',
 
     /* ── Footer ── */
     'footer.privacy':  'Privacy',
@@ -51,7 +51,7 @@ window.T = {
     /* ── Phase / Banner ── */
     'phase.label': 'Fase 1',
     'phase.badge': 'Fase 1: Lançamento Em Breve',
-    'banner':      'Entre para a Lista de Espera de Elite — vagas limitadas',
+    'banner':      'Aceitando Membros Fundadores &mdash; vagas limitadas',
 
     /* ── Nav ── */
     'nav.value':      'Vantagem',
@@ -64,8 +64,8 @@ window.T = {
 
     /* ── Waitlist ── */
     'waitlist.placeholder': 'Seu endereço de e-mail',
-    'waitlist.btn':         'Solicitar Acesso',
-    'waitlist.success':     '&#10003; Você está na lista. Entraremos em contato.',
+    'waitlist.btn':         'Come&ccedil;ar Minha Evolu&ccedil;&atilde;o',
+    'waitlist.success':     '&#10003; Bem-vindo(a). Sua evolu&ccedil;&atilde;o come&ccedil;a aqui.',
 
     /* ── Footer ── */
     'footer.privacy':  'Privacidade',
@@ -89,47 +89,6 @@ window.T = {
     'badge.escrow': 'Protegido pelo Aestyx Escrow',
   },
 
-  es: {
-    /* ── Phase / Banner ── */
-    'phase.label': 'Fase 1',
-    'phase.badge': 'Fase 1: Próximo Lanzamiento',
-    'banner':      'Únete a la Lista de Espera de Élite — cupos limitados',
-
-    /* ── Nav ── */
-    'nav.value':      'Ventaja',
-    'nav.security':   'Seguridad',
-    'nav.procedures': 'Procedimientos',
-    'nav.brazil':     'Por Qué Brasil',
-    'nav.partners':   'Socios',
-    'nav.financing':  'Financiamiento',
-    'nav.cta':        'Lista de Espera',
-
-    /* ── Waitlist ── */
-    'waitlist.placeholder': 'Tu dirección de e-mail',
-    'waitlist.btn':         'Solicitar Acceso',
-    'waitlist.success':     '&#10003; Estás en la lista. Te contactaremos pronto.',
-
-    /* ── Footer ── */
-    'footer.privacy':  'Privacidad',
-    'footer.terms':    'Términos',
-    'footer.partners': 'Para Especialistas',
-    'footer.contact':  'Contacto',
-    'footer.copy':     '&copy; 2025 Aestyx Inc.',
-
-    /* ── Footer columns ── */
-    'footer.col.experience': 'Experiencia',
-    'footer.col.ecosystem':  'Ecosistema',
-    'footer.col.legal':      'Legal & Contacto',
-    'footer.specialist':     'Asociación Médica',
-    'footer.security':       'Seguridad Clínica',
-    'footer.club':           'Club Aestyx',
-
-    /* ── Verification Badges ── */
-    'badge.crm':    'CRM Verificado',
-    'badge.rqe':    'Especialista RQE',
-    'badge.enc':    'Cifrado Hospitalario',
-    'badge.escrow': 'Protegido por Aestyx Escrow',
-  }
 };
 
 /* ----------------------------------------------------------------
