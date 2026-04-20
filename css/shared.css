@@ -1730,3 +1730,359 @@ footer {
 /* ── HOW IT WORKS: JOURNEY SECTION ── */
 .hiw-section { background: var(--white); }
 .hiw-brazil { background: var(--bg); }
+
+/* ── ARBITRAGE SECTION ── */
+.arb-section { background: var(--white); }
+
+.arb-intro {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 4rem;
+}
+
+.arb-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.arb-card {
+  background: var(--bg);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(74,59,79,0.07);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.arb-card:hover {
+  box-shadow: 0 20px 60px rgba(74,59,79,0.1);
+  transform: translateY(-5px);
+}
+
+.arb-card-header {
+  background: var(--purple);
+  padding: 22px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.arb-proc-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+}
+
+.arb-card-body { padding: 24px 28px 28px; }
+
+.arb-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 0;
+  border-bottom: 1px solid rgba(74,59,79,0.08);
+}
+
+.arb-row.featured-row {
+  background: rgba(74,59,79,0.05);
+  padding: 14px 12px;
+  border-radius: 10px;
+  margin: 6px 0 0;
+  border-bottom: none;
+}
+
+.arb-loc {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-s);
+}
+
+.arb-price {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-s);
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.arb-price.featured {
+  font-size: 1.4rem;
+  color: var(--purple);
+  text-decoration: none;
+  opacity: 1;
+}
+
+.arb-savings {
+  margin-top: 1.4rem;
+  padding: 14px 16px;
+  background: var(--white);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgba(74,59,79,0.07);
+}
+
+.arb-save-label {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-s);
+  margin-bottom: 3px;
+}
+
+.arb-save-amount {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.arb-save-pct {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--purple);
+  line-height: 1;
+}
+
+.arb-save-pct span { font-size: 1rem; color: var(--gold); }
+
+.arb-disclaimer {
+  text-align: center;
+  margin-top: 2.5rem;
+  font-size: 0.72rem;
+  color: var(--text-s);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.75;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(74,59,79,0.08);
+}
+
+/* ── CONCIERGE SECTION ── */
+.concierge-section {
+  background: var(--text);
+  padding: 96px 5vw;
+}
+
+.concierge-section .section-kicker { color: var(--gold); }
+.concierge-section .section-kicker::before { background: var(--gold); }
+.concierge-section .section-title { color: var(--white); }
+
+.con-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: end;
+  margin-bottom: 4rem;
+}
+
+.con-header .section-lead { color: rgba(255,255,255,0.45); }
+
+.concierge-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.con-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 32px 26px;
+  transition: background 0.3s, border-color 0.3s, transform 0.3s;
+}
+
+.con-card:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(201,185,156,0.35);
+  transform: translateY(-4px);
+}
+
+.con-num {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: rgba(201,185,156,0.18);
+  line-height: 1;
+  margin-bottom: 1.4rem;
+}
+
+.con-icon {
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  background: rgba(201,185,156,0.1);
+  border: 1px solid rgba(201,185,156,0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.4rem;
+}
+
+.con-icon svg { width: 20px; height: 20px; stroke: var(--gold); stroke-width: 1.75; }
+
+.con-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 0.65rem;
+}
+
+.con-desc {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.48);
+  line-height: 1.8;
+}
+
+@media (max-width: 960px) {
+  .arb-grid { grid-template-columns: 1fr; }
+  .con-header { grid-template-columns: 1fr; gap: 2rem; }
+  .concierge-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .concierge-grid { grid-template-columns: 1fr; }
+}
+
+/* ── ECOSYSTEM SECTION ── */
+.eco-section { background: var(--bg); }
+
+.eco-intro {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 4rem;
+}
+
+.eco-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.eco-card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 40px 32px;
+  border: 1px solid rgba(74,59,79,0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.eco-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 60px rgba(74,59,79,0.1);
+  border-color: rgba(74,59,79,0.15);
+}
+
+.eco-card.featured {
+  background: var(--purple);
+  border-color: transparent;
+  box-shadow: 0 32px 80px rgba(74,59,79,0.22);
+  transform: translateY(-16px);
+}
+
+.eco-card.featured:hover {
+  transform: translateY(-22px);
+  box-shadow: 0 44px 100px rgba(74,59,79,0.3);
+}
+
+.eco-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  width: fit-content;
+  margin-bottom: 0.4rem;
+}
+
+.eco-card:not(.featured) .eco-tag {
+  background: rgba(74,59,79,0.08);
+  color: var(--purple);
+}
+
+.eco-card.featured .eco-tag {
+  background: rgba(201,185,156,0.18);
+  color: var(--gold);
+  border: 1px solid rgba(201,185,156,0.3);
+}
+
+.eco-icon {
+  width: 52px; height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.4rem;
+}
+
+.eco-card:not(.featured) .eco-icon { background: rgba(74,59,79,0.06); }
+.eco-card.featured .eco-icon { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.12); }
+
+.eco-icon svg { width: 24px; height: 24px; stroke-width: 1.5; }
+.eco-card:not(.featured) .eco-icon svg { stroke: var(--purple); }
+.eco-card.featured .eco-icon svg { stroke: var(--gold); }
+
+.eco-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.eco-card:not(.featured) .eco-name { color: var(--text); }
+.eco-card.featured .eco-name { color: var(--white); }
+
+.eco-desc { font-size: 0.83rem; line-height: 1.8; flex: 1; }
+.eco-card:not(.featured) .eco-desc { color: var(--text-s); }
+.eco-card.featured .eco-desc { color: rgba(255,255,255,0.6); }
+
+.eco-cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-top: 0.8rem;
+  transition: gap 0.2s;
+}
+
+.eco-card:not(.featured) .eco-cta-link { color: var(--purple); }
+.eco-card.featured .eco-cta-link { color: var(--gold); }
+.eco-cta-link::after { content: ' →'; }
+.eco-cta-link:hover { gap: 10px; }
+
+/* ── HERO CTA ROW ── */
+.hero-cta-row { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+
+@media (max-width: 960px) {
+  .eco-grid { grid-template-columns: 1fr; }
+  .eco-card.featured { transform: none; }
+  .eco-card.featured:hover { transform: translateY(-6px); }
+}
+
+@media (max-width: 480px) {
+  .hero-cta-row { flex-direction: column; align-items: stretch; }
+  .hero-cta-row .btn-outline { text-align: center; justify-content: center; }
+}

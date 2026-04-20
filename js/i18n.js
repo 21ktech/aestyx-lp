@@ -41,10 +41,10 @@ window.T = {
     'footer.club':           'Club Aestyx',
 
     /* ── Verification Badges ── */
-    'badge.crm':    'CRM Verified',
-    'badge.rqe':    'RQE Specialist',
-    'badge.enc':    'Hospital-Grade Encryption',
-    'badge.escrow': 'Aestyx Escrow Protected',
+    'badge.crm':    'CRM-Verified Surgeons',
+    'badge.rqe':    'RQE-Certified Specialists',
+    'badge.enc':    'JCI-Certified Hospitals',
+    'badge.escrow': 'Escrow-Protected Payments',
   },
 
   pt: {
@@ -83,10 +83,10 @@ window.T = {
     'footer.club':           'Club Aestyx',
 
     /* ── Verification Badges ── */
-    'badge.crm':    'CRM Verificado',
-    'badge.rqe':    'Especialista RQE',
-    'badge.enc':    'Criptografia Hospitalar',
-    'badge.escrow': 'Protegido pelo Aestyx Escrow',
+    'badge.crm':    'Cirurgi&otilde;es com CRM Verificado',
+    'badge.rqe':    'Especialistas Certificados RQE',
+    'badge.enc':    'Hospitais Certificados JCI',
+    'badge.escrow': 'Pagamentos Protegidos por Escrow',
   },
 
 };

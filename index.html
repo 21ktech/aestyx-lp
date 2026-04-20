@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aestyx — Reach Your 100%</title>
-  <meta name="description" content="The world's first AI aesthetics intelligence platform. World-class Brazilian specialists. Your best version awaits.">
+  <title>Aestyx — Your Best Aesthetic Version, Without Borders</title>
+  <meta name="description" content="Upload two photos. Get a clinical-grade AI aesthetic analysis and a definitive roadmap to your peak potential — executed by Brazil's top 1% verified specialists at JCI-certified hospitals.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
@@ -28,21 +28,15 @@
       AESTYX
     </a>
     <ul class="nav-links">
-      <li><a href="index.html" data-i18n="nav.value"></a></li>
-      <li><a href="security.html" data-i18n="nav.security"></a></li>
-      <li><a href="financing.html" data-i18n="nav.financing"></a></li>
-      <li><a href="#procedures" data-i18n="nav.procedures"></a></li>
+      <li><a href="#ecosystem">The Platform</a></li>
+      <li><a href="#procedures">Procedures</a></li>
+      <li><a href="#arbitrage">Pricing</a></li>
     </ul>
     <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
       <i data-lucide="menu"></i>
     </button>
     <div class="nav-right">
-      <a href="partners.html" class="nav-specialist" data-i18n="footer.specialist"></a>
-      <div class="lang-selector">
-        <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
-        <button class="lang-btn" data-lang="pt" onclick="setLanguage('pt')">PT</button>
-      </div>
-      <a href="#waitlist" class="nav-cta" data-i18n="nav.cta"></a>
+      <a href="#waitlist" class="nav-cta">Get My Score &mdash; Free</a>
     </div>
   </nav>
 
@@ -55,14 +49,10 @@
       </div>
       <h1 data-i18n="hero.h1"></h1>
       <p class="hero-sub" data-i18n="hero.sub"></p>
-      <div class="waitlist-form">
-        <input type="email" class="waitlist-input" id="hero-email" data-i18n-placeholder="waitlist.placeholder">
-        <button class="btn-primary" onclick="handleWaitlist('hero-email','hero-success')">
-          <span data-i18n="waitlist.btn"></span>
-          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-        </button>
+      <div class="hero-cta-row">
+        <a href="#waitlist" class="btn-primary" data-i18n="hero.cta"></a>
+        <a href="#procedures" class="btn-outline" data-i18n="hero.cta2"></a>
       </div>
-      <p class="waitlist-success" id="hero-success" style="display:none;" data-i18n="waitlist.success"></p>
     </div>
 
     <div class="hero-visual">
@@ -158,57 +148,213 @@
     </div>
   </div>
 
-  <!-- ══ PRODUCT STACK — 5 PILLARS ══ -->
-  <section class="product-stack" id="platform">
-    <div class="ps-intro">
-      <div class="section-kicker" data-i18n="pillars.kicker"></div>
-      <div class="section-title" data-i18n="pillars.title"></div>
+  <!-- ══ THE AESTYX ECOSYSTEM ══ -->
+  <section class="eco-section" id="ecosystem">
+    <div class="eco-intro">
+      <div class="section-kicker" style="justify-content:center;" data-i18n="eco.kicker"></div>
+      <div class="section-title" data-i18n="eco.title"></div>
+      <p class="section-lead" data-i18n="eco.lead"></p>
     </div>
-    <div class="ps-grid">
+    <div class="eco-grid">
 
-      <!-- Pillar 1: Aestyx Score -->
-      <div class="ps-card">
-        <div class="ps-icon"><i data-lucide="brain"></i></div>
-        <div class="ps-number">01</div>
-        <div class="ps-name" data-i18n="pillar1.name"></div>
-        <p class="ps-desc" data-i18n="pillar1.desc"></p>
-        <a href="#waitlist" class="ps-link" data-i18n="pillar1.cta"></a>
+      <div class="eco-card">
+        <div class="eco-tag" data-i18n="eco.score.tag"></div>
+        <div class="eco-icon"><i data-lucide="scan"></i></div>
+        <div class="eco-name" data-i18n="eco.score.name"></div>
+        <p class="eco-desc" data-i18n="eco.score.desc"></p>
+        <a href="#waitlist" class="eco-cta-link" data-i18n="eco.score.cta"></a>
       </div>
 
-      <!-- Pillar 2: Aestyx Blueprint™ -->
-      <div class="ps-card">
-        <div class="ps-icon"><i data-lucide="map"></i></div>
-        <div class="ps-number">02</div>
-        <div class="ps-name" data-i18n="pillar2.name"></div>
-        <p class="ps-desc" data-i18n="pillar2.desc"></p>
-        <a href="how-it-works.html" class="ps-link" data-i18n="pillar2.cta"></a>
+      <div class="eco-card featured">
+        <div class="eco-tag" data-i18n="eco.bp.tag"></div>
+        <div class="eco-icon"><i data-lucide="map"></i></div>
+        <div class="eco-name" data-i18n="eco.bp.name"></div>
+        <p class="eco-desc" data-i18n="eco.bp.desc"></p>
+        <a href="#waitlist" class="eco-cta-link" data-i18n="eco.bp.cta"></a>
       </div>
 
-      <!-- Pillar 3: AI Translation Bridge -->
-      <div class="ps-card">
-        <div class="ps-icon"><i data-lucide="languages"></i></div>
-        <div class="ps-number">03</div>
-        <div class="ps-name" data-i18n="pillar3.name"></div>
-        <p class="ps-desc" data-i18n="pillar3.desc"></p>
-        <a href="how-it-works.html" class="ps-link" data-i18n="pillar3.cta"></a>
+      <div class="eco-card">
+        <div class="eco-tag" data-i18n="eco.club.tag"></div>
+        <div class="eco-icon"><i data-lucide="trophy"></i></div>
+        <div class="eco-name" data-i18n="eco.club.name"></div>
+        <p class="eco-desc" data-i18n="eco.club.desc"></p>
+        <a href="#waitlist" class="eco-cta-link" data-i18n="eco.club.cta"></a>
       </div>
 
-      <!-- Pillar 4: Medical Marketplace -->
-      <div class="ps-card">
-        <div class="ps-icon"><i data-lucide="store"></i></div>
-        <div class="ps-number">04</div>
-        <div class="ps-name" data-i18n="pillar4.name"></div>
-        <p class="ps-desc" data-i18n="pillar4.desc"></p>
-        <a href="financing.html" class="ps-link" data-i18n="pillar4.cta"></a>
+    </div>
+  </section>
+
+  <!-- ══ THE EXECUTION: WHY BRAZIL ══ -->
+  <section class="why-brazil" id="advantage">
+    <div class="section-kicker" data-i18n="brazil.kicker"></div>
+    <div class="section-title" data-i18n="brazil.title"></div>
+    <div class="wb-layout">
+      <div>
+        <div class="wb-stats">
+          <div class="wb-stat-card">
+            <div class="wb-num">#1<span class="wb-unit">*</span></div>
+            <div class="wb-label" data-i18n="wb.stat1"></div>
+          </div>
+          <div class="wb-stat-card">
+            <div class="wb-num">80<span class="wb-unit">%</span></div>
+            <div class="wb-label" data-i18n="wb.stat2"></div>
+          </div>
+          <div class="wb-stat-card full">
+            <div class="wb-num">60<span class="wb-unit">+</span></div>
+            <div class="wb-label" data-i18n="wb.stat3"></div>
+          </div>
+        </div>
+      </div>
+      <div class="wb-points">
+        <div class="wb-point">
+          <div class="wb-check">&#10003;</div>
+          <div>
+            <div class="wb-point-title" data-i18n="wb.point1.title"></div>
+            <div class="wb-point-desc" data-i18n="wb.point1.desc"></div>
+          </div>
+        </div>
+        <div class="wb-point">
+          <div class="wb-check">&#10003;</div>
+          <div>
+            <div class="wb-point-title" data-i18n="wb.point2.title"></div>
+            <div class="wb-point-desc" data-i18n="wb.point2.desc"></div>
+          </div>
+        </div>
+        <div class="wb-point">
+          <div class="wb-check">&#10003;</div>
+          <div>
+            <div class="wb-point-title" data-i18n="wb.point3.title"></div>
+            <div class="wb-point-desc" data-i18n="wb.point3.desc"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ QUALITY ARBITRAGE ══ -->
+  <section class="arb-section" id="arbitrage">
+    <div class="arb-intro">
+      <div class="section-kicker" style="justify-content:center;" data-i18n="arb.kicker"></div>
+      <div class="section-title" style="text-align:center;" data-i18n="arb.title"></div>
+      <p class="section-lead" data-i18n="arb.lead"></p>
+    </div>
+
+    <div class="arb-grid">
+
+      <div class="arb-card">
+        <div class="arb-card-header">
+          <div class="arb-proc-name" data-i18n="arb.proc1"></div>
+          <div class="bpc-tag tag-high" data-i18n="arb.highlight"></div>
+        </div>
+        <div class="arb-card-body">
+          <div class="arb-row">
+            <div class="arb-loc" data-i18n="arb.ref.us"></div>
+            <div class="arb-price">$29,000</div>
+          </div>
+          <div class="arb-row featured-row">
+            <div class="arb-loc" style="color:var(--purple);" data-i18n="arb.ref.br"></div>
+            <div class="arb-price featured">$4,800</div>
+          </div>
+          <div class="arb-savings">
+            <div>
+              <div class="arb-save-label" data-i18n="arb.save"></div>
+              <div class="arb-save-amount">$24,200</div>
+            </div>
+            <div class="arb-save-pct">83<span>%</span></div>
+          </div>
+        </div>
       </div>
 
-      <!-- Pillar 5: Aestyx Club -->
-      <div class="ps-card">
-        <div class="ps-icon"><i data-lucide="trophy"></i></div>
-        <div class="ps-number">05</div>
-        <div class="ps-name" data-i18n="pillar5.name"></div>
-        <p class="ps-desc" data-i18n="pillar5.desc"></p>
-        <a href="club.html" class="ps-link" data-i18n="pillar5.cta"></a>
+      <div class="arb-card">
+        <div class="arb-card-header">
+          <div class="arb-proc-name" data-i18n="arb.proc2"></div>
+          <div class="bpc-tag tag-high" data-i18n="arb.highlight"></div>
+        </div>
+        <div class="arb-card-body">
+          <div class="arb-row">
+            <div class="arb-loc" data-i18n="arb.ref.us"></div>
+            <div class="arb-price">$45,000</div>
+          </div>
+          <div class="arb-row featured-row">
+            <div class="arb-loc" style="color:var(--purple);" data-i18n="arb.ref.br"></div>
+            <div class="arb-price featured">$20,000</div>
+          </div>
+          <div class="arb-savings">
+            <div>
+              <div class="arb-save-label" data-i18n="arb.save"></div>
+              <div class="arb-save-amount">$25,000</div>
+            </div>
+            <div class="arb-save-pct">56<span>%</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="arb-card">
+        <div class="arb-card-header">
+          <div class="arb-proc-name" data-i18n="arb.proc3"></div>
+          <div class="bpc-tag tag-high" data-i18n="arb.highlight"></div>
+        </div>
+        <div class="arb-card-body">
+          <div class="arb-row">
+            <div class="arb-loc" data-i18n="arb.ref.us"></div>
+            <div class="arb-price">$12,500</div>
+          </div>
+          <div class="arb-row featured-row">
+            <div class="arb-loc" style="color:var(--purple);" data-i18n="arb.ref.br"></div>
+            <div class="arb-price featured">$5,050</div>
+          </div>
+          <div class="arb-savings">
+            <div>
+              <div class="arb-save-label" data-i18n="arb.save"></div>
+              <div class="arb-save-amount">$7,450</div>
+            </div>
+            <div class="arb-save-pct">60<span>%</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="arb-disclaimer" data-i18n="arb.disclaimer"></p>
+  </section>
+
+  <!-- ══ MEDICAL CONCIERGE & SAFETY ══ -->
+  <section class="concierge-section">
+    <div class="con-header">
+      <div>
+        <div class="section-kicker" data-i18n="con.kicker"></div>
+        <div class="section-title" data-i18n="con.title"></div>
+      </div>
+      <p class="section-lead" data-i18n="con.lead"></p>
+    </div>
+    <div class="concierge-grid">
+
+      <div class="con-card">
+        <div class="con-num">01</div>
+        <div class="con-icon"><i data-lucide="file-text"></i></div>
+        <div class="con-title" data-i18n="con1.title"></div>
+        <p class="con-desc" data-i18n="con1.desc"></p>
+      </div>
+
+      <div class="con-card">
+        <div class="con-num">02</div>
+        <div class="con-icon"><i data-lucide="building-2"></i></div>
+        <div class="con-title" data-i18n="con2.title"></div>
+        <p class="con-desc" data-i18n="con2.desc"></p>
+      </div>
+
+      <div class="con-card">
+        <div class="con-num">03</div>
+        <div class="con-icon"><i data-lucide="heart-pulse"></i></div>
+        <div class="con-title" data-i18n="con3.title"></div>
+        <p class="con-desc" data-i18n="con3.desc"></p>
+      </div>
+
+      <div class="con-card">
+        <div class="con-num">04</div>
+        <div class="con-icon"><i data-lucide="video"></i></div>
+        <div class="con-title" data-i18n="con4.title"></div>
+        <p class="con-desc" data-i18n="con4.desc"></p>
       </div>
 
     </div>
@@ -256,7 +402,7 @@
     </div>
   </section>
 
-  <!-- ══ ELITE WAITLIST ══ -->
+  <!-- ══ ELITE WAITLIST CTA ══ -->
   <section class="cta-section" id="waitlist">
     <div class="section-kicker" data-i18n="cta.kicker"></div>
     <div class="section-title" data-i18n="cta.title"></div>
@@ -280,19 +426,19 @@
     </div>
     <div class="footer-grid">
       <div class="footer-col">
-        <div class="footer-col-title" data-i18n="footer.col.experience"></div>
+        <div class="footer-col-title">Experience</div>
         <ul class="footer-links">
-          <li><a href="index.html" data-i18n="nav.value"></a></li>
-          <li><a href="#procedures" data-i18n="nav.procedures"></a></li>
-          <li><a href="financing.html" data-i18n="nav.financing"></a></li>
+          <li><a href="#advantage">Why Brazil</a></li>
+          <li><a href="#procedures">Procedures</a></li>
+          <li><a href="#arbitrage">Pricing</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <div class="footer-col-title" data-i18n="footer.col.ecosystem"></div>
+        <div class="footer-col-title">Platform</div>
         <ul class="footer-links">
-          <li><a href="partners.html" data-i18n="footer.specialist"></a></li>
-          <li><a href="security.html" data-i18n="footer.security"></a></li>
-          <li><a href="club.html" data-i18n="footer.club"></a></li>
+          <li><a href="#waitlist">Aestyx Score&#8482; &mdash; Free</a></li>
+          <li><a href="#waitlist">Blueprint&#8482; &mdash; $17</a></li>
+          <li><a href="#waitlist">Aestyx Club</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -310,9 +456,13 @@
   <script>
     var PAGE_T = {
       en: {
-        'hero.h1':  'Map your baseline.<br><span class="highlight">Plan your evolution.</span>',
-        'hero.sub': 'The AI platform that generates your Aestyx Score&#8482; in 12 seconds &mdash; then builds your complete aesthetic roadmap with Brazil\'s top 1% of verified specialists. Brazil leads the world in aesthetic excellence.',
+        /* ── Hero ── */
+        'hero.h1':  'Your best aesthetic version.<br><span class="highlight">Without borders.</span>',
+        'hero.sub': 'Upload two photos. Get a clinical-grade aesthetic analysis powered by AI &mdash; and a definitive roadmap to your peak potential.',
+        'hero.cta':  'Get My Free Score &rarr;',
+        'hero.cta2': 'Explore Procedures',
 
+        /* ── Blueprint UI ── */
         'ui.stat':          'Aestyx Score&#8482;',
         'ui.score.lbl':     'Aestyx Score&#8482;',
         'ui.score.tooltip': 'A proprietary clinical metric: facial symmetry, Golden Ratio proportions, Aesthetic Archetype, and surgical viability. Your compass before any decision.',
@@ -326,37 +476,82 @@
         'ui.pri.high':   'Priority',
         'ui.pri.med':    'Recommended',
         'ui.pri.opt':    'Optional',
-        'ui.btn1':       'Full Blueprint&#8482; &mdash; $49',
-        'ui.btn2':       'Find Specialist',
+        'ui.btn1':       'Full Blueprint&#8482; &mdash; $17',
+        'ui.btn2':       'Explore Procedures',
         'ui.fc.label':   'Available now',
         'ui.fc.val':     'Top 1% Brazilian specialists',
 
-        'pillars.kicker': 'The Platform',
-        'pillars.title':  'Your compass. Your GPS.<br><span class="accent">Your path to 100%.</span>',
+        /* ── Ecosystem ── */
+        'eco.kicker': 'The Aestyx Platform',
+        'eco.title':  'Discover. Plan.<br><span class="accent">Evolve.</span>',
+        'eco.lead':   'Three products, one ecosystem. Each step builds on the last &mdash; from your free diagnostic baseline to your 12-month roadmap, to ongoing post-op evolution.',
 
-        'pillar1.name': 'Aestyx Score&#8482; &mdash; Free',
-        'pillar1.desc': 'Your diagnostic compass. AI maps your facial symmetry, Golden Ratio, and Aesthetic Archetype in 12 seconds. Know exactly where you stand &mdash; before spending a single dollar.',
-        'pillar1.cta':  'Get My Score &mdash; Free',
+        'eco.score.tag':  'Free',
+        'eco.score.name': 'Aestyx Score&#8482;',
+        'eco.score.desc': 'Upload two photos. Get a real-time, AI-driven facial harmony diagnosis &mdash; symmetry, Golden Ratio, Aesthetic Archetype. Discover your baseline before spending a single dollar.',
+        'eco.score.cta':  'Get My Score &mdash; Free',
 
-        'pillar2.name': 'Aestyx Blueprint&#8482; &mdash; $49',
-        'pillar2.desc': 'Your 12-month aesthetic GPS. Includes Visagism Analysis, Smile Engine (VITA Veneers), Hair Analysis, real-cost estimates, and priority matching with Brazil\'s elite specialists. Spend $49. Avoid a $10,000 mistake.',
-        'pillar2.cta':  'Get My Blueprint',
+        'eco.bp.tag':  '$17',
+        'eco.bp.name': 'Aestyx Blueprint&#8482;',
+        'eco.bp.desc': 'Your 12-month aesthetic GPS. Visagism analysis, Smile Engine, Hair Analysis, real-cost estimates, and priority matching with Brazil&rsquo;s elite specialists. Spend $17. Avoid a $10,000 mistake.',
+        'eco.bp.cta':  'Get My Blueprint',
 
-        'pillar3.name': 'AI Communication Bridge',
-        'pillar3.desc': 'Your Blueprint&#8482; arrives pre-interpreted at every Brazilian clinic &mdash; no language barriers, no information loss. Your plan speaks the specialist\'s language before you walk in.',
-        'pillar3.cta':  'Learn More',
+        'eco.club.tag':  '$7.90/mo',
+        'eco.club.name': 'Aestyx Club',
+        'eco.club.desc': 'Don&rsquo;t walk the path alone. Track daily habits, get dynamic AI glow-up projections, and access premium post-op care &mdash; month by month, milestone by milestone.',
+        'eco.club.cta':  'Preview Club',
 
-        'pillar4.name': 'Curated Specialist Network',
-        'pillar4.desc': 'Brazil\'s top 1% of CRM-verified specialists &mdash; surgeons, dermatologists, dentists, and hair restoration experts &mdash; matched directly to your Blueprint&#8482;. Escrow-protected at every milestone.',
-        'pillar4.cta':  'View Financing',
+        /* ── Why Brazil ── */
+        'brazil.kicker': 'The Elite Standard',
+        'brazil.title':  'The global elite<br><span class="accent">is choosing Brazil.</span>',
 
-        'pillar5.name': 'Aestyx Club',
-        'pillar5.desc': '&ldquo;Me vs Me&rdquo; &mdash; track, document, and celebrate your aesthetic evolution over time. Your progress, quantified.',
-        'pillar5.cta':  'Preview Club',
+        'wb.stat1': 'World ranking in aesthetic procedures performed annually',
+        'wb.stat2': 'Average savings vs. NY/Miami for structural rhinoplasty',
+        'wb.stat3': 'Years of unmatched aesthetic surgery tradition',
 
+        'wb.point1.title': 'The Pitanguy Legacy',
+        'wb.point1.desc':  'Brazil&rsquo;s aesthetic surgery tradition dates to the 1960s. Dr. Ivo Pitanguy trained a global generation of surgeons, establishing Brazilian precision as the world&rsquo;s gold standard.',
+
+        'wb.point2.title': 'SBCP-Verified Excellence',
+        'wb.point2.desc':  'Aestyx partners exclusively with SBCP-certified specialists &mdash; the Brazilian Society of Plastic Surgery, equivalent to the ASPS in the United States.',
+
+        'wb.point3.title': 'JCI-Certified Infrastructure',
+        'wb.point3.desc':  'ICU-equipped private hospitals, board-certified anesthesiologists, and international-standard post-op protocols. Not a clinic &mdash; a world-class medical center.',
+
+        /* ── Arbitrage ── */
+        'arb.kicker':    'Quality Arbitrage',
+        'arb.title':     'Same result. A fraction<br><span class="accent">of the cost.</span>',
+        'arb.lead':      'This is not about cheap. This is intelligent economics &mdash; investing the savings in what truly matters: premium surgeons, JCI hospitals, and months of post-op care, for a fraction of what a basic procedure costs in the US.',
+        'arb.proc1':     'Structural Rhinoplasty',
+        'arb.proc2':     'Deep Plane Facelift',
+        'arb.proc3':     'FUE Hair Transplant',
+        'arb.highlight': 'JCI',
+        'arb.ref.us':    'US / NY Avg.',
+        'arb.ref.br':    'Aestyx Brazil',
+        'arb.save':      'You save',
+        'arb.disclaimer': '* Price comparisons based on average 2025&ndash;2026 market data from independent research (Aestyx Research Report 2025). Individual quotes vary by surgeon, procedure complexity, and hospital. Savings percentages calculated vs. NY/Miami average market prices.',
+
+        /* ── Concierge ── */
+        'con.kicker': 'Medical Concierge',
+        'con.title':  'The surgery is half<br>the journey.',
+        'con.lead':   'Your Blueprint arrives at your specialist before you do. Aestyx Concierge coordinates every step &mdash; pre-arrival, hospital check-in, recovery, and 30-day telehealth follow-up &mdash; in your language, on your timeline.',
+
+        'con1.title': 'Blueprint Pre-Arrival',
+        'con1.desc':  'Your Blueprint&#8482; is pre-translated and delivered to the specialist. Medical history, goals, AI analysis &mdash; zero friction from day one. Your plan speaks the surgeon&rsquo;s language before you walk in.',
+
+        'con2.title': 'JCI Hospital Check-in',
+        'con2.desc':  'Surgeon briefing, board-certified anesthesiologist, private recovery suite. Every detail coordinated by Aestyx. You arrive &mdash; we handle the rest.',
+
+        'con3.title': '24/7 Recovery Care',
+        'con3.desc':  'Lymphatic drainage, vital monitoring, private nursing on request. Luxury recovery houses available. Your wellbeing is the only priority.',
+
+        'con4.title': 'Post-op at Home',
+        'con4.desc':  'Telehealth follow-up with your specialist. 30-day check-in protocol. Your result tracked and documented in your Aestyx Club profile.',
+
+        /* ── Procedures ── */
         'proc.kicker': 'Full Procedure Catalog',
         'proc.title':  'Everything covered.<br><span style="color:var(--gold)">Nothing left to chance.</span>',
-        'proc.lead':   'Brazil leads the world in aesthetic excellence. Your Blueprint&#8482; maps exactly which procedures apply to you &mdash; in the right order, at the right time. Your matched specialist provides all pricing directly.',
+        'proc.lead':   'Brazil leads the world in aesthetic excellence. Your Blueprint&#8482; maps exactly which procedures apply to you &mdash; in the right order, at the right time.',
         'proc.cta':    'Get My Blueprint&#8482; &rarr;',
 
         'p1.cat':   'Facial Refinement &amp; Visagism',
@@ -375,82 +570,11 @@
         'p4.tag':   'Density. Naturalness. Confidence.',
         'p4.items': ['FUE Advanced Technology', 'DHI Direct Implant', 'PRP Scalp Therapy', 'Hairline &amp; Temporal Design', 'Beard Restoration &amp; Design', 'LLLT Laser Therapy'],
 
+        /* ── CTA ── */
         'cta.kicker': 'Founding Members',
         'cta.title':  'Begin your aesthetic evolution<br><span class="accent">with complete precision.</span>',
-        'cta.lead':   'The Aestyx Blueprint&#8482; ($49) is the clinical plan that eliminates guesswork before your first consultation &mdash; protecting you from costly, irreversible decisions. Join our founding members and secure priority access to Brazil\'s elite specialist network.',
-        'cta.note':   'Curated from Brazil\'s top 1% of verified specialists &middot; Brazil: World #1 in Aesthetic Procedures &middot; Phase 1 launching now',
-      },
-
-      pt: {
-        'hero.h1':  'Mapeie seu ponto de partida.<br><span class="highlight">Planeje sua evolu&ccedil;&atilde;o.</span>',
-        'hero.sub': 'A plataforma de IA que gera seu Aestyx Score&#8482; em 12 segundos &mdash; e constr&oacute;i seu plano completo de evolu&ccedil;&atilde;o est&eacute;tica com o top 1% de especialistas brasileiros verificados. O Brasil lidera o mundo em excel&ecirc;ncia est&eacute;tica.',
-
-        'ui.stat':          'Aestyx Score&#8482;',
-        'ui.score.lbl':     'Aestyx Score&#8482;',
-        'ui.score.tooltip': 'M&eacute;trica cl&iacute;nica propriet&aacute;ria: simetria facial, propor&ccedil;&otilde;es da Regra &Aacute;urea, Arqu&eacute;tipo Est&eacute;tico e viabilidade cir&uacute;rgica. Sua b&uacute;ssola antes de qualquer decis&atilde;o.',
-        'ui.goal':       'Blueprint&#8482; de Auge Est&eacute;tico',
-        'ui.cat1':       'Refinamento Facial',
-        'ui.cat1p':      'Rinoplastia &middot; Lifting',
-        'ui.cat2':       'Pele &amp; Sorriso',
-        'ui.cat2p':      'Laser CO&#8322; &middot; Bioestimuladores',
-        'ui.cat3':       'Escultura Corporal',
-        'ui.cat3p':      'Lipoaspira&ccedil;&atilde;o HD',
-        'ui.pri.high':   'Prioridade',
-        'ui.pri.med':    'Recomendado',
-        'ui.pri.opt':    'Opcional',
-        'ui.btn1':       'Blueprint&#8482; Completo &mdash; R$99',
-        'ui.btn2':       'Encontrar Especialista',
-        'ui.fc.label':   'Dispon&iacute;veis agora',
-        'ui.fc.val':     'Top 1% de especialistas brasileiros',
-
-        'pillars.kicker': 'A Plataforma',
-        'pillars.title':  'Sua b&uacute;ssola. Seu GPS.<br><span class="accent">Seu caminho para o 100%.</span>',
-
-        'pillar1.name': 'Aestyx Score&#8482; &mdash; Gr&aacute;tis',
-        'pillar1.desc': 'Sua b&uacute;ssola diagn&oacute;stica. Em 12 segundos, a IA mapeia sua simetria facial, Regra &Aacute;urea e Arqu&eacute;tipo Est&eacute;tico. Saiba exatamente onde voc&ecirc; est&aacute; &mdash; antes de gastar um &uacute;nico centavo.',
-        'pillar1.cta':  'Obter Meu Score &mdash; Gr&aacute;tis',
-
-        'pillar2.name': 'Aestyx Blueprint&#8482; &mdash; R$99',
-        'pillar2.desc': 'Seu GPS est&eacute;tico para 12 meses. Inclui An&aacute;lise de Visagismo, Smile Engine (Odontologia VITA), An&aacute;lise Capilar, estimativas de custo reais e match priorit&aacute;rio com os especialistas de elite do Brasil. R$99 para evitar um erro de R$20.000.',
-        'pillar2.cta':  'Obter Meu Blueprint',
-
-        'pillar3.name': 'Ponte de Comunica&ccedil;&atilde;o IA',
-        'pillar3.desc': 'Seu Blueprint&#8482; chega pr&eacute;-interpretado em cada cl&iacute;nica brasileira &mdash; sem barreiras de idioma, sem perda de informa&ccedil;&atilde;o. Seu plano fala a l&iacute;ngua do especialista antes de voc&ecirc; entrar.',
-        'pillar3.cta':  'Saiba Mais',
-
-        'pillar4.name': 'Rede de Especialistas Curada',
-        'pillar4.desc': 'Top 1% de especialistas brasileiros com CRM verificado &mdash; cirurgi&otilde;es, dermatologistas, dentistas e especialistas em restaura&ccedil;&atilde;o capilar &mdash; conectados diretamente ao seu Blueprint&#8482;. Protegido por escrow em cada etapa.',
-        'pillar4.cta':  'Ver Financiamento',
-
-        'pillar5.name': 'Aestyx Club',
-        'pillar5.desc': '&ldquo;Eu vs Eu&rdquo; &mdash; acompanhe, documente e celebre sua evolu&ccedil;&atilde;o est&eacute;tica ao longo do tempo. Seu progresso, quantificado.',
-        'pillar5.cta':  'Pr&eacute;via do Club',
-
-        'proc.kicker': 'Cat&aacute;logo Completo de Procedimentos',
-        'proc.title':  'Tudo coberto.<br><span style="color:var(--gold)">Nada deixado ao acaso.</span>',
-        'proc.lead':   'O Brasil lidera o mundo em excel&ecirc;ncia est&eacute;tica. Seu Blueprint&#8482; mapeia exatamente quais procedimentos se aplicam a voc&ecirc; &mdash; na ordem certa, no momento certo. Todos os valores s&atilde;o fornecidos diretamente pelo seu especialista.',
-        'proc.cta':    'Obter Meu Blueprint&#8482; &rarr;',
-
-        'p1.cat':   'Refinamento Facial &amp; Visagismo',
-        'p1.tag':   'Precis&atilde;o. Harmonia. Presen&ccedil;a.',
-        'p1.items': ['Rinoplastia (Corre&ccedil;&atilde;o do Nariz)', 'Facelift &amp; Lifting de Pesco&ccedil;o', 'Blefaroplastia (P&aacute;lpebras)', 'Otoplastia (Orelhas)', 'Mentoplastia (Queixo)', 'Malar (Ma&ccedil;&atilde; do Rosto)', 'Visagismo &amp; An&aacute;lise de Harmonia Facial'],
-
-        'p2.cat':   'Pele &amp; Sorriso Inteligente',
-        'p2.tag':   'Clareza. Luminosidade. Vitalidade.',
-        'p2.items': ['Toxina Botul&iacute;nica (Botox)', 'Preenchimento com &Aacute;cido Hialur&ocirc;nico', 'Laser CO&#8322; Fracionado', 'Bioestimuladores de Col&aacute;geno', 'Peeling Qu&iacute;mico &amp; Microagulhamento RF', 'Design de Sorriso (Lentes VITA)', 'Clareamento Dental Profissional'],
-
-        'p3.cat':   'Escultura Corporal',
-        'p3.tag':   'Defini&ccedil;&atilde;o. Propor&ccedil;&atilde;o. Confian&ccedil;a.',
-        'p3.items': ['Lipoaspira&ccedil;&atilde;o HD', 'Mamoplastia de Aumento', 'Abdominoplastia', 'Brazilian Butt Lift (BBL)', 'Braquioplastia (Bra&ccedil;os)', 'Tratamento de Ginecomastia'],
-
-        'p4.cat':   'Restaura&ccedil;&atilde;o Capilar',
-        'p4.tag':   'Densidade. Naturalidade. Confian&ccedil;a.',
-        'p4.items': ['T&eacute;cnica FUE Avan&ccedil;ada', 'Implante Direto DHI', 'Terapia PRP Capilar', 'Design de Linha Frontal &amp; Temporal', 'Restaura&ccedil;&atilde;o &amp; Design de Barba', 'LLLT (Laserterapia Capilar)'],
-
-        'cta.kicker': 'Membros Fundadores',
-        'cta.title':  'Inicie sua evolu&ccedil;&atilde;o est&eacute;tica<br><span class="accent">com precis&atilde;o completa.</span>',
-        'cta.lead':   'O Aestyx Blueprint&#8482; (R$99) &eacute; o plano cl&iacute;nico que elimina o achismo antes da sua primeira consulta &mdash; protegendo voc&ecirc; de decis&otilde;es custosas e irrevers&iacute;veis. Junte-se aos membros fundadores e garanta acesso priorit&aacute;rio &agrave; rede de elite do Brasil.',
-        'cta.note':   'Curadoria do top 1% de especialistas brasileiros verificados &middot; Brasil: #1 mundial em est&eacute;tica &middot; Fase 1 iniciando agora',
+        'cta.lead':   'Join founding members and get priority access to the Aestyx Score (free), the Blueprint&#8482; ($17), and Brazil&rsquo;s elite specialist network. Phase 1 &mdash; limited spots.',
+        'cta.note':   'Top 1% of verified Brazilian specialists &middot; World #1 in Aesthetic Procedures &middot; Phase 1 launching now',
       }
     };
 
@@ -458,7 +582,11 @@
       if (window.T[lang]) Object.assign(window.T[lang], PAGE_T[lang]);
     });
 
-    initPage();
+    /* EN-only phase — ignore any stored language preference */
+    setLanguage('en');
+    document.addEventListener('DOMContentLoaded', function() {
+      if (typeof lucide !== 'undefined') lucide.createIcons();
+    });
   </script>
 </body>
 </html>
