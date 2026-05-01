@@ -8,8 +8,8 @@ window.T = {
   en: {
     /* ── Phase / Banner ── */
     'phase.label': 'Phase 1',
-    'phase.badge': 'Phase 1: Launching Soon',
-    'banner':      'Now accepting Founding Members &mdash; limited early access',
+    'phase.badge': 'Launching Soon &mdash; Questions? <a href="mailto:social@aestyx.com" style="color:var(--gold);text-decoration:underline;">social@aestyx.com</a>',
+    'banner':      'We are launching soon &mdash; Get in touch: <a href="mailto:social@aestyx.com" style="color:var(--gold);font-weight:600;">social@aestyx.com</a>',
 
     /* ── Nav ── */
     'nav.value':      'Advantage',
@@ -22,8 +22,8 @@ window.T = {
 
     /* ── Waitlist ── */
     'waitlist.placeholder': 'Your email address',
-    'waitlist.btn':         'Begin My Evolution',
-    'waitlist.success':     '&#10003; Welcome. Your evolution starts here.',
+    'waitlist.btn':         'Get My Free Score &rarr;',
+    'waitlist.success':     '&#10003; Welcome. We will be in touch shortly.',
 
     /* ── Footer ── */
     'footer.privacy':  'Privacy',
