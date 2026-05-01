@@ -1059,6 +1059,16 @@ footer {
   align-items: start;
 }
 
+.footer-minimal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 5vw;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-s);
+}
+
 .footer-brand {
   display: flex;
   flex-direction: column;
