@@ -1,16 +1,289 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aestyx &mdash; For Medical Partners</title>
-  <meta name="description" content="Join Aestyx's invitation-only network. We deliver high-ticket global patients with structured clinical briefs, pre-qualified and ready.">
+  <title>Aestyx &mdash; Para Clínicas e Cirurgiões</title>
+  <meta name="description" content="Torne sua clínica global em 15 minutos. A Aestyx fornece a infraestrutura completa para captar e converter pacientes internacionais.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
   <link rel="stylesheet" href="css/shared.css">
   <style>
-    .partner-cta-bar .waitlist-success { color: var(--gold); text-align: center; }
+    /* ── HERO ── */
+    .p-hero {
+      padding: calc(var(--banner-h) + 130px) 5vw 90px;
+      max-width: 860px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .p-hero h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(2.2rem, 4vw, 3.6rem);
+      font-weight: 700;
+      line-height: 1.1;
+      color: var(--text);
+      letter-spacing: -0.025em;
+      margin-bottom: 1.2rem;
+    }
+    .p-hero h1 .highlight { color: var(--purple); }
+    .p-hero-sub {
+      font-size: 1.1rem;
+      color: var(--text-s);
+      line-height: 1.75;
+      max-width: 560px;
+      margin: 0 auto 2.4rem;
+    }
+    .p-hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 16px 32px;
+      background: var(--purple);
+      color: var(--white);
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+    }
+    .p-hero-cta:hover { background: var(--text); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(74,59,79,0.2); }
+    .p-hero-cta svg { width: 16px; height: 16px; }
+
+    /* ── INFRASTRUCTURE SECTION ── */
+    .infra-section {
+      background: var(--bg-2);
+      padding: 80px 5vw;
+    }
+    .infra-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .infra-header {
+      margin-bottom: 3rem;
+    }
+    .infra-header .section-kicker { margin-bottom: 0.8rem; }
+    .infra-header .section-title { margin-bottom: 0; }
+    .infra-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.2rem;
+    }
+    .infra-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(74,59,79,0.08);
+      border-radius: 10px;
+      padding: 1.8rem 1.6rem;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .infra-card:hover { box-shadow: 0 8px 24px rgba(74,59,79,0.07); transform: translateY(-2px); }
+    .infra-card-icon {
+      width: 40px; height: 40px;
+      border-radius: 8px;
+      background: rgba(201,185,156,0.12);
+      border: 1px solid rgba(201,185,156,0.28);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--gold);
+      margin-bottom: 1.1rem;
+    }
+    .infra-card-icon svg { width: 18px; height: 18px; }
+    .infra-card-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+    .infra-card p {
+      font-size: 0.875rem;
+      color: var(--text-s);
+      line-height: 1.7;
+    }
+
+    /* ── B2B STRATEGY SECTION ── */
+    .b2b-section {
+      padding: 80px 5vw;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .b2b-section .section-kicker { margin-bottom: 0.8rem; }
+    .b2b-section .section-title { margin-bottom: 1rem; }
+    .b2b-lead {
+      font-size: 1rem;
+      color: var(--text-s);
+      line-height: 1.8;
+      max-width: 640px;
+      margin-bottom: 3rem;
+    }
+    .b2b-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .b2b-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 1.4rem 1.6rem;
+      background: var(--bg-card);
+      border: 1px solid rgba(74,59,79,0.07);
+      border-radius: 8px;
+    }
+    .b2b-list-icon {
+      width: 32px; height: 32px; flex-shrink: 0;
+      border-radius: 6px;
+      background: rgba(74,59,79,0.06);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--purple);
+      margin-top: 2px;
+    }
+    .b2b-list-icon svg { width: 15px; height: 15px; }
+    .b2b-list-body {}
+    .b2b-list-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--text);
+      margin-bottom: 0.2rem;
+    }
+    .b2b-list-desc {
+      font-size: 0.875rem;
+      color: var(--text-s);
+      line-height: 1.65;
+    }
+
+    /* ── CTA SECTION ── */
+    .p-cta-section {
+      background: var(--purple);
+      padding: 80px 5vw;
+      text-align: center;
+    }
+    .p-cta-section h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.8rem;
+      letter-spacing: -0.02em;
+    }
+    .p-cta-section p {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 2rem;
+    }
+    .p-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 16px 36px;
+      background: var(--gold);
+      color: var(--text);
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .p-cta-btn:hover { background: var(--gold-l); transform: translateY(-2px); }
+
+    /* ── CONTACT MODAL ── */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(14,10,18,0.65);
+      backdrop-filter: blur(6px);
+      z-index: 200;
+      align-items: center;
+      justify-content: center;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal-box {
+      background: var(--bg-card);
+      border-radius: 16px;
+      padding: 2.8rem 2.4rem;
+      max-width: 440px;
+      width: 90%;
+      position: relative;
+      box-shadow: 0 40px 100px rgba(14,10,18,0.35);
+    }
+    .modal-close {
+      position: absolute;
+      top: 1.2rem; right: 1.2rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--text-s);
+      padding: 4px;
+      border-radius: 4px;
+      transition: color 0.15s;
+    }
+    .modal-close:hover { color: var(--text); }
+    .modal-close svg { width: 20px; height: 20px; }
+    .modal-eyebrow {
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.7rem;
+    }
+    .modal-box h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+    .modal-box > p {
+      font-size: 0.9rem;
+      color: var(--text-s);
+      line-height: 1.65;
+      margin-bottom: 1.8rem;
+    }
+    .modal-contact-list { list-style: none; display: flex; flex-direction: column; gap: 1rem; }
+    .modal-contact-list li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 1rem 1.1rem;
+      background: var(--bg);
+      border-radius: 8px;
+      border: 1px solid rgba(74,59,79,0.08);
+    }
+    .modal-contact-list li svg { width: 18px; height: 18px; color: var(--purple); flex-shrink: 0; }
+    .modal-contact-item-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-s);
+      margin-bottom: 2px;
+    }
+    .modal-contact-item-val a {
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--text);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .modal-contact-item-val a:hover { color: var(--purple); }
+
+    @media (max-width: 700px) {
+      .infra-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 900px) {
+      .infra-grid { grid-template-columns: repeat(2, 1fr); }
+    }
   </style>
 </head>
 <body>
@@ -31,284 +304,206 @@
       AESTYX
     </a>
     <ul class="nav-links">
-      <li><a href="index.html" data-i18n="nav.value"></a></li>
-      <li><a href="security.html" data-i18n="nav.security"></a></li>
-      <li><a href="financing.html" data-i18n="nav.financing"></a></li>
-      <li><a href="index.html#procedures" data-i18n="nav.procedures"></a></li>
+      <li><a href="about.html">Sobre</a></li>
+      <li><a href="partners.html" class="active">Parceiros</a></li>
     </ul>
-    <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
+    <button class="nav-toggle" aria-label="Abrir menu" onclick="toggleNav()">
       <i data-lucide="menu"></i>
     </button>
-    <div class="nav-right">
-      <a href="partners.html" class="nav-specialist active" data-i18n="footer.specialist"></a>
-      <div class="lang-selector">
-        <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
-        <button class="lang-btn" data-lang="pt" onclick="setLanguage('pt')">PT</button>
-      </div>
-      <a href="index.html#waitlist" class="nav-cta" data-i18n="nav.cta"></a>
-    </div>
   </nav>
 
-  <!-- ══ PAGE HERO ══ -->
-  <div class="page-hero">
-    <div class="page-hero-content">
-      <div class="page-hero-eyebrow">
-        <div class="eyebrow-dot"></div>
-        <span data-i18n="part.hero.eyebrow"></span>
-      </div>
-      <h1 data-i18n="part.hero.h1"></h1>
-      <p class="page-hero-sub" data-i18n="part.hero.sub"></p>
+  <!-- ══ HERO ══ -->
+  <section class="p-hero">
+    <div class="page-hero-eyebrow">
+      <div class="eyebrow-dot"></div>
+      <span>Para Clínicas e Cirurgiões</span>
     </div>
-    <div class="ph-visual">
-      <div class="ph-stat-card">
-        <div class="ph-stat-icon"><i data-lucide="globe"></i></div>
-        <div>
-          <div class="ph-stat-label" data-i18n="ph.s1.label"></div>
-          <div class="ph-stat-val" data-i18n="ph.s1.val"></div>
-        </div>
-      </div>
-      <div class="ph-stat-card">
-        <div class="ph-stat-icon"><i data-lucide="file-text"></i></div>
-        <div>
-          <div class="ph-stat-label" data-i18n="ph.s2.label"></div>
-          <div class="ph-stat-val" data-i18n="ph.s2.val"></div>
-        </div>
-      </div>
-      <div class="ph-stat-card">
-        <div class="ph-stat-icon"><i data-lucide="badge-check"></i></div>
-        <div>
-          <div class="ph-stat-label" data-i18n="ph.s3.label"></div>
-          <div class="ph-stat-val" data-i18n="ph.s3.val"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ══ VERIFY ROW ══ -->
-  <div class="verify-row">
-    <div class="verify-badge">
-      <i data-lucide="badge-check"></i>
-      <span data-i18n="badge.crm"></span>
-    </div>
-    <div class="verify-divider"></div>
-    <div class="verify-badge">
-      <i data-lucide="stethoscope"></i>
-      <span data-i18n="badge.rqe"></span>
-    </div>
-    <div class="verify-divider"></div>
-    <div class="verify-badge">
-      <i data-lucide="shield-check"></i>
-      <span data-i18n="badge.enc"></span>
-    </div>
-    <div class="verify-divider"></div>
-    <div class="verify-badge">
-      <i data-lucide="landmark"></i>
-      <span data-i18n="badge.escrow"></span>
-    </div>
-  </div>
-
-  <!-- ══ PARTNER BENEFITS ══ -->
-  <section class="partners" id="partners">
-    <div class="partners-header">
-      <div>
-        <div class="section-kicker" data-i18n="part.kicker"></div>
-        <div class="section-title" data-i18n="part.title"></div>
-      </div>
-      <p class="section-lead" data-i18n="part.lead"></p>
-    </div>
-
-    <div class="partner-benefits">
-      <div class="pb-card">
-        <span class="pb-icon"><i data-lucide="circle-dollar-sign"></i></span>
-        <div class="pb-title" data-i18n="pb1.title"></div>
-        <p class="pb-desc" data-i18n="pb1.desc"></p>
-      </div>
-      <div class="pb-card">
-        <span class="pb-icon"><i data-lucide="file-text"></i></span>
-        <div class="pb-title" data-i18n="pb2.title"></div>
-        <p class="pb-desc" data-i18n="pb2.desc"></p>
-      </div>
-      <div class="pb-card">
-        <span class="pb-icon"><i data-lucide="badge-check"></i></span>
-        <div class="pb-title" data-i18n="pb3.title"></div>
-        <p class="pb-desc" data-i18n="pb3.desc"></p>
-      </div>
-    </div>
-
-    <div class="partner-cta-bar">
-      <div class="pcb-left">
-        <div class="pcb-kicker" data-i18n="pcb.kicker"></div>
-        <div class="pcb-title" data-i18n="pcb.title"></div>
-      </div>
-      <div class="pcb-form">
-        <input type="email" class="pcb-input" id="partner-email" data-i18n-placeholder="pcb.placeholder">
-        <button class="btn-gold" onclick="handleWaitlist('partner-email','partner-success')" data-i18n="pcb.btn"></button>
-      </div>
-    </div>
-    <p class="waitlist-success" id="partner-success" style="display:none;" data-i18n="waitlist.success"></p>
+    <h1>Torne sua clínica <span class="highlight">global em 15 minutos.</span></h1>
+    <p class="p-hero-sub">Use IA para captar e converter pacientes internacionais.</p>
+    <button class="p-hero-cta" onclick="openContactModal()">
+      <i data-lucide="message-circle"></i>
+      Falar com a equipe Aestyx
+    </button>
   </section>
 
-  <!-- ══ VERIFICATION PROCESS ══ -->
-  <section class="verification">
-    <div class="section-kicker" data-i18n="ver.kicker"></div>
-    <div class="section-title" data-i18n="ver.title"></div>
-
-    <div class="ver-grid">
-      <div class="ver-card">
-        <div class="ver-step">01</div>
-        <div class="ver-icon"><i data-lucide="user-check"></i></div>
-        <div class="ver-title" data-i18n="ver1.title"></div>
-        <p class="ver-desc" data-i18n="ver1.desc"></p>
-        <div class="ver-badge" data-i18n="ver1.badge"></div>
+  <!-- ══ INFRAESTRUTURA ══ -->
+  <section class="infra-section">
+    <div class="infra-inner">
+      <div class="infra-header">
+        <div class="section-kicker">Infraestrutura completa</div>
+        <div class="section-title">O que a Aestyx fornece</div>
       </div>
-      <div class="ver-card">
-        <div class="ver-step">02</div>
-        <div class="ver-icon"><i data-lucide="stethoscope"></i></div>
-        <div class="ver-title" data-i18n="ver2.title"></div>
-        <p class="ver-desc" data-i18n="ver2.desc"></p>
-        <div class="ver-badge" data-i18n="ver2.badge"></div>
-      </div>
-      <div class="ver-card">
-        <div class="ver-step">03</div>
-        <div class="ver-icon"><i data-lucide="shield-check"></i></div>
-        <div class="ver-title" data-i18n="ver3.title"></div>
-        <p class="ver-desc" data-i18n="ver3.desc"></p>
-        <div class="ver-badge" data-i18n="ver3.badge"></div>
+      <div class="infra-grid">
+        <div class="infra-card">
+          <div class="infra-card-icon"><i data-lucide="bot"></i></div>
+          <div class="infra-card-title">Agentes de IA para captação e conversão</div>
+          <p>Atendimento automatizado 24h em inglês, qualificação de leads e agendamento de consultas sem equipe manual.</p>
+        </div>
+        <div class="infra-card">
+          <div class="infra-card-icon"><i data-lucide="languages"></i></div>
+          <div class="infra-card-title">Comunicação em inglês</div>
+          <p>Todo contato com o paciente é conduzido em inglês pela Aestyx. Sua clínica opera normalmente em português.</p>
+        </div>
+        <div class="infra-card">
+          <div class="infra-card-icon"><i data-lucide="video"></i></div>
+          <div class="infra-card-title">Consultas online síncronas e assíncronas</div>
+          <p>O paciente realiza a consulta inicial remotamente — por chamada ao vivo ou envio de vídeo — antes de viajar para o Brasil.</p>
+        </div>
+        <div class="infra-card">
+          <div class="infra-card-icon"><i data-lucide="clipboard-list"></i></div>
+          <div class="infra-card-title">Coordenação pré e pós-operatória</div>
+          <p>Briefings clínicos estruturados por IA, acompanhamento pós-cirúrgico e suporte ao paciente durante toda a jornada.</p>
+        </div>
+        <div class="infra-card">
+          <div class="infra-card-icon"><i data-lucide="shield"></i></div>
+          <div class="infra-card-title">Pagamento internacional com escrow</div>
+          <p>Transações em dólar e euro com proteção de escrow. O valor chega integralmente à sua clínica, sem intermediários nos seus honorários.</p>
+        </div>
       </div>
     </div>
+  </section>
+
+  <!-- ══ ESTRATÉGIA B2B ══ -->
+  <section class="b2b-section">
+    <div class="section-kicker">Modelo de negócio</div>
+    <div class="section-title">A Aestyx como sistema operacional da sua clínica</div>
+    <p class="b2b-lead">
+      A Aestyx não é um diretório de médicos. É uma camada de operação que transforma clínicas estéticas em negócios com receita internacional — sem precisar montar equipe, criar site em inglês ou lidar com a complexidade de atender pacientes do exterior.
+    </p>
+    <ul class="b2b-list">
+      <li>
+        <div class="b2b-list-icon"><i data-lucide="globe"></i></div>
+        <div class="b2b-list-body">
+          <div class="b2b-list-title">Captação de pacientes internacionais em dólar e euro</div>
+          <div class="b2b-list-desc">A Aestyx opera a aquisição de pacientes nos EUA e Europa. Sua clínica recebe os leads já qualificados e prontos para consultar.</div>
+        </div>
+      </li>
+      <li>
+        <div class="b2b-list-icon"><i data-lucide="bot"></i></div>
+        <div class="b2b-list-body">
+          <div class="b2b-list-title">Agentes de IA substituem equipes manuais</div>
+          <div class="b2b-list-desc">Triagem, qualificação, agendamento e acompanhamento são executados por agentes de IA. Não é necessário contratar equipe bilíngue.</div>
+        </div>
+      </li>
+      <li>
+        <div class="b2b-list-icon"><i data-lucide="layers"></i></div>
+        <div class="b2b-list-body">
+          <div class="b2b-list-title">Aquisição, conversão, operação clínica e retenção centralizados</div>
+          <div class="b2b-list-desc">Cada etapa da jornada do paciente — do primeiro contato ao acompanhamento pós-op — é gerenciada dentro da plataforma Aestyx.</div>
+        </div>
+      </li>
+      <li>
+        <div class="b2b-list-icon"><i data-lucide="video"></i></div>
+        <div class="b2b-list-body">
+          <div class="b2b-list-title">Consultas online sem barreira de idioma</div>
+          <div class="b2b-list-desc">O paciente consulta em inglês, mediado pela Aestyx. O cirurgião conduz a consulta no formato que preferir, sem precisar falar inglês.</div>
+        </div>
+      </li>
+      <li>
+        <div class="b2b-list-icon"><i data-lucide="trending-up"></i></div>
+        <div class="b2b-list-body">
+          <div class="b2b-list-title">Maior ticket médio e receita previsível</div>
+          <div class="b2b-list-desc">Pacientes de dólar e euro pagam valores maiores que o mercado local. A recorrência de leads qualificados cria previsibilidade de agenda e faturamento.</div>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ══ CTA FINAL ══ -->
+  <section class="p-cta-section">
+    <h2>Pronto para receber pacientes internacionais?</h2>
+    <p>Fale com nossa equipe e entenda como funciona para a sua clínica.</p>
+    <button class="p-cta-btn" onclick="openContactModal()">
+      <i data-lucide="message-circle"></i>
+      Falar com a equipe Aestyx
+    </button>
   </section>
 
   <!-- FOOTER -->
   <footer>
     <div class="footer-brand">
       <a href="index.html" class="footer-logo"><span class="logo-dot"></span>AESTYX</a>
-      <div class="footer-copy" data-i18n="footer.copy"></div>
+      <div class="footer-copy">&copy; 2025 Aestyx Inc.</div>
     </div>
     <div class="footer-grid">
       <div class="footer-col">
-        <div class="footer-col-title" data-i18n="footer.col.experience"></div>
+        <div class="footer-col-title">Navegar</div>
         <ul class="footer-links">
-          <li><a href="index.html" data-i18n="nav.value"></a></li>
-          <li><a href="index.html#procedures" data-i18n="nav.procedures"></a></li>
-          <li><a href="financing.html" data-i18n="nav.financing"></a></li>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="about.html">Sobre</a></li>
+          <li><a href="partners.html" class="active">Parceiros</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <div class="footer-col-title" data-i18n="footer.col.ecosystem"></div>
+        <div class="footer-col-title">Contato</div>
         <ul class="footer-links">
-          <li><a href="partners.html" class="active" data-i18n="footer.specialist"></a></li>
-          <li><a href="security.html" data-i18n="footer.security"></a></li>
-          <li><a href="club.html" data-i18n="footer.club"></a></li>
+          <li><a href="mailto:social@aestyx.com">social@aestyx.com</a></li>
+          <li><a href="https://wa.me/5561995615919" target="_blank" rel="noopener">WhatsApp</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <div class="footer-col-title" data-i18n="footer.col.legal"></div>
+        <div class="footer-col-title">Legal</div>
         <ul class="footer-links">
-          <li><a href="#" data-i18n="footer.privacy"></a></li>
-          <li><a href="#" data-i18n="footer.terms"></a></li>
-          <li><a href="#" data-i18n="footer.contact"></a></li>
+          <li><a href="#">Privacidade</a></li>
+          <li><a href="#">Termos</a></li>
         </ul>
       </div>
     </div>
   </footer>
 
+  <!-- ══ CONTACT MODAL ══ -->
+  <div class="modal-overlay" id="contact-modal" onclick="handleModalClick(event)">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeContactModal()" aria-label="Fechar">
+        <i data-lucide="x"></i>
+      </button>
+      <div class="modal-eyebrow">Fale com a equipe</div>
+      <h3>Entre em contato</h3>
+      <p>Escolha o canal de sua preferência. Respondemos em menos de 24h.</p>
+      <ul class="modal-contact-list">
+        <li>
+          <i data-lucide="message-circle"></i>
+          <div>
+            <div class="modal-contact-item-label">WhatsApp</div>
+            <div class="modal-contact-item-val">
+              <a href="https://wa.me/5561995615919" target="_blank" rel="noopener">+55 (61) 99561-5919</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <i data-lucide="mail"></i>
+          <div>
+            <div class="modal-contact-item-label">E-mail</div>
+            <div class="modal-contact-item-val">
+              <a href="mailto:social@aestyx.com">social@aestyx.com</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
   <script src="js/i18n.js"></script>
   <script>
-    var PAGE_T = {
-      en: {
-        'part.hero.eyebrow': 'Invitation-Only Specialist Network',
-        'part.hero.h1':      'More patients.<br><span class="highlight">Ready to consult.</span>',
-        'part.hero.sub':     'Aestyx brings you pre-qualified patients who already know exactly what they want. Each one arrives with a complete AI-prepared clinical brief &mdash; procedure priorities, goals, and medical history reviewed before the first appointment. You focus on your specialty. We handle the rest.',
-
-        'ph.s1.label': 'Patient Profile',
-        'ph.s1.val':   'Pre-Qualified &middot; Blueprint Ready',
-        'ph.s2.label': 'Clinical Brief',
-        'ph.s2.val':   'Structured &middot; AI-Prepared',
-        'ph.s3.label': 'Network Standard',
-        'ph.s3.val':   'Invitation-Only &middot; Audited',
-
-        'part.kicker': 'How It Works For Specialists',
-        'part.title':  'Simple. Transparent.<br><span class="accent">Built around your practice.</span>',
-        'part.lead':   'We connect motivated, informed patients to verified specialists. No complexity, no surprises.',
-
-        'pb1.title': 'You Set Your Price. You Receive It.',
-        'pb1.desc':  'Register the fee you charge for each procedure. That is exactly the amount your patient pays for your service &mdash; transferred directly to you. No deductions, no commissions, no hidden fees on your revenue.',
-        'pb2.title': 'Patients Arrive Ready',
-        'pb2.desc':  'Every patient comes with an AI-structured clinical brief: aesthetic goals, medical history, photo analysis, and a prioritized procedure list. Your consultation starts where it should &mdash; at the clinical decision.',
-        'pb3.title': 'Curated, Verified Network',
-        'pb3.desc':  'Aestyx is not a directory. Every specialist is audited for CRM registration, RQE specialty code, and ANVISA sanitary compliance. Your peers on this network are held to the same rigorous standard.',
-
-        'pcb.kicker':      'Apply to Join',
-        'pcb.title':       'Join the network. Start receiving qualified patients.',
-        'pcb.placeholder': 'Your clinic email address',
-        'pcb.btn':         'Apply Now',
-
-        'ver.kicker': 'Verification Standard',
-        'ver.title':  'Three-tier audit.<br><span class="accent">Every partner, every time.</span>',
-
-        'ver1.title': 'CRM Registration',
-        'ver1.desc':  'Active registration with the Regional Medical Council (CRM) is mandatory. We verify directly &mdash; no active CRM number, no admission to the network.',
-        'ver1.badge': 'Active Registration Required',
-
-        'ver2.title': 'RQE Specialty Code',
-        'ver2.desc':  'Specialty procedures are cross-referenced against the specialist\'s RQE (Registro de Qualifica&ccedil;&atilde;o de Especialidade). Every specialist operates exclusively within their verified scope.',
-        'ver2.badge': 'Scope-Matched Procedures Only',
-
-        'ver3.title': 'Sanitary Compliance',
-        'ver3.desc':  'Clinic facilities are reviewed for current ANVISA compliance and sanitary licensing. International patient safety standards apply to every partner on the network.',
-        'ver3.badge': 'ANVISA &middot; International Standards',
-      },
-
-      pt: {
-        'part.hero.eyebrow': 'Rede de Especialistas por Convite',
-        'part.hero.h1':      'Mais pacientes.<br><span class="highlight">Prontos para consultar.</span>',
-        'part.hero.sub':     'A Aestyx leva at&eacute; voc&ecirc; pacientes pr&eacute;-qualificados que j&aacute; sabem exatamente o que querem. Cada um chega com um briefing cl&iacute;nico completo preparado por IA &mdash; procedimentos priorizados, objetivos e hist&oacute;rico m&eacute;dico revisados antes da primeira consulta. Voc&ecirc; foca na sua especialidade. N&oacute;s cuidamos do resto.',
-
-        'ph.s1.label': 'Perfil do Paciente',
-        'ph.s1.val':   'Pr&eacute;-Qualificado &middot; Blueprint Pronto',
-        'ph.s2.label': 'Briefing Cl&iacute;nico',
-        'ph.s2.val':   'Estruturado &middot; Preparado por IA',
-        'ph.s3.label': 'Padr&atilde;o da Rede',
-        'ph.s3.val':   'Apenas por Convite &middot; Auditado',
-
-        'part.kicker': 'Como Funciona Para Especialistas',
-        'part.title':  'Simples. Transparente.<br><span class="accent">Feito para sua pr&aacute;tica.</span>',
-        'part.lead':   'Conectamos pacientes motivados e informados a especialistas verificados. Sem complexidade, sem surpresas.',
-
-        'pb1.title': 'Voc&ecirc; Define Seu Valor. Voc&ecirc; Recebe Integralmente.',
-        'pb1.desc':  'Cadastre o valor que voc&ecirc; cobra por cada procedimento. Esse &eacute; exatamente o valor que o paciente paga pelo seu servi&ccedil;o &mdash; transferido diretamente para voc&ecirc;. Sem descontos, sem cobran&ccedil;as ocultas sobre seus honor&aacute;rios.',
-        'pb2.title': 'Pacientes Chegam Preparados',
-        'pb2.desc':  'Cada paciente chega com um briefing cl&iacute;nico estruturado por IA: objetivos est&eacute;ticos, hist&oacute;rico m&eacute;dico, an&aacute;lise fotogr&aacute;fica e lista de procedimentos priorizada. Sua consulta come&ccedil;a onde deve &mdash; na decis&atilde;o cl&iacute;nica.',
-        'pb3.title': 'Rede Curada e Verificada',
-        'pb3.desc':  'A Aestyx n&atilde;o &eacute; um diret&oacute;rio. Cada especialista passa por auditoria de CRM, RQE e conformidade sanit&aacute;ria ANVISA. Seus pares nessa rede s&atilde;o mantidos no mesmo padr&atilde;o rigoroso.',
-
-        'pcb.kicker':      'Candidatar-se',
-        'pcb.title':       'Entre na rede. Comece a receber pacientes qualificados.',
-        'pcb.placeholder': 'E-mail da sua cl&iacute;nica',
-        'pcb.btn':         'Candidatar-me',
-
-        'ver.kicker': 'Padr&atilde;o de Verifica&ccedil;&atilde;o',
-        'ver.title':  'Auditoria em tr&ecirc;s n&iacute;veis.<br><span class="accent">Cada parceiro, sempre.</span>',
-
-        'ver1.title': 'Registro no CRM',
-        'ver1.desc':  'Registro ativo no Conselho Regional de Medicina (CRM) &eacute; obrigat&oacute;rio. Verificamos diretamente &mdash; sem CRM ativo, sem admiss&atilde;o na rede.',
-        'ver1.badge': 'Registro Ativo Obrigat&oacute;rio',
-
-        'ver2.title': 'N&uacute;mero de RQE',
-        'ver2.desc':  'Os procedimentos de especialidade s&atilde;o cruzados com o RQE (Registro de Qualifica&ccedil;&atilde;o de Especialidade) do profissional. Cada especialista opera exclusivamente dentro do seu escopo verificado.',
-        'ver2.badge': 'Procedimentos Dentro do Escopo',
-
-        'ver3.title': 'Conformidade Sanit&aacute;ria',
-        'ver3.desc':  'As instala&ccedil;&otilde;es da cl&iacute;nica s&atilde;o revisadas quanto &agrave; conformidade atual com a ANVISA e ao licenciamento sanit&aacute;rio. Padr&otilde;es internacionais de seguran&ccedil;a do paciente se aplicam a todos os parceiros da rede.',
-        'ver3.badge': 'ANVISA &middot; Padr&otilde;es Internacionais',
-      }
-    };
-
-    Object.keys(PAGE_T).forEach(function(lang) {
-      if (window.T[lang]) Object.assign(window.T[lang], PAGE_T[lang]);
-    });
-
     initPage();
+
+    function openContactModal() {
+      document.getElementById('contact-modal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeContactModal() {
+      document.getElementById('contact-modal').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function handleModalClick(e) {
+      if (e.target === document.getElementById('contact-modal')) closeContactModal();
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeContactModal();
+    });
   </script>
 </body>
 </html>
