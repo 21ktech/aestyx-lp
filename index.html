@@ -3,12 +3,151 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aestyx — Surgical-grade Precision. Curated for You. 30–60% Smarter Cost.</title>
-  <meta name="description" content="Aestyx matches you with top-tier Brazilian surgeons vetted for your specific anatomy. 100% online consultations in English. 12x credit card installments. Travel only for surgery week.">
+  <title>Aestyx — Top Brazilian Surgeons. 30–60% Lower Cost.</title>
+  <meta name="description" content="Aestyx connects you to the right surgeon in Brazil and manages everything in English. Board-certified surgeons, online consultations, 12x credit card. You only travel for surgery week.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
   <link rel="stylesheet" href="css/shared.css">
+  <style>
+    /* ── WHAT WE DO ── */
+    .wwd-section { padding: 80px 5vw; background: var(--bg); }
+    .wwd-inner { max-width: 700px; margin: 0 auto; text-align: center; }
+    .wwd-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin: 2rem auto;
+      max-width: 420px;
+      text-align: left;
+    }
+    .wwd-list li { display: flex; align-items: center; gap: 12px; font-size: 1rem; color: var(--text-s); }
+    .wwd-list li svg { width: 18px; height: 18px; color: var(--gold); flex-shrink: 0; }
+    .wwd-note { font-size: 1rem; color: var(--text-s); margin: 0 0 2rem; font-weight: 500; }
+
+    /* ── CONSULTATIONS ── */
+    .consult-section { padding: 80px 5vw; background: var(--text); }
+    .consult-inner { max-width: 700px; margin: 0 auto; text-align: center; }
+    .consult-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.2;
+      margin: 1rem 0 2rem;
+    }
+    .consult-title .accent { color: var(--gold); }
+    .consult-cards {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+    .consult-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 1.4rem 1.75rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.85);
+      max-width: 280px;
+    }
+    .consult-card svg { width: 20px; height: 20px; color: var(--gold); flex-shrink: 0; }
+    .consult-tagline { font-size: 1.1rem; font-weight: 600; color: rgba(255,255,255,0.9); letter-spacing: 0.02em; }
+
+    /* ── PRICING ── */
+    .pricing-section { padding: 80px 5vw; background: var(--bg); }
+    .pricing-intro { margin-bottom: 3rem; }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .pricing-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(74,59,79,0.08);
+      border-radius: 12px;
+      padding: 1.75rem 1.5rem;
+      transition: box-shadow 0.2s;
+    }
+    .pricing-card:hover { box-shadow: 0 8px 24px rgba(74,59,79,0.07); }
+    .pricing-proc {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-s);
+      margin-bottom: 0.6rem;
+    }
+    .pricing-range {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--purple);
+      margin-bottom: 0.5rem;
+    }
+    .pricing-note { font-size: 0.82rem; color: var(--text-s); line-height: 1.5; }
+    .pricing-card-cta {
+      background: var(--bg);
+      border: 1.5px dashed rgba(74,59,79,0.2);
+      display: flex;
+      flex-direction: column;
+    }
+    .pricing-range-alt {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+    .btn-outline-purple {
+      display: inline-block;
+      padding: 0.55rem 1.25rem;
+      border-radius: 8px;
+      border: 1.5px solid var(--purple);
+      background: transparent;
+      color: var(--purple);
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      align-self: flex-start;
+    }
+    .btn-outline-purple:hover { background: var(--purple); color: var(--white); }
+    .pricing-disclaimer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-s);
+      margin-top: 2rem;
+      font-style: italic;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ── PAYMENT ── */
+    .payment-section { background: var(--purple); padding: 60px 5vw; text-align: center; }
+    .payment-inner { max-width: 500px; margin: 0 auto; }
+    .payment-section svg { width: 32px; height: 32px; color: var(--gold); margin-bottom: 1rem; }
+    .payment-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 1.25rem;
+    }
+    .payment-list { list-style: none; display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; }
+    .payment-list li { font-size: 0.95rem; color: rgba(255,255,255,0.8); position: relative; padding-left: 1.25rem; }
+    .payment-list li::before { content: '✓'; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
+  </style>
 </head>
 <body>
 
@@ -43,8 +182,8 @@
         <div class="eyebrow-dot"></div>
         <span>Brazil&rsquo;s Curated Aesthetic Surgery Agency</span>
       </div>
-      <h1>Top Brazilian surgeons.<br><span class="highlight">30&ndash;60% vs. US/Europe prices.</span></h1>
-      <p class="hero-sub">Aestyx is a <strong>medical aesthetic tourism agency</strong>. We find the right board-certified surgeon in Brazil for your case — rhinoplasty, facelift, jaw surgery, FUE hair, smile design — and handle everything end-to-end in English. You only travel for surgery week.</p>
+      <h1>The best Brazilian surgeons.<br><span class="highlight">30&ndash;60% lower cost than the US and Europe.</span></h1>
+      <p class="hero-sub">Aestyx connects you to the right surgeon in Brazil and manages everything in English. You only travel for surgery week.</p>
       <div class="hero-proof-row">
         <div class="hero-proof-item">
           <div class="hero-proof-num">30–60<span>%</span></div>
@@ -62,13 +201,50 @@
         </div>
       </div>
       <div class="hero-cta-row">
-        <a href="#waitlist" class="btn-primary">See Your Symmetry — Free &rarr;</a>
-        <button class="btn-outline" onclick="openContact()">Talk to Concierge</button>
+        <button class="btn-primary" onclick="openContact()">Talk to Concierge &rarr;</button>
       </div>
     </div>
   </section>
 
-  <!-- ══ INLINE BEFORE/AFTER (below hero) ══ -->
+  <!-- ══ WHAT WE DO ══ -->
+  <section class="wwd-section">
+    <div class="wwd-inner">
+      <div class="section-kicker" style="justify-content:center;">What We Do</div>
+      <div class="section-title" style="text-align:center;">We match you with one surgeon<br><span class="accent">based on your case.</span></div>
+      <ul class="wwd-list">
+        <li><i data-lucide="video"></i><span>Online consultations (video or async)</span></li>
+        <li><i data-lucide="globe"></i><span>Translation and communication</span></li>
+        <li><i data-lucide="calendar-check"></i><span>Surgery planning</span></li>
+        <li><i data-lucide="map-pin"></i><span>Travel and recovery coordination</span></li>
+      </ul>
+      <p class="wwd-note">No language barrier. No guesswork.</p>
+      <button class="btn-primary" onclick="openContact()">Talk to Aestyx Team &rarr;</button>
+    </div>
+  </section>
+
+  <!-- ══ CONSULTATIONS ══ -->
+  <section class="consult-section">
+    <div class="consult-inner">
+      <div class="page-hero-eyebrow" style="justify-content:center;">
+        <div class="eyebrow-dot" style="background:var(--gold);"></div>
+        <span style="color:rgba(201,185,156,0.8);">Consultations</span>
+      </div>
+      <div class="consult-title">All consultations<br><span class="accent">are online.</span></div>
+      <div class="consult-cards">
+        <div class="consult-card">
+          <i data-lucide="video"></i>
+          <span>Talk live with your surgeon</span>
+        </div>
+        <div class="consult-card">
+          <i data-lucide="image"></i>
+          <span>Send photos and get a structured response</span>
+        </div>
+      </div>
+      <p class="consult-tagline">Fast. Clear. In English.</p>
+    </div>
+  </section>
+
+  <!-- ══ ILLUSTRATIVE RESULTS ══ -->
   <section class="ba-hero-section">
     <div class="ba-hero-header">
       <div class="section-kicker" style="justify-content:center;">Illustrative Results</div>
@@ -134,138 +310,59 @@
     </div>
   </section>
 
-  <!-- ══ VALUE ARBITRAGE (inline, above trust) ══ -->
-  <section class="arb-section arb-inline" id="arbitrage">
-    <div class="arb-intro">
-      <div class="section-kicker" style="justify-content:center;">Value Arbitrage</div>
-      <div class="section-title" style="text-align:center;">Same result.<br><span class="accent">30–60% smarter cost.</span></div>
+  <!-- ══ PRICING ══ -->
+  <section class="pricing-section" id="pricing">
+    <div class="pricing-intro">
+      <div class="section-kicker" style="justify-content:center;">Pricing</div>
+      <div class="section-title" style="text-align:center;">Transparent ranges.<br><span class="accent">No surprises.</span></div>
     </div>
-
-    <div class="arb-grid arb-grid-5">
-
-      <div class="arb-card">
-        <div class="arb-card-header">
-          <div class="arb-proc-name">Structural Rhinoplasty</div>
-          <div class="bpc-tag tag-high">SBCP-Verified</div>
-        </div>
-        <div class="arb-card-body">
-          <div class="arb-row">
-            <div class="arb-loc">US / EU Avg.</div>
-            <div class="arb-price">$25k&ndash;$32k</div>
-          </div>
-          <div class="arb-row featured-row">
-            <div class="arb-loc" style="color:var(--purple);">Aestyx Brazil</div>
-            <div class="arb-price featured">$4k&ndash;$8k</div>
-          </div>
-          <div class="arb-savings">
-            <div>
-              <div class="arb-save-label">You save</div>
-              <div class="arb-save-amount">5&ndash;7 days office-ready</div>
-            </div>
-            <div class="arb-save-pct">70<span>%</span></div>
-          </div>
-        </div>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <div class="pricing-proc">Rhinoplasty (Primary)</div>
+        <div class="pricing-range">$6,000 &ndash; $8,500</div>
+        <div class="pricing-note">Final price depends on case complexity and surgeon.</div>
       </div>
-
-      <div class="arb-card">
-        <div class="arb-card-header">
-          <div class="arb-proc-name">Deep Plane Facelift</div>
-          <div class="bpc-tag tag-high">JCI</div>
-        </div>
-        <div class="arb-card-body">
-          <div class="arb-row">
-            <div class="arb-loc">US / EU Avg.</div>
-            <div class="arb-price">$40k&ndash;$55k</div>
-          </div>
-          <div class="arb-row featured-row">
-            <div class="arb-loc" style="color:var(--purple);">Aestyx Brazil</div>
-            <div class="arb-price featured">$15k&ndash;$22k</div>
-          </div>
-          <div class="arb-savings">
-            <div>
-              <div class="arb-save-label">You save</div>
-              <div class="arb-save-amount">10&ndash;14 days social-ready</div>
-            </div>
-            <div class="arb-save-pct">57<span>%</span></div>
-          </div>
-        </div>
+      <div class="pricing-card">
+        <div class="pricing-proc">Deep Plane Facelift</div>
+        <div class="pricing-range">$15,000 &ndash; $21,500</div>
+        <div class="pricing-note">Final price depends on case complexity and surgeon.</div>
       </div>
-
-      <div class="arb-card">
-        <div class="arb-card-header">
-          <div class="arb-proc-name">FUE Hair Transplant</div>
-          <div class="bpc-tag tag-high">SBCP</div>
-        </div>
-        <div class="arb-card-body">
-          <div class="arb-row">
-            <div class="arb-loc">US / EU Avg.</div>
-            <div class="arb-price">$10k&ndash;$18k</div>
-          </div>
-          <div class="arb-row featured-row">
-            <div class="arb-loc" style="color:var(--purple);">Aestyx Brazil</div>
-            <div class="arb-price featured">$4k&ndash;$6k</div>
-          </div>
-          <div class="arb-savings">
-            <div>
-              <div class="arb-save-label">You save</div>
-              <div class="arb-save-amount">3&ndash;5 days social-ready</div>
-            </div>
-            <div class="arb-save-pct">60<span>%</span></div>
-          </div>
-        </div>
+      <div class="pricing-card">
+        <div class="pricing-proc">Revision Rhinoplasty</div>
+        <div class="pricing-range">$8,500 &ndash; $12,500</div>
+        <div class="pricing-note">Final price depends on case complexity and surgeon.</div>
       </div>
-
-      <div class="arb-card">
-        <div class="arb-card-header">
-          <div class="arb-proc-name">Jaw Surgery</div>
-          <div class="bpc-tag tag-high">SBCP-Verified</div>
-        </div>
-        <div class="arb-card-body">
-          <div class="arb-row">
-            <div class="arb-loc">US / EU Avg.</div>
-            <div class="arb-price">$35k&ndash;$50k</div>
-          </div>
-          <div class="arb-row featured-row">
-            <div class="arb-loc" style="color:var(--purple);">Aestyx Brazil</div>
-            <div class="arb-price featured">$10k&ndash;$18k</div>
-          </div>
-          <div class="arb-savings">
-            <div>
-              <div class="arb-save-label">You save</div>
-              <div class="arb-save-amount">14&ndash;21 days office-ready</div>
-            </div>
-            <div class="arb-save-pct">65<span>%</span></div>
-          </div>
-        </div>
+      <div class="pricing-card">
+        <div class="pricing-proc">Jaw Surgery</div>
+        <div class="pricing-range">$16,500 &ndash; $25,000</div>
+        <div class="pricing-note">Final price depends on case complexity and surgeon.</div>
       </div>
-
-      <div class="arb-card">
-        <div class="arb-card-header">
-          <div class="arb-proc-name">Perfect Smile</div>
-          <div class="bpc-tag tag-high">VITA Ceramic</div>
-        </div>
-        <div class="arb-card-body">
-          <div class="arb-row">
-            <div class="arb-loc">US / EU Avg.</div>
-            <div class="arb-price">$20k&ndash;$40k</div>
-          </div>
-          <div class="arb-row featured-row">
-            <div class="arb-loc" style="color:var(--purple);">Aestyx Brazil</div>
-            <div class="arb-price featured">$8k&ndash;$14k</div>
-          </div>
-          <div class="arb-savings">
-            <div>
-              <div class="arb-save-label">You save</div>
-              <div class="arb-save-amount">2&ndash;3 days social-ready</div>
-            </div>
-            <div class="arb-save-pct">60<span>%</span></div>
-          </div>
-        </div>
+      <div class="pricing-card">
+        <div class="pricing-proc">Mentoplasty</div>
+        <div class="pricing-range">$4,000 &ndash; $5,500</div>
+        <div class="pricing-note">Final price depends on case complexity and surgeon.</div>
       </div>
-
+      <div class="pricing-card pricing-card-cta">
+        <div class="pricing-proc">Other Procedure</div>
+        <div class="pricing-range-alt">Interested in a different surgery?</div>
+        <p class="pricing-note" style="margin-bottom:1.25rem;">Contact us and Aestyx will connect you with the right surgeon for your case.</p>
+        <button class="btn-outline-purple" onclick="openContact()">Talk to Aestyx &rarr;</button>
+      </div>
     </div>
+    <p class="pricing-disclaimer">Final price is defined after medical evaluation.</p>
+  </section>
 
-    <p class="arb-disclaimer">Ranges reflect 2026 market data (ASPS &amp; SBCP). Final pricing is set per client during your online consultation, based on procedure complexity and surgeon match. Downtime estimates based on Aestyx patient cohort.</p>
+  <!-- ══ PAYMENT ══ -->
+  <section class="payment-section">
+    <div class="payment-inner">
+      <i data-lucide="credit-card"></i>
+      <div class="payment-title">Pay in up to 12x with credit card.</div>
+      <ul class="payment-list">
+        <li>No large upfront burden</li>
+        <li>Structured payments</li>
+        <li>Full transparency</li>
+      </ul>
+    </div>
   </section>
 
   <!-- ══ FAQ ══ -->
@@ -283,7 +380,7 @@
           <i data-lucide="chevron-down"></i>
         </button>
         <div class="faq-a">
-          <p>Yes — Brazil has one of the world’s most rigorous plastic surgery oversight bodies. Aestyx partners exclusively with <strong>SBCP-certified surgeons</strong> (Brazilian Society of Plastic Surgery, the equivalent of ASPS in the US) operating in <strong>JCI-accredited hospitals</strong> — the same international standard used by Mayo Clinic. We do not work with clinics or unverified practitioners.</p>
+          <p>Yes — Brazil has one of the world's most rigorous plastic surgery oversight bodies. Aestyx partners exclusively with <strong>SBCP-certified surgeons</strong> (Brazilian Society of Plastic Surgery, the equivalent of ASPS in the US) operating in <strong>JCI-accredited hospitals</strong> — the same international standard used by Mayo Clinic. We do not work with clinics or unverified practitioners.</p>
         </div>
       </div>
 
@@ -303,7 +400,7 @@
           <i data-lucide="chevron-down"></i>
         </button>
         <div class="faq-a">
-          <p>The surgical quality is equivalent — what you’re avoiding is US systemic overhead: hospital liability markups, insurance premiums, administrative bloat, and NYC/Miami location pricing. <strong>Brazil’s operational costs are structurally lower</strong>, not the standard of care. A rhinoplasty in São Paulo costs $4k–$8k. The same procedure in New York averages $25k–$32k — for the same surgical technique.</p>
+          <p>The surgical quality is equivalent — what you're avoiding is US systemic overhead: hospital liability markups, insurance premiums, administrative bloat, and NYC/Miami location pricing. <strong>Brazil's operational costs are structurally lower</strong>, not the standard of care. A rhinoplasty in São Paulo costs $6k–$8.5k. The same procedure in New York averages $25k–$32k — for the same surgical technique.</p>
         </div>
       </div>
 
@@ -323,7 +420,7 @@
           <i data-lucide="chevron-down"></i>
         </button>
         <div class="faq-a">
-          <p>Most procedures require <strong>7–14 days in-country</strong> for initial recovery before flying. Rhinoplasty: ~7 days. Facelift: ~12–14 days. FUE hair: ~3–5 days. We plan your trip around your procedure so you’re never there longer than necessary. All post-op follow-ups happen via telehealth from home.</p>
+          <p>Most procedures require <strong>7–14 days in-country</strong> for initial recovery before flying. Rhinoplasty: ~7 days. Facelift: ~12–14 days. FUE hair: ~3–5 days. We plan your trip around your procedure so you're never there longer than necessary. All post-op follow-ups happen via telehealth from home.</p>
         </div>
       </div>
 
@@ -333,7 +430,7 @@
           <i data-lucide="chevron-down"></i>
         </button>
         <div class="faq-a">
-          <p>All payments go through <strong>Stripe Escrow</strong> — funds are held and only released to the surgeon after your consultation is confirmed. If the match doesn’t proceed, your money is returned. Surgeons receive 100% of their professional fee; Aestyx charges a fixed facilitation fee ($1,000–$2,000) for coordination, matching, and logistics. No hidden commissions.</p>
+          <p>All payments go through <strong>Stripe Escrow</strong> — funds are held and only released to the surgeon after your consultation is confirmed. If the match doesn't proceed, your money is returned. Surgeons receive 100% of their professional fee; Aestyx charges a fixed facilitation fee for coordination, matching, and logistics. No hidden commissions.</p>
         </div>
       </div>
 
@@ -343,7 +440,7 @@
           <i data-lucide="chevron-down"></i>
         </button>
         <div class="faq-a">
-          <p>Yes. Through <strong>Aestyx Pay™</strong>, you can split the total into 12 equal monthly installments via credit card — no liquidating investments, no large upfront capital. A $6,000 rhinoplasty package becomes ~$500/month. Keep your capital working while your procedure pays for itself in value arbitrage.</p>
+          <p>Yes. You can split the total into up to 12 equal monthly installments via credit card — no liquidating investments, no large upfront capital. A $6,000 rhinoplasty becomes ~$500/month. Keep your capital working while your procedure pays for itself in value arbitrage.</p>
         </div>
       </div>
 
@@ -353,27 +450,17 @@
           <i data-lucide="chevron-down"></i>
         </button>
         <div class="faq-a">
-          <p>Aestyx is a <strong>medical aesthetic tourism agency</strong> — not a hospital, clinic, or medical practice. We are the coordination and intelligence layer: we match you to the right surgeon, manage all logistics and communication, handle payments via escrow, and provide pre/post-op support. The medical procedures are performed by independent, certified surgeons in accredited hospitals.</p>
+          <p>Aestyx is a <strong>medical aesthetic tourism agency</strong> — not a hospital, clinic, or medical practice. We are the coordination layer: we match you to the right surgeon, manage all logistics and communication, handle payments via escrow, and provide pre/post-op support. The medical procedures are performed by independent, certified surgeons in accredited hospitals.</p>
         </div>
       </div>
 
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">
-          <span>How do I get started? What’s the first step?</span>
+          <span>What if I'm not happy with the result?</span>
           <i data-lucide="chevron-down"></i>
         </button>
         <div class="faq-a">
-          <p>Get your <strong>free Aestyx Score™</strong> — upload two photos and receive a real-time AI facial harmony assessment. This tells you your baseline and which procedures are clinically relevant for your anatomy. Then, optionally upgrade to the <strong>Aesthetic Blueprint™ ($17)</strong> for a full 12-month roadmap with cost estimates and priority surgeon matching. No commitment required at either step.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          <span>What if I’m not happy with the result?</span>
-          <i data-lucide="chevron-down"></i>
-        </button>
-        <div class="faq-a">
-          <p>Aestyx provides 30-day post-op telehealth follow-up with your surgeon. For revision cases, your surgeon’s revision policy (standard in the industry) applies. We document every step of your case in your Aestyx profile — so if a revision is needed, the full clinical context is available immediately. <strong>We do not disappear after surgery.</strong></p>
+          <p>Aestyx provides 30-day post-op telehealth follow-up with your surgeon. For revision cases, your surgeon's revision policy (standard in the industry) applies. We document every step of your case — so if a revision is needed, the full clinical context is available immediately. <strong>We do not disappear after surgery.</strong></p>
         </div>
       </div>
 
@@ -403,8 +490,6 @@
     </div>
   </div>
 
-
-
   <!-- LIGHTBOX MODAL -->
   <div class="lb-backdrop" id="lb-backdrop" onclick="closeLightbox()">
     <button class="lb-close" onclick="closeLightbox()" aria-label="Close"><i data-lucide="x"></i></button>
@@ -417,13 +502,12 @@
     </div>
   </div>
 
-
   <!-- CONTACT MODAL -->
   <div class="contact-backdrop" id="contact-modal" onclick="closeContact()">
     <div class="contact-modal-inner" onclick="event.stopPropagation()">
       <button class="lb-close" onclick="closeContact()" aria-label="Close"><i data-lucide="x"></i></button>
       <div class="contact-icon"><i data-lucide="message-circle"></i></div>
-      <div class="contact-title">Talk to our Concierge</div>
+      <div class="contact-title">Talk to Aestyx Team</div>
       <p class="contact-sub">We're real people. Reach out directly — we respond within 24 hours, in English.</p>
       <div class="contact-options">
         <a href="mailto:social@aestyx.com" class="contact-option">
@@ -434,16 +518,15 @@
           </div>
           <i data-lucide="arrow-right" class="contact-opt-arrow"></i>
         </a>
-        <a href="https://instagram.com/aestyx.ai" target="_blank" rel="noopener" class="contact-option">
-          <div class="contact-opt-icon"><i data-lucide="instagram"></i></div>
+        <a href="https://wa.me/5561995615919" target="_blank" rel="noopener" class="contact-option">
+          <div class="contact-opt-icon"><i data-lucide="message-circle"></i></div>
           <div class="contact-opt-body">
-            <div class="contact-opt-label">DM us on Instagram</div>
-            <div class="contact-opt-val">@aestyx.ai</div>
+            <div class="contact-opt-label">WhatsApp</div>
+            <div class="contact-opt-val">+55 (61) 99561-5919</div>
           </div>
           <i data-lucide="arrow-right" class="contact-opt-arrow"></i>
         </a>
       </div>
-      <p class="contact-note">Not ready to talk yet? <a href="#waitlist" onclick="closeContact()">Join the waitlist</a> and we'll reach out when you're ready.</p>
     </div>
   </div>
 
@@ -451,148 +534,19 @@
   <footer class="footer-minimal">
     <span>&copy; 2025 Aestyx Inc.</span>
   </footer>
+
   <script src="js/i18n.js"></script>
   <script>
-    var PAGE_T = {
-      en: {
-        /* ── Hero ── */
-        'hero.h1':  'Surgical-grade precision.<br><span class="highlight">Curated for you.</span>',
-        'hero.sub': 'Aestyx matches you with top-tier Brazilian surgeons vetted for your specific anatomy. 100% online consultations in English. 12x credit card installments. Travel only for surgery week.',
-        'hero.cta':  'See Your Symmetry — Free &rarr;',
-        'hero.cta2': 'Talk to Concierge',
-
-        /* ── Blueprint UI ── */
-        'ui.stat':          'Aestyx Score&#8482;',
-        'ui.score.lbl':     'Aestyx Score&#8482;',
-        'ui.score.tooltip': 'A proprietary clinical metric: facial symmetry, Golden Ratio proportions, Aesthetic Archetype, and surgical viability. Your compass before any decision.',
-        'ui.goal':       'Aesthetic Peak Blueprint&#8482;',
-        'ui.cat1':       'Facial Refinement',
-        'ui.cat1p':      'Rhinoplasty &middot; Facelift',
-        'ui.cat2':       'Skin &amp; Smile',
-        'ui.cat2p':      'Laser CO&#8322; &middot; Bio-stimulators',
-        'ui.cat3':       'Body Sculpting',
-        'ui.cat3p':      'HD Liposuction',
-        'ui.pri.high':   'Priority',
-        'ui.pri.med':    'Recommended',
-        'ui.pri.opt':    'Optional',
-        'ui.btn1':       'Full Blueprint&#8482; &mdash; $17',
-        'ui.btn2':       'Explore Procedures',
-        'ui.fc.label':   'Available now',
-        'ui.fc.val':     'Top 1% Brazilian specialists',
-
-        /* ── Ecosystem ── */
-        'eco.kicker': 'The Aestyx Platform',
-        'eco.title':  'Discover. Plan.<br><span class="accent">Evolve.</span>',
-        'eco.lead':   'Three products, one ecosystem. Each step builds on the last &mdash; from your free diagnostic baseline to your 12-month roadmap, to ongoing post-op evolution.',
-
-        'eco.score.tag':  'Free',
-        'eco.score.name': 'Aestyx Score&#8482;',
-        'eco.score.desc': 'Upload two photos. Get a real-time, AI-driven facial harmony diagnosis &mdash; symmetry, Golden Ratio, Aesthetic Archetype. Discover your baseline before spending a single dollar.',
-        'eco.score.cta':  'See Your Symmetry &mdash; Free',
-
-        'eco.bp.tag':  '$17',
-        'eco.bp.name': 'Aestyx Blueprint&#8482;',
-        'eco.bp.desc': 'Your 12-month aesthetic GPS. Visagism analysis, Smile Engine, Hair Analysis, real-cost estimates, and priority matching with Brazil&rsquo;s elite specialists. Spend $17. Avoid a $10,000 mistake.',
-        'eco.bp.cta':  'Get My Blueprint',
-
-        'eco.club.tag':  '$7.90/mo',
-        'eco.club.name': 'Aestyx Club',
-        'eco.club.desc': 'Don&rsquo;t walk the path alone. Track daily habits, get dynamic AI glow-up projections, and access premium post-op care &mdash; month by month, milestone by milestone.',
-        'eco.club.cta':  'Preview Club',
-
-        /* ── Why Brazil ── */
-        'brazil.kicker': 'The Elite Standard',
-        'brazil.title':  'The global elite<br><span class="accent">is choosing Brazil.</span>',
-
-        'wb.stat1': 'World ranking in aesthetic procedures performed annually',
-        'wb.stat2': 'Average savings vs. NY/Miami for structural rhinoplasty',
-        'wb.stat3': 'Years of unmatched aesthetic surgery tradition',
-
-        'wb.point1.title': 'The Pitanguy Legacy',
-        'wb.point1.desc':  'Brazil&rsquo;s aesthetic surgery tradition dates to the 1960s. Dr. Ivo Pitanguy trained a global generation of surgeons, establishing Brazilian precision as the world&rsquo;s gold standard.',
-
-        'wb.point2.title': 'SBCP-Verified Excellence',
-        'wb.point2.desc':  'Aestyx partners exclusively with SBCP-certified specialists &mdash; the Brazilian Society of Plastic Surgery, equivalent to the ASPS in the United States.',
-
-        'wb.point3.title': 'JCI-Certified Infrastructure',
-        'wb.point3.desc':  'ICU-equipped private hospitals, board-certified anesthesiologists, and international-standard post-op protocols. Not a clinic &mdash; a world-class medical center.',
-
-        /* ── Arbitrage ── */
-        'arb.kicker':    'Quality Arbitrage',
-        'arb.title':     'Same result. A fraction<br><span class="accent">of the cost.</span>',
-        'arb.lead':      'This is not about cheap. This is intelligent economics &mdash; investing the savings in what truly matters: premium surgeons, JCI hospitals, and months of post-op care, for a fraction of what a basic procedure costs in the US.',
-        'arb.proc1':     'Structural Rhinoplasty',
-        'arb.proc2':     'Deep Plane Facelift',
-        'arb.proc3':     'FUE Hair Transplant',
-        'arb.highlight': 'JCI',
-        'arb.ref.us':    'US / NY Avg.',
-        'arb.ref.br':    'Aestyx Brazil',
-        'arb.save':      'You save',
-        'arb.disclaimer': '* Price comparisons based on average 2025&ndash;2026 market data from independent research (Aestyx Research Report 2025). Individual quotes vary by surgeon, procedure complexity, and hospital. Savings percentages calculated vs. NY/Miami average market prices.',
-
-        /* ── Concierge ── */
-        'con.kicker': 'Medical Concierge',
-        'con.title':  'The surgery is half<br>the journey.',
-        'con.lead':   'Your Blueprint arrives at your specialist before you do. Aestyx Concierge coordinates every step &mdash; pre-arrival, hospital check-in, recovery, and 30-day telehealth follow-up &mdash; in your language, on your timeline.',
-
-        'con1.title': 'Blueprint Pre-Arrival',
-        'con1.desc':  'Your Blueprint&#8482; is pre-translated and delivered to the specialist. Medical history, goals, AI analysis &mdash; zero friction from day one. Your plan speaks the surgeon&rsquo;s language before you walk in.',
-
-        'con2.title': 'JCI Hospital Check-in',
-        'con2.desc':  'Surgeon briefing, board-certified anesthesiologist, private recovery suite. Every detail coordinated by Aestyx. You arrive &mdash; we handle the rest.',
-
-        'con3.title': '24/7 Recovery Care',
-        'con3.desc':  'Lymphatic drainage, vital monitoring, private nursing on request. Luxury recovery houses available. Your wellbeing is the only priority.',
-
-        'con4.title': 'Post-op at Home',
-        'con4.desc':  'Telehealth follow-up with your specialist. 30-day check-in protocol. Your result tracked and documented in your Aestyx Club profile.',
-
-        /* ── Procedures ── */
-        'proc.kicker': 'Full Procedure Catalog',
-        'proc.title':  'Everything covered.<br><span style="color:var(--gold)">Nothing left to chance.</span>',
-        'proc.lead':   'Brazil leads the world in aesthetic excellence. Your Blueprint&#8482; maps exactly which procedures apply to you &mdash; in the right order, at the right time.',
-        'proc.cta':    'Get My Blueprint&#8482; &rarr;',
-
-        'p1.cat':   'Facial Refinement &amp; Visagism',
-        'p1.tag':   'Precision. Harmony. Presence.',
-        'p1.items': ['Rhinoplasty (Nose Correction)', 'Facelift &amp; Neck Lift', 'Blepharoplasty (Eyelid)', 'Otoplasty (Ear)', 'Chin Augmentation (Mentoplasty)', 'Cheek Augmentation (Malar)', 'Visagism &amp; Facial Harmony Analysis'],
-
-        'p2.cat':   'Skin &amp; Smile Intelligence',
-        'p2.tag':   'Clarity. Luminosity. Vitality.',
-        'p2.items': ['Botulinum Toxin (Botox)', 'Hyaluronic Acid Fillers', 'Laser CO&#8322; Resurfacing', 'Collagen Bio-Stimulators', 'Chemical Peeling &amp; Microneedling RF', 'Smile Design (VITA Ceramic Veneers)', 'Professional Teeth Whitening'],
-
-        'p3.cat':   'Body Sculpting',
-        'p3.tag':   'Definition. Proportion. Confidence.',
-        'p3.items': ['HD Liposuction', 'Breast Augmentation', 'Abdominoplasty (Tummy Tuck)', 'Brazilian Butt Lift (BBL)', 'Arm Lift (Brachioplasty)', 'Gynecomastia Treatment'],
-
-        'p4.cat':   'Hair Restoration',
-        'p4.tag':   'Density. Naturalness. Confidence.',
-        'p4.items': ['FUE Advanced Technology', 'DHI Direct Implant', 'PRP Scalp Therapy', 'Hairline &amp; Temporal Design', 'Beard Restoration &amp; Design', 'LLLT Laser Therapy'],
-
-        /* ── CTA ── */
-        'cta.kicker': 'Founding Members',
-        'cta.title':  'Begin your aesthetic evolution<br><span class="accent">with complete precision.</span>',
-        'cta.lead':   'Join founding members and get priority access to the Aestyx Score (free), the Blueprint&#8482; ($17), and Brazil&rsquo;s elite specialist network. Phase 1 &mdash; limited spots.',
-        'cta.note':   'Top 1% of verified Brazilian specialists &middot; World #1 in Aesthetic Procedures &middot; Phase 1 launching now',
-      }
-    };
-
-    Object.keys(PAGE_T).forEach(function(lang) {
-      if (window.T[lang]) Object.assign(window.T[lang], PAGE_T[lang]);
-    });
-
-    /* EN-only phase — ignore any stored language preference */
     setLanguage('en');
     document.addEventListener('DOMContentLoaded', function() {
       if (typeof lucide !== 'undefined') lucide.createIcons();
     });
-    /* Lightbox */
+
     window.openLightbox = function(src, title, sub) {
-      var bd = document.getElementById('lb-backdrop');
       document.getElementById('lb-img').src = src;
       document.getElementById('lb-title').textContent = title;
       document.getElementById('lb-sub').textContent = sub;
-      bd.classList.add('lb-open');
+      document.getElementById('lb-backdrop').classList.add('lb-open');
       document.body.style.overflow = 'hidden';
       if (typeof lucide !== 'undefined') lucide.createIcons();
     };
@@ -600,10 +554,6 @@
       document.getElementById('lb-backdrop').classList.remove('lb-open');
       document.body.style.overflow = '';
     };
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') { window.closeLightbox(); window.closeContact(); }
-    });
-    /* Contact Modal */
     window.openContact = function() {
       document.getElementById('contact-modal').classList.add('lb-open');
       document.body.style.overflow = 'hidden';
@@ -613,13 +563,15 @@
       document.getElementById('contact-modal').classList.remove('lb-open');
       document.body.style.overflow = '';
     };
-    /* FAQ Accordion */
     window.toggleFaq = function(btn) {
       var item = btn.parentElement;
       var isOpen = item.classList.contains('faq-open');
       document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('faq-open'); });
       if (!isOpen) item.classList.add('faq-open');
     };
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') { window.closeLightbox(); window.closeContact(); }
+    });
   </script>
 </body>
 </html>
