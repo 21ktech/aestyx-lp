@@ -3,161 +3,361 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aestyx — Top Brazilian Surgeons. 30–60% Lower Cost.</title>
+  <title>Aestyx — Face Optimization. Beverly Hills Safety. Brazilian Artistry.</title>
   <meta name="description" content="Aestyx connects you to the right surgeon in Brazil and manages everything in English. Board-certified surgeons, online consultations, 12x credit card. You only travel for surgery week.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
   <link rel="stylesheet" href="css/shared.css">
   <style>
-    /* ── WHAT WE DO ── */
-    .wwd-section { padding: 80px 5vw; background: var(--bg); }
-    .wwd-inner { max-width: 700px; margin: 0 auto; text-align: center; }
-    .wwd-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      margin: 2rem auto;
-      max-width: 420px;
-      text-align: left;
-    }
-    .wwd-list li { display: flex; align-items: center; gap: 12px; font-size: 1rem; color: var(--text-s); }
-    .wwd-list li svg { width: 18px; height: 18px; color: var(--gold); flex-shrink: 0; }
-    .wwd-note { font-size: 1rem; color: var(--text-s); margin: 0 0 2rem; font-weight: 500; }
-
-    /* ── CONSULTATIONS ── */
-    .consult-section { padding: 80px 5vw; background: var(--text); }
-    .consult-inner { max-width: 700px; margin: 0 auto; text-align: center; }
-    .consult-title {
-      font-family: 'Montserrat', sans-serif;
-      font-size: clamp(1.6rem, 3vw, 2.4rem);
-      font-weight: 700;
-      color: var(--white);
-      line-height: 1.2;
-      margin: 1rem 0 2rem;
-    }
-    .consult-title .accent { color: var(--gold); }
-    .consult-cards {
-      display: flex;
-      gap: 1.5rem;
-      justify-content: center;
-      margin-bottom: 2rem;
-      flex-wrap: wrap;
-    }
-    .consult-card {
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 12px;
-      padding: 1.4rem 1.75rem;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 0.95rem;
-      color: rgba(255,255,255,0.85);
-      max-width: 280px;
-    }
-    .consult-card svg { width: 20px; height: 20px; color: var(--gold); flex-shrink: 0; }
-    .consult-tagline { font-size: 1.1rem; font-weight: 600; color: rgba(255,255,255,0.9); letter-spacing: 0.02em; }
-
-    /* ── PRICING ── */
-    .pricing-section { padding: 80px 5vw; background: var(--bg); }
-    .pricing-intro { margin-bottom: 3rem; }
-    .pricing-grid {
+    /* ── NEW HERO V2 ── */
+    .hero-v2 {
+      min-height: 100vh;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.25rem;
-      max-width: 900px;
+      grid-template-columns: 1.05fr 0.95fr;
+      align-items: center;
+      padding: calc(var(--banner-h) + 90px) 5vw 80px;
+      gap: 3rem;
+      max-width: 1400px;
       margin: 0 auto;
     }
-    .pricing-card {
-      background: var(--bg-card);
-      border: 1px solid rgba(74,59,79,0.08);
-      border-radius: 12px;
-      padding: 1.75rem 1.5rem;
-      transition: box-shadow 0.2s;
+
+    .hero-v2-content { animation: fadeUp 0.8s ease both; }
+
+    .hero-v2-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.6rem;
     }
-    .pricing-card:hover { box-shadow: 0 8px 24px rgba(74,59,79,0.07); }
-    .pricing-proc {
-      font-size: 0.75rem;
+    .hero-v2-eyebrow::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+
+    .hero-v2 h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(2.2rem, 4vw, 3.6rem);
+      font-weight: 700;
+      line-height: 1.12;
+      color: var(--text);
+      margin-bottom: 1.6rem;
+      letter-spacing: -0.025em;
+    }
+    .hero-v2 h1 .highlight { color: var(--purple); }
+
+    .hero-v2-sub {
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--text-s);
+      line-height: 1.8;
+      margin-bottom: 2.2rem;
+      max-width: 520px;
+    }
+
+    /* Conversion Card */
+    .conv-card {
+      background: var(--purple);
+      border-radius: 16px;
+      padding: 28px 32px;
+      max-width: 480px;
+      margin-bottom: 1.5rem;
+    }
+    .conv-card-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 0.6rem;
+    }
+    .conv-card-text {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.7;
+      margin-bottom: 1.4rem;
+    }
+    .conv-card-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
       font-weight: 700;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--text-s);
-      margin-bottom: 0.6rem;
-    }
-    .pricing-range {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1.4rem;
-      font-weight: 700;
+      padding: 14px 28px;
+      background: var(--white);
       color: var(--purple);
-      margin-bottom: 0.5rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+      text-decoration: none;
     }
-    .pricing-note { font-size: 0.82rem; color: var(--text-s); line-height: 1.5; }
-    .pricing-card-cta {
-      background: var(--bg);
-      border: 1.5px dashed rgba(74,59,79,0.2);
+    .conv-card-btn:hover {
+      background: var(--gold-l);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    }
+    .conv-card-btn svg { width: 16px; height: 16px; }
+
+    /* Hero Visual */
+    .hero-v2-visual {
+      position: relative;
+      animation: fadeUp 0.9s 0.18s ease both;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-v2-img-wrap {
+      position: relative;
+      width: 100%;
+      max-width: 520px;
+    }
+
+    .hero-v2-img-wrap img {
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+      display: block;
+    }
+
+    /* AI Badges floating */
+    .ai-badge {
+      position: absolute;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--white);
+      border: 1px solid rgba(74,59,79,0.1);
+      border-radius: 10px;
+      padding: 10px 16px;
+      box-shadow: 0 8px 24px rgba(74,59,79,0.1);
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text);
+      white-space: nowrap;
+      animation: floatBadge 4s ease-in-out infinite;
+    }
+    .ai-badge svg { width: 16px; height: 16px; stroke: var(--purple); stroke-width: 1.5; flex-shrink: 0; }
+    .ai-badge .ai-score { font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--purple); }
+
+    .ai-badge.symmetry   { top: 18%; left: -8%; animation-delay: 0s; }
+    .ai-badge.harmony    { top: 32%; right: -10%; animation-delay: 0.6s; }
+    .ai-badge.balance    { top: 52%; left: -6%; animation-delay: 1.2s; }
+    .ai-badge.proportions{ top: 68%; right: -8%; animation-delay: 1.8s; }
+    .ai-badge.skin       { top: 84%; left: 2%; animation-delay: 2.4s; }
+
+    @keyframes floatBadge {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+
+    /* Regulatory badge */
+    .regulatory-badge {
+      position: absolute;
+      bottom: -16px;
+      right: 10%;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--purple);
+      color: var(--white);
+      border-radius: 10px;
+      padding: 10px 18px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      box-shadow: 0 8px 24px rgba(74,59,79,0.2);
+    }
+    .regulatory-badge svg { width: 16px; height: 16px; stroke: var(--gold); stroke-width: 1.5; }
+
+        /* ── TRANSFORMATION PROTOCOLS ── */
+    .protocols-section { padding: 100px 5vw; background: var(--bg); }
+    .protocols-intro { text-align: center; margin-bottom: 4rem; }
+    .protocols-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .protocol-card {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      aspect-ratio: 3 / 4;
+      cursor: pointer;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .protocol-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 24px 48px rgba(74,59,79,0.18);
+    }
+    .protocol-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+    .protocol-card:hover img { transform: scale(1.05); }
+    .protocol-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(26,22,30,0.92) 0%, rgba(26,22,30,0.4) 50%, transparent 100%);
       display: flex;
       flex-direction: column;
+      justify-content: flex-end;
+      padding: 2rem;
     }
-    .pricing-range-alt {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1.05rem;
+    .protocol-label {
+      font-size: 0.65rem;
       font-weight: 700;
-      color: var(--text);
-      margin-bottom: 0.5rem;
-      line-height: 1.3;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.75rem;
     }
-    .btn-outline-purple {
-      display: inline-block;
-      padding: 0.55rem 1.25rem;
-      border-radius: 8px;
-      border: 1.5px solid var(--purple);
-      background: transparent;
-      color: var(--purple);
-      font-size: 0.9rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.2s, color 0.2s;
-      align-self: flex-start;
+    .protocol-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(1.1rem, 1.5vw, 1.4rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.25;
+      margin-bottom: 0.75rem;
     }
-    .btn-outline-purple:hover { background: var(--purple); color: var(--white); }
-    .pricing-disclaimer {
-      text-align: center;
-      font-size: 0.85rem;
-      color: var(--text-s);
-      margin-top: 2rem;
-      font-style: italic;
-      max-width: 480px;
-      margin-left: auto;
-      margin-right: auto;
+    .protocol-desc {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.6;
+    }
+    .protocol-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 1.25rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold);
+      transition: gap 0.25s;
+    }
+    .protocol-card:hover .protocol-cta { gap: 10px; }
+    .protocol-cta svg { width: 14px; height: 14px; stroke: var(--gold); }
+
+    @media (max-width: 960px) {
+      .protocols-grid { grid-template-columns: 1fr; max-width: 420px; }
+      .protocol-card { aspect-ratio: 4 / 5; }
     }
 
     /* ── PAYMENT ── */
-    .payment-section { background: var(--purple); padding: 60px 5vw; text-align: center; }
-    .payment-inner { max-width: 500px; margin: 0 auto; }
-    .payment-section svg { width: 32px; height: 32px; color: var(--gold); margin-bottom: 1rem; }
+    .payment-section { background: var(--purple); padding: 100px 5vw; text-align: center; }
+    .payment-inner { max-width: 640px; margin: 0 auto; }
+    .payment-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.2rem;
+    }
+    .payment-eyebrow::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
     .payment-title {
       font-family: 'Montserrat', sans-serif;
-      font-size: 1.5rem;
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
       font-weight: 700;
       color: var(--white);
+      line-height: 1.2;
       margin-bottom: 1.25rem;
+      letter-spacing: -0.02em;
     }
-    .payment-list { list-style: none; display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; }
-    .payment-list li { font-size: 0.95rem; color: rgba(255,255,255,0.8); position: relative; padding-left: 1.25rem; }
-    .payment-list li::before { content: '✓'; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
+    .payment-sub {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.7;
+      margin-bottom: 2rem;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .payment-list { list-style: none; display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2.5rem; }
+    .payment-list li {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.6;
+      text-align: left;
+      padding: 1rem 1.25rem;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+    }
+    .payment-list li strong { color: var(--gold); font-weight: 600; }
+    .payment-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 16px 36px;
+      background: var(--gold);
+      color: var(--text);
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+    }
+    .payment-cta:hover {
+      background: var(--gold-l);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(201,185,156,0.3);
+    }
+
+    @media (max-width: 960px) {
+      .hero-v2 { grid-template-columns: 1fr; padding: calc(var(--banner-h) + 90px) 5vw 60px; }
+      .hero-v2-visual { order: -1; max-width: 400px; margin: 0 auto; }
+      .ai-badge.symmetry    { top: 10%; left: 0; }
+      .ai-badge.harmony     { top: 25%; right: -5%; }
+      .ai-badge.balance     { top: 45%; left: -2%; }
+      .ai-badge.proportions { top: 62%; right: -2%; }
+      .ai-badge.skin        { top: 80%; left: 5%; }
+      .regulatory-badge { right: 5%; bottom: -10px; font-size: 0.65rem; padding: 8px 14px; }
+      .conv-card { padding: 22px 24px; }
+    }
   </style>
 </head>
 <body>
 
-  <!-- CONSTRUCTION BANNER -->
+  <!-- URGENCY BANNER -->
   <div class="construction-banner">
     <div class="phase-pill">
       <div class="phase-dot"></div>
-      <span data-i18n="phase.label"></span>
+      <span>Phase 1</span>
     </div>
-    <span class="banner-text" data-i18n="banner"></span>
+    <span class="banner-text">NOW ACCEPTING FOUNDING MEMBERS — LIMITED EARLY ACCESS</span>
   </div>
 
   <!-- NAV -->
@@ -168,200 +368,125 @@
     </a>
     <ul class="nav-links">
       <li><a href="about.html">About</a></li>
-      <li><a href="partners.html">Partners</a></li>
+      <li><a href="partners.html">Parceiros</a></li>
+      <li><a href="#faq">FAQ</a></li>
     </ul>
-    <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
-      <i data-lucide="menu"></i>
-    </button>
+    <div class="nav-right" style="display:flex;align-items:center;gap:1rem;">
+      <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
   </nav>
 
-  <!-- ══ HERO ══ -->
-  <section class="hero hero-compact">
-    <div class="hero-content">
-      <div class="hero-eyebrow">
-        <div class="eyebrow-dot"></div>
-        <span>Brazil&rsquo;s Curated Aesthetic Surgery Agency</span>
+  <!-- ══ HERO V2 ══ -->
+  <section class="hero-v2">
+    <div class="hero-v2-content">
+      <div class="hero-v2-eyebrow">Brazilian Aesthetic Health Tourism, Simplified</div>
+      <h1>The Safety of Beverly Hills.<br>The Artistry of Brazil.<br><span class="highlight">The Price You've Been Looking For.</span></h1>
+      <p class="hero-v2-sub">US Standards. Brazilian Mastery. Half the Cost. Don't compromise your safety for price. In Brazil, your USD/EUR has 3× the purchasing power, allowing us to provide 5-star recovery suites and world-leading surgeons for what you would pay in a mass-market clinic elsewhere.</p>
+
+      <div class="conv-card">
+        <div class="conv-card-title">Realize Your Dream This Year</div>
+        <p class="conv-card-text">Transformative facial surgery is now an accessible investment with 12× credit card installments.</p>
+        <a href="#" class="conv-card-btn" onclick="openContact(); return false;">
+          Start Your Face Optimization
+          <i data-lucide="arrow-right"></i>
+        </a>
       </div>
-      <h1>The best Brazilian surgeons.<br><span class="highlight">30&ndash;60% lower cost than the US and Europe.</span></h1>
-      <p class="hero-sub">Aestyx connects you to the right surgeon in Brazil and manages everything in English. You only travel for surgery week.</p>
-      <div class="hero-proof-row">
-        <div class="hero-proof-item">
-          <div class="hero-proof-num">30–60<span>%</span></div>
-          <div class="hero-proof-lbl">vs. US &amp; EU prices</div>
+    </div>
+
+    <div class="hero-v2-visual">
+      <div class="hero-v2-img-wrap">
+        <img src="assets/hero-web.jpg" alt="AI-powered facial symmetry analysis" loading="eager">
+
+        <!-- AI Badges -->
+        <div class="ai-badge symmetry">
+          <i data-lucide="scan-face"></i>
+          <span>Symmetry</span>
+          <span class="ai-score">92%</span>
         </div>
-        <div class="hero-proof-div"></div>
-        <div class="hero-proof-item">
-          <div class="hero-proof-num">100<span>%</span></div>
-          <div class="hero-proof-lbl">English concierge</div>
+        <div class="ai-badge harmony">
+          <i data-lucide="sparkles"></i>
+          <span>Harmony</span>
+          <span class="ai-score">93%</span>
         </div>
-        <div class="hero-proof-div"></div>
-        <div class="hero-proof-item">
-          <div class="hero-proof-num">SBCP</div>
-          <div class="hero-proof-lbl">Verified surgeons only</div>
+        <div class="ai-badge balance">
+          <i data-lucide="scale"></i>
+          <span>Facial Balance</span>
+          <span class="ai-score">91%</span>
         </div>
-      </div>
-      <div class="hero-cta-row">
-        <button class="btn-primary" onclick="openContact()">Talk to Concierge &rarr;</button>
+        <div class="ai-badge proportions">
+          <i data-lucide="ruler"></i>
+          <span>Proportions</span>
+          <span class="ai-score">94%</span>
+        </div>
+        <div class="ai-badge skin">
+          <i data-lucide="droplets"></i>
+          <span>Skin Quality</span>
+          <span class="ai-score">95%</span>
+        </div>
+
+        <div class="regulatory-badge">
+          <i data-lucide="shield-check"></i>
+          <span>Regulatory-Active</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ══ WHAT WE DO ══ -->
-  <section class="wwd-section">
-    <div class="wwd-inner">
-      <div class="section-kicker" style="justify-content:center;">What We Do</div>
-      <div class="section-title" style="text-align:center;">We match you with one surgeon<br><span class="accent">based on your case.</span></div>
-      <ul class="wwd-list">
-        <li><i data-lucide="video"></i><span>Online consultations (video or async)</span></li>
-        <li><i data-lucide="globe"></i><span>Translation and communication</span></li>
-        <li><i data-lucide="calendar-check"></i><span>Surgery planning</span></li>
-        <li><i data-lucide="map-pin"></i><span>Travel and recovery coordination</span></li>
-      </ul>
-      <p class="wwd-note">No language barrier. No guesswork.</p>
-      <button class="btn-primary" onclick="openContact()">Talk to Aestyx Team &rarr;</button>
+  <!-- ══ TRANSFORMATION PROTOCOLS ══ -->
+  <section class="protocols-section">
+    <div class="protocols-intro">
+      <div class="section-kicker" style="justify-content:center;">Transformation Protocols</div>
+      <div class="section-title" style="text-align:center;">The Dream Showcase.<br><span class="accent">Procedures engineered for you.</span></div>
     </div>
-  </section>
+    <div class="protocols-grid">
 
-  <!-- ══ CONSULTATIONS ══ -->
-  <section class="consult-section">
-    <div class="consult-inner">
-      <div class="page-hero-eyebrow" style="justify-content:center;">
-        <div class="eyebrow-dot" style="background:var(--gold);"></div>
-        <span style="color:rgba(201,185,156,0.8);">Consultations</span>
-      </div>
-      <div class="consult-title">All consultations<br><span class="accent">are online.</span></div>
-      <div class="consult-cards">
-        <div class="consult-card">
-          <i data-lucide="video"></i>
-          <span>Talk live with your surgeon</span>
-        </div>
-        <div class="consult-card">
-          <i data-lucide="image"></i>
-          <span>Send photos and get a structured response</span>
-        </div>
-      </div>
-      <p class="consult-tagline">Fast. Clear. In English.</p>
-    </div>
-  </section>
-
-  <!-- ══ ILLUSTRATIVE RESULTS ══ -->
-  <section class="ba-hero-section">
-    <div class="ba-hero-header">
-      <div class="section-kicker" style="justify-content:center;">Illustrative Results</div>
-      <p style="text-align:center;font-size:0.9rem;color:var(--text-s);margin-top:0.4rem;max-width:600px;margin-left:auto;margin-right:auto;">These images are <strong>illustrative simulations</strong> of typical outcomes from SBCP-certified procedures. Every patient is a unique case &mdash; final results depend on anatomy, technique, and individual healing. Click to view full detail.</p>
-    </div>
-    <div class="ba-hero-grid">
-
-      <div class="ba-card" onclick="openLightbox('assets/before-after/rino.jpg','Structural Rhinoplasty','SBCP-Verified · 200+ cases/year · 5–7 days office-ready')">
-        <div class="ba-img-wrap">
-          <img src="assets/before-after/rino.jpg" alt="Rhinoplasty before and after" loading="lazy">
-          <div class="ba-overlay"><i data-lucide="zoom-in"></i><span>View Result</span></div>
-        </div>
-        <div class="ba-label">
-          <div class="ba-proc">Rhinoplasty</div>
-          <div class="bpc-tag tag-high">SBCP</div>
+      <div class="protocol-card" onclick="openContact()">
+        <img src="assets/premium-facelift.jpg" alt="Deep Plane Facelift" loading="lazy">
+        <div class="protocol-overlay">
+          <div class="protocol-label">Protocol</div>
+          <div class="protocol-title">Deep Plane Facelift</div>
+          <p class="protocol-desc">Turn back the clock with the world's most advanced lifting technique. Natural, refreshed, and structurally sound.</p>
+          <div class="protocol-cta">Explore <i data-lucide="arrow-right"></i></div>
         </div>
       </div>
 
-      <div class="ba-card" onclick="openLightbox('assets/before-after/jaw.jpg','Orthognathic Jaw Surgery','SBCP-Verified · 100+ cases/year · 14–21 days recovery')">
-        <div class="ba-img-wrap">
-          <img src="assets/before-after/jaw.jpg" alt="Jaw surgery before and after" loading="lazy">
-          <div class="ba-overlay"><i data-lucide="zoom-in"></i><span>View Result</span></div>
-        </div>
-        <div class="ba-label">
-          <div class="ba-proc">Jaw Surgery</div>
-          <div class="bpc-tag tag-high">SBCP</div>
-        </div>
-      </div>
-
-      <div class="ba-card" onclick="openLightbox('assets/before-after/facelift-gpt.jpg','Deep Plane Facelift','JCI-Accredited · 150+ cases/year · 10–14 days social-ready')">
-        <div class="ba-img-wrap">
-          <img src="assets/before-after/facelift-gpt.jpg" alt="Facelift before and after" loading="lazy">
-          <div class="ba-overlay"><i data-lucide="zoom-in"></i><span>View Result</span></div>
-        </div>
-        <div class="ba-label">
-          <div class="ba-proc">Facelift</div>
-          <div class="bpc-tag tag-high">JCI</div>
+      <div class="protocol-card" onclick="openContact()">
+        <img src="assets/premium-rhino.jpg" alt="Structural Rhinoplasty" loading="lazy">
+        <div class="protocol-overlay">
+          <div class="protocol-label">Protocol</div>
+          <div class="protocol-title">Structural Rhinoplasty</div>
+          <p class="protocol-desc">Mastering the golden ratio. A nose that fits your face perfectly, engineered for both beauty and function.</p>
+          <div class="protocol-cta">Explore <i data-lucide="arrow-right"></i></div>
         </div>
       </div>
 
-      <div class="ba-card" onclick="openLightbox('assets/before-after/hair.jpg','FUE Hair Transplant','SBCP-Certified · 300+ procedures/year · 3–5 days social-ready')">
-        <div class="ba-img-wrap">
-          <img src="assets/before-after/hair.jpg" alt="FUE hair transplant before and after" loading="lazy">
-          <div class="ba-overlay"><i data-lucide="zoom-in"></i><span>View Result</span></div>
-        </div>
-        <div class="ba-label">
-          <div class="ba-proc">FUE Hair</div>
-          <div class="bpc-tag tag-high">SBCP</div>
-        </div>
-      </div>
-
-      <div class="ba-card" onclick="openLightbox('assets/before-after/smile.jpg','Perfect Smile Design','VITA Ceramic · 500+ procedures/year · 2–3 days social-ready')">
-        <div class="ba-img-wrap">
-          <img src="assets/before-after/smile.jpg" alt="Smile design before and after" loading="lazy">
-          <div class="ba-overlay"><i data-lucide="zoom-in"></i><span>View Result</span></div>
-        </div>
-        <div class="ba-label">
-          <div class="ba-proc">Smile Design</div>
-          <div class="bpc-tag tag-high">VITA</div>
+      <div class="protocol-card" onclick="openContact()">
+        <img src="assets/premium-jaw.jpg" alt="Jawline & Profile Optimization" loading="lazy">
+        <div class="protocol-overlay">
+          <div class="protocol-label">Protocol</div>
+          <div class="protocol-title">Jawline & Profile Optimization</div>
+          <p class="protocol-desc">Defined. Masculine. Symmetrical. Correcting structural recession to reveal your strongest profile.</p>
+          <div class="protocol-cta">Explore <i data-lucide="arrow-right"></i></div>
         </div>
       </div>
 
     </div>
-  </section>
-
-  <!-- ══ PRICING ══ -->
-  <section class="pricing-section" id="pricing">
-    <div class="pricing-intro">
-      <div class="section-kicker" style="justify-content:center;">Pricing</div>
-      <div class="section-title" style="text-align:center;">Transparent ranges.<br><span class="accent">No surprises.</span></div>
-    </div>
-    <div class="pricing-grid">
-      <div class="pricing-card">
-        <div class="pricing-proc">Rhinoplasty (Primary)</div>
-        <div class="pricing-range">$6,000 &ndash; $8,500</div>
-        <div class="pricing-note">Final price depends on case complexity and surgeon.</div>
-      </div>
-      <div class="pricing-card">
-        <div class="pricing-proc">Deep Plane Facelift</div>
-        <div class="pricing-range">$15,000 &ndash; $21,500</div>
-        <div class="pricing-note">Final price depends on case complexity and surgeon.</div>
-      </div>
-      <div class="pricing-card">
-        <div class="pricing-proc">Revision Rhinoplasty</div>
-        <div class="pricing-range">$8,500 &ndash; $12,500</div>
-        <div class="pricing-note">Final price depends on case complexity and surgeon.</div>
-      </div>
-      <div class="pricing-card">
-        <div class="pricing-proc">Jaw Surgery</div>
-        <div class="pricing-range">$16,500 &ndash; $25,000</div>
-        <div class="pricing-note">Final price depends on case complexity and surgeon.</div>
-      </div>
-      <div class="pricing-card">
-        <div class="pricing-proc">Mentoplasty</div>
-        <div class="pricing-range">$4,000 &ndash; $5,500</div>
-        <div class="pricing-note">Final price depends on case complexity and surgeon.</div>
-      </div>
-      <div class="pricing-card pricing-card-cta">
-        <div class="pricing-proc">Other Procedure</div>
-        <div class="pricing-range-alt">Interested in a different surgery?</div>
-        <p class="pricing-note" style="margin-bottom:1.25rem;">Contact us and Aestyx will connect you with the right surgeon for your case.</p>
-        <button class="btn-outline-purple" onclick="openContact()">Talk to Aestyx &rarr;</button>
-      </div>
-    </div>
-    <p class="pricing-disclaimer">Final price is defined after medical evaluation.</p>
   </section>
 
   <!-- ══ PAYMENT ══ -->
   <section class="payment-section">
     <div class="payment-inner">
-      <i data-lucide="credit-card"></i>
-      <div class="payment-title">Pay in up to 12x with credit card.</div>
+      <div class="payment-eyebrow">Phase 1 Exclusive</div>
+      <div class="payment-title">Master Your Transformation.<br><span style="color:var(--gold);">Optimize Your Cash Flow.</span></div>
+      <p class="payment-sub">In Brazil, the elite secret isn't just the artistry—it's the access. For a limited time, Aestyx members can split their entire facial optimization into 12 easy monthly payments.</p>
       <ul class="payment-list">
-        <li>No large upfront burden</li>
-        <li>Structured payments</li>
-        <li>Full transparency</li>
+        <li><strong>Beat the Inflation:</strong> Lock in today's prices and pay over the next year.</li>
+        <li><strong>Preserve Your Savings:</strong> Keep your capital while you recover in luxury.</li>
+        <li><strong>Phase 1 Exclusive:</strong> Our 12x credit card facility is closing soon for new international applicants.</li>
       </ul>
+      <button class="payment-cta" onclick="openContact()">Apply for Flexible Financing</button>
     </div>
   </section>
 
@@ -376,91 +501,87 @@
 
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">
-          <span>Is surgery in Brazil actually safe?</span>
+          <span>Why are surgeries in Brazil more affordable than in the U.S.?</span>
           <i data-lucide="chevron-down"></i>
         </button>
         <div class="faq-a">
-          <p>Yes — Brazil has one of the world's most rigorous plastic surgery oversight bodies. Aestyx partners exclusively with <strong>SBCP-certified surgeons</strong> (Brazilian Society of Plastic Surgery, the equivalent of ASPS in the US) operating in <strong>JCI-accredited hospitals</strong> — the same international standard used by Mayo Clinic. We do not work with clinics or unverified practitioners.</p>
+          <p>Plastic surgery in Brazil can cost 40–70% less than in the United States — not because quality is lower, but because operational and healthcare costs are significantly different. Brazil is internationally recognized for aesthetic medicine and has one of the world's most established plastic surgery communities.</p>
+          <p>Aestyx works only with verified clinics and surgeons with active professional registrations.</p>
         </div>
       </div>
 
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">
-          <span>How do I know the surgeon is qualified?</span>
+          <span>How do I know the surgeon is real and licensed?</span>
           <i data-lucide="chevron-down"></i>
         </button>
         <div class="faq-a">
-          <p>Every surgeon in our network is independently SBCP-certified, has a minimum 5-year specialist track record, and is vetted by the Aestyx board before joining. You receive their credentials, case volume, and relevant case portfolio before committing to anything. <strong>You never go in blind.</strong></p>
+          <p>Every surgeon listed on Aestyx goes through our verification process.</p>
+          <p>We confirm:</p>
+          <ul style="margin-left:1.5rem;margin-bottom:1rem;">
+            <li>active medical license (CRM)</li>
+            <li>plastic surgery specialization (RQE)</li>
+            <li>clinic and hospital registration (CNES)</li>
+          </ul>
+          <p>You can see verification status directly on each profile through the Aestyx Verified™ system.</p>
         </div>
       </div>
 
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">
-          <span>Why are the prices so much lower than in the US?</span>
+          <span>What if I don't speak Portuguese?</span>
           <i data-lucide="chevron-down"></i>
         </button>
         <div class="faq-a">
-          <p>The surgical quality is equivalent — what you're avoiding is US systemic overhead: hospital liability markups, insurance premiums, administrative bloat, and NYC/Miami location pricing. <strong>Brazil's operational costs are structurally lower</strong>, not the standard of care. A rhinoplasty in São Paulo costs $6k–$8.5k. The same procedure in New York averages $25k–$32k — for the same surgical technique.</p>
+          <p>Aestyx includes WhatsApp translation and bilingual communication support throughout your journey.</p>
+          <p>You'll be able to communicate with clinics, coordinators, and surgeons in English before and after surgery.</p>
         </div>
       </div>
 
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">
-          <span>Do I need to speak Portuguese?</span>
+          <span>Is it safe to travel alone for surgery?</span>
           <i data-lucide="chevron-down"></i>
         </button>
         <div class="faq-a">
-          <p>No. All consultations, pre-op briefings, and follow-ups are conducted in <strong>English</strong>. Aestyx acts as your full communication layer — your surgeon speaks through us, and every document you receive is in English. Your only job is to show up for surgery week.</p>
+          <p>Many international patients travel alone every year for aesthetic procedures.</p>
+          <p>Aestyx helps organize communication, appointments, payment coordination, and recovery guidance so patients feel supported throughout the process.</p>
+          <p>We encourage every patient to carefully follow medical instructions and prioritize a safe recovery environment.</p>
         </div>
       </div>
 
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">
-          <span>How long do I need to stay in Brazil?</span>
+          <span>What happens if I'm not happy with the results?</span>
           <i data-lucide="chevron-down"></i>
         </button>
         <div class="faq-a">
-          <p>Most procedures require <strong>7–14 days in-country</strong> for initial recovery before flying. Rhinoplasty: ~7 days. Facelift: ~12–14 days. FUE hair: ~3–5 days. We plan your trip around your procedure so you're never there longer than necessary. All post-op follow-ups happen via telehealth from home.</p>
+          <p>We don't disappear after surgery.</p>
+          <p>Aestyx provides 30-day post-op telehealth follow-up with your surgeon. We document every step of your case so your medical history, photos, and recovery notes remain organized and accessible if additional evaluation is needed.</p>
+          <p><strong>Your peace of mind matters.</strong></p>
         </div>
       </div>
 
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">
-          <span>Is my money protected if something goes wrong?</span>
+          <span>How does payment work?</span>
           <i data-lucide="chevron-down"></i>
         </button>
         <div class="faq-a">
-          <p>All payments go through <strong>Stripe Escrow</strong> — funds are held and only released to the surgeon after your consultation is confirmed. If the match doesn't proceed, your money is returned. Surgeons receive 100% of their professional fee; Aestyx charges a fixed facilitation fee for coordination, matching, and logistics. No hidden commissions.</p>
+          <p>Aestyx uses secure international payment infrastructure designed for cross-border healthcare transactions.</p>
+          <p>Patients can review pricing clearly before confirming surgery, and payments are processed through protected payment flows with verified clinics.</p>
         </div>
       </div>
 
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">
-          <span>Can I finance the procedure?</span>
+          <span>Will I meet the surgeon before paying?</span>
           <i data-lucide="chevron-down"></i>
         </button>
         <div class="faq-a">
-          <p>Yes. You can split the total into up to 12 equal monthly installments via credit card — no liquidating investments, no large upfront capital. A $6,000 rhinoplasty becomes ~$500/month. Keep your capital working while your procedure pays for itself in value arbitrage.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          <span>What exactly does Aestyx do? Are you a hospital?</span>
-          <i data-lucide="chevron-down"></i>
-        </button>
-        <div class="faq-a">
-          <p>Aestyx is a <strong>medical aesthetic tourism agency</strong> — not a hospital, clinic, or medical practice. We are the coordination layer: we match you to the right surgeon, manage all logistics and communication, handle payments via escrow, and provide pre/post-op support. The medical procedures are performed by independent, certified surgeons in accredited hospitals.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          <span>What if I'm not happy with the result?</span>
-          <i data-lucide="chevron-down"></i>
-        </button>
-        <div class="faq-a">
-          <p>Aestyx provides 30-day post-op telehealth follow-up with your surgeon. For revision cases, your surgeon's revision policy (standard in the industry) applies. We document every step of your case — so if a revision is needed, the full clinical context is available immediately. <strong>We do not disappear after surgery.</strong></p>
+          <p>Yes.</p>
+          <p>Patients can receive a personalized surgical assessment and communicate with the clinic before moving forward with any procedure.</p>
+          <p>Our goal is to help patients make informed decisions — never rushed ones.</p>
         </div>
       </div>
 

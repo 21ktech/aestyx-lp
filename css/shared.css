@@ -1569,7 +1569,10 @@ footer {
   footer { grid-template-columns: 1fr; gap: 2.5rem; }
   .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
   .nav-specialist { display: none; }
-  nav .nav-links { display: none; }
+  nav .nav-links { display: flex; }
+  @media (max-width: 960px) {
+    nav .nav-links { display: none; }
+  }
   nav.nav-open .nav-links {
     display: flex;
     flex-direction: column;
